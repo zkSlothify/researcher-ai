@@ -1,61 +1,56 @@
-// src/index.ts
-
-import { NewsAggregator } from "./aggregator/NewsAggregator";
-import { RssSource } from "./plugins/sources/RssSource";
-import { ApiSource } from "./plugins/sources/ApiSource";
-import { TopicEnricher } from "./plugins/enrichers/TopicEnricher";
-import { CrawlEnricher } from "./plugins/enrichers/CrawlEnricher";
+import { ContentAggregator } from "./aggregator/ContentAggregator";
+import { TwitterSource } from "./plugins/sources/TwitterSource";
+import { GitHubDataSource } from "./plugins/sources/GitHubDataSource";
 import { SQLiteStorage } from "./plugins/storage/SQLiteStorage";
+import { OpenAIProvider } from "./plugins/ai/OpenAIProvider";
+import { AiTopicsEnricher } from "./plugins/enrichers/AiTopicEnricher";
+import { DailySummaryGenerator } from "./plugins/generators/DailySummaryGenerator";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 (async () => {
-  // 1. Instantiate the news aggregator
-  const aggregator = new NewsAggregator();
-
-  // 2. Register sources
-  aggregator.registerSource(
-    new RssSource({
-      name: "BBC RSS",
-      url: "http://feeds.bbci.co.uk/news/rss.xml",
-    })
-  );
-
-  aggregator.registerSource(
-    new ApiSource({
-      name: "Sample News API",
-      endpoint: "https://newsapi.org/v2/top-headlines?country=us",
-      apiKey: "",
-    })
-  );
-
-  // 3. Register enrichers
-  aggregator.registerEnricher(
-    new TopicEnricher([
-      { topic: "sports", keywords: ["football", "soccer", "basketball", "nba"] },
-      { topic: "technology", keywords: ["tech", "software", "AI", "artificial intelligence"] },
-      { topic: "politics", keywords: ["senate", "congress", "election"] },
-    ])
-  );
-
-  // CrawlEnricher: specify CSS selectors for further details
-  aggregator.registerEnricher(
-    new CrawlEnricher()
-  );
-
-  // 4. Initialize the SQLite storage
-  const storage = new SQLiteStorage({
-    dbPath: "data/database.sqlite",
+  // Initialize an AI Provider (OpenAI)
+  const openAiProvider = new OpenAIProvider({
+    apiKey: process.env.OPENAI_API_KEY || '',
+    model: "gpt-3.5-turbo",
+    temperature: 0,
   });
+
+  // 1. Create aggregator
+  const aggregator = new ContentAggregator();
+
+  // 2. Register multiple sources
+  aggregator.registerSource(new TwitterSource({
+    name: "twitter",
+    username: process.env.TWITTER_USERNAME,
+    password: process.env.TWITTER_PASSWORD,
+    email: process.env.TWITTER_EMAIL,
+    accounts: ["daosdotfun", "ai16zdao", "shawmakesmagic"]
+  }));
+
+  aggregator.registerSource(
+    new GitHubDataSource({
+      name: "eliza_github",
+      contributorsUrl: "https://elizaos.github.io/data/daily/contributors.json",
+      summaryUrl: "https://elizaos.github.io/data/daily/summary.json",
+    })
+  );
+
+  aggregator.registerEnricher(
+    new AiTopicsEnricher({
+      provider: openAiProvider,
+      thresholdLength: 30
+    })
+  );
+
+  // 3. Fetch items from all sources
+  const items = await aggregator.fetchAll();
+
+  // 4. Store them in a unified storage
+  const storage = new SQLiteStorage({ dbPath: "data/db.sqlite" });
   await storage.init();
+  await storage.save(items);
 
-  try {
-    // 5. Fetch all news
-    const articles = await aggregator.fetchAll();
-
-    // 6. Save to SQLite
-    await storage.save(articles);
-
-    console.log("Articles have been saved to SQLite!");
-  } catch (error) {
-    console.error("Error occurred while fetching or saving news:", error);
-  }
+  console.log("Fetched and stored items in a unified manner!");
 })();

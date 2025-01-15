@@ -1,119 +1,187 @@
-// src/plugins/storage/SQLiteStorage.ts
+// src/plugins/storage/UnifiedStorage.ts
 
+import { StoragePlugin } from "./StoragePlugin"; // a small interface if you like
 import { open, Database } from "sqlite";
 import sqlite3 from "sqlite3";
-import { Article } from "../../types";
-import { StoragePlugin } from "./StoragePlugin";
-import { articleSchema } from "./schemas/articleSchema";
+import { ContentItem } from "../../types";
 
-type PragmaRow = { name: string };
-
-export interface SQLiteStorageConfig {
+export interface UnifiedStorageConfig {
   dbPath: string;
 }
-
 
 export class SQLiteStorage implements StoragePlugin {
   private db: Database<sqlite3.Database, sqlite3.Statement> | null = null;
   private dbPath: string;
 
-  constructor(config: SQLiteStorageConfig) {
+  constructor(config: UnifiedStorageConfig) {
     this.dbPath = config.dbPath;
   }
 
   public async init(): Promise<void> {
-    this.db = await open({
-      filename: this.dbPath,
-      driver: sqlite3.Database,
-    });
+    this.db = await open({ filename: this.dbPath, driver: sqlite3.Database });
 
-    // Create table if it doesn’t exist
+    // Create the items table if it doesn't exist
     await this.db.exec(`
-      CREATE TABLE IF NOT EXISTS articles (
-        id INTEGER PRIMARY KEY AUTOINCREMENT
-        /* We'll add columns dynamically below */
+      CREATE TABLE IF NOT EXISTS items (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        cid TEXT,
+        type TEXT NOT NULL,
+        source TEXT NOT NULL,
+        title TEXT,
+        text TEXT,
+        link TEXT,
+        topics TEXT,
+        date INTEGER,
+        metadata TEXT  -- JSON-encoded metadata
       );
     `);
-
-    // Run a method to auto-update columns
-    await this.updateSchema();
   }
 
-  /**
-   * Compare existing columns in 'articles' with our articleSchema,
-   * and add any missing columns automatically.
-   */
-  private async updateSchema(): Promise<void> {
-    if (!this.db) return;
-
-    // 1. Find existing columns in the 'articles' table
-    const pragma = await this.db.all<PragmaRow[]>(`PRAGMA table_info(articles)`);
-    const existingColumns = pragma.map(row => row.name);
-
-    // 2. Compare with the articleSchema
-    const schemaEntries = Object.entries(articleSchema); // e.g. [["source", "TEXT"], ["title", "TEXT"], ...]
-    for (const [columnName, columnType] of schemaEntries) {
-      // If the column doesn't exist, add it
-      if (!existingColumns.includes(columnName)) {
-        console.log(`Adding missing column '${columnName}' to 'articles' table.`);
-        await this.db.run(`ALTER TABLE articles ADD COLUMN ${columnName} ${columnType};`);
-      }
-    }
-  }
-
-  public async save(articles: Article[]): Promise<void> {
+  public async save(items: ContentItem[]): Promise<ContentItem[]> {
     if (!this.db) {
-      throw new Error("Database connection not initialized. Call init() first.");
+      throw new Error("Database not initialized. Call init() first.");
     }
 
-    // Build an insert statement dynamically using the keys from articleSchema
-    const columnNames = Object.keys(articleSchema).join(", ");
-    const placeholders = Object.keys(articleSchema).map(() => "?").join(", ");
-    const insertSql = `
-      INSERT INTO articles (${columnNames})
-      VALUES (${placeholders})
-    `;
-    const insertStmt = await this.db.prepare(insertSql);
+    // Prepare an UPDATE statement for the metadata
+    const updateStmt = await this.db.prepare(`
+      UPDATE items
+      SET metadata = ?
+      WHERE cid = ?
+    `);
+
+    // Prepare an INSERT statement for new rows
+    const insertStmt = await this.db.prepare(`
+      INSERT INTO items (type, source, cid, title, text, link, topics, date, metadata)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `);
 
     try {
       await this.db.run("BEGIN TRANSACTION");
-      for (const article of articles) {
-        // Convert the Article object to an array of values matching the schema
-        const values = this.mapArticleToValues(article);
-        await insertStmt.run(values);
+
+      for (const item of items) {
+        if (!item) {
+          continue
+        }
+        if (!item.cid) {
+          const result = await insertStmt.run(
+            item.type,
+            item.source,
+            null,
+            item.title,
+            item.text,
+            item.link,
+            item.topics ? JSON.stringify(item.topics) : null,
+            item.date,
+            item.metadata ? JSON.stringify(item.metadata) : null
+          );
+          item.id = result.lastID || undefined;
+          continue;
+        }
+
+        const existingRow = await this.db.get<{ id: number }>(
+          `SELECT id FROM items WHERE cid = ?`,
+          [item.cid]
+        );
+
+        if (existingRow) {
+          await updateStmt.run(
+            item.metadata ? JSON.stringify(item.metadata) : null,
+            item.cid
+          );
+          item.id = existingRow.id;
+        } else {
+          const metadataStr = item.metadata ? JSON.stringify(item.metadata) : null;
+          const topicStr = item.topics ? JSON.stringify(item.topics) : null;
+
+          const result = await insertStmt.run(
+            item.type,
+            item.source,
+            item.cid,
+            item.title,
+            item.text,
+            item.link,
+            topicStr,
+            item.date,
+            metadataStr
+          );
+          item.id = result.lastID || undefined;
+        }
       }
+
       await this.db.run("COMMIT");
     } catch (error) {
       await this.db.run("ROLLBACK");
       throw error;
     } finally {
+      await updateStmt.finalize();
       await insertStmt.finalize();
     }
+
+    return items;
   }
 
-  /**
-   * Maps the article's fields to the array of values in schema order.
-   */
-  private mapArticleToValues(article: Article): unknown[] {
-    return Object.keys(articleSchema).map(columnName => {
-      switch (columnName) {
-        case "date":
-          // convert date to string if it exists
-          return article.date ? article.date.toISOString() : null;
+  public async getItemsByType(type: string): Promise<ContentItem[]> {
+    if (!this.db) {
+      throw new Error("Database not initialized.");
+    }
 
-        case "topics":
-          // topics array -> JSON string or comma-separated
-          return article.topics ? article.topics.join(",") : null;
+    const rows = await this.db.all(`
+      SELECT * FROM items WHERE type = ?
+    `, [type]);
 
-        case "tags":
-          // tags array -> JSON string or comma-separated
-          return article.tags ? article.tags.join(",") : null;
+    return rows.map(row => ({
+      id: row.id,
+      cid: row.cid,
+      type: row.type,
+      source: row.source,
+      title: row.title,
+      text: row.text,
+      link: row.link,
+      topics: row.topics ? JSON.parse(row.topics) : undefined,
+      date: row.date,
+      metadata: row.metadata ? JSON.parse(row.metadata) : undefined
+    }));
+  }
 
-        default:
-          // dynamically index the article object; might be undefined if not present
-          // but that's okay for optional fields
-          return (article as any)[columnName] ?? null;
-      }
-    });
+  public async getContentItemsBetweenEpoch(
+    startEpoch: number,
+    endEpoch: number,
+    excludeType?: string
+  ): Promise<ContentItem[]> {
+    if (!this.db) {
+      throw new Error("Database not initialized.");
+    }
+
+    if (startEpoch > endEpoch) {
+      throw new Error("startEpoch must be less than or equal to endEpoch.");
+    }
+
+    let query = `SELECT * FROM items WHERE date BETWEEN ? AND ?`;
+    const params: any[] = [startEpoch, endEpoch];
+
+    if (excludeType) {
+      query += ` AND type != ?`;
+      params.push(excludeType);
+    }
+
+    try {
+      const rows = await this.db.all(query, params);
+
+      return rows.map(row => ({
+        id: row.id,
+        type: row.type,
+        source: row.source,
+        cid: row.cid,
+        title: row.title || undefined,
+        text: row.text || undefined,
+        link: row.link || undefined,
+        date: row.date,
+        topics: row.topics ? JSON.parse(row.topics) : undefined,
+        metadata: row.metadata ? JSON.parse(row.metadata) : undefined,
+      }));
+    } catch (error) {
+      console.error("Error fetching content items between epochs:", error);
+      throw error;
+    }
   }
 }

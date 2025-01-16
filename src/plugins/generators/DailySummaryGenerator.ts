@@ -117,7 +117,7 @@ export class DailySummaryGenerator {
   }
 
   private createAIPrompt(groupedContent: Record<string, ContentItem[]>, dateStr: string): string {
-    let prompt = `Generate a comprehensive daily newsletter for ${dateStr} based on the following topics and activities:\n\n`;
+    let prompt = `Generate a comprehensive daily newsletter for ${dateStr} based on the following topics. Make sure to combine topics that are related, and focus on these Topics ( News, Dev, Events ). The newsletter must be a bulleted list for the popular topics with bullet points of the content under that topic\n\n`;
 
     for (const [topic, items] of Object.entries(groupedContent)) {
       prompt += `**${topic}:**\n`;

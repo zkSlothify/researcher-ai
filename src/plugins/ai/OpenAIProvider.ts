@@ -43,7 +43,7 @@ export class OpenAIProvider implements AiProvider {
 
   public async topics(text: string): Promise<string[]> {
     try {
-      const prompt = `Provide 3 words that describe the topic of the following text:\n\n"${text}.\n\n Response format MUST be formatted in like this:\n\narray\n\n[ \"word1\", \"word2\", \"word3\"]\n`;
+      const prompt = `Provide up to 3 words that describe the topic of the following text:\n\n"${text}.\n\n Response format MUST be formatted in this way, the words must be strings:\n\n[ \"word1\", \"word2\", \"word3\"]\n`;
   
       const params: OpenAI.Chat.ChatCompletionCreateParams = {
         messages: [{ role: 'user', content: prompt }],
@@ -51,7 +51,7 @@ export class OpenAIProvider implements AiProvider {
       };
   
       const { data: chatCompletion, response: raw } = await this.openai.chat.completions.create(params).withResponse();
-  
+
       return JSON.parse(chatCompletion.choices[0]?.message?.content || "[]");
     } catch (e) {
       return []

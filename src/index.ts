@@ -4,7 +4,9 @@ import { GitHubDataSource } from "./plugins/sources/GitHubDataSource";
 import { SQLiteStorage } from "./plugins/storage/SQLiteStorage";
 import { OpenAIProvider } from "./plugins/ai/OpenAIProvider";
 import { AiTopicsEnricher } from "./plugins/enrichers/AiTopicEnricher";
-import { DailySummaryGenerator } from "./plugins/generators/DailySummaryGenerator";
+import { DiscordChannelSource } from "./plugins/sources/DiscordChannelSource";
+import { DiscordAnnouncementSource } from "./plugins/sources/DiscordAnnouncementSource";
+
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -29,6 +31,19 @@ dotenv.config();
     accounts: ["daosdotfun", "ai16zdao", "shawmakesmagic"]
   }));
 
+  aggregator.registerSource(new DiscordChannelSource({
+    name: "discordChannel",
+    botToken: process.env.DISCORD_TOKEN || '',
+    channelIds: ["940835354846572594"],
+    provider: openAiProvider,
+  }));
+  
+  aggregator.registerSource(new DiscordAnnouncementSource({
+    name: "discordAnnouncement",
+    botToken: process.env.DISCORD_TOKEN || '',
+    channelIds: ["940833937838714913"]
+  }));
+
   aggregator.registerSource(
     new GitHubDataSource({
       name: "eliza_github",
@@ -46,7 +61,7 @@ dotenv.config();
 
   // 3. Fetch items from all sources
   const items = await aggregator.fetchAll();
-
+  
   // 4. Store them in a unified storage
   const storage = new SQLiteStorage({ dbPath: "data/db.sqlite" });
   await storage.init();

@@ -8,6 +8,7 @@ import { DiscordChannelSource } from "./plugins/sources/DiscordChannelSource";
 import { DiscordAnnouncementSource } from "./plugins/sources/DiscordAnnouncementSource";
 
 import dotenv from "dotenv";
+import { SolanaTokenAnalyticsSource } from "./plugins/sources/SolanaAnalyticsSource";
 
 dotenv.config();
 
@@ -49,6 +50,14 @@ dotenv.config();
       name: "eliza_github",
       contributorsUrl: "https://elizaos.github.io/data/daily/contributors.json",
       summaryUrl: "https://elizaos.github.io/data/daily/summary.json",
+    })
+  );
+
+  aggregator.registerSource(
+    new SolanaTokenAnalyticsSource({
+      name: "solana_token_analytics",
+      apiKey: process.env.BIRDEYE_API_KEY || '',
+      tokenAddresses: ['HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC']
     })
   );
 

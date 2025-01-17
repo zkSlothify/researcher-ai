@@ -59,6 +59,7 @@ export class TwitterSource implements ContentSource {
                     likes: tweet.likes,
                     replies: tweet.replise,
                     retweets: tweet.retweets,
+                    photos: tweet.photos.map((img : any) => img.url)
                 },
             })
         }

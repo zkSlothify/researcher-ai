@@ -117,19 +117,27 @@ export class DailySummaryGenerator {
   }
 
   private createAIPrompt(groupedContent: Record<string, ContentItem[]>, dateStr: string): string {
-    let prompt = `Generate a comprehensive daily newsletter for ${dateStr} based on the following topics. Make sure to combine topics that are related, and focus on these Topics ( News, Dev, Events ). The newsletter must be a bulleted list for the popular topics with bullet points of the content under that topic\n\n`;
+    let prompt = `Generate a comprehensive daily newsletter for ${dateStr} based on the following topics. Make sure to combine topics that are related, and focus on these Topics ( News, Dev, Events, Market Conditions ). The newsletter must be a bulleted list for the popular topics with bullet points of the content under that topic\n\n`;
 
     for (const [topic, items] of Object.entries(groupedContent)) {
       prompt += `**${topic}:**\n`;
       items.forEach(item => {
         if (item.text) {
-          prompt += `- ${item.text}\n`;
+          prompt += `- ${item.text}`;
+        }
+        if (item.link) {
+          prompt += `- ${item.link}`;
+        }
+        if (item.metadata?.photos) {
+          prompt += `- ${item.metadata?.photos}`;
         }
       });
-      prompt += `\n`;
+      prompt += `\n\n`;
     }
 
-    prompt += `Provide a clear and concise summary that highlights the key activities and developments of the day.\n\n Make sure the outline talks about specific topics that were popular that day`;
+    prompt += `Provide a clear and concise summary that highlights the key activities and developments of the day.\n\n`;
+
+    prompt += `Respond MUST be a JSON array containing the values in a JSON block of topics formatted for markdown with this structure:\n\`\`\`json\n\[\n  'value',\n  'value'\n\]\n\`\`\`\n\nYour response must include the JSON block. Each JSON block should include the title of the topic, the sources for references (sources MUST only be under the source key, its okay if no sources under a topic), the images for references (images MUST only be under the source key, its okay if no images under a topic), and the messages.`
 
     return prompt;
   }

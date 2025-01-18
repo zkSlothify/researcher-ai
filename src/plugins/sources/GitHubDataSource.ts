@@ -55,7 +55,7 @@ export class GitHubDataSource implements ContentSource {
                 else if ( c.activity?.code?.pull_requests?.length > 0 ) {
                     date = new Date(c.activity?.code?.pull_requests[0].created_at)
                 }
-                console.log( date )
+                
                 if ( date ) {
                     const isoString = date.toISOString();
                     const formattedDate = isoString.slice(0, 10);

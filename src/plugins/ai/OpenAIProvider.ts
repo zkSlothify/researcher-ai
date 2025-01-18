@@ -57,4 +57,23 @@ export class OpenAIProvider implements AiProvider {
       return []
     }
   }
+
+  public async image(text: string): Promise<string[]> {
+    try {
+      const prompt = `Create an image that depicts the following text:\n\n"${text}.\n\n Response format MUST be formatted in this way, the words must be strings:\n\n{ \"images\": \"<image_url>\"}\n`;
+  
+      const params: OpenAI.Images.ImageGenerateParams = {
+        model: "dall-e-3",
+        prompt: text,
+        n: 1,
+        size: "1024x1024",
+      };
+  
+      const { data: image, response: raw } = await this.openai.images.generate(params).withResponse();
+      console.log(image.data[0].url)
+      return JSON.parse(image.data[0].url || "[]");
+    } catch (e) {
+      return []
+    }
+  }
 }

@@ -13,7 +13,7 @@ export interface ContentItem {
   link?: string;         // URL to the item
   topics?: string[];
   date?: number;           // When it was created/published
-  metadata?: Record<string, unknown>; // Additional key-value data
+  metadata?: Record<string, any>; // Additional key-value data
 }
   
 /**
@@ -42,4 +42,5 @@ export interface AiEnricherConfig {
 export interface AiProvider {
   summarize(text: string): Promise<string>;
   topics(text: string): Promise<string[]>;
+  image(text: string): Promise<string[]>;
 }

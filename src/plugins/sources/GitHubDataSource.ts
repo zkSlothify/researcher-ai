@@ -8,6 +8,8 @@ interface GithubDataSourceConfig {
   name: string;                // e.g. "github-data"
   contributorsUrl: string;     // e.g. "https://elizaos.github.io/data/daily/contributors.json"
   summaryUrl: string;          // e.g. "https://elizaos.github.io/data/daily/summary.json"
+  githubCompany: string,
+  githubRepo: string,
 }
 
 /**
@@ -18,11 +20,17 @@ export class GitHubDataSource implements ContentSource {
   public name: string;
   private contributorsUrl: string;
   private summaryUrl: string;
+  private githubCompany: string;
+  private githubRepo: string;
+  private baseGithubUrl: string;
 
   constructor(config: GithubDataSourceConfig) {
     this.name = config.name;
     this.contributorsUrl = config.contributorsUrl;
     this.summaryUrl = config.summaryUrl;
+    this.githubCompany = config.githubCompany;
+    this.githubRepo = config.githubRepo;
+    this.baseGithubUrl = `https://github.com/${this.githubCompany}/${this.githubRepo}/`
   }
 
   /**
@@ -45,45 +53,71 @@ export class GitHubDataSource implements ContentSource {
       }
       const summaryData : any = await summaryResp.json();
 
-      const contributorsItems: any[] = (Array.isArray(contributorsData)
-        ? contributorsData : [] ).map((c: any) => {
-                let date;
+      const githubItems : ContentItem[] = [];
 
-                if ( c.activity?.code?.commits?.length > 0 ) {
-                    date = new Date(c.activity?.code?.commits[0].created_at)
-                }
-                else if ( c.activity?.code?.pull_requests?.length > 0 ) {
-                    date = new Date(c.activity?.code?.pull_requests[0].created_at)
-                }
-                
-                if ( date ) {
-                    const isoString = date.toISOString();
-                    const formattedDate = isoString.slice(0, 10);
-                    const cid = `github-contrib-${c.contributor}-${formattedDate}`;
+      (Array.isArray(contributorsData)
+        ? contributorsData : [] ).forEach((c: any) => {
+          if ( c.activity?.code?.commits?.length > 0 ) {
+            c.activity?.code?.commits?.forEach((commit: any) => {
+              const item : ContentItem = {
+                type: "githubCommitContributor",
+                cid: `github-commit-${commit.sha}`,
+                source: this.name,
+                link: `${this.baseGithubUrl}commit/${commit.sha}`,
+                text: commit.message,
+                date: new Date().getTime() / 1000,
+                metadata: {
+                    additions: commit.additions,
+                    deletions: commit.deletions,
+                    changed_files: commit.changed_files,
+                    photos: [c.avatar_url]
+                },
+              }
 
-                    const item : ContentItem = {
-                        type: "githubContributor",
-                        cid: cid,
-                        source: this.name,
-                        link: undefined,
-                        text: c.summary,
-                        date: new Date().getTime() / 1000,
-                        metadata: {
-                            contributor: c.contributor,
-                            score: c.score,
-                            avatar_url: c.avatar_url,
-                            total_prs: c.activity?.code?.total_prs,
-                            total_commits: c.activity?.code?.total_commits,
-                            total_opened: c.activity?.issues?.total_opened,
-                            total_comments: c.activity?.engagement?.total_comments,
-                            total_reviews: c.activity?.engagement?.total_reviews,
-                            photos: [c.avatar_url]
-                        },
-                    }
+              githubItems.push(item);
+            })
+          }
 
-                    return item;
-                }
-                return
+          if ( c.activity?.code?.pull_requests?.length > 0 ) {
+            c.activity?.code?.pull_requests?.forEach((pr: any) => {
+              const item : ContentItem = {
+                type: "githubPullRequestContributor",
+                cid: `github-pull-${pr.number}`,
+                source: this.name,
+                link: `${this.baseGithubUrl}pull/${pr.number}`,
+                text: `Title: ${pr.title}\nBody: ${pr.body}`,
+                date: new Date().getTime() / 1000,
+                metadata: {
+                  number: pr.number,
+                  state: pr.state,
+                  merged: pr.merged,
+                  photos: [c.avatar_url]
+                },
+              }
+
+              githubItems.push(item);
+            })
+          }
+
+          if ( c.activity?.issues?.opened?.length > 0 ) {
+            c.activity?.issues?.opened?.forEach((issue: any) => {
+              const item : ContentItem = {
+                type: "githubIssueContributor",
+                cid: `github-issue-${issue.number}`,
+                source: this.name,
+                link: `${this.baseGithubUrl}issues/${issue.number}`,
+                text: `Title: ${issue.title}\nBody: ${issue.body}`,
+                date: new Date().getTime() / 1000,
+                metadata: {
+                  number: issue.number,
+                  state: issue.state,
+                  photos: [c.avatar_url]
+                },
+              }
+
+              githubItems.push(item);
+            })
+          }
         });
       
       const cid = `github-contrib-${summaryData.title}`;
@@ -105,7 +139,7 @@ export class GitHubDataSource implements ContentSource {
         },
       };
 
-      return [...contributorsItems, summaryItem];
+      return [...githubItems, summaryItem];
     } catch (error) {
       console.error("Error fetching GitHub data:", error);
       return [];

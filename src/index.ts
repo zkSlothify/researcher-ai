@@ -4,7 +4,6 @@ import { GitHubDataSource } from "./plugins/sources/GitHubDataSource";
 import { SQLiteStorage } from "./plugins/storage/SQLiteStorage";
 import { OpenAIProvider } from "./plugins/ai/OpenAIProvider";
 import { AiTopicsEnricher } from "./plugins/enrichers/AiTopicEnricher";
-import { AiImageEnricher } from "./plugins/enrichers/AiImageEnricher";
 import { DiscordChannelSource } from "./plugins/sources/DiscordChannelSource";
 import { DiscordAnnouncementSource } from "./plugins/sources/DiscordAnnouncementSource";
 import { SolanaTokenAnalyticsSource } from "./plugins/sources/SolanaAnalyticsSource";
@@ -52,6 +51,8 @@ dotenv.config();
       name: "eliza_github",
       contributorsUrl: "https://raw.githubusercontent.com/elizaOS/elizaos.github.io/refs/heads/main/data/daily/contributors.json",
       summaryUrl: "https://raw.githubusercontent.com/elizaOS/elizaos.github.io/refs/heads/main/data/daily/summary.json",
+      githubCompany: "elizaOS",
+      githubRepo: "elizaos"
     })
   );
 
@@ -72,13 +73,6 @@ dotenv.config();
 
   aggregator.registerEnricher(
     new AiTopicsEnricher({
-      provider: openAiProvider,
-      thresholdLength: 30
-    })
-  );
-
-  aggregator.registerEnricher(
-    new AiImageEnricher({
       provider: openAiProvider,
       thresholdLength: 30
     })

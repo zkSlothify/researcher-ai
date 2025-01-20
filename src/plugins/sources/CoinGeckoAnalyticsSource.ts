@@ -44,6 +44,7 @@ export class CoinGeckoMarketAnalyticsSource implements ContentSource {
                     source: this.name,
                     text: `Symbol: ${symbol} Current Price: $${marketData.current_price.usd}\nVolume (24h): $${marketData.total_volume.usd}\nMarket Cap: $${marketData.market_cap.usd}\nDaily Change: ${marketData.price_change_24h}.`,
                     date: Math.floor(new Date().getTime() / 1000),
+                    link: `https://www.coingecko.com/en/coins/${symbol}`,
                     metadata: {
                         price: marketData.current_price.usd,
                         volume_24h: marketData.total_volume.usd,

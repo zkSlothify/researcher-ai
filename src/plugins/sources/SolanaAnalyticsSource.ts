@@ -52,6 +52,7 @@ export class SolanaTokenAnalyticsSource implements ContentSource {
           source: this.name,
           text: `Symbol: ${analytics.baseToken.symbol} Current Price: $${analytics.priceUsd}\nVolume (24h): $${analytics.volume.h24}\nMarket Cap: $${analytics.marketCap}\nDaily Change: ${analytics.priceChange.h24}`,
           date: Math.floor(new Date().getTime() / 1000),
+          link: `https://dexscreener.com/solana/${tokenAddress}`,
           metadata: {
             price: analytics.priceUsd,
             volume_24h: analytics.volume.h24,
@@ -62,7 +63,7 @@ export class SolanaTokenAnalyticsSource implements ContentSource {
           },
         };
 
-        return [summaryItem];
+        solanaResponse.push(summaryItem);
       } catch (error) {
         console.error("Error fetching analytics data:", error);
       }

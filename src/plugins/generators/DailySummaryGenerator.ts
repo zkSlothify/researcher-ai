@@ -37,8 +37,9 @@ export class DailySummaryGenerator {
         return;
       }
 
-      const groupedContent = this.groupContentByTopic(contentItems);
-
+      // const groupedContent = thiss.groupContentByTopic(contentItems);
+      const groupedContent = this.groupObjectsByTopics(contentItems);
+      console.log(groupedContent )
       const prompt = this.createAIPrompt(groupedContent, dateStr);
 
       const summaryText = await this.openAiProvider.summarize(prompt);
@@ -62,6 +63,40 @@ export class DailySummaryGenerator {
     } catch (error) {
       console.error(`Error generating daily summary for ${dateStr}:`, error);
     }
+  }
+
+  private groupObjectsByTopics(objects : any[]): any[] {
+    const topicMap = new Map();
+
+    // Build a map of topics to associated objects
+    objects.forEach(obj => {
+      if (obj.topics) {
+        obj.topics.forEach((topic:any) => {
+          let shortCase = topic.toLowerCase();
+            if (!topicMap.has(shortCase)) {
+                topicMap.set(shortCase, []);
+            }
+            topicMap.get(shortCase).push(obj);
+        });
+      }
+    });
+
+    // Convert the map to an array and sort by popularity (number of associated objects)
+    const sortedTopics = Array.from(topicMap.entries()).sort((a, b) => b[1].length - a[1].length);
+    console.log( sortedTopics )
+    // Format the result to include all topics from associated objects
+    return sortedTopics.map(([topic, associatedObjects]) => {
+        const mergedTopics = new Set();
+        associatedObjects.forEach((obj:any) => {
+            obj.topics.forEach((t:any) => mergedTopics.add(t));
+        });
+
+        return {
+            topic,
+            objects: associatedObjects,
+            allTopics: Array.from(mergedTopics)
+        };
+    });
   }
 
   
@@ -113,15 +148,18 @@ export class DailySummaryGenerator {
       }
     });
 
+    console.log( topicGroups )
     return topicGroups;
   }
 
-  private createAIPrompt(groupedContent: Record<string, ContentItem[]>, dateStr: string): string {
+  private createAIPrompt(groupedContent: Record<string, any>[], dateStr: string): string {
     let prompt = `Generate a comprehensive daily newsletter for ${dateStr} based on the following topics. Make sure to combine topics that are related, and OUTLINE on these Topics ( News, Dev, Events, Market Conditions ). The newsletter must be a bulleted list for the popular topics with bullet points of the content under that topic. For Market Conditions BE SPECIFIC and summarize daily changes\n\n`;
 
     for (const [topic, items] of Object.entries(groupedContent)) {
+      console.log( items.length )
       prompt += `**${topic}:**\n`;
-      items.forEach(item => {
+      items.forEach((item:any) => {
+        prompt += `***item***`
         if (item.text) {
           prompt += `- ${item.text}`;
         }
@@ -131,13 +169,17 @@ export class DailySummaryGenerator {
         if (item.metadata?.photos) {
           prompt += `- ${item.metadata?.photos}`;
         }
+        if (item.metadata?.photos) {
+          prompt += `- ${item.metadata?.photos}`;
+        }
       });
+      prompt += `***item_end***`
       prompt += `\n\n`;
     }
 
     prompt += `Provide a clear and concise summary that highlights the key activities and developments of the day.\n\n`;
 
-    prompt += `Respond MUST be a JSON array containing the values in a JSON block of topics formatted for markdown with this structure:\n\`\`\`json\n\[\n  'value',\n  'value'\n\]\n\`\`\`\n\nYour response must include the JSON block. Each JSON block should include the title of the topic, and the message content. Each message content MUST be a list of json objct of "text","sources","images". the sources for references (sources MUST only be under the source key, its okay if no sources under a topic), the images for references (images MUST only be under the source key, its okay if no images under a topic), and the messages.`
+    prompt += `Respond MUST be a JSON array containing the values in a JSON block of topics formatted for markdown with this structure:\n\`\`\`json\n\{\n  'value',\n  'value'\n\}\n\`\`\`\n\nYour response must include the JSON block. Each JSON block should include the title of the topic, and the message content. Each message content MUST be a list of json objct of "text","sources","images","videos". the sources for references (sources MUST only be under the source key, its okay if no sources under a topic), the images/videos for references (images/videos MUST only be under the source key), and the messages.`
 
     return prompt;
   }

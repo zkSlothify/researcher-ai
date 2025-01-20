@@ -46,6 +46,13 @@ export class TwitterSource implements ContentSource {
         const tweets : AsyncGenerator<any> = await this.client.getTweets(account, 10);
         
         for await (const tweet of tweets) {
+          let photos = tweet.photos.map((img : any) => img.url) || [];
+          let retweetPhotos = tweet.retweetedStatus?.photos?.map((img : any) => img.url) || [];
+          let videos = tweet.videos.map((img : any) => img.url) || [];
+          let videoPreview = tweet.videos.map((img : any) => img.preview) || [];
+          let retweetVideos = tweet.retweetedStatus?.videos.map((img : any) => img.url) || [];
+          let retweetVideoPreview = tweet.retweetedStatus?.videos.map((img : any) => img.preview) || [];
+          
             tweetsResponse.push({
                 cid: tweet.id,
                 type: "tweet",
@@ -57,9 +64,10 @@ export class TwitterSource implements ContentSource {
                     userId: tweet.userId,
                     tweetId: tweet.id,
                     likes: tweet.likes,
-                    replies: tweet.replise,
+                    replies: tweet.replies,
                     retweets: tweet.retweets,
-                    photos: tweet.photos.map((img : any) => img.url)
+                    photos: photos.concat(retweetPhotos,videoPreview,retweetVideoPreview),
+                    videos: videos.concat(retweetVideos)
                 },
             })
         }

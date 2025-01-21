@@ -36,4 +36,28 @@ export class ContentAggregator {
 
     return allItems;
   }
+
+  /**
+   * Fetch items from all registered sources
+   */
+  public async fetchSource(sourceName: string): Promise<ContentItem[]> {
+    let allItems: ContentItem[] = [];
+    for (const source of this.sources) {
+      try {
+        if ( source.name === sourceName ) {
+          const items = await source.fetchItems();
+          allItems = allItems.concat(items);
+        }
+      } catch (error) {
+        console.error(`Error fetching from ${source.name}:`, error);
+      }
+    }
+
+    // Apply each enricher to the entire articles array
+    for (const enricher of this.enrichers) {
+        allItems = await enricher.enrich(allItems);
+    }
+
+    return allItems;
+  }
 }

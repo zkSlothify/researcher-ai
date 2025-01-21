@@ -37,27 +37,20 @@ export class DailySummaryGenerator {
         return;
       }
 
-      // const groupedContent = thiss.groupContentByTopic(contentItems);
       const groupedContent = this.groupObjectsByTopics(contentItems);
 
       const prompt = this.createAIPrompt(groupedContent, dateStr);
 
       const summaryText = await this.openAiProvider.summarize(prompt);
 
-      console.log( summaryText )
-    //   const summaryItem: ContentItem = {
-    //     type: this.summaryType,
-    //     source: this.source,
-    //     cid: this.computeCid(dateStr),
-    //     title: `Daily Summary for ${dateStr}`,
-    //     text: summaryText,
-    //     date: new Date(dateStr).getTime() / 1000,
-    //     metadata: {
-    //       generated_at: new Date().toISOString(),
-    //     },
-    //   };
+      const summaryItem: any = {
+        type: this.summaryType,
+        title: `Daily Summary for ${dateStr}`,
+        text: summaryText,
+        date: new Date(dateStr).getTime() / 1000,
+      };
 
-    //   await this.storage.saveContentItem(summaryItem);
+      await this.storage.saveContentItem(summaryItem);
 
       console.log(`Daily summary for ${dateStr} generated and stored successfully.`);
     } catch (error) {
@@ -100,7 +93,7 @@ export class DailySummaryGenerator {
       });
     
       if ( ! topicAlreadyAdded ) {
-        // alreadyAdded[topic] = true;
+        alreadyAdded[topic] = true;
 
         return {
           topic,
@@ -143,7 +136,7 @@ export class DailySummaryGenerator {
 
     prompt += `Provide a clear and concise summary that highlights the key activities and developments of the day.\n\n`;
 
-    prompt += `Response MUST be a JSON array containing the values in a JSON block of topics formatted for markdown with this structure:\n\`\`\`json\n\{\n  'value',\n  'value'\n\}\n\`\`\`\n\nYour response must include the JSON block. Each JSON block should include the title of the topic, and the message content. Each message content MUST be a list of json objct of "text","sources","images","videos". the sources for references (sources MUST only be under the source key, its okay if no sources under a topic), the images/videos for references (images/videos MUST only be under the source key), and the messages.`
+    prompt += `Response MUST be a valid JSON array containing the values in a JSON block of topics formatted for markdown with this structure:\n\`\`\`json\n\{\n  'value',\n  'value'\n\}\n\`\`\`\n\nYour response must include the JSON block. Each JSON block should include the title of the topic, and the message content. Each message content MUST be a list of json objct of "text","sources","images","videos". the sources for references (sources MUST only be under the source key, its okay if no sources under a topic), the images/videos for references (images/videos MUST only be under the source key), and the messages.`
 
     return prompt;
   }

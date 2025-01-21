@@ -3,7 +3,7 @@
 import { StoragePlugin } from "./StoragePlugin"; // a small interface if you like
 import { open, Database } from "sqlite";
 import sqlite3 from "sqlite3";
-import { ContentItem } from "../../types";
+import { ContentItem, SummaryItem } from "../../types";
 
 export interface UnifiedStorageConfig {
   dbPath: string;
@@ -35,6 +35,23 @@ export class SQLiteStorage implements StoragePlugin {
         metadata TEXT  -- JSON-encoded metadata
       );
     `);
+
+    await this.db.exec(`
+      CREATE TABLE IF NOT EXISTS summary (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        type TEXT NOT NULL,
+        title TEXT,
+        text TEXT,
+        date INTEGER
+      );
+    `);
+  }
+
+
+  public async close(): Promise<void> {
+    if (this.db) {
+      await this.db.close()
+    }
   }
 
   public async save(items: ContentItem[]): Promise<ContentItem[]> {
@@ -120,6 +137,25 @@ export class SQLiteStorage implements StoragePlugin {
     return items;
   }
 
+  public async saveContentItem(item: SummaryItem): Promise<void> {
+    if (!this.db) {
+      throw new Error("Database not initialized. Call init() first.");
+    }
+
+    await this.db.run(
+      `
+      INSERT INTO summary (type, title, text, date)
+      VALUES (?, ?, ?, ?)
+      `,
+      [
+        item.type,
+        item.title || null,
+        item.text || null,
+        item.date,
+      ]
+    );
+  }
+
   public async getItemsByType(type: string): Promise<ContentItem[]> {
     if (!this.db) {
       throw new Error("Database not initialized.");
@@ -181,6 +217,43 @@ export class SQLiteStorage implements StoragePlugin {
       }));
     } catch (error) {
       console.error("Error fetching content items between epochs:", error);
+      throw error;
+    }
+  }
+  
+  public async getSummaryBetweenEpoch(
+    startEpoch: number,
+    endEpoch: number,
+    excludeType?: string
+  ): Promise<SummaryItem[]> {
+    if (!this.db) {
+      throw new Error("Database not initialized.");
+    }
+
+    if (startEpoch > endEpoch) {
+      throw new Error("startEpoch must be less than or equal to endEpoch.");
+    }
+
+    let query = `SELECT * FROM summary WHERE date BETWEEN ? AND ?`;
+    const params: any[] = [startEpoch, endEpoch];
+    
+    if (excludeType) {
+      query += ` AND type != ?`;
+      params.push(excludeType);
+    }
+
+    try {
+      const rows = await this.db.all(query, params);
+
+      return rows.map(row => ({
+        id: row.id,
+        type: row.type,
+        title: row.title || undefined,
+        text: row.text || undefined,
+        date: row.date,
+      }));
+    } catch (error) {
+      console.error("Error fetching summary between epochs:", error);
       throw error;
     }
   }

@@ -30,7 +30,7 @@ export class OpenAIProvider implements AiProvider {
       const params: OpenAI.Chat.ChatCompletionCreateParams = {
         messages: [{ role: 'user', content: prompt }],
         model: this.model,
-        frequency_penalty: 0.2,
+        frequency_penalty: 0,
       };
   
       const { data: chatCompletion, response: raw } = await this.openai.chat.completions.create(params).withResponse();

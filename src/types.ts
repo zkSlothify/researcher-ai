@@ -15,6 +15,14 @@ export interface ContentItem {
   date?: number;           // When it was created/published
   metadata?: Record<string, any>; // Additional key-value data
 }
+
+export interface SummaryItem {
+  id?: number;          // Will be assigned by storage if not provided
+  type: string;          // e.g. "tweet", "newsArticle", "discordMessage", "githubIssue"
+  title?: string;        // optional – for articles, maybe a tweet "title" is same as text
+  text?: string;         // main text content (tweet text, article abstract, etc.)
+  date?: number;           // When it was created/published
+}
   
 /**
  * An interface that any source plugin must implement.

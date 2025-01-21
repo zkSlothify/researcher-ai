@@ -10,7 +10,7 @@ interface DiscordChannelSourceConfig {
   name: string;
   botToken: string;
   channelIds: string[];
-  provider: AiProvider;
+  provider: AiProvider | undefined;
 }
 
 interface LastProcessedState {
@@ -19,7 +19,7 @@ interface LastProcessedState {
 
 export class DiscordChannelSource implements ContentSource {
   public name: string;
-  private provider: AiProvider;
+  public provider: AiProvider | undefined;
   private botToken: string = '';
   private channelIds: string[];
   private client: Client;
@@ -81,27 +81,28 @@ export class DiscordChannelSource implements ContentSource {
 
       const prompt = this.formatStructuredPrompt(transcript);
 
-      const summary = await this.provider.summarize(prompt);
-
-      console.log( summary )
-      discordResponse.push({
-        type: "discordChannelSummary",
-        cid: `${channelId}-${lastProcessedId}`,
-        source: this.name,
-        text: summary,
-        link: `https://discord.com/channels/${(channel as TextChannel).guild.id}/${channelId}`,
-        date: Math.floor(new Date().getTime() / 1000),
-        metadata: {
-          channelId: channelId,
-          guildId: (channel as TextChannel).guild.id,
-          summaryDate: Math.floor(new Date().getTime() / 1000),
-        },
-      });
-
-      const lastMessage = sortedMessages.first();
-      if (lastMessage) {
-        this.lastProcessed[channelId] = lastMessage.id;
-        this.saveState();
+      if ( this.provider ) {
+        const summary = await this.provider.summarize(prompt);
+  
+        discordResponse.push({
+          type: "discordChannelSummary",
+          cid: `${channelId}-${lastProcessedId}`,
+          source: this.name,
+          text: summary,
+          link: `https://discord.com/channels/${(channel as TextChannel).guild.id}/${channelId}`,
+          date: Math.floor(new Date().getTime() / 1000),
+          metadata: {
+            channelId: channelId,
+            guildId: (channel as TextChannel).guild.id,
+            summaryDate: Math.floor(new Date().getTime() / 1000),
+          },
+        });
+  
+        const lastMessage = sortedMessages.first();
+        if (lastMessage) {
+          this.lastProcessed[channelId] = lastMessage.id;
+          this.saveState();
+        }
       }
     }
     return discordResponse

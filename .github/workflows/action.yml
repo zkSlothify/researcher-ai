@@ -9,6 +9,15 @@ jobs:
   sqlite-job:
     runs-on: ubuntu-latest
 
+    env:
+      TWITTER_USERNAME: ${{ secrets.TWITTER_USERNAME }}
+      TWITTER_PASSWORD: ${{ secrets.TWITTER_PASSWORD }}
+      TWITTER_EMAIL: ${{ secrets.TWITTER_EMAIL }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      DISCORD_APP_ID: ${{ secrets.DISCORD_APP_ID }}
+      DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+      BIRDEYE_API_KEY: ${{ secrets.BIRDEYE_API_KEY }}
+
     steps:
       # Step 1: Check out the repository
       - name: Checkout code
@@ -27,13 +36,13 @@ jobs:
       # Step 4: Run the script
       - name: Run index.js
         env:
-          TWITTER_USERNAME: ${{ secrets.TWITTER_USERNAME }}
-          TWITTER_PASSWORD: ${{ secrets.TWITTER_PASSWORD }}
-          TWITTER_EMAIL: ${{ secrets.TWITTER_EMAIL }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          DISCORD_APP_ID: ${{ secrets.DISCORD_APP_ID }}
-          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-          BIRDEYE_API_KEY: ${{ secrets.BIRDEYE_API_KEY }}
+          TWITTER_USERNAME: ${{ env.TWITTER_USERNAME }}
+          TWITTER_PASSWORD: ${{ env.TWITTER_PASSWORD }}
+          TWITTER_EMAIL: ${{ env.TWITTER_EMAIL }}
+          OPENAI_API_KEY: ${{ env.OPENAI_API_KEY }}
+          DISCORD_APP_ID: ${{ env.DISCORD_APP_ID }}
+          DISCORD_TOKEN: ${{ env.DISCORD_TOKEN }}
+          BIRDEYE_API_KEY: ${{ env.BIRDEYE_API_KEY }}
           RUN_ONCE: true
         run: npm run dev
 

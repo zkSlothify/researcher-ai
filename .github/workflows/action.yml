@@ -34,7 +34,7 @@ jobs:
           DISCORD_APP_ID: ${{ secrets.DISCORD_APP_ID }}
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
           BIRDEYE_API_KEY: ${{ secrets.BIRDEYE_API_KEY }}
-          RUN_ONCE: ${{ secrets.RUN_ONCE }}
+          RUN_ONCE: true
         run: npm run dev
 
       - name: Commit and Push Changes

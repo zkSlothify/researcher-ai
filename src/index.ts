@@ -8,9 +8,9 @@ import { DiscordChannelSource } from "./plugins/sources/DiscordChannelSource";
 import { DiscordAnnouncementSource } from "./plugins/sources/DiscordAnnouncementSource";
 import { SolanaTokenAnalyticsSource } from "./plugins/sources/SolanaAnalyticsSource";
 import { CoinGeckoMarketAnalyticsSource } from "./plugins/sources/CoinGeckoAnalyticsSource";
+import { DailySummaryGenerator } from "./plugins/generators/DailySummaryGenerator";
 
 import dotenv from "dotenv";
-import { DailySummaryGenerator } from "./plugins/generators/DailySummaryGenerator";
 
 dotenv.config();
 

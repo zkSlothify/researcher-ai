@@ -41,7 +41,7 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add data.sqlite
+          git add ./data/db.sqlite
           git add ./json/
           git commit -m "Update from collection"
           git push

@@ -144,7 +144,6 @@ const sourceConfigs: SourceConfig[] = [
 
     const summarizeDaily = async () => {
       try {
-        console.log( "HERE", process.env.RUN_ONCE, process.env.TWITTER_USERNAME )
         const today = new Date();
         
         let summary = await storage.getSummaryBetweenEpoch((today.getTime() - ( hour * 24 * 1000)) / 1000,today.getTime() / 1000);

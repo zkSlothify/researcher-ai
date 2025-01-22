@@ -36,3 +36,12 @@ jobs:
           BIRDEYE_API_KEY: ${{ secrets.BIRDEYE_API_KEY }}
           RUN_ONCE: ${{ secrets.RUN_ONCE }}
         run: npm run dev
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add data.sqlite
+          git add ./json/
+          git commit -m "Update from collection"
+          git push

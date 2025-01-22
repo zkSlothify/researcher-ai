@@ -25,6 +25,7 @@ let hour = 60 * 60 * 1000;
 
 let dailySummaryInterval;
 
+console.log( process.env.RUN_ONCE, process.env.TWITTER_USERNAME )
 let runOnce = process.env.RUN_ONCE === 'true';
 
 const sourceConfigs: SourceConfig[] = [

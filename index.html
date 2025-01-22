@@ -15,7 +15,7 @@
     <pre id="jsonDisplay">Select a file to view JSON content...</pre>
     <script>
         async function fetchJSONFiles() {
-            const response = await fetch('./'); // Adjust this path if files are in subfolders
+            const response = await fetch('./json/'); // Adjust this path if files are in subfolders
             const text = await response.text();
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(text, 'text/html');

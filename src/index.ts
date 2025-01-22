@@ -25,6 +25,8 @@ let hour = 60 * 60 * 1000;
 
 let dailySummaryInterval;
 
+let runOnce = process.env.RUN_ONCE === 'true';
+
 const sourceConfigs: SourceConfig[] = [
   {
     source: new TwitterSource({
@@ -171,20 +173,29 @@ const sourceConfigs: SourceConfig[] = [
     process.on("SIGINT", shutdown);
     process.on("SIGTERM", shutdown);
 
-    sourceConfigs.forEach((config) => {
+    sourceConfigs.forEach(async (config) => {
       fetchAndStore(config.source.name);
 
       setInterval(() => {
         fetchAndStore(config.source.name);
       }, config.interval);
     });
+    
+    if (runOnce) {
+      await new Promise(resolve => setTimeout(resolve, 90000))
+    }
 
-    summarizeDaily()
+    await summarizeDaily()
     dailySummaryInterval = setInterval(() => {
       summarizeDaily()
     }, hour * 1);
 
     console.log("Content aggregator is running and scheduled.");
+
+    if (runOnce) {
+      await shutdown();
+      console.log("Content aggregator is complete.");
+    }
   } catch (error) {
     clearInterval(dailySummaryInterval);
     console.error("Error initializing the content aggregator:", error);

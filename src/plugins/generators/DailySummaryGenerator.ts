@@ -3,7 +3,8 @@
 import { OpenAIProvider } from "../ai/OpenAIProvider";
 import { SQLiteStorage } from "../storage/SQLiteStorage";
 import { ContentItem } from "../../types";
-import crypto from "crypto";
+import fs from "fs";
+
 
 interface DailySummaryGeneratorConfig {
   openAiProvider: OpenAIProvider;
@@ -51,6 +52,8 @@ export class DailySummaryGenerator {
       };
 
       await this.storage.saveContentItem(summaryItem);
+
+      fs.writeFileSync(`${dateStr}.json`, JSON.stringify(summaryItem, null, 2));
 
       console.log(`Daily summary for ${dateStr} generated and stored successfully.`);
     } catch (error) {

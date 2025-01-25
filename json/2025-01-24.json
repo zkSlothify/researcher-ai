@@ -3,108 +3,72 @@
   "title": "Daily Summary for 2025-01-24",
   "text": [
     {
-      "title": "AI Developments and Events",
-      "messages": [
+      "title": "AI and Technology Innovations",
+      "content": [
         {
-          "text": "Big_Pharmai launched the first AI Agent built on the BADDIE framework to celebrate reaching 20k followers.",
-          "sources": [
-            "https://twitter.com/daosdotfun/status/1882846519092711471"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiEsxNQXgAAfaB4.jpg"
-          ],
-          "videos": []
+          "text": "Big_Pharmai launches the first AI Agent built on the BADDIE framework to celebrate reaching 20k followers.",
+          "sources": "https://twitter.com/daosdotfun/status/1882846519092711471",
+          "images": "https://pbs.twimg.com/media/GiEsxNQXgAAfaB4.jpg",
+          "videos": ""
         },
         {
-          "text": "An AI x VC game show is announced with a trailer released today and more info/demos tomorrow.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1882961537469731126"
-          ],
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1882945167230996480/pu/img/Dwu1W8cS3YjCURBo.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/ext_tw_video/1882945167230996480/pu/vid/avc1/1280x720/70BwMvt5xRn8-CYW.mp4?tag=12"
-          ]
+          "text": "Announcement of an AI x VC game show with a trailer release today and a demo coming soon.",
+          "sources": "https://twitter.com/ai16zdao/status/1882961537469731126",
+          "images": "https://pbs.twimg.com/ext_tw_video_thumb/1882945167230996480/pu/img/Dwu1W8cS3YjCURBo.jpg",
+          "videos": "https://video.twimg.com/ext_tw_video/1882945167230996480/pu/vid/avc1/1280x720/70BwMvt5xRn8-CYW.mp4?tag=12"
         },
         {
-          "text": "Mind AI collaborates with ElizaOS to enhance AI's processing of social signals and market data.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1882939509949730842"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiEmTktbQAAApoA.jpg"
-          ],
-          "videos": []
+          "text": "Mind AI partners with ElizaOS_ai to enhance AI capabilities in processing social signals and market data.",
+          "sources": "https://twitter.com/ai16zdao/status/1882939509949730842",
+          "images": "https://pbs.twimg.com/media/GiEmTktbQAAApoA.jpg",
+          "videos": ""
         },
         {
-          "text": "Fleek announces the availability of AI Agent APIs, allowing users to deploy, update, and manage AI agents via API calls.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1882935640209362955"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiFOaoKWIAA_rW9.jpg"
-          ],
-          "videos": []
+          "text": "Fleek launches AI Agent APIs, allowing users to deploy, update, and control AI agents with simple API calls.",
+          "sources": "https://twitter.com/ai16zdao/status/1882935640209362955",
+          "images": "https://pbs.twimg.com/media/GiFOaoKWIAA_rW9.jpg",
+          "videos": ""
         },
         {
-          "text": "A new partnership extends AI agent capabilities, promising improvements for both human and AI interactions.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1882936313835635088"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiFJVj4W8AAUQIM.jpg"
-          ],
-          "videos": []
+          "text": "Nillion Network's partnership expands capabilities for AI agents, marking an important milestone for the network.",
+          "sources": "https://twitter.com/ai16zdao/status/1882936313835635088",
+          "images": "https://pbs.twimg.com/media/GiFJVj4W8AAUQIM.jpg",
+          "videos": ""
         },
         {
-          "text": "Reality Spiral announces a soft launch of a new UI for interacting with AI agents.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1883001250096324637"
-          ],
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1882964151125045248/pu/img/Qv_fcm_W_I2c9Xdt.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/ext_tw_video/1882964151125045248/pu/vid/avc1/1490x720/sBY67v3vT7coSwVd.mp4?tag=12"
-          ]
+          "text": "Reality Spiral announces the soft launch of their new UI for agent interaction.",
+          "sources": "https://twitter.com/ai16zdao/status/1883001250096324637",
+          "images": "https://pbs.twimg.com/ext_tw_video_thumb/1882964151125045248/pu/img/Qv_fcm_W_I2c9Xdt.jpg",
+          "videos": "https://video.twimg.com/ext_tw_video/1882964151125045248/pu/vid/avc1/1490x720/sBY67v3vT7coSwVd.mp4?tag=12"
         }
       ]
     },
     {
       "title": "Market Conditions",
-      "messages": [
+      "content": [
         {
-          "text": "ai16z saw a significant decrease in value, dropping 7.28% to a current price of $0.7965.",
-          "sources": [
-            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
-          ],
-          "images": [],
-          "videos": []
+          "text": "AI16z token experiences a significant decrease, with a daily change of -7.28%, current price at $0.7965.",
+          "sources": "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+          "images": "",
+          "videos": ""
         },
         {
-          "text": "Bitcoin's value increased notably today, currently priced at $104,643, up by 1037 to reach a market cap of over $2 trillion.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin"
-          ],
-          "images": [],
-          "videos": []
+          "text": "Bitcoin sees an impressive daily rise of 1037 in its value, with a current price of $104643.",
+          "sources": "https://www.coingecko.com/en/coins/bitcoin",
+          "images": "",
+          "videos": ""
         },
         {
-          "text": "Ethereum's market faced a downturn, dropping 11.18%, with a current price of $3293.69.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/ethereum"
-          ],
-          "images": [],
-          "videos": []
+          "text": "Ethereum's value declines by -11.18% currently priced at $3293.69.",
+          "sources": "https://www.coingecko.com/en/coins/ethereum",
+          "images": "",
+          "videos": ""
         },
         {
-          "text": "Solana experienced a slight decrease of 0.52% in its value, bringing the price down to $251.21.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/solana"
-          ],
-          "images": [],
-          "videos": []
+          "text": "Solana experiences a slight drop, down by -0.52%, trading at $251.21.",
+          "sources": "https://www.coingecko.com/en/coins/solana",
+          "images": "",
+          "videos": ""
         }
       ]
     }

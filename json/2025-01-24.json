@@ -3,50 +3,68 @@
   "title": "Daily Summary for 2025-01-24",
   "text": [
     {
-      "title": "AI Innovations & Updates",
-      "messages": [
+      "AI Developments and Announcements": [
         {
-          "text": "Big_Pharmai launches the first AI Agent built on the BADDIE framework to celebrate reaching 20k followers.",
-          "sources": "https://twitter.com/daosdotfun/status/1882846519092711471",
+          "text": "Big PharmAI launches the first AI Agent built on the BADDIE framework and celebrates reaching 20k followers.",
+          "sources": [
+            "https://twitter.com/daosdotfun/status/1882846519092711471"
+          ],
           "images": [
             "https://pbs.twimg.com/media/GiEsxNQXgAAfaB4.jpg"
           ],
-          "videos": ""
+          "videos": []
         },
         {
-          "text": "Fleek announces AI Agent APIs now live, allowing simple API calls to deploy, update, and control AI agents.",
-          "sources": "https://twitter.com/ai16zdao/status/1882935640209362955",
-          "images": [
-            "https://pbs.twimg.com/media/GiFOaoKWIAA_rW9.jpg"
+          "text": "Mind AI partners with ElizaOS to enhance AI processing of social signals and market data.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1882939509949730842"
           ],
-          "videos": ""
-        },
-        {
-          "text": "Mind AI partners with ElizaOS to enhance capabilities in processing social signals and market data.",
-          "sources": "https://twitter.com/ai16zdao/status/1882939509949730842",
           "images": [
             "https://pbs.twimg.com/media/GiEmTktbQAAApoA.jpg"
           ],
-          "videos": ""
+          "videos": []
         },
         {
-          "text": "Reality Spiral announces the soft launch of their new UI for interacting with AI agents.",
-          "sources": "https://twitter.com/ai16zdao/status/1883001250096324637",
+          "text": "Fleek announces AI Agent APIs are now live, enabling the deployment, update, and control of AI agents through simple API calls.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1882935640209362955"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GiFOaoKWIAA_rW9.jpg"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Reality Spiral announces the soft launch of a new UI for interacting with AI agents, starting with specific applications.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1883001250096324637"
+          ],
           "images": [
             "https://pbs.twimg.com/ext_tw_video_thumb/1882964151125045248/pu/img/Qv_fcm_W_I2c9Xdt.jpg"
           ],
           "videos": [
             "https://video.twimg.com/ext_tw_video/1882964151125045248/pu/vid/avc1/1490x720/sBY67v3vT7coSwVd.mp4?tag=12"
           ]
+        },
+        {
+          "text": "Nillion Network announces a new partnership unlocking powerful capabilities for AI agents.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1882936313835635088"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GiFJVj4W8AAUQIM.jpg"
+          ],
+          "videos": []
         }
       ]
     },
     {
-      "title": "AI and Venture Capital",
-      "messages": [
+      "AI and Venture Capital Game Show": [
         {
-          "text": "Dankvr hints at merging AI and VC into a game show with a trailer released today and more info coming tomorrow.",
-          "sources": "https://twitter.com/ai16zdao/status/1882961537469731126",
+          "text": "Dank VR teases the upcoming launch of 'AI x VC' game show, with a trailer out and further info and demo to follow.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1882961537469731126"
+          ],
           "images": [
             "https://pbs.twimg.com/ext_tw_video_thumb/1882945167230996480/pu/img/Dwu1W8cS3YjCURBo.jpg"
           ],
@@ -57,52 +75,38 @@
       ]
     },
     {
-      "title": "Market Conditions",
-      "messages": [
+      "Market Conditions": [
         {
-          "text": "ai16z sees a significant drop, with a daily change of -7.28% and a current price of $0.7965.",
-          "sources": "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
-          "images": [],
-          "videos": ""
-        },
-        {
-          "text": "Bitcoin continues its upward trend with a daily change of 1037%, a current price of $104643, and a market cap over $2 trillion.",
-          "sources": "https://www.coingecko.com/en/coins/bitcoin",
-          "images": [],
-          "videos": ""
-        },
-        {
-          "text": "Ethereum experiences a drop with a daily change of -11.17%, current price at $3293.69.",
-          "sources": "https://www.coingecko.com/en/coins/ethereum",
-          "images": [],
-          "videos": ""
-        },
-        {
-          "text": "Solana's price decreases slightly, marking a -0.52% daily change with current price at $251.21.",
-          "sources": "https://www.coingecko.com/en/coins/solana",
-          "images": [],
-          "videos": ""
-        }
-      ]
-    },
-    {
-      "title": "Token Holder Updates & Partnerships",
-      "messages": [
-        {
-          "text": "All token holders now gain access to Classified 70b BF 16 with new releases coming soon.",
-          "sources": "https://twitter.com/daosdotfun/status/1882675811360346488",
-          "images": [
-            "https://pbs.twimg.com/media/GiCbFCyasAAZRYd.jpg"
+          "text": "ai16z token saw a daily price decrease of 7.28%, with a current price of $0.7965 and a market cap of $876.22 million.",
+          "sources": [
+            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
           ],
-          "videos": ""
+          "images": [],
+          "videos": []
         },
         {
-          "text": "Nillion Network announces a partnership that extends capabilities for AI agents, integrating beyond human users.",
-          "sources": "https://twitter.com/ai16zdao/status/1882936313835635088",
-          "images": [
-            "https://pbs.twimg.com/media/GiFJVj4W8AAUQIM.jpg"
+          "text": "Bitcoin experienced a substantial gain, increasing by 1037 to a current price of $104,643, with a total market cap surpassing $2 trillion.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/bitcoin"
           ],
-          "videos": ""
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Ethereum dropped by 11.18 to $3,293.69, impacting its market cap which now stands at $396.89 billion.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/ethereum"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Solana's price slightly decreased by 0.52%, maintaining a current price of $251.21, with a market cap of $122.03 billion.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/solana"
+          ],
+          "images": [],
+          "videos": []
         }
       ]
     }

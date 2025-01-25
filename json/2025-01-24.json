@@ -3,91 +3,55 @@
   "title": "Daily Summary for 2025-01-24",
   "text": [
     {
-      "title": "Market Conditions",
-      "messages": [
+      "title": "AI Developments and Launches",
+      "content": [
         {
-          "text": "Bitcoin marks an impressive surge, crossing the $104,000 barrier.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin"
-          ],
-          "images": [],
-          "videos": []
+          "text": "AI x VC to become a game show. Trailer released today with demo and more info expected tomorrow.",
+          "sources": "https://twitter.com/ai16zdao/status/1882961537469731126",
+          "images": "https://pbs.twimg.com/ext_tw_video_thumb/1882945167230996480/pu/img/Dwu1W8cS3YjCURBo.jpg",
+          "videos": "https://video.twimg.com/ext_tw_video/1882945167230996480/pu/vid/avc1/1280x720/70BwMvt5xRn8-CYW.mp4?tag=12"
         },
         {
-          "text": "Ethereum experiences a significant drop, while Solana shows marginal losses.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/ethereum",
-            "https://www.coingecko.com/en/coins/solana"
-          ],
-          "images": [],
-          "videos": []
+          "text": "Mind AI partners with ElizaOS to enhance AI capabilities for processing social signals and market data.",
+          "sources": "https://twitter.com/ai16zdao/status/1882939509949730842",
+          "images": "https://pbs.twimg.com/media/GiEmTktbQAAApoA.jpg"
         },
         {
-          "text": "ai16z token sees a notable decline, indicating investor caution.",
-          "sources": [
-            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
-          ],
-          "images": [],
-          "videos": []
+          "text": "AI Agent APIs are now live on Fleek, allowing users to deploy, update, and control AI agents via simple API calls.",
+          "sources": "https://twitter.com/ai16zdao/status/1882935640209362955",
+          "images": "https://pbs.twimg.com/media/GiFOaoKWIAA_rW9.jpg"
+        },
+        {
+          "text": "Nillion Network partnership enhances capabilities for AI agents and detailed integration possibilities.",
+          "sources": "https://twitter.com/ai16zdao/status/1882936313835635088",
+          "images": "https://pbs.twimg.com/media/GiFJVj4W8AAUQIM.jpg"
+        },
+        {
+          "text": "Reality Spiral announces soft launch of new UI for interacting with agents, with an exciting preview video available.",
+          "sources": "https://twitter.com/ai16zdao/status/1883001250096324637",
+          "images": "https://pbs.twimg.com/ext_tw_video_thumb/1882964151125045248/pu/img/Qv_fcm_W_I2c9Xdt.jpg",
+          "videos": "https://video.twimg.com/ext_tw_video/1882964151125045248/pu/vid/avc1/1490x720/sBY67v3vT7coSwVd.mp4?tag=12"
         }
       ]
     },
     {
-      "title": "AI and Technology Developments",
-      "messages": [
+      "title": "Market Conditions",
+      "content": [
         {
-          "text": "The AI x VC is evolving into an interactive game show. Demo and more information will be available tomorrow.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1882961537469731126"
-          ],
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1882945167230996480/pu/img/Dwu1W8cS3YjCURBo.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/ext_tw_video/1882945167230996480/pu/vid/avc1/1280x720/70BwMvt5xRn8-CYW.mp4?tag=12"
-          ]
+          "text": "Bitcoin experiences a significant increase, current price is $104,643 reflecting a daily change of +1037.",
+          "sources": "https://www.coingecko.com/en/coins/bitcoin"
         },
         {
-          "text": "Mind AI partners with ElizaOS to advance capabilities in processing social signals.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1882939509949730842"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiEmTktbQAAApoA.jpg"
-          ],
-          "videos": []
+          "text": "Ethereum shows a decrease with current price at $3293.69 and a daily change of -11.18.",
+          "sources": "https://www.coingecko.com/en/coins/ethereum"
         },
         {
-          "text": "Fleek launches AI Agent APIs, offering simple API calls for deploying, updating, and controlling AI agents.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1882935640209362955"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiFOaoKWIAA_rW9.jpg"
-          ],
-          "videos": []
+          "text": "Solana sees a minor dip, priced at $251.21 with a slight change of -0.52.",
+          "sources": "https://www.coingecko.com/en/coins/solana"
         },
         {
-          "text": "Nillion Network's integration with AI agents promises enhanced capabilities beyond typical user interactions.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1882936313835635088"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiFJVj4W8AAUQIM.jpg"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Reality Spiral introduces a new UI for interacting with agents in a soft launch.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1883001250096324637"
-          ],
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1882964151125045248/pu/img/Qv_fcm_W_I2c9Xdt.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/ext_tw_video/1882964151125045248/pu/vid/avc1/1490x720/sBY67v3vT7coSwVd.mp4?tag=12"
-          ]
+          "text": "Token ai16z experiences a notable downturn with current price at $0.7965, marking a daily change of -7.28.",
+          "sources": "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
         }
       ]
     }

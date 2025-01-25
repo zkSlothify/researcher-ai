@@ -53,7 +53,7 @@ export class DailySummaryGenerator {
 
       await this.storage.saveContentItem(summaryItem);
 
-      fs.writeFileSync(`${dateStr}.json`, JSON.stringify(summaryItem, null, 2));
+      fs.writeFileSync(`./json/${dateStr}.json`, JSON.stringify(summaryItem, null, 2));
 
       console.log(`Daily summary for ${dateStr} generated and stored successfully.`);
     } catch (error) {

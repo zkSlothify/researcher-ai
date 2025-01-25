@@ -146,7 +146,7 @@ const sourceConfigs: SourceConfig[] = [
       try {
         const today = new Date();
         
-        let summary = await storage.getSummaryBetweenEpoch((today.getTime() - ( hour * 24 * 1000)) / 1000,today.getTime() / 1000);
+        let summary = await storage.getSummaryBetweenEpoch((today.getTime() - ( hour * 24 )) / 1000,today.getTime() / 1000);
         
         if ( summary && summary.length <= 0 ) {
           const dateStr = today.toISOString().slice(0, 10);

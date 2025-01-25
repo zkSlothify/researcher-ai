@@ -145,11 +145,14 @@ const sourceConfigs: SourceConfig[] = [
     const summarizeDaily = async () => {
       try {
         const today = new Date();
-        
+
         let summary = await storage.getSummaryBetweenEpoch((today.getTime() - ( hour * 24 )) / 1000,today.getTime() / 1000);
         
         if ( summary && summary.length <= 0 ) {
-          const dateStr = today.toISOString().slice(0, 10);
+          const summaryDate = new Date(today);
+          summaryDate.setDate(summaryDate.getDate() - 1)
+          
+          const dateStr = summaryDate.toISOString().slice(0, 10);
           console.log(`Summarizing data from for daily report`);
         
           await summaryGenerator.generateAndStoreSummary(dateStr);

@@ -43,17 +43,23 @@ export class DailySummaryGenerator {
       const prompt = this.createAIPrompt(groupedContent, dateStr);
 
       const summaryText = await this.openAiProvider.summarize(prompt);
-
+      const summaryJSONString = summaryText.replace(/```json\n|```/g, "");
+      const summaryJSON = JSON.parse(summaryJSONString);
       const summaryItem: any = {
         type: this.summaryType,
         title: `Daily Summary for ${dateStr}`,
-        text: summaryText,
+        text: JSON.stringify(summaryJSON || summaryText),
         date: new Date(dateStr).getTime() / 1000,
       };
 
       await this.storage.saveContentItem(summaryItem);
 
-      fs.writeFileSync(`./json/${dateStr}.json`, JSON.stringify(summaryItem, null, 2));
+      fs.writeFileSync(`./json/${dateStr}.json`, JSON.stringify({
+        type: this.summaryType,
+        title: `Daily Summary for ${dateStr}`,
+        text: summaryJSON,
+        date: new Date(dateStr).getTime() / 1000,
+      }, null, 2));
 
       console.log(`Daily summary for ${dateStr} generated and stored successfully.`);
     } catch (error) {

@@ -3,10 +3,10 @@
   "title": "Daily Summary for 2025-01-24",
   "text": [
     {
-      "title": "AI Developments and Partnerships",
+      "title": "AI Developments & Innovations",
       "content": [
         {
-          "text": "Big Pharmai launches the first AI Agent using the BADDIE framework, celebrating 20k followers.",
+          "text": "Launch of First AI Agent Built on BADDIE Framework.",
           "sources": [
             "https://twitter.com/daosdotfun/status/1882846519092711471"
           ],
@@ -16,7 +16,19 @@
           "videos": []
         },
         {
-          "text": "Mind AI partners with ElizaOS to enhance AI capabilities in processing social signals and market data.",
+          "text": "Turning AI x VC into a Game Show: Demo Tomorrow.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1882961537469731126"
+          ],
+          "images": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/1882945167230996480/pu/img/Dwu1W8cS3YjCURBo.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/ext_tw_video/1882945167230996480/pu/vid/avc1/1280x720/70BwMvt5xRn8-CYW.mp4?tag=12"
+          ]
+        },
+        {
+          "text": "Mind AI Partners with ElizaOS to Enhance AI Capabilities.",
           "sources": [
             "https://twitter.com/ai16zdao/status/1882939509949730842"
           ],
@@ -26,7 +38,7 @@
           "videos": []
         },
         {
-          "text": "Fleek unveils new AI Agent APIs – easily deploy, update, and control AI agents via simple API calls.",
+          "text": "Fleek Launches AI Agent APIs - Deploy, Update, Control with Simple Calls.",
           "sources": [
             "https://twitter.com/ai16zdao/status/1882935640209362955"
           ],
@@ -36,7 +48,7 @@
           "videos": []
         },
         {
-          "text": "Nillion Network announces a partnership extending capabilities for AI agents, focusing on AI-human integration.",
+          "text": "Nillion Network Partnership Unlocks New Capabilities for AI Agents.",
           "sources": [
             "https://twitter.com/ai16zdao/status/1882936313835635088"
           ],
@@ -46,7 +58,7 @@
           "videos": []
         },
         {
-          "text": "Reality Spiral announces the soft launch of a new UI for interacting with AI agents, initial launch starting soon.",
+          "text": "Reality Spiral Soft Launches New UI for AI Agent Interaction.",
           "sources": [
             "https://twitter.com/ai16zdao/status/1883001250096324637"
           ],
@@ -60,54 +72,29 @@
       ]
     },
     {
-      "title": "AI Entertainment",
-      "content": [
-        {
-          "text": "AI x VC to become a game show – a trailer released today with more information including a demo coming tomorrow.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1882961537469731126"
-          ],
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1882945167230996480/pu/img/Dwu1W8cS3YjCURBo.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/ext_tw_video/1882945167230996480/pu/vid/avc1/1280x720/70BwMvt5xRn8-CYW.mp4?tag=12"
-          ]
-        }
-      ]
-    },
-    {
       "title": "Market Conditions",
       "content": [
         {
-          "text": "AI16z token experienced a -7.28% decline, current price at $0.7965 with a market cap of $876,224,019.",
-          "sources": [
-            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
-          ],
+          "text": "ai16z: Current Price $0.7965, Market Cap $876,224,019, Daily Change -7.28%",
+          "sources": [],
           "images": [],
           "videos": []
         },
         {
-          "text": "Bitcoin shows remarkable growth, surging by 1037% with a current price of $104,643 and a market cap of $2,073,351,809,076.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin"
-          ],
+          "text": "Bitcoin: Price $104,643, Market Cap $2,073,351,809,076, Daily Change +1037%",
+          "sources": [],
           "images": [],
           "videos": []
         },
         {
-          "text": "Ethereum sees a downturn with a -11.18% daily change, priced at $3,293.69 and a market cap of $396,893,064,475.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/ethereum"
-          ],
+          "text": "Ethereum: Price $3,293.69, Market Cap $396,893,064,475, Daily Change -11.18%",
+          "sources": [],
           "images": [],
           "videos": []
         },
         {
-          "text": "Solana slightly drops by -0.52%, valuing at $251.21 and a market cap of $122,033,398,700.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/solana"
-          ],
+          "text": "Solana: Price $251.21, Market Cap $122,033,398,700, Daily Change -0.52%",
+          "sources": [],
           "images": [],
           "videos": []
         }

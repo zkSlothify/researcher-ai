@@ -3,10 +3,10 @@
   "title": "Daily Summary for 2025-01-24",
   "text": [
     {
-      "title": "AI Agent Developments and Events",
-      "content": [
+      "value": "AI Developments and Innovations",
+      "text": [
         {
-          "text": "Big Pharma is launching the first AI Agent built on the BADDIE framework.",
+          "text": "Big_Pharmai launches the first AI Agent built on the BADDIE framework, celebrating this milestone with their 20k followers.",
           "sources": [
             "https://twitter.com/daosdotfun/status/1882846519092711471"
           ],
@@ -16,19 +16,7 @@
           "videos": []
         },
         {
-          "text": "AI x VC is being turned into a game show, with a trailer released today.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1882961537469731126"
-          ],
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1882945167230996480/pu/img/Dwu1W8cS3YjCURBo.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/ext_tw_video/1882945167230996480/pu/vid/avc1/1280x720/70BwMvt5xRn8-CYW.mp4?tag=12"
-          ]
-        },
-        {
-          "text": "Mind AI partners with Eliza OS to enhance AI capabilities in processing social signals and market data.",
+          "text": "Mind AI partners with ElizaOS to enhance AI capabilities in processing social signals and market data.",
           "sources": [
             "https://twitter.com/ai16zdao/status/1882939509949730842"
           ],
@@ -38,7 +26,7 @@
           "videos": []
         },
         {
-          "text": "Fleek has launched AI Agent APIs, enabling users to deploy, update, and control AI agents through simple API calls.",
+          "text": "AI Agent APIs are now live on Fleek, allowing users to deploy, update, and control AI agents via simple API calls.",
           "sources": [
             "https://twitter.com/ai16zdao/status/1882935640209362955"
           ],
@@ -48,7 +36,7 @@
           "videos": []
         },
         {
-          "text": "Reality Spiral announces the soft launch of a new UI for interacting with agents.",
+          "text": "Reality Spiral announces the soft launch of a new user interface for interacting with agents, starting with a demo video.",
           "sources": [
             "https://twitter.com/ai16zdao/status/1883001250096324637"
           ],
@@ -58,22 +46,41 @@
           "videos": [
             "https://video.twimg.com/ext_tw_video/1882964151125045248/pu/vid/avc1/1490x720/sBY67v3vT7coSwVd.mp4?tag=12"
           ]
+        },
+        {
+          "text": "Partnership with Nillion Network extends AI agent capabilities beyond human users to unlock powerful capabilities.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1882936313835635088"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GiFJVj4W8AAUQIM.jpg"
+          ],
+          "videos": []
         }
       ]
     },
     {
-      "title": "Market Conditions",
-      "content": [
+      "value": "AI x VC Game Show",
+      "text": [
         {
-          "text": "AI16z price dropped to $0.7965 with a daily change of -7.28%.",
+          "text": "AI x VC is being turned into a game show, with a trailer release today and more information and a demo to follow.",
           "sources": [
-            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
+            "https://twitter.com/ai16zdao/status/1882961537469731126"
           ],
-          "images": [],
-          "videos": []
-        },
+          "images": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/1882945167230996480/pu/img/Dwu1W8cS3YjCURBo.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/ext_tw_video/1882945167230996480/pu/vid/avc1/1280x720/70BwMvt5xRn8-CYW.mp4?tag=12"
+          ]
+        }
+      ]
+    },
+    {
+      "value": "Market Conditions",
+      "text": [
         {
-          "text": "Bitcoin experienced a large increase, now priced at $104,643 with a daily change of 1037%.",
+          "text": "Bitcoin sees a significant surge, increasing by 1037% to $104,643 with a 24-hour volume of $49,721,094,352, and a market cap of $2,073,351,809,076.",
           "sources": [
             "https://www.coingecko.com/en/coins/bitcoin"
           ],
@@ -81,7 +88,7 @@
           "videos": []
         },
         {
-          "text": "Ethereum's price down to $3293.69, a decrease of 11.18%.",
+          "text": "Ethereum experiences a downturn with a decrease of 11.18%, falling to $3,293.69. The 24-hour volume is $25,817,302,472, and the market cap stands at $396,893,064,475.",
           "sources": [
             "https://www.coingecko.com/en/coins/ethereum"
           ],
@@ -89,26 +96,19 @@
           "videos": []
         },
         {
-          "text": "Solana slightly decreased to $251.21 with a daily change of -0.52%.",
+          "text": "Solana's price decreases slightly by 0.52% to $251.21, with a 24-hour volume of $8,526,830,180 and a market cap of $122,033,398,700.",
           "sources": [
             "https://www.coingecko.com/en/coins/solana"
           ],
           "images": [],
           "videos": []
-        }
-      ]
-    },
-    {
-      "title": "Nillion Network Expansion",
-      "content": [
+        },
         {
-          "text": "New partnership by Nillion Network enhances AI agents' capabilities.",
+          "text": "AI16Z token experiences a notable decline of 7.28%, priced at $0.7965. The 24-hour trading volume is $24,128,037.49 and the market cap is $876,224,019.",
           "sources": [
-            "https://twitter.com/ai16zdao/status/1882936313835635088"
+            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
           ],
-          "images": [
-            "https://pbs.twimg.com/media/GiFJVj4W8AAUQIM.jpg"
-          ],
+          "images": [],
           "videos": []
         }
       ]

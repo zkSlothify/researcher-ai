@@ -6,68 +6,84 @@
       "title": "ElizaOS Plugin Developments",
       "content": [
         {
-          "text": "ElizaOS introduces a new Cryptocurrency Arbitrage Plugin, enabling real-time market monitoring and automated trades across DEXs.",
+          "text": "New plugins have been added to ElizaOS, enhancing its functionality and offering new features.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2784"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/82287267?v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "New plugins include Mind Network integration, token security analysis, and the intelligent BitMind API for social media data extraction.",
-          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2784",
             "https://github.com/elizaOS/elizaos/commit/3d05b891ca74ab5766809a5439872f64132b9666",
             "https://github.com/elizaOS/elizaos/commit/4375d6b81ddc772ea2cc05dad0af0e470c2da73e",
-            "https://github.com/elizaOS/elizaos/commit/52660d5fc7762a6d0cec08e0ade60c93c42d08ed"
+            "https://github.com/elizaOS/elizaos/commit/bf073ac94eae83484d2a6cd3263e3044c765c891",
+            "https://github.com/elizaOS/elizaos/commit/53b972f036be257fc8676a39333314ba8f76800e",
+            "https://github.com/elizaOS/elizaos/commit/52660d5fc7762a6d0cec08e0ade60c93c42d08ed",
+            "https://github.com/elizaOS/elizaos/commit/15d393776cb2ff8fe0ff49446bfb11c7232880ca"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "messages": [
+            "Arbitrage plugin enables automated crypto arbitrage across DEXs.",
+            "Mind Network and BitMind API integration improve data handling.",
+            "New Quick Intel plugin provides token security analysis.",
+            "Form Chain and Moralis plugins expand blockchain interaction capabilities.",
+            "Email automation improves workflow efficiency.",
+            "Zerion plugin further enhances ElizaOS's financial data integration."
+          ]
         }
       ]
     },
     {
-      "title": "Market Conditions – January 25, 2025",
+      "title": "Bug Fixes and Improvements",
       "content": [
         {
-          "text": "Bitcoin sees a significant increase, up 10.93% to $104,692 with notable trading volume.",
+          "text": "Several bug fixes and improvements implemented in various components.",
           "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin"
+            "https://github.com/elizaOS/elizaos/commit/819d808fce2300a27a6269a2189fae637062a6d7",
+            "https://github.com/elizaOS/elizaos/commit/6bb21e9abe221fc4c6a1587cc91fb5722fe48204"
           ],
           "images": [],
-          "videos": []
-        },
-        {
-          "text": "Ethereum experiences a remarkable surge, climbing 32.91% to $3,330.07, driven by heightened activity in its ecosystem.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/ethereum"
-          ],
-          "images": [],
-          "videos": []
+          "videos": [],
+          "messages": [
+            "Fixed Twitter homeTimeline name parsing.",
+            "Resolved topics formatting issue at composeState."
+          ]
         }
       ]
     },
     {
-      "title": "System Improvements and Features",
+      "title": "Deploy Enhancements",
       "content": [
         {
-          "text": "New message parsing enhancements improve error handling by ensuring all attributes are fetched, even if JSON parsing fails.",
+          "text": "Improved deployment processes with new features and documentation.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2772"
+            "https://github.com/elizaOS/elizaos/issues/2780",
+            "https://github.com/elizaOS/elizaos/issues/2778",
+            "https://github.com/elizaOS/elizaos/commit/1f46b48b0ed46756c0b677662d929ce999f0fc36"
           ],
           "images": [],
-          "videos": []
-        },
+          "videos": [],
+          "messages": [
+            "One-click deployment options available for Render.com, Railway, and DigitalOcean.",
+            "Documentation updated for smoother deployments."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Market Conditions",
+      "content": [
         {
-          "text": "The integration of Amazon Bedrock as an LLM provider enhances Eliza's AI capabilities.",
+          "text": "The cryptocurrency market saw significant changes.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/19bc60c1877670482ce4245a1fde9eff525186d5"
+            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+            "https://www.coingecko.com/en/coins/bitcoin",
+            "https://www.coingecko.com/en/coins/ethereum",
+            "https://www.coingecko.com/en/coins/solana"
           ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/739962?u=bb7278eb8c93d774f4d7cf5888e41e768126549a&v=4"
-          ],
-          "videos": []
+          "images": [],
+          "videos": [],
+          "messages": [
+            "Bitcoin price rose by 10.93%, now at $104,692 with a market cap of $2.073 trillion.",
+            "Ethereum saw a significant increase of 32.91%, reaching $3,330.07.",
+            "Solana and ai16z also experienced notable increases of 4.21% and 9.26%, respectively."
+          ]
         }
       ]
     }

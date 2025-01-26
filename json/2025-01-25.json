@@ -4,42 +4,34 @@
   "text": [
     {
       "title": "ElizaOS Plugin Developments",
-      "message": [
+      "content": [
         {
-          "text": "Multiple new plugins have been released for ElizaOS, expanding its capabilities:",
+          "text": "ElizaOS introduces a new Cryptocurrency Arbitrage Plugin, enabling real-time market monitoring and automated trades across DEXs.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/3d05b891ca74ab5766809a5439872f64132b9666",
-            "https://github.com/elizaOS/elizaos/commit/4375d6b81ddc772ea2cc05dad0af0e470c2da73e",
-            "https://github.com/elizaOS/elizaos/commit/52660d5fc7762a6d0cec08e0ade60c93c42d08ed",
-            "https://github.com/elizaOS/elizaos/commit/bf073ac94eae83484d2a6cd3263e3044c765c891",
-            "https://github.com/elizaOS/elizaos/commit/b6719760a9f0bd845b87eea3cba301c27b5843f4",
-            "https://github.com/elizaOS/elizaos/commit/53b972f036be257fc8676a39333314ba8f76800e"
+            "https://github.com/elizaOS/elizaos/pull/2784"
           ],
-          "images": [],
+          "images": [
+            "https://avatars.githubusercontent.com/u/82287267?v=4"
+          ],
           "videos": []
         },
         {
-          "text": "Introducing Mind Network Plugin, Quick Intel Plugin, Moralis Plugin, Zerion Plugin, Form Chain Plugin, BitMind API Plugin, and enhancements to Amazon Bedrock Integration.",
-          "images": [
-            "https://avatars.githubusercontent.com/u/82287267?v=4",
-            "https://avatars.githubusercontent.com/u/1265027?v=4",
-            "https://avatars.githubusercontent.com/u/739962?u=bb7278eb8c93d774f4d7cf5888e41e768126549a&v=4"
+          "text": "New plugins include Mind Network integration, token security analysis, and the intelligent BitMind API for social media data extraction.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/commit/3d05b891ca74ab5766809a5439872f64132b9666",
+            "https://github.com/elizaOS/elizaos/commit/4375d6b81ddc772ea2cc05dad0af0e470c2da73e",
+            "https://github.com/elizaOS/elizaos/commit/52660d5fc7762a6d0cec08e0ade60c93c42d08ed"
           ],
+          "images": [],
           "videos": []
         }
       ]
     },
     {
-      "title": "Market Update",
-      "message": [
+      "title": "Market Conditions – January 25, 2025",
+      "content": [
         {
-          "text": "Significant market movements were observed on January 25, 2025:",
-          "sources": [],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Bitcoin surged with a daily change of 10.93%, reaching a new high of $104,692.",
+          "text": "Bitcoin sees a significant increase, up 10.93% to $104,692 with notable trading volume.",
           "sources": [
             "https://www.coingecko.com/en/coins/bitcoin"
           ],
@@ -47,72 +39,33 @@
           "videos": []
         },
         {
-          "text": "Ethereum saw a significant increase of 32.91%, trading at $3,330.07.",
+          "text": "Ethereum experiences a remarkable surge, climbing 32.91% to $3,330.07, driven by heightened activity in its ecosystem.",
           "sources": [
             "https://www.coingecko.com/en/coins/ethereum"
           ],
           "images": [],
           "videos": []
-        },
-        {
-          "text": "Solana’s price moved up by 4.21%, now at $256.16.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/solana"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "The AI16Z token saw a 9.26% increase in value.",
-          "sources": [
-            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
-          ],
-          "images": [],
-          "videos": []
         }
       ]
     },
     {
-      "title": "Bug Fixes and Improvements",
-      "message": [
+      "title": "System Improvements and Features",
+      "content": [
         {
-          "text": "Several bug fixes were implemented in the ElizaOS ecosystem:",
+          "text": "New message parsing enhancements improve error handling by ensuring all attributes are fetched, even if JSON parsing fails.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/819d808fce2300a27a6269a2189fae637062a6d7",
-            "https://github.com/elizaOS/elizaos/commit/6bb21e9abe221fc4c6a1587cc91fb5722fe48204",
-            "https://github.com/elizaOS/elizaos/pull/2789",
-            "https://github.com/elizaOS/elizaos/pull/2788"
+            "https://github.com/elizaOS/elizaos/pull/2772"
           ],
           "images": [],
           "videos": []
         },
         {
-          "text": "Notable fixes include parsing issues in Twitter API client and topics formatting bugs.",
-          "images": [
-            "https://avatars.githubusercontent.com/u/33475000?u=120f295328221d14782f578b4f74967a0f5b4642&v=4"
-          ],
-          "videos": []
-        }
-      ]
-    },
-    {
-      "title": "Deployment Enhancements",
-      "message": [
-        {
-          "text": "Deployment processes have been streamlined with the addition of one-click deployment features.",
+          "text": "The integration of Amazon Bedrock as an LLM provider enhances Eliza's AI capabilities.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2780",
-            "https://github.com/elizaOS/elizaos/issues/2778",
-            "https://github.com/elizaOS/elizaos/issues/2779",
-            "https://github.com/elizaOS/elizaos/commit/1f46b48b0ed46756c0b677662d929ce999f0fc36"
+            "https://github.com/elizaOS/elizaos/commit/19bc60c1877670482ce4245a1fde9eff525186d5"
           ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Functionalities added for Render.com, Railway, and DigitalOcean deployment services.",
           "images": [
-            "https://avatars.githubusercontent.com/u/82053242?u=45a31bd14d91cac88efa293594f36e989024adf0&v=4"
+            "https://avatars.githubusercontent.com/u/739962?u=bb7278eb8c93d774f4d7cf5888e41e768126549a&v=4"
           ],
           "videos": []
         }

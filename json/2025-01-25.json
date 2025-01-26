@@ -3,105 +3,106 @@
   "title": "Daily Summary for 2025-01-25",
   "text": [
     {
-      "title": "ElizaOS Plugin Developments",
-      "message": [
+      "title": "ElizaOS Plugin and Development Updates",
+      "content": [
         {
-          "text": "The ElizaOS team introduced several updates and new features to its plugin offerings today.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2784",
-            "https://github.com/elizaOS/elizaos/commit/3d05b891ca74ab5766809a5439872f64132b9666",
-            "https://github.com/elizaOS/elizaos/commit/4375d6b81ddc772ea2cc05dad0af0e470c2da73e"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/82287267?v=4"
-          ],
-          "videos": [],
-          "messages": [
-            "An arbitrage plugin has been added allowing for cryptocurrency trading across decentralized exchanges.",
-            "New plugins include the Mind Network integration, quick intel for token security analysis, and more.",
-            "New plugin developments enable functionalities like bitmind API and intelligent email evaluation and automation."
-          ]
+          "text": "Arbitrage Plugin Enhancement",
+          "sources": "https://github.com/elizaOS/elizaos/pull/2784",
+          "images": "https://avatars.githubusercontent.com/u/82287267?v=4",
+          "videos": null
+        },
+        {
+          "text": "Introduction of Mind Network Plugin",
+          "sources": "https://github.com/elizaOS/elizaos/commit/3d05b891ca74ab5766809a5439872f64132b9666",
+          "images": null,
+          "videos": null
+        },
+        {
+          "text": "New Quick Intel Plugin for Token Security",
+          "sources": "https://github.com/elizaOS/elizaos/commit/4375d6b81ddc772ea2cc05dad0af0e470c2da73e",
+          "images": null,
+          "videos": null
+        },
+        {
+          "text": "Bittensor BitMind API in Eliza",
+          "sources": "https://github.com/elizaOS/elizaos/commit/52660d5fc7762a6d0cec08e0ade60c93c42d08ed",
+          "images": null,
+          "videos": null
+        },
+        {
+          "text": "Moralis Plugin Enhancement",
+          "sources": "https://github.com/elizaOS/elizaos/commit/53b972f036be257fc8676a39333314ba8f76800e",
+          "images": null,
+          "videos": null
         }
       ]
     },
     {
-      "title": "Market Conditions",
-      "message": [
+      "title": "Market Conditions Updates",
+      "content": [
         {
-          "text": "The cryptocurrency market experienced significant movements today.",
-          "sources": [
-            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
-            "https://www.coingecko.com/en/coins/bitcoin",
-            "https://www.coingecko.com/en/coins/ethereum",
-            "https://www.coingecko.com/en/coins/solana"
-          ],
-          "images": [],
-          "videos": [],
-          "messages": [
-            "Bitcoin's price surged by 10.93% to $104,692.",
-            "Ethereum saw a remarkable 32.91% rise to $3,330.07.",
-            "Solana experienced a modest 4.22% increase, reaching $256.16.",
-            "The ai16z token also saw a notable rise, up by 9.26% to $0.8786."
-          ]
+          "text": "Bitcoin Market Dynamics",
+          "sources": "https://www.coingecko.com/en/coins/bitcoin",
+          "images": null,
+          "videos": null
+        },
+        {
+          "text": "Ethereum Price Surge",
+          "sources": "https://www.coingecko.com/en/coins/ethereum",
+          "images": null,
+          "videos": null
+        },
+        {
+          "text": "Solana Weekly Performance",
+          "sources": "https://www.coingecko.com/en/coins/solana",
+          "images": null,
+          "videos": null
+        },
+        {
+          "text": "AI16Z Cryptocurrency",
+          "sources": "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+          "images": null,
+          "videos": null
         }
       ]
     },
     {
-      "title": "System Improvements and Bug Fixes",
-      "message": [
+      "title": "System Fixes and Improvements",
+      "content": [
         {
-          "text": "A series of bug fixes and system improvements were rolled out today.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/commit/819d808fce2300a27a6269a2189fae637062a6d7",
-            "https://github.com/elizaOS/elizaos/pull/2789",
-            "https://github.com/elizaOS/elizaos/commit/2b2f061b8ea6d93aaf8102929ba608d7f4070341"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/33475000?u=120f295328221d14782f578b4f74967a0f5b4642&v=4"
-          ],
-          "videos": [],
-          "messages": [
-            "Issues with Twitter client name parsing were resolved.",
-            "Formatting bugs at composeState have been fixed."
-          ]
+          "text": "Client-Twitter Bug Fix",
+          "sources": "https://github.com/elizaOS/elizaos/commit/819d808fce2300a27a6269a2189fae637062a6d7",
+          "images": "https://avatars.githubusercontent.com/u/33475000?u=120f295328221d14782f578b4f74967a0f5b4642&v=4",
+          "videos": null
+        },
+        {
+          "text": "ComposeState Formatting Bug",
+          "sources": "https://github.com/elizaOS/elizaos/commit/6bb21e9abe221fc4c6a1587cc91fb5722fe48204",
+          "images": "https://avatars.githubusercontent.com/u/33475000?u=120f295328221d14782f578b4f74967a0f5b4642&v=4",
+          "videos": null
         }
       ]
     },
     {
-      "title": "Deployment and Configuration Updates",
-      "message": [
+      "title": "Deployment and Documentation Updates",
+      "content": [
         {
-          "text": "Efforts to optimize deployment configurations continue with new setups and improvements.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2780",
-            "https://github.com/elizaOS/elizaos/issues/2778",
-            "https://github.com/elizaOS/elizaos/commit/1f46b48b0ed46756c0b677662d929ce999f0fc36"
-          ],
-          "images": [],
-          "videos": [],
-          "messages": [
-            "New deployment setups on Render.com and Railway were introduced.",
-            "Documentation enhancements include one-click deployment instructions."
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Development Branch Updates",
-      "message": [
+          "text": "One Click Deployment on Render.com",
+          "sources": "https://github.com/elizaOS/elizaos/issues/2780",
+          "images": "https://avatars.githubusercontent.com/u/82053242?u=45a31bd14d91cac88efa293594f36e989024adf0&v=4",
+          "videos": null
+        },
         {
-          "text": "The development branch has seen several merges and updates.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/commit/f3baec5dfd7d80b59073565efdee249fde8aa705",
-            "https://github.com/elizaOS/elizaos/commit/96cb93d0ad8329d6898fb80c7e0ad8039fed2808"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/111034762?u=0d3eed7c5f6e6fd4ddee24801aae9f88b0330380&v=4"
-          ],
-          "videos": [],
-          "messages": [
-            "Development work continues with updates focusing on turbo-cache improvements."
-          ]
+          "text": "Railway Deployment Setup",
+          "sources": "https://github.com/elizaOS/elizaos/issues/2778",
+          "images": "https://avatars.githubusercontent.com/u/82053242?u=45a31bd14d91cac88efa293594f36e989024adf0&v=4",
+          "videos": null
+        },
+        {
+          "text": "DigitalOcean Deployment Integration",
+          "sources": "https://github.com/elizaOS/elizaos/issues/2779",
+          "images": "https://avatars.githubusercontent.com/u/82053242?u=45a31bd14d91cac88efa293594f36e989024adf0&v=4",
+          "videos": null
         }
       ]
     }

@@ -3,29 +3,64 @@
   "title": "Daily Summary for 2025-01-25",
   "text": [
     {
-      "title": "Development Updates",
-      "message": [
+      "title": "ElizaOS Plugin Developments",
+      "messages": [
         {
-          "text": "Multiple new plugins were introduced or improved in the ElizaOS ecosystem, including arbitrage, Mind Network, and quick intel plugins.",
-          "sources": "https://github.com/elizaOS/elizaos/commit/3d05b891ca74ab5766809a5439872f64132b9666",
+          "text": "Title: New Plugins and Enhancements",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/commit/3d05b891ca74ab5766809a5439872f64132b9666",
+            "https://github.com/elizaOS/elizaos/commit/fed685fad3141ba92573cf593049bc36e3dce9d9",
+            "https://github.com/elizaOS/elizaos/commit/53b972f036be257fc8676a39333314ba8f76800e"
+          ],
           "images": [],
           "videos": []
         },
         {
-          "text": "The introduction of Amazon Bedrock as a new Large Language Model (LLM) provider enhances the scalability and capabilities of AI-driven features.",
-          "sources": "https://github.com/elizaOS/elizaos/commit/19bc60c1877670482ce4245a1fde9eff525186d5",
+          "text": "Summary of plugins:\n- Mind Network Plugin added for enhanced integration.\n- Mongo DB Adaptor introduced for cloud storage capabilities.\n- Moralis Plugin with Solana APIs created, including aggregated stats and metadata APIs.\n- Form Chain Plugin supporting Form mainnet and testnet implemented.",
+          "sources": [],
+          "images": [],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "Infrastructure Enhancements",
+      "messages": [
+        {
+          "text": "Title: Deployment Enhancements",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/issues/2780",
+            "https://github.com/elizaOS/elizaos/issues/2778",
+            "https://github.com/elizaOS/elizaos/commit/1f46b48b0ed46756c0b677662d929ce999f0fc36"
+          ],
           "images": [],
           "videos": []
         },
         {
-          "text": "Chores such as overriding the version of ethers in the Mind Network and adding complete test suites for core functionalities have been implemented to ensure system consistency and reliability.",
-          "sources": "https://github.com/elizaOS/elizaos/pull/2783",
+          "text": "Increased ease of deployment with one-click setups added for Render.com, Railway, and DigitalOcean.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/issues/2779"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "Bug Fixes",
+      "messages": [
+        {
+          "text": "Title: Resolved Bugs and Errors",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/commit/819d808fce2300a27a6269a2189fae637062a6d7",
+            "https://github.com/elizaOS/elizaos/pull/2772"
+          ],
           "images": [],
           "videos": []
         },
         {
-          "text": "Significant fixes were carried out on client-twitter and topics formatting-related bugs, enhancing stability and performance.",
-          "sources": "https://github.com/elizaOS/elizaos/commit/819d808fce2300a27a6269a2189fae637062a6d7",
+          "text": "A name parse bug in Twitter API client and a topics formatting issue were fixed, along with improvements in message parsing errors.",
+          "sources": [],
           "images": [],
           "videos": []
         }
@@ -33,45 +68,20 @@
     },
     {
       "title": "Market Conditions",
-      "message": [
+      "messages": [
         {
-          "text": "Bitcoin (BTC) gained substantial value, with a 10.93% daily change, reflecting current market optimism.",
-          "sources": "https://www.coingecko.com/en/coins/bitcoin",
+          "text": "Title: Cryptocurrency Market Trends",
+          "sources": [
+            "https://www.coingecko.com/en/coins/bitcoin",
+            "https://www.coingecko.com/en/coins/ethereum",
+            "https://www.coingecko.com/en/coins/solana"
+          ],
           "images": [],
           "videos": []
         },
         {
-          "text": "Ethereum (ETH) witnessed an unprecedented 32.91% daily increase, which might be attributed to recent decentralized finance (DeFi) developments.",
-          "sources": "https://www.coingecko.com/en/coins/ethereum",
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "AI16z token also showed a positive trend with a 9.26% increase, signaling potential investor confidence in AI-driven platforms.",
-          "sources": "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Solana maintained a steady growth pattern with a 4.21% rise, reflecting stable growth in its ecosystem.",
-          "sources": "https://www.coingecko.com/en/coins/solana",
-          "images": [],
-          "videos": []
-        }
-      ]
-    },
-    {
-      "title": "Infrastructure Improvements",
-      "message": [
-        {
-          "text": "One-click deployment options are being introduced for easier deployment across platforms like Render.com, Railway, and DigitalOcean.",
-          "sources": "https://github.com/elizaOS/elizaos/issues/2780",
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "The Turbo Cache mechanism was enhanced to improve build times and deployment efficiency across the development workflow.",
-          "sources": "https://github.com/elizaOS/elizaos/commit/d505157a306cecb3c498800f039be8f42ba910d4",
+          "text": "Bitcoin surged by 10.93% to $104,692. Ethereum saw a massive uptick of 32.91% reaching $3,330.07, while Solana experienced a 4.21% rise, settling at $256.16.",
+          "sources": [],
           "images": [],
           "videos": []
         }

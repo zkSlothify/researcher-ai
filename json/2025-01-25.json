@@ -3,80 +3,112 @@
   "title": "Daily Summary for 2025-01-25",
   "text": [
     {
-      "title": "ElizaOS Plugin Development",
-      "content": [
+      "title": "ElizaOS Plugin Developments",
+      "messageContent": [
         {
-          "text": "New features and improvements have been introduced to the ElizaOS framework through several plugin updates. These include a cryptocurrency arbitrage plugin, token security analysis plugin, Mind Network integration, and a Moralis plugin for Solana API access.",
-          "sources": [],
-          "images": []
-        },
-        {
-          "text": "Arbitrage Plugin for Eliza that enables cryptocurrency trading across DEXs, integration with Flashbots, supports multiple DEX pairs like Uniswap V2.",
+          "text": "ElizaOS has introduced several new plugins today enhancing its capabilities.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2784"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/82287267?v=4"
-          ]
-        },
-        {
-          "text": "Security-focused updates with the new quick intel plugin for token analysis.",
-          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2784",
+            "https://github.com/elizaOS/elizaos/commit/3d05b891ca74ab5766809a5439872f64132b9666",
             "https://github.com/elizaOS/elizaos/commit/4375d6b81ddc772ea2cc05dad0af0e470c2da73e"
           ],
-          "images": []
+          "images": [],
+          "videos": []
         },
         {
-          "text": "The Moralis plugin now integrates with Solana APIs providing features like aggregated stats and token metadata access.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/commit/53b972f036be257fc8676a39333314ba8f76800e"
-          ],
-          "images": []
+          "text": "Newly added plugins include the Arbitrage Plugin, Mind Network Plugin, Quick Intel Plugin, BitTensor BitMind API, and more.",
+          "sources": [],
+          "images": [],
+          "videos": []
         }
       ]
     },
     {
-      "title": "Market Conditions",
-      "content": [
+      "title": "Cryptocurrency Market Update",
+      "messageContent": [
         {
-          "text": "Cryptocurrency markets today saw significant movements: Bitcoin surged by 10.93% landing at $104,692 per coin while Ethereum jumped 32.91% reaching $3,330.07. Solana experienced a moderate rise of 4.22% to $256.16.",
-          "sources": [],
-          "images": []
-        },
-        {
-          "text": "Ai16z token experienced a 9.26% increase now priced at $0.8786.",
+          "text": "The cryptocurrency market saw significant activity today:",
           "sources": [
+            "https://www.coingecko.com/en/coins/bitcoin",
+            "https://www.coingecko.com/en/coins/ethereum",
             "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
           ],
-          "images": []
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Bitcoin's price rose by 10.93% reaching $104,692 with a market cap of $2.07 trillion.",
+          "sources": [],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Ethereum experienced a 32.91% increase to $3330.07, heavily impacting its market cap.",
+          "sources": [],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Solana and ai16z saw moderate gains with increases of 4.21% and 9.26% respectively.",
+          "sources": [],
+          "images": [],
+          "videos": []
         }
       ]
     },
     {
-      "title": "Bug Fixes and Code Merges",
-      "content": [
+      "title": "Twitter Plugin Bug Fixes",
+      "messageContent": [
         {
-          "text": "Addressed multiple critical bugs including name parsing bugs in the Twitter client-homeTimeline and a fix for topics formatting bug at composeState. Resolved numerous conflicts and performed merges with active branches.",
-          "sources": [],
-          "images": []
-        },
-        {
-          "text": "Twitter client bug where the API was incorrectly parsing name fields has been fixed.",
+          "text": "Twitter plugin updates addressed several bugs to improve functionality.",
           "sources": [
+            "https://github.com/elizaOS/elizaos/commit/819d808fce2300a27a6269a2189fae637062a6d7",
+            "https://github.com/elizaOS/elizaos/commit/6bb21e9abe221fc4c6a1587cc91fb5722fe48204",
             "https://github.com/elizaOS/elizaos/pull/2789"
           ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/33475000?u=120f295328221d14782f578b4f74967a0f5b4642&v=4"
-          ]
+          "images": [],
+          "videos": []
         },
         {
-          "text": "Topics formatting bug fix was applied to improve state composition reliability.",
+          "text": "Fixes include correcting parsing issues in the homeTimeline feature.",
+          "sources": [],
+          "images": [],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "One-Click Deployment Updates",
+      "messageContent": [
+        {
+          "text": "ElizaOS has added one-click deployment capabilities for multiple platforms.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2788"
+            "https://github.com/elizaOS/elizaos/issues/2780",
+            "https://github.com/elizaOS/elizaos/issues/2778",
+            "https://github.com/elizaOS/elizaos/commit/1f46b48b0ed46756c0b677662d929ce999f0fc36"
           ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/33475000?u=120f295328221d14782f578b4f74967a0f5b4642&v=4"
-          ]
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Now supports deployments via Render.com, Railway, and DigitalOcean.",
+          "sources": [],
+          "images": [],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "Turbo Cache Integration",
+      "messageContent": [
+        {
+          "text": "With the recent updates, ElizaOS has enabled turbo cache to improve system performance.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2775",
+            "https://github.com/elizaOS/elizaos/commit/d505157a306cecb3c498800f039be8f42ba910d4"
+          ],
+          "images": [],
+          "videos": []
         }
       ]
     }

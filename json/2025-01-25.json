@@ -3,65 +3,20 @@
   "title": "Daily Summary for 2025-01-25",
   "text": [
     {
-      "title": "ElizaOS Plugin Developments",
+      "title": "ElizaOS Development Updates",
       "messages": [
         {
-          "text": "Title: New Plugins and Enhancements",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/commit/3d05b891ca74ab5766809a5439872f64132b9666",
-            "https://github.com/elizaOS/elizaos/commit/fed685fad3141ba92573cf593049bc36e3dce9d9",
-            "https://github.com/elizaOS/elizaos/commit/53b972f036be257fc8676a39333314ba8f76800e"
-          ],
+          "text": "Title: Mind Network Plugin Updates",
+          "sources": "https://github.com/elizaOS/elizaos/commit/3d05b891ca74ab5766809a5439872f64132b9666",
           "images": [],
           "videos": []
         },
         {
-          "text": "Summary of plugins:\n- Mind Network Plugin added for enhanced integration.\n- Mongo DB Adaptor introduced for cloud storage capabilities.\n- Moralis Plugin with Solana APIs created, including aggregated stats and metadata APIs.\n- Form Chain Plugin supporting Form mainnet and testnet implemented.",
-          "sources": [],
-          "images": [],
-          "videos": []
-        }
-      ]
-    },
-    {
-      "title": "Infrastructure Enhancements",
-      "messages": [
-        {
-          "text": "Title: Deployment Enhancements",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2780",
-            "https://github.com/elizaOS/elizaos/issues/2778",
-            "https://github.com/elizaOS/elizaos/commit/1f46b48b0ed46756c0b677662d929ce999f0fc36"
+          "text": "Title: Arbitrage Plugin Added",
+          "sources": "https://github.com/elizaOS/elizaos/pull/2784",
+          "images": [
+            "https://avatars.githubusercontent.com/u/82287267?v=4"
           ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Increased ease of deployment with one-click setups added for Render.com, Railway, and DigitalOcean.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2779"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ]
-    },
-    {
-      "title": "Bug Fixes",
-      "messages": [
-        {
-          "text": "Title: Resolved Bugs and Errors",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/commit/819d808fce2300a27a6269a2189fae637062a6d7",
-            "https://github.com/elizaOS/elizaos/pull/2772"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "A name parse bug in Twitter API client and a topics formatting issue were fixed, along with improvements in message parsing errors.",
-          "sources": [],
-          "images": [],
           "videos": []
         }
       ]
@@ -70,19 +25,40 @@
       "title": "Market Conditions",
       "messages": [
         {
-          "text": "Title: Cryptocurrency Market Trends",
-          "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin",
-            "https://www.coingecko.com/en/coins/ethereum",
-            "https://www.coingecko.com/en/coins/solana"
-          ],
+          "text": "Bitcoin rallied with a daily change of 10.93% to $104,692.",
+          "sources": "https://www.coingecko.com/en/coins/bitcoin",
           "images": [],
           "videos": []
         },
         {
-          "text": "Bitcoin surged by 10.93% to $104,692. Ethereum saw a massive uptick of 32.91% reaching $3,330.07, while Solana experienced a 4.21% rise, settling at $256.16.",
-          "sources": [],
+          "text": "Ethereum showed significant growth with a daily change of 32.91%, now priced at $3330.07.",
+          "sources": "https://www.coingecko.com/en/coins/ethereum",
           "images": [],
+          "videos": []
+        },
+        {
+          "text": "Solana had a modest increase of 4.21%, with the current price at $256.16.",
+          "sources": "https://www.coingecko.com/en/coins/solana",
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Ai16z saw a 9.26% rise, trading at $0.8786.",
+          "sources": "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+          "images": [],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "Twitter API Bugs",
+      "messages": [
+        {
+          "text": "Title: Fix for Twitter's homeTimeline name parsing bug.",
+          "sources": "https://github.com/elizaOS/elizaos/pull/2789",
+          "images": [
+            "https://avatars.githubusercontent.com/u/33475000?u=120f295328221d14782f578b4f74967a0f5b4642&v=4"
+          ],
           "videos": []
         }
       ]

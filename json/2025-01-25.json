@@ -3,99 +3,105 @@
   "title": "Daily Summary for 2025-01-25",
   "text": [
     {
-      "title": "ElizaOS Development Updates",
-      "messages": [
+      "title": "ElizaOS Plugin Developments",
+      "message": [
         {
-          "text": "Title: fix: ethers/viem issue in mind network plugin",
+          "text": "The ElizaOS team introduced several updates and new features to its plugin offerings today.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2783"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/82053242?u=45a31bd14d91cac88efa293594f36e989024adf0&v=4"
-          ],
-          "videos": [],
-          "message": ""
-        },
-        {
-          "text": "Title: feat: Add arbitrage plugin with example character",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2784"
+            "https://github.com/elizaOS/elizaos/pull/2784",
+            "https://github.com/elizaOS/elizaos/commit/3d05b891ca74ab5766809a5439872f64132b9666",
+            "https://github.com/elizaOS/elizaos/commit/4375d6b81ddc772ea2cc05dad0af0e470c2da73e"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/82287267?v=4"
           ],
           "videos": [],
-          "message": "This PR adds a new plugin enabling cryptocurrency arbitrage trading across DEXs. Features include real-time market monitoring, automated opportunity detection, Flashbots integration, and support for Uniswap V2-compatible DEX pairs."
-        },
+          "messages": [
+            "An arbitrage plugin has been added allowing for cryptocurrency trading across decentralized exchanges.",
+            "New plugins include the Mind Network integration, quick intel for token security analysis, and more.",
+            "New plugin developments enable functionalities like bitmind API and intelligent email evaluation and automation."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Market Conditions",
+      "message": [
         {
-          "text": "fix: client-twitter homeTimeline name parse bug",
+          "text": "The cryptocurrency market experienced significant movements today.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/819d808fce2300a27a6269a2189fae637062a6d7"
+            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+            "https://www.coingecko.com/en/coins/bitcoin",
+            "https://www.coingecko.com/en/coins/ethereum",
+            "https://www.coingecko.com/en/coins/solana"
+          ],
+          "images": [],
+          "videos": [],
+          "messages": [
+            "Bitcoin's price surged by 10.93% to $104,692.",
+            "Ethereum saw a remarkable 32.91% rise to $3,330.07.",
+            "Solana experienced a modest 4.22% increase, reaching $256.16.",
+            "The ai16z token also saw a notable rise, up by 9.26% to $0.8786."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "System Improvements and Bug Fixes",
+      "message": [
+        {
+          "text": "A series of bug fixes and system improvements were rolled out today.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/commit/819d808fce2300a27a6269a2189fae637062a6d7",
+            "https://github.com/elizaOS/elizaos/pull/2789",
+            "https://github.com/elizaOS/elizaos/commit/2b2f061b8ea6d93aaf8102929ba608d7f4070341"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/33475000?u=120f295328221d14782f578b4f74967a0f5b4642&v=4"
           ],
           "videos": [],
-          "message": "Fixed a bug where the API returned 'undefined' for names, by retrieving it from .core."
+          "messages": [
+            "Issues with Twitter client name parsing were resolved.",
+            "Formatting bugs at composeState have been fixed."
+          ]
         }
       ]
     },
     {
-      "title": "Market Conditions – 2025-01-25",
-      "messages": [
+      "title": "Deployment and Configuration Updates",
+      "message": [
         {
-          "text": "Bitcoin",
+          "text": "Efforts to optimize deployment configurations continue with new setups and improvements.",
           "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin"
+            "https://github.com/elizaOS/elizaos/issues/2780",
+            "https://github.com/elizaOS/elizaos/issues/2778",
+            "https://github.com/elizaOS/elizaos/commit/1f46b48b0ed46756c0b677662d929ce999f0fc36"
           ],
           "images": [],
           "videos": [],
-          "message": "Current Price: $104,692\nVolume (24h): $21,514,505,981\nMarket Cap: $2,073,406,269,891\nDaily Change: 10.93%"
-        },
-        {
-          "text": "Ethereum",
-          "sources": [
-            "https://www.coingecko.com/en/coins/ethereum"
-          ],
-          "images": [],
-          "videos": [],
-          "message": "Current Price: $3,330.07\nVolume (24h): $11,876,007,739\nMarket Cap: $401,294,495,917\nDaily Change: 32.91%"
-        },
-        {
-          "text": "Solana",
-          "sources": [
-            "https://www.coingecko.com/en/coins/solana"
-          ],
-          "images": [],
-          "videos": [],
-          "message": "Current Price: $256.16\nVolume (24h): $5,527,935,090\nMarket Cap: $124,543,389,737\nDaily Change: 4.22%"
+          "messages": [
+            "New deployment setups on Render.com and Railway were introduced.",
+            "Documentation enhancements include one-click deployment instructions."
+          ]
         }
       ]
     },
     {
-      "title": "Deployment Enhancements",
-      "messages": [
+      "title": "Development Branch Updates",
+      "message": [
         {
-          "text": "Setup one click deploy on Render.com",
+          "text": "The development branch has seen several merges and updates.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2780"
+            "https://github.com/elizaOS/elizaos/commit/f3baec5dfd7d80b59073565efdee249fde8aa705",
+            "https://github.com/elizaOS/elizaos/commit/96cb93d0ad8329d6898fb80c7e0ad8039fed2808"
           ],
           "images": [
-            "https://avatars.githubusercontent.com/u/82053242?u=45a31bd14d91cac88efa293594f36e989024adf0&v=4"
+            "https://avatars.githubusercontent.com/u/111034762?u=0d3eed7c5f6e6fd4ddee24801aae9f88b0330380&v=4"
           ],
           "videos": [],
-          "message": "Setup button for deploying on Render.com added to the README."
-        },
-        {
-          "text": "Setup one click deploy on Railway",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2778"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/82053242?u=45a31bd14d91cac88efa293594f36e989024adf0&v=4"
-          ],
-          "videos": [],
-          "message": "Implemented straightforward deployment option via Railway, documented in the README."
+          "messages": [
+            "Development work continues with updates focusing on turbo-cache improvements."
+          ]
         }
       ]
     }

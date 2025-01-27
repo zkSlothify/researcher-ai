@@ -4,71 +4,105 @@
   "text": [
     {
       "title": "Market Conditions",
-      "messages": [
+      "content": [
         {
-          "text": "Bitcoin experienced a significant decline today, with a current price of $101,746. The 24-hour trading volume is $24,968,435,665 and the market cap stands at $2,016,865,086,833.",
-          "sources": "https://www.coingecko.com/en/coins/bitcoin",
+          "text": "Crypto Market Overview",
+          "sources": [],
           "images": [],
-          "videos": []
-        },
-        {
-          "text": "Ethereum's price dropped to $3,204.93, with a 24-hour trading volume of $15,811,054,087 and a market cap of $386,200,269,910.",
-          "sources": "https://www.coingecko.com/en/coins/ethereum",
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Solana is currently priced at $236.59. It had a 24-hour trading volume of $5,481,018,881 and a market cap of $115,121,580,274.",
-          "sources": "https://www.coingecko.com/en/coins/solana",
-          "images": [],
-          "videos": []
-        }
-      ]
-    },
-    {
-      "title": "Developments in Technology",
-      "messages": [
-        {
-          "text": "New plugin support for Apro integrated into ElizaOS, which includes querying the current price of coins, creating agents with APRO, and verifying data.",
-          "sources": "https://github.com/elizaOS/elizaos/pull/2794",
-          "images": [
-            "https://avatars.githubusercontent.com/u/886093?v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Solana web3.js V2 and automated LPing on Orca have been enhanced, offering improvements in testing setup and documentation.",
-          "sources": "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198",
-          "images": [],
-          "videos": []
-        }
-      ]
-    },
-    {
-      "title": "Event Announcements",
-      "messages": [
-        {
-          "text": "SEASON 1 IS OVER. SEASON 2 BEGINS NOW.",
-          "sources": "https://twitter.com/shawmakesmagic/status/1883676926008778941",
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1883674060850376704/pu/img/z7ZrMzV1O1cxTz92.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/ext_tw_video/1883674060850376704/pu/vid/avc1/1280x720/TAqCm2A4xNXHauxy.mp4?tag=12"
+          "videos": [],
+          "messages": [
+            "Bitcoin",
+            "- Current Price: $101,746",
+            "- Market Cap: $2,016,865,086,833",
+            "- Daily Change: -$2,958.15",
+            "Ethereum",
+            "- Current Price: $3,204.93",
+            "- Market Cap: $386,200,269,910",
+            "- Daily Change: -$124.62",
+            "Solana",
+            "- Current Price: $236.59",
+            "- Market Cap: $115,121,580,274",
+            "- Daily Change: -$19.40",
+            "ai16z (NFT/Digital Asset)",
+            "- Current Price: $0.7352",
+            "- Market Cap: $808,758,429",
+            "- Daily Change: -16.21%"
           ]
         }
       ]
     },
     {
-      "title": "Community Updates",
-      "messages": [
+      "title": "Development Updates",
+      "content": [
         {
-          "text": "The ElizaOS community is buzzing with new requests and fixes such as the application not running on Replit due to node version issues and a message ID collision issue in the Telegram client.",
-          "sources": "https://github.com/elizaOS/elizaos/issues/2803",
-          "images": [
-            "https://avatars.githubusercontent.com/u/62040836?v=4"
+          "text": "ElizaOS Plugin Developments",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2794",
+            "https://github.com/elizaOS/elizaos/issues/2793",
+            "https://github.com/elizaOS/elizaos/pull/2810",
+            "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198",
+            "https://github.com/elizaOS/elizaos/commit/227baf7bd62394a50ae261e934669e4a9520b87f"
           ],
-          "videos": []
+          "images": [
+            "https://avatars.githubusercontent.com/u/886093?v=4",
+            "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
+          ],
+          "videos": [],
+          "messages": [
+            "New Apro Plugin Support",
+            "- Features include querying coin prices, registering agents, and verifying data.",
+            "MultiversX Plugin Update",
+            "- Added access token management improvements.",
+            "Solana Web3.js Plugin V2",
+            "- Enhanced with automated liquidity provisioning features on Orca."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Development Fixes and Enhancements",
+      "content": [
+        {
+          "text": "Key Fixes and Enhancements",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/commit/2791",
+            "https://github.com/elizaOS/elizaos/issues/2796",
+            "https://github.com/elizaOS/elizaos/issues/2801"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/64008830?u=d26f4e5c9c07625bb42f8f4b3154df60a8ca5527&v=4"
+          ],
+          "videos": [],
+          "messages": [
+            "Telegram Client Bug Fix",
+            "- Resolved message ID collision issue.",
+            "New Plugin for BTCFun",
+            "- Allows creation and trading of Runes/BRC20 tokens on Bitcoin."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Social Media Highlights",
+      "content": [
+        {
+          "text": "Trends and Insights",
+          "sources": [
+            "https://twitter.com/shawmakesmagic/status/1883676926008778941",
+            "https://twitter.com/ai16zdao/status/1883682875578692075"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GiPIGspXAAEJiA5.jpg",
+            "https://pbs.twimg.com/media/GiIRhY0bUAAgnri.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/amplify_video/1883588555223728128/vid/1280x720/RdvLCCT2QrEvOJAa.mp4?tag=16",
+            "https://video.twimg.com/ext_tw_video/1883674060850376704/pu/vid/1280x720/TAqCm2A4xNXHauxy.mp4?tag=12"
+          ],
+          "messages": [
+            "SEASON 2 Begins for aiccelerate",
+            "- Excitement grows for the new season."
+          ]
         }
       ]
     }

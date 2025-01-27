@@ -3,138 +3,101 @@
   "title": "Daily Summary for 2025-01-26",
   "text": [
     {
-      "title": "Market Conditions",
+      "title": "Market Conditions Update - January 26, 2025",
       "content": [
         {
-          "text": "Crypto Market Downturn - Key Changes for Major Cryptos",
-          "sources": [],
-          "images": [],
-          "videos": [],
-          "messages": [
-            {
-              "text": "AI16Z: Current Price - $0.7352, Volume - $15.67M, Market Cap - $808.76M, Daily Change -16.21%",
-              "sources": [],
-              "images": [],
-              "videos": []
-            },
-            {
-              "text": "Bitcoin: Current Price - $101,746, Volume - $24.97B, Market Cap - $2.01T, Daily Change -$2,958.15",
-              "sources": [],
-              "images": [],
-              "videos": []
-            },
-            {
-              "text": "Ethereum: Current Price - $3,204.93, Volume - $15.81B, Market Cap - $386.20B, Daily Change -$124.62",
-              "sources": [],
-              "images": [],
-              "videos": []
-            },
-            {
-              "text": "Solana: Current Price - $236.59, Volume - $5.48B, Market Cap - $115.12B, Daily Change -$19.39",
-              "sources": [],
-              "images": [],
-              "videos": []
-            }
-          ]
+          "text": "The cryptocurrency market witnessed some significant movements today. Here's a detailed summary: ",
+          "sources": null,
+          "images": null,
+          "videos": null
+        },
+        {
+          "text": "- **ai16z**: The token experienced a substantial drop of 16.21%, with a current price of $0.7352 and a market cap of $808,758,429.",
+          "sources": "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+          "images": null,
+          "videos": null
+        },
+        {
+          "text": "- **Bitcoin (BTC)**: Faced a decline with a new price of $101,746, representing a daily change of -2,958.15.",
+          "sources": "https://www.coingecko.com/en/coins/bitcoin",
+          "images": null,
+          "videos": null
+        },
+        {
+          "text": "- **Ethereum (ETH)**: Dropped by $124.62 to $3,204.93.",
+          "sources": "https://www.coingecko.com/en/coins/ethereum",
+          "images": null,
+          "videos": null
+        },
+        {
+          "text": "- **Solana (SOL)**: Witnessed a decrease of $19.39, bringing its price to $236.59.",
+          "sources": "https://www.coingecko.com/en/coins/solana",
+          "images": null,
+          "videos": null
         }
       ]
     },
     {
-      "title": "Development Updates",
+      "title": "ElizaOS Development Updates",
       "content": [
         {
-          "text": "New Plugins and Improvements in ElizaOS",
+          "text": "Several key developments and merges have been completed:",
+          "sources": null,
+          "images": null,
+          "videos": null
+        },
+        {
+          "text": "- A new plugin 'apro' has been introduced to enable coin queries, agent registration, and data verification features. This was merged under pull request #2794.",
           "sources": [
             "https://github.com/elizaOS/elizaos/pull/2794",
-            "https://github.com/elizaOS/elizaos/pull/2793"
+            "https://github.com/elizaOS/elizaos/issues/2793"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/886093?v=4"
           ],
-          "videos": [],
-          "messages": [
-            {
-              "text": "Introduction of Apro Plugin: Supports interactions with Apro for querying coin prices, agent registration, and data verification.",
-              "sources": [],
-              "images": [],
-              "videos": []
-            },
-            {
-              "text": "Access Token Management added to MultiversX Plugin for improved token management capabilities.",
-              "sources": [
-                "https://github.com/elizaOS/elizaos/pull/2810"
-              ],
-              "images": [
-                "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
-              ],
-              "videos": []
-            }
-          ]
+          "videos": null
         },
         {
-          "text": "Solana web3.js V2 Development",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
+          "text": "- MultiversX plugin has been updated with new access token management features.",
+          "sources": "https://github.com/elizaOS/elizaos/pull/2810",
+          "images": [
+            "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
           ],
-          "images": [],
-          "videos": [],
-          "messages": [
-            {
-              "text": "Solana web3.js V2 & automated LPing on Orca development progressing with new features and bug fixes.",
-              "sources": [],
-              "images": [],
-              "videos": []
-            }
-          ]
+          "videos": null
+        },
+        {
+          "text": "- New feature for automatic liquidity provisioning (LPing) in Solana's web3.js V2 was added.",
+          "sources": "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198",
+          "images": null,
+          "videos": null
         }
       ]
     },
     {
-      "title": "News Events",
+      "title": "Upcoming Events",
       "content": [
         {
-          "text": "NVIDIA Robotics Virtual Training Gym",
-          "sources": [
-            "https://twitter.com/shawmakesmagic/status/1883630474272411926"
-          ],
-          "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/1883588555223728128/img/hCdXRFdz5bJZvOJA"
-          ],
-          "videos": [
-            "https://video.twimg.com/amplify_video/1883588555223728128/vid/avc1/1280x720/RdvLCCT2QrEvOJAa.mp4"
-          ],
-          "messages": [
-            {
-              "text": "Nvidia unveils a groundbreaking virtual training gym for robots, enabling extensive training for AI systems.",
-              "sources": [],
-              "images": [],
-              "videos": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Community Highlights",
-      "content": [
+          "text": "Stay tuned for these exciting upcoming events:",
+          "sources": null,
+          "images": null,
+          "videos": null
+        },
         {
-          "text": "AI Accelerator and Cohort Announcements",
-          "sources": [
-            "https://twitter.com/daosdotfun/status/1883689875159003589"
-          ],
+          "text": "- SOZU AI Hackathon: Week 1 submissions are due February 1, with a prize pool exceeding $175,000.",
+          "sources": "https://twitter.com/ai16zdao/status/1883912071290724670",
           "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1883685861839245312/pu/img/3FTufneHHtPpmX2I.jpg"
+            "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
+          ],
+          "videos": null
+        },
+        {
+          "text": "- NVIDIA Robotics is hosting virtual training sessions for robotics enthusiasts to explore new technologies.",
+          "sources": "https://twitter.com/shawmakesmagic/status/1883630474272411926",
+          "images": [
+            "https://pbs.twimg.com/amplify_video_thumb/1883588555223728128/img/hCdXRFdz5bJZvJoj.jpg"
           ],
           "videos": [
-            "https://video.twimg.com/ext_tw_video/1883685861839245312/pu/vid/avc1/960x720/V3ISclqDYWtotBEK.mp4"
-          ],
-          "messages": [
-            {
-              "text": "Aiccelerate DAO announces its first incubator cohort with over 100 applications received.",
-              "sources": [],
-              "images": [],
-              "videos": []
-            }
+            "https://video.twimg.com/amplify_video/1883588555223728128/vid/avc1/1280x720/RdvLCCT2QrEvOJAa.mp4?tag=16"
           ]
         }
       ]

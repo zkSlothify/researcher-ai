@@ -3,95 +3,98 @@
   "title": "Daily Summary for 2025-01-26",
   "text": [
     {
-      "Market Conditions": [
+      "Title": "Cryptocurrency Market Update: January 26, 2025",
+      "MessageContent": [
         {
-          "text": "AI16z saw a significant price drop with a current price of $0.7352 and a daily change of -16.21%.",
+          "text": "Summary of today's cryptocurrency market condition:",
           "sources": [],
           "images": [],
           "videos": []
         },
         {
-          "text": "Bitcoin is currently priced at $101,746 with a notable decline of -$2958.15 from the previous trading day.",
-          "sources": [],
+          "text": "Bitcoin (BTC) experienced a decline today, with a current price of $101,746, down by $2,958.15 from yesterday.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/bitcoin"
+          ],
           "images": [],
           "videos": []
         },
         {
-          "text": "Ethereum's current price stands at $3,204.93 having experienced a daily dip of -$124.62.",
-          "sources": [],
+          "text": "Ethereum (ETH) is trading at $3,204.93, marking a daily decrease of $124.62.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/ethereum"
+          ],
           "images": [],
           "videos": []
         },
         {
-          "text": "Solana's value has decreased to $236.59 with a 24-hour change of -$19.40.",
-          "sources": [],
+          "text": "Solana (SOL) recorded a price of $236.59, experiencing a decline of $19.40 today.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/solana"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The token ai16z shows a significant decrease with a daily change of -16.21%, trading at $0.7352.",
+          "sources": [
+            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
+          ],
           "images": [],
           "videos": []
         }
       ]
     },
     {
-      "Development Updates": [
+      "Title": "ElizaOS Development Updates",
+      "MessageContent": [
         {
-          "text": "New Apro plugin integrated into Eliza, now supports querying coin prices, creating agents, and data verification.",
+          "text": "Recent developments in the ElizaOS project include new plugin support and improvements.",
+          "sources": [],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "The new plugin-apro has been introduced, offering functionality such as querying coin prices, creating agents, and verifying data.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2794",
             "https://github.com/elizaOS/elizaos/issues/2793"
           ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Access Token Management feature added to MultiversX plugin allowing token management for specified users.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2810",
-            "https://github.com/elizaOS/elizaos/pull/2808"
+          "images": [
+            "https://avatars.githubusercontent.com/u/886093?v=4"
           ],
-          "images": [],
           "videos": []
         },
         {
-          "text": "Solana web3.js V2 and automated liquidity pooling on Orca plugin updated with finalized demo setup and documentation.",
+          "text": "An access token management feature has been added to the MultiversX Plugin, providing more control over token management.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2810"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "The Solana web3.js V2 & automated LPing on Orca has been enhanced with new updates and fixes.",
           "sources": [
             "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
           ],
           "images": [],
           "videos": []
-        },
-        {
-          "text": "Introduction of the btcFun plugin for Eliza enabling Bitcoin Layer1 token creation and access to BTCFun functionalities.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2797"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "The Deribit integration plugin has been developed to allow institutional market commentary based on Deribit's exchange data.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2809"
-          ],
-          "images": [],
-          "videos": []
         }
       ]
     },
     {
-      "Events and Launches": [
+      "Title": "AI Community Highlights",
+      "MessageContent": [
         {
-          "text": "Excitement for Aiccelerate Builders' first incubator cohort as over 100 applications have been received.",
-          "sources": [
-            "https://twitter.com/daosdotfun/status/1883689875159003589"
-          ],
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1883685861839245312/pu/img/3FTufneHHtPpmX2I.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/ext_tw_video/1883685861839245312/pu/vid/avc1/960x720/V3ISclqDYWtotBEK.mp4?tag=12"
-          ]
+          "text": "The AI community has shown enthusiasm for recent developments and events.",
+          "sources": [],
+          "images": [],
+          "videos": []
         },
         {
-          "text": "Season 2 begins following the conclusion of Season 1, marked by community announcements and media.",
+          "text": "A new season is beginning, promising further advancements and projects.",
           "sources": [
             "https://twitter.com/shawmakesmagic/status/1883676926008778941"
           ],
@@ -100,6 +103,18 @@
           ],
           "videos": [
             "https://video.twimg.com/ext_tw_video/1883674060850376704/pu/vid/avc1/1280x720/TAqCm2A4xNXHauxy.mp4?tag=12"
+          ]
+        },
+        {
+          "text": "The Aiccelerate Builders incubator cohort has garnered significant attention with over 100 applications.",
+          "sources": [
+            "https://twitter.com/daosdotfun/status/1883689875159003589"
+          ],
+          "images": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/1883685861839245312/pu/img/3FTufneHHtPpmX2I.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/ext_tw_video/1883685861839245312/pu/vid/avc1/960x720/V3ISclqDYWtotBEK.mp4?tag=12"
           ]
         }
       ]

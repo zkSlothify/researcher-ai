@@ -4,121 +4,162 @@
   "text": [
     {
       "title": "Market Conditions",
-      "content": [
+      "message": [
         {
-          "text": "Cryptocurrency market sees a significant downturn.",
-          "sources": [],
+          "text": "AI16z Token:",
+          "sources": [
+            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
+          ],
           "images": [],
           "videos": [],
-          "messages": [
-            {
-              "text": "Bitcoin has decreased by $2,958.15, holding at $101,746 with a market cap over $2 trillion.",
-              "sources": [
-                "https://www.coingecko.com/en/coins/bitcoin"
-              ],
-              "images": [],
-              "videos": []
-            },
-            {
-              "text": "Ethereum dropped by $124.62 to a price of $3,204.93, with its market cap being $386.2 billion.",
-              "sources": [
-                "https://www.coingecko.com/en/coins/ethereum"
-              ],
-              "images": [],
-              "videos": []
-            },
-            {
-              "text": "Solana drops by $19.40, with current pricing at $236.59 and a market cap of approximately $115 billion.",
-              "sources": [
-                "https://www.coingecko.com/en/coins/solana"
-              ],
-              "images": [],
-              "videos": []
-            },
-            {
-              "text": "Ai16z token also sees a decline of approximately 16.21%, priced now at $0.7352.",
-              "sources": [
-                "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
-              ],
-              "images": [],
-              "videos": []
-            }
+          "message": [
+            "Current Price: $0.7352",
+            "Volume (24h): $15,674,509.31",
+            "Market Cap: $808,758,429",
+            "Daily Change: -16.21%"
+          ]
+        },
+        {
+          "text": "Bitcoin:",
+          "sources": [
+            "https://www.coingecko.com/en/coins/bitcoin"
+          ],
+          "images": [],
+          "videos": [],
+          "message": [
+            "Current Price: $101,746",
+            "Volume (24h): $24,968,435,665",
+            "Market Cap: $2,016,865,086,833",
+            "Daily Change: -$2,958.15 (-2.88%)"
+          ]
+        },
+        {
+          "text": "Ethereum:",
+          "sources": [
+            "https://www.coingecko.com/en/coins/ethereum"
+          ],
+          "images": [],
+          "videos": [],
+          "message": [
+            "Current Price: $3,204.93",
+            "Volume (24h): $15,811,054,087",
+            "Market Cap: $386,200,269,910",
+            "Daily Change: -$124.62 (-3.74%)"
+          ]
+        },
+        {
+          "text": "Solana:",
+          "sources": [
+            "https://www.coingecko.com/en/coins/solana"
+          ],
+          "images": [],
+          "videos": [],
+          "message": [
+            "Current Price: $236.59",
+            "Volume (24h): $5,481,018,881",
+            "Market Cap: $115,121,580,274",
+            "Daily Change: -$19.40 (-7.58%)"
           ]
         }
       ]
     },
     {
-      "title": "Tech Developments",
-      "content": [
+      "title": "Development Updates",
+      "message": [
         {
-          "text": "ElizaOS integrates new plugins and fixes numerous issues.",
-          "sources": [],
+          "text": "Apro Plugin Support Added",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2794",
+            "https://github.com/elizaOS/elizaos/issues/2793"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/886093?v=4"
+          ],
+          "videos": [],
+          "message": [
+            "Integration of Apro plugin allowing querying of coin prices, agent creation, and data verification."
+          ]
+        },
+        {
+          "text": "Access Token Management in MultiversX Plugin",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2810"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
+          ],
+          "videos": [],
+          "message": [
+            "Token management functionality now enables limitation to individual users."
+          ]
+        },
+        {
+          "text": "Solana Web3.js V2 and Automated LPing On Orca",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
+          ],
           "images": [],
           "videos": [],
-          "messages": [
-            {
-              "text": "Support for the Apro plugin is added, allowing users to query coin prices, create/register agents, and verify data.",
-              "sources": [
-                "https://github.com/elizaOS/elizaos/pull/2794"
-              ],
-              "images": [
-                "https://avatars.githubusercontent.com/u/886093?v=4"
-              ],
-              "videos": []
-            },
-            {
-              "text": "Solana web3.js V2 plugin built and automated LPing on Orca enabled.",
-              "sources": [
-                "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
-              ],
-              "images": [],
-              "videos": []
-            },
-            {
-              "text": "Access token management added to MultiversX plugin.",
-              "sources": [
-                "https://github.com/elizaOS/elizaos/pull/2810"
-              ],
-              "images": [
-                "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
-              ],
-              "videos": []
-            }
+          "message": [
+            "Completion of Solana Web3.js version 2 plugin and Orca LPing."
           ]
         }
       ]
     },
     {
       "title": "Events",
-      "content": [
+      "message": [
         {
-          "text": "Exciting events in the AI community.",
-          "sources": [],
-          "images": [],
-          "videos": [],
-          "messages": [
-            {
-              "text": "NVIDIA's robotics training platform creates buzz with extensive virtual training opportunities.",
-              "sources": [
-                "https://twitter.com/shawmakesmagic/status/1883630474272411926"
-              ],
-              "images": [
-                "https://pbs.twimg.com/amplify_video_thumb/1883588555223728128/img/hCdXRFdz5bJZvJoj.jpg"
-              ],
-              "videos": [
-                "https://video.twimg.com/amplify_video/1883588555223728128/vid/avc1/1280x720/RdvLCCT2QrEvOJAa.mp4?tag=16"
-              ]
-            },
-            {
-              "text": "SOZU AI Hack hosts its weekly hackathon with significant prize money.",
-              "sources": [
-                "https://twitter.com/ai16zdao/status/1883912071290724670"
-              ],
-              "images": [
-                "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
-              ],
-              "videos": []
-            }
+          "text": "AI Agentathon and Other Hackathons",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1883941398870929419",
+            "https://twitter.com/ai16zdao/status/1883912071290724670"
+          ],
+          "images": [
+            "https://pbs.twimg.com/amplify_video_thumb/1883877523131617280/img/tUYehEtiuDFak-Ud.jpg",
+            "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/amplify_video/1883877523131617280/vid/avc1/1280x720/ciSOkMMIn_DyeXfp.mp4?tag=14"
+          ],
+          "message": [
+            "Safe Agentathon has begun calling all builders for AI x Crypto hackathons.",
+            "SOZU AI Hack ongoing with a prize pool of over $175k."
+          ]
+        },
+        {
+          "text": "NVIDIA Robotics Virtual Training",
+          "sources": [
+            "https://twitter.com/shawmakesmagic/status/1883630474272411926"
+          ],
+          "images": [
+            "https://pbs.twimg.com/amplify_video_thumb/1883588555223728128/img/hCdXRFdz5bJZvJoj.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/amplify_video/1883588555223728128/vid/avc1/1280x720/RdvLCCT2QrEvOJAa.mp4?tag=16"
+          ],
+          "message": [
+            "Introduction of NVIDIA Robotics virtual training gym for extensive robot training."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "News Highlights",
+      "message": [
+        {
+          "text": "Season 2 Kicks Off",
+          "sources": [
+            "https://twitter.com/shawmakesmagic/status/1883676926008778941"
+          ],
+          "images": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/1883674060850376704/pu/img/z7ZrMzV1O1cxTz92.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/ext_tw_video/1883674060850376704/pu/vid/avc1/1280x720/TAqCm2A4xNXHauxy.mp4?tag=12"
+          ],
+          "message": [
+            "Season 1 has ended with Season 2 starting immediately with exciting new developments."
           ]
         }
       ]

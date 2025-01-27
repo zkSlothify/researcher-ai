@@ -6,88 +6,109 @@
       "title": "Market Conditions",
       "content": [
         {
-          "text": "Bitcoin faced a significant drop today, with a current price of $101,746 and a market cap of $2,016,865,086,833.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Ethereum also saw a decline, closing at $3,204.93. Its market cap stands at $386,200,269,910.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/ethereum"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Solana's market price dropped to $236.59, with a market cap of $115,121,580,274.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/solana"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "The ai16z token experienced a major decrease, ending the day at $0.7352.",
+          "text": "Ai16z Token market activity.",
           "sources": [
             "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
           ],
           "images": [],
-          "videos": []
+          "videos": [],
+          "messages": "The ai16z token experienced a significant market decline with a 16.21% decrease in value, resulting in a current price of $0.7352."
+        },
+        {
+          "text": "Bitcoin's price sees a notable decrease.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/bitcoin"
+          ],
+          "images": [],
+          "videos": [],
+          "messages": "Bitcoin saw a substantial drop in value, decreasing by $2,958.15, bringing its current price to $101,746."
+        },
+        {
+          "text": "Ethereum experiences a drop in value.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/ethereum"
+          ],
+          "images": [],
+          "videos": [],
+          "messages": "Ethereum's price decreased, losing $124.62 to reach a current price of $3,204.93."
+        },
+        {
+          "text": "Solana market performance.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/solana"
+          ],
+          "images": [],
+          "videos": [],
+          "messages": "Solana's price fell by $19.40, resulting in its current price being $236.59."
         }
       ]
     },
     {
-      "title": "Tech Development and Updates",
+      "title": "Development: Apro Plugin & More",
       "content": [
         {
-          "text": "ElizaOS integrates Apro plugin to enhance cryptocurrency data querying and verification capabilities.",
+          "text": "New Apro plugin offers coin price querying and agent functionalities.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2794"
+            "https://github.com/elizaOS/elizaos/pull/2794",
+            "https://github.com/elizaOS/elizaos/issues/2793"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/886093?v=4"
           ],
-          "videos": []
+          "videos": [],
+          "messages": "The plugin-apro introduces functionality enabling price queries for cryptocurrencies, agent creation, and data verification through the APRO system."
         },
         {
-          "text": "MultiversX Plugin now includes Access Token Management improvements, enhancing user token management options.",
+          "text": "Introducing Access Token Management for MultiversX Plugin.",
           "sources": [
             "https://github.com/elizaOS/elizaos/pull/2810"
           ],
           "images": [
-            "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
+            "https://avatars.githubusercontent.com/u/151920498"
           ],
-          "videos": []
+          "videos": [],
+          "messages": "A feature to manage access tokens to limit capabilities for either individual or all users, enhancing security and customization within the MultiversX plugin."
         },
         {
-          "text": "BTC.Fun Plugin for Eliza allows Bitcoin Layer1 Token creation and trading in a permissionless environment.",
+          "text": "Web3.js V2 and Orca LP automation enhancements.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2797"
+            "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
           ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/195998257?v=4"
-          ],
-          "videos": []
+          "images": [],
+          "videos": [],
+          "messages": "Web3.js V2 plugin for Solana and automated Liquidity Pooling (LPing) on Orca have been updated to improve performance and reliability, with ongoing refinements and documentation."
         }
       ]
     },
     {
-      "title": "AI and Robotics",
+      "title": "Events",
       "content": [
         {
-          "text": "NVIDIA introduces a virtual training gym for robots, promising thousands of hours of training capabilities.",
+          "text": "Start of Season 2 in Gaming Series Announced.",
           "sources": [
-            "https://twitter.com/shawmakesmagic/status/1883630474272411926"
+            "https://twitter.com/ai16zdao/status/1883682875578692075",
+            "https://twitter.com/shawmakesmagic/status/1883676926008778941"
           ],
           "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/1883588555223728128/img/hCdXRFdz5bJZvJoj.jpg"
+            "https://pbs.twimg.com/ext_tw_video_thumb/1883674060850376704/pu/img/z7ZrMzV1O1cxTz92.jpg"
           ],
           "videos": [
-            "https://video.twimg.com/amplify_video/1883588555223728128/vid/avc1/1280x720/RdvLCCT2QrEvOJAa.mp4?tag=16"
-          ]
+            "https://video.twimg.com/ext_tw_video/1883674060850376704/pu/vid/avc1/1280x720/TAqCm2A4xNXHauxy.mp4?tag=12"
+          ],
+          "messages": "The much-anticipated Season 2 follows a successful first season, bringing new challenges and excitement to participants and viewers."
+        },
+        {
+          "text": "Excitement Grows Around Aiccelerate Builders Incubator.",
+          "sources": [
+            "https://twitter.com/daosdotfun/status/1883689875159003589"
+          ],
+          "images": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/1883685861839245312/pu/img/3FTufneHHtPpmX2I.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/ext_tw_video/1883685861839245312/pu/vid/avc1/960x720/V3ISclqDYWtotBEK.mp4?tag=12"
+          ],
+          "messages": "The Aiccelerate Builders incubator has generated strong interest with over 100 applications, highlighting the growing innovation in AI development."
         }
       ]
     }

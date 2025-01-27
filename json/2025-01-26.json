@@ -1,0 +1,74 @@
+{
+  "type": "dailySummary",
+  "title": "Daily Summary for 2025-01-26",
+  "text": [
+    {
+      "Market Conditions": [
+        {
+          "text": "Bitcoin (BTC) faced a significant decrease in value, with its current price at $101,746, reflecting a daily change of -$2,958.15.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/bitcoin"
+          ]
+        },
+        {
+          "text": "Ethereum (ETH) also saw a drop in price today, currently at $3,204.93, which is down by $124.62 from yesterday.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/ethereum"
+          ]
+        },
+        {
+          "text": "Solana (SOL) continues to experience a downward trend with the current price at $236.59, a decrease of $19.39.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/solana"
+          ]
+        },
+        {
+          "text": "AI16Z witnessed a substantial decline with a -16.21% change, bringing its current price to $0.7352.",
+          "sources": [
+            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
+          ]
+        }
+      ]
+    },
+    {
+      "Development Updates": [
+        {
+          "text": "Several enhancements in the ElizaOS: The Apro plugin now supports actions such as querying current coin prices, creating agents, and verifying data.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2794",
+            "https://github.com/elizaOS/elizaos/issues/2793"
+          ]
+        },
+        {
+          "text": "A new plugin based on Solana web3.js V2 was built and is now operational, intended for automated LPing on Orca.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
+          ]
+        },
+        {
+          "text": "A new access token management feature has been added to the MultiversX plugin, improving overall user experience and functionalities.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2810"
+          ]
+        }
+      ]
+    },
+    {
+      "Events": [
+        {
+          "text": "The end of Season 1 and the beginning of Season 2 was announced with the release of a new promotional video.",
+          "sources": [
+            "https://twitter.com/shawmakesmagic/status/1883676926008778941"
+          ],
+          "images": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/1883674060850376704/pu/img/z7ZrMzV1O1cxTz92.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/ext_tw_video/1883674060850376704/pu/vid/avc1/1280x720/TAqCm2A4xNXHauxy.mp4?tag=12"
+          ]
+        }
+      ]
+    }
+  ],
+  "date": 1737849600
+}

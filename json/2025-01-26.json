@@ -3,67 +3,86 @@
   "title": "Daily Summary for 2025-01-26",
   "text": [
     {
-      "title": "Market Conditions – Cryptocurrency Market Update",
-      "message_content": [
+      "title": "Market Conditions",
+      "content": [
         {
-          "text": "Bitcoin: Notable decline with a current price of $101,746. Daily change of -$2,958.15.",
-          "sources": "https://www.coingecko.com/en/coins/bitcoin",
+          "text": "ai16z token experienced a significant decline today.",
+          "sources": [],
           "images": [],
           "videos": []
         },
         {
-          "text": "Ethereum: Experienced a drop, current price at $3,204.93. Daily change of -$124.62.",
-          "sources": "https://www.coingecko.com/en/coins/ethereum",
+          "text": "Bitcoin's price fell by approximately $2958.15, and its market cap strengthens its position despite volatility.",
+          "sources": [],
           "images": [],
           "videos": []
         },
         {
-          "text": "Solana: Prices fell to $236.59, showing a daily change of -$19.40.",
-          "sources": "https://www.coingecko.com/en/coins/solana",
+          "text": "Ethereum saw a daily decrease of $124.62, reflecting the current volatility in the market.",
+          "sources": [],
           "images": [],
           "videos": []
         },
         {
-          "text": "AI16Z: Significant loss with a current price of $0.7352. Daily change of -16.21%.",
-          "sources": "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+          "text": "Solana's value dropped by $19.40, in line with general trends in the cryptocurrency space.",
+          "sources": [],
           "images": [],
           "videos": []
         }
       ]
     },
     {
-      "title": "Development Updates – New Plugins and Features",
-      "message_content": [
+      "title": "Technological Developments & Software Enhancements",
+      "content": [
         {
-          "text": "New plugin-apro for ElizaOS released: Enables coin price querying, agent registration, and data verification.",
-          "sources": "https://github.com/elizaOS/elizaos/pull/2794",
+          "text": "A new Apro plugin has been introduced, providing features such as querying coin prices and verifying data.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2794",
+            "https://github.com/elizaOS/elizaos/issues/2793"
+          ],
           "images": [
             "https://avatars.githubusercontent.com/u/886093?v=4"
           ],
           "videos": []
         },
         {
-          "text": "MultiversX Plugin: Introduced access token management allowing usability restrictions to specific users.",
-          "sources": "https://github.com/elizaOS/elizaos/pull/2810",
+          "text": "Updates in Solana web3.js plugin to version 2, improving functionalities and LPing on Orca.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "BTCFun Plugin introduces new features for token creation on Bitcoin's Layer1 through Eliza.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2797"
+          ],
           "images": [
-            "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
+            "https://avatars.githubusercontent.com/u/195998257?v=4"
           ],
           "videos": []
         },
         {
-          "text": "Integration of Solana web3.js V2 and automated liquidity providing on Orca completed.",
-          "sources": "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198",
-          "images": [],
+          "text": "The Deribit plugin integration allows for institutional market commentary using Deribit's exchange data.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2809"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/2825062?u=035c79e3200a392013ff0dfbd898ccdb65716039&v=4"
+          ],
           "videos": []
         }
       ]
     },
     {
-      "title": "Events – Hackathons and AI Developments",
-      "message_content": [
+      "title": "Events",
+      "content": [
         {
-          "text": "Safe Agentathon: Announced an online AI hackathon encouraging builders to integrate AI with crypto.",
-          "sources": "https://twitter.com/ai16zdao/status/1883941398870929419",
+          "text": "Introducing Safe Agentathon, an online hackathon for AI and crypto enthusiasts.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1883941398870929419"
+          ],
           "images": [
             "https://pbs.twimg.com/amplify_video_thumb/1883877523131617280/img/tUYehEtiuDFak-Ud.jpg"
           ],
@@ -72,14 +91,14 @@
           ]
         },
         {
-          "text": "Virtual Training Gym: NVIDIA releases a new facility for extensive training programs for robotics.",
-          "sources": "https://twitter.com/shawmakesmagic/status/1883630474272411926",
-          "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/1883588555223728128/img/hCdXRFdz5bJZvJoj.jpg"
+          "text": "Weekly virtual hackathon, SOZU AI HACK, offers $175k+ in prizes.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1883912071290724670"
           ],
-          "videos": [
-            "https://video.twimg.com/amplify_video/1883588555223728128/vid/avc1/1280x720/RdvLCCT2QrEvOJAa.mp4?tag=16"
-          ]
+          "images": [
+            "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
+          ],
+          "videos": []
         }
       ]
     }

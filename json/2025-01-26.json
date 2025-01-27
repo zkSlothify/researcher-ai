@@ -3,135 +3,96 @@
   "title": "Daily Summary for 2025-01-26",
   "text": [
     {
-      "News & Development Updates": [
+      "title": "Market Conditions",
+      "messages": [
         {
-          "text": "New Features and Plugins for ElizaOS",
-          "messages": [
-            {
-              "text": "The integration of a new plugin from Apro brings enhanced functionalities including price querying, agent creation, and data verification with APRO.",
-              "sources": [
-                "https://github.com/elizaOS/elizaos/pull/2794"
-              ],
-              "images": [
-                "https://avatars.githubusercontent.com/u/886093?v=4"
-              ],
-              "videos": []
-            },
-            {
-              "text": "An important update to the MultiversX Plugin introduces access token management, with improved settings for user-specific token activities.",
-              "sources": [
-                "https://github.com/elizaOS/elizaos/pull/2810"
-              ],
-              "images": [
-                "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
-              ],
-              "videos": []
-            },
-            {
-              "text": "Enhancements to Solana’s web3.js with V2 plugin and automated liquidity providing capabilities on Orca are now available.",
-              "sources": [
-                "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
-              ],
-              "images": [],
-              "videos": []
-            }
+          "text": "Bitcoin sees a substantial decline in daily trading values.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/bitcoin"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Ethereum experiences a similar downward trend with a notable drop.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/ethereum"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Solana joins the downward spiral with its own daily dip.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/solana"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "ai16z stands out with a significant drop of 16.21% today.",
+          "sources": [
+            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "New Developments in ElizaOS",
+      "messages": [
+        {
+          "text": "The Apro plugin now lets users interact more dynamically with cryptocurrency functionalities.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2794"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/886093?v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Solana web3.js V2 & automated LPing on Orca enhances system efficiency.",
+          "sources": [],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "BTC.Fun Plugin empowers users to create tokens on Bitcoin Layer1 through the ElizaOS framework.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2797"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/195998257?v=4"
+          ],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "Exciting Event Notifications",
+      "messages": [
+        {
+          "text": "New season of content announced for followers; fresh beginnings.",
+          "sources": [
+            "https://twitter.com/shawmakesmagic/status/1883676926008778941"
+          ],
+          "images": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/1883674060850376704/pu/img/z7ZrMzV1O1cxTz92.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/ext_tw_video/1883674060850376704/pu/vid/avc1/1280x720/TAqCm2A4xNXHauxy.mp4?tag=12"
           ]
         },
         {
-          "text": "Minor Fixes and Systems Updates",
-          "messages": [
-            {
-              "text": "A fix was implemented in the goal objectives update logic to address lookup issues.",
-              "sources": [
-                "https://github.com/elizaOS/elizaos/commit/0f9441a03ff4e721937c37e89aea87827166ada1"
-              ],
-              "images": [
-                "https://avatars.githubusercontent.com/u/3462173?u=ba0540280d90240be5fb1c82c9caa74d813d24fd&v=4"
-              ],
-              "videos": []
-            },
-            {
-              "text": "Added environment examples to ensure clarity in configuration settings and deployments.",
-              "sources": [
-                "https://github.com/elizaOS/elizaos/commit/2a967afbc00f01fe94849835883c28d6fc2a30b8"
-              ],
-              "images": [],
-              "videos": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Market Conditions": [
-        {
-          "text": "Cryptocurrency Market Update for January 26, 2025",
-          "messages": [
-            {
-              "text": "Ai16z token experienced a significant drop, with a daily change of -16.21%, bringing the current price to $0.7352.",
-              "sources": [
-                "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
-              ],
-              "images": [],
-              "videos": []
-            },
-            {
-              "text": "Bitcoin's market dropped by a considerable amount with a daily change of -$2958 to rest at a current price of $101,746.",
-              "sources": [
-                "https://www.coingecko.com/en/coins/bitcoin"
-              ],
-              "images": [],
-              "videos": []
-            },
-            {
-              "text": "Ethereum followed the market trend with a decrease of $124.62 compared to the previous day, now valued at $3204.93.",
-              "sources": [
-                "https://www.coingecko.com/en/coins/ethereum"
-              ],
-              "images": [],
-              "videos": []
-            },
-            {
-              "text": "Solana too saw a decrease, landing at $236.59 after a change of -$19.39.",
-              "sources": [
-                "https://www.coingecko.com/en/coins/solana"
-              ],
-              "images": [],
-              "videos": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Community and Events": [
-        {
-          "text": "AI and Technology Community Buzz",
-          "messages": [
-            {
-              "text": "There's growing anticipation around the new season for a technology series, building on the excitement of its first season.",
-              "sources": [
-                "https://twitter.com/ai16zdao/status/1883682875578692075"
-              ],
-              "images": [
-                "https://pbs.twimg.com/ext_tw_video_thumb/1883674060850376704/pu/img/z7ZrMzV1O1cxTz92.jpg"
-              ],
-              "videos": [
-                "https://video.twimg.com/ext_tw_video/1883674060850376704/pu/vid/avc1/1280x720/TAqCm2A4xNXHauxy.mp4?tag=12"
-              ]
-            },
-            {
-              "text": "The announcement of the first incubator cohort, the Aiccelerate Builders, has seen significant interest, with over 100 applications received.",
-              "sources": [
-                "https://twitter.com/daosdotfun/status/1883689875159003589"
-              ],
-              "images": [
-                "https://pbs.twimg.com/ext_tw_video_thumb/1883685861839245312/pu/img/3FTufneHHtPpmX2I.jpg"
-              ],
-              "videos": [
-                "https://video.twimg.com/ext_tw_video/1883685861839245312/pu/vid/avc1/960x720/V3ISclqDYWtotBEK.mp4?tag=12"
-              ]
-            }
+          "text": "Aiccelerate's inaugural incubator chapter gathers quick responses; excitement builds over 100 applications received.",
+          "sources": [],
+          "images": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/1883685861839245312/pu/img/3FTufneHHtPpmX2I.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/ext_tw_video/1883685861839245312/pu/vid/avc1/960x720/V3ISclqDYWtotBEK.mp4?tag=12"
           ]
         }
       ]

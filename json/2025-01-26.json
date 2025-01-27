@@ -3,88 +3,116 @@
   "title": "Daily Summary for 2025-01-26",
   "text": [
     {
-      "title": "Market Conditions",
+      "value": "Daily Market Conditions",
       "content": [
         {
-          "text": "Ai16z Token market activity.",
+          "text": "Symbol: ai16z",
           "sources": [
             "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
           ],
           "images": [],
           "videos": [],
-          "messages": "The ai16z token experienced a significant market decline with a 16.21% decrease in value, resulting in a current price of $0.7352."
+          "messages": [
+            "Current Price: $0.7352",
+            "Volume (24h): $15,674,509.31",
+            "Market Cap: $808,758,429",
+            "Daily Change: -16.21%"
+          ]
         },
         {
-          "text": "Bitcoin's price sees a notable decrease.",
+          "text": "Symbol: Bitcoin",
           "sources": [
             "https://www.coingecko.com/en/coins/bitcoin"
           ],
           "images": [],
           "videos": [],
-          "messages": "Bitcoin saw a substantial drop in value, decreasing by $2,958.15, bringing its current price to $101,746."
+          "messages": [
+            "Current Price: $101,746",
+            "Volume (24h): $24,968,435,665",
+            "Market Cap: $2,016,865,086,833",
+            "Daily Change: -2958.15"
+          ]
         },
         {
-          "text": "Ethereum experiences a drop in value.",
+          "text": "Symbol: Ethereum",
           "sources": [
             "https://www.coingecko.com/en/coins/ethereum"
           ],
           "images": [],
           "videos": [],
-          "messages": "Ethereum's price decreased, losing $124.62 to reach a current price of $3,204.93."
+          "messages": [
+            "Current Price: $3,204.93",
+            "Volume (24h): $15,811,054,087",
+            "Market Cap: $386,200,269,910",
+            "Daily Change: -124.62"
+          ]
         },
         {
-          "text": "Solana market performance.",
+          "text": "Symbol: Solana",
           "sources": [
             "https://www.coingecko.com/en/coins/solana"
           ],
           "images": [],
           "videos": [],
-          "messages": "Solana's price fell by $19.40, resulting in its current price being $236.59."
+          "messages": [
+            "Current Price: $236.59",
+            "Volume (24h): $5,481,018,881",
+            "Market Cap: $115,121,580,274",
+            "Daily Change: -19.40"
+          ]
         }
       ]
     },
     {
-      "title": "Development: Apro Plugin & More",
+      "value": "Development Updates",
       "content": [
         {
-          "text": "New Apro plugin offers coin price querying and agent functionalities.",
+          "text": "feat(new-plugin): support apro plugin",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2794",
-            "https://github.com/elizaOS/elizaos/issues/2793"
+            "https://github.com/elizaOS/elizaos/pull/2794"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/886093?v=4"
           ],
           "videos": [],
-          "messages": "The plugin-apro introduces functionality enabling price queries for cryptocurrencies, agent creation, and data verification through the APRO system."
+          "messages": [
+            "Merges the new plugin from APRO",
+            "Adds support for querying coin prices, creating agents, and verifying data with APRO"
+          ]
         },
         {
-          "text": "Introducing Access Token Management for MultiversX Plugin.",
+          "text": "Add Access Token Management to MultiversX Plugin",
           "sources": [
             "https://github.com/elizaOS/elizaos/pull/2810"
           ],
           "images": [
-            "https://avatars.githubusercontent.com/u/151920498"
+            "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
           ],
           "videos": [],
-          "messages": "A feature to manage access tokens to limit capabilities for either individual or all users, enhancing security and customization within the MultiversX plugin."
+          "messages": [
+            "Limits token management to specific users",
+            "Testing steps involve setting user ID in .env file"
+          ]
         },
         {
-          "text": "Web3.js V2 and Orca LP automation enhancements.",
+          "text": "feat: plugin Solana web3.js V2 & automated LPing on Orca",
           "sources": [
             "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
           ],
           "images": [],
           "videos": [],
-          "messages": "Web3.js V2 plugin for Solana and automated Liquidity Pooling (LPing) on Orca have been updated to improve performance and reliability, with ongoing refinements and documentation."
+          "messages": [
+            "Build and integration of Solana web3.js V2",
+            "Automated liquidity provisioning on Orca"
+          ]
         }
       ]
     },
     {
-      "title": "Events",
+      "value": "Community and Social Events",
       "content": [
         {
-          "text": "Start of Season 2 in Gaming Series Announced.",
+          "text": "SEASON 2 BEGINS",
           "sources": [
             "https://twitter.com/ai16zdao/status/1883682875578692075",
             "https://twitter.com/shawmakesmagic/status/1883676926008778941"
@@ -95,10 +123,13 @@
           "videos": [
             "https://video.twimg.com/ext_tw_video/1883674060850376704/pu/vid/avc1/1280x720/TAqCm2A4xNXHauxy.mp4?tag=12"
           ],
-          "messages": "The much-anticipated Season 2 follows a successful first season, bringing new challenges and excitement to participants and viewers."
+          "messages": [
+            "Season 1 has concluded",
+            "Season 2 is now underway"
+          ]
         },
         {
-          "text": "Excitement Grows Around Aiccelerate Builders Incubator.",
+          "text": "Excitement around Aiccelerate Builders",
           "sources": [
             "https://twitter.com/daosdotfun/status/1883689875159003589"
           ],
@@ -108,7 +139,10 @@
           "videos": [
             "https://video.twimg.com/ext_tw_video/1883685861839245312/pu/vid/avc1/960x720/V3ISclqDYWtotBEK.mp4?tag=12"
           ],
-          "messages": "The Aiccelerate Builders incubator has generated strong interest with over 100 applications, highlighting the growing innovation in AI development."
+          "messages": [
+            "Growing interest in the first incubator cohort, Aiccelerate Builders",
+            "Over 100 applications received"
+          ]
         }
       ]
     }

@@ -3,112 +3,83 @@
   "title": "Daily Summary for 2025-01-26",
   "text": [
     {
-      "title": "Market Conditions",
-      "message": [
+      "Market Conditions": [
         {
-          "text": "Cryptocurrency markets experienced notable declines.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin",
-            "https://www.coingecko.com/en/coins/ethereum",
-            "https://www.coingecko.com/en/coins/solana"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Bitcoin's price dropped to $101,746 with a daily loss of $2,958.",
+          "text": "AI16z saw a significant price drop with a current price of $0.7352 and a daily change of -16.21%.",
           "sources": [],
           "images": [],
           "videos": []
         },
         {
-          "text": "Ethereum saw a decrease to $3,204.93 with a decline of $124.",
+          "text": "Bitcoin is currently priced at $101,746 with a notable decline of -$2958.15 from the previous trading day.",
           "sources": [],
           "images": [],
           "videos": []
         },
         {
-          "text": "Solana's value decreased to $236.59, a drop of $19.",
+          "text": "Ethereum's current price stands at $3,204.93 having experienced a daily dip of -$124.62.",
           "sources": [],
           "images": [],
           "videos": []
         },
         {
-          "text": "The ai16z token fell by 16.21% to $0.7352.",
-          "sources": [
-            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
-          ],
+          "text": "Solana's value has decreased to $236.59 with a 24-hour change of -$19.40.",
+          "sources": [],
           "images": [],
           "videos": []
         }
       ]
     },
     {
-      "title": "Development Updates",
-      "message": [
+      "Development Updates": [
         {
-          "text": "Eliza has integrated a new Apro plugin supporting cryptocurrency interactions.",
+          "text": "New Apro plugin integrated into Eliza, now supports querying coin prices, creating agents, and data verification.",
           "sources": [
             "https://github.com/elizaOS/elizaos/pull/2794",
             "https://github.com/elizaOS/elizaos/issues/2793"
           ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/886093?v=4"
-          ],
+          "images": [],
           "videos": []
         },
         {
-          "text": "MultiversX Plugin enhanced with Access Token Management features.",
+          "text": "Access Token Management feature added to MultiversX plugin allowing token management for specified users.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2810"
+            "https://github.com/elizaOS/elizaos/pull/2810",
+            "https://github.com/elizaOS/elizaos/pull/2808"
           ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
-          ],
+          "images": [],
           "videos": []
         },
         {
-          "text": "Solana web3.js V2 plugin with Orca automated liquidity providing completed.",
+          "text": "Solana web3.js V2 and automated liquidity pooling on Orca plugin updated with finalized demo setup and documentation.",
           "sources": [
             "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
           ],
           "images": [],
           "videos": []
-        }
-      ]
-    },
-    {
-      "title": "AI and Technology News",
-      "message": [
+        },
         {
-          "text": "Chinese bootleg LLM teams continue to compete with major AI labs.",
+          "text": "Introduction of the btcFun plugin for Eliza enabling Bitcoin Layer1 token creation and access to BTCFun functionalities.",
           "sources": [
-            "https://twitter.com/shawmakesmagic/status/1883555287422153063"
+            "https://github.com/elizaOS/elizaos/pull/2797"
           ],
-          "images": [
-            "https://pbs.twimg.com/media/GiIRhY0bUAAgnri.jpg"
-          ],
+          "images": [],
           "videos": []
         },
         {
-          "text": "NVIDIA Robotics introduces a virtual training gym for robots.",
+          "text": "The Deribit integration plugin has been developed to allow institutional market commentary based on Deribit's exchange data.",
           "sources": [
-            "https://twitter.com/shawmakesmagic/status/1883630474272411926"
+            "https://github.com/elizaOS/elizaos/pull/2809"
           ],
-          "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/1883588555223728128/img/hCdXRFdz5bJZvJoj.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/amplify_video/1883588555223728128/vid/avc1/1280x720/RdvLCCT2QrEvOJAa.mp4?tag=16"
-          ]
+          "images": [],
+          "videos": []
         }
       ]
     },
     {
-      "title": "Community and Events",
-      "message": [
+      "Events and Launches": [
         {
-          "text": "Aiccelerate launches its first incubator cohort with over 100 applications.",
+          "text": "Excitement for Aiccelerate Builders' first incubator cohort as over 100 applications have been received.",
           "sources": [
             "https://twitter.com/daosdotfun/status/1883689875159003589"
           ],
@@ -120,7 +91,7 @@
           ]
         },
         {
-          "text": "SEASON 1 IS OVER. SEASON 2 BEGINS NOW.",
+          "text": "Season 2 begins following the conclusion of Season 1, marked by community announcements and media.",
           "sources": [
             "https://twitter.com/shawmakesmagic/status/1883676926008778941"
           ],

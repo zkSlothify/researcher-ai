@@ -3,79 +3,55 @@
   "title": "Daily Summary for 2025-01-26",
   "text": [
     {
-      "title": "Market Conditions",
+      "title": "Cryptocurrency Market Conditions",
       "content": [
         {
-          "text": "Bitcoin's current price is $101,746 with a market cap of $2,016,865,086,833. It experiences a significant daily decline of -$2,958.15.",
+          "text": "Bitcoin (BTC) experienced a significant decline with a current price of $101,746, a 24-hour trading volume of $24,968,435,665, and a market cap of $2,016,865,086,833, closing down by $2,958.15.",
           "sources": "https://www.coingecko.com/en/coins/bitcoin"
         },
         {
-          "text": "Ethereum's current price stands at $3,204.93 with a market cap of $386,200,269,910. The daily change is marked at -$124.62.",
+          "text": "Ethereum (ETH) is priced at $3,204.93, with a 24-hour trading volume of $15,811,054,087 and a market cap of $386,200,269,910, marking a decrease of $124.62.",
           "sources": "https://www.coingecko.com/en/coins/ethereum"
         },
         {
-          "text": "Solana is priced at $236.59 with a market cap of $115,121,580,274. It sees a daily change of -$19.40.",
+          "text": "Solana (SOL) has reached a value of $236.59, a 24-hour trading volume of $5,481,018,881, and a market cap of $115,121,580,274, down by $19.40.",
           "sources": "https://www.coingecko.com/en/coins/solana"
         },
         {
-          "text": "ai16z coin is at $0.7352 with a market cap of $808,758,429. Notably, its daily change reflects a downturn of -16.21%.",
+          "text": "The a16z token is priced at $0.7352, with a 24-hour trading volume of $15,674,509.31 and a market capitalization of $808,758,429, decreasing by 16.21%.",
           "sources": "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
         }
       ]
     },
     {
-      "title": "Development in Technology",
+      "title": "Development Updates",
       "content": [
         {
-          "text": "The APRO plugin is integrated to support new functionalities like querying coin prices, agent registration, and data verification.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2794",
-            "https://github.com/elizaOS/elizaos/issues/2793"
-          ],
+          "text": "A new plugin-apro is introduced, offering actions like querying current coin prices, creating, and registering agents, and data verification.",
+          "sources": "https://github.com/elizaOS/elizaos/issues/2793",
           "images": [
             "https://avatars.githubusercontent.com/u/886093?v=4"
           ]
         },
         {
-          "text": "An update to the MultiversX Plugin introduces access token management. It allows limitation of token management to specific user(s).",
-          "sources": "https://github.com/elizaOS/elizaos/pull/2810",
-          "images": "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
-        },
-        {
-          "text": "Solana web3.js V2 and automated liquidity providing on Orca are made operational, offering a streamlined user experience in the Solana ecosystem.",
+          "text": "Solana web3.js V2 and automated LPing on Orca have been updated, including a working demo setup and thorough testing.",
           "sources": "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
+        },
+        {
+          "text": "Access Token Management has been added to the MultiversX Plugin, allowing token management limitation to specific users.",
+          "sources": "https://github.com/elizaOS/elizaos/pull/2810",
+          "images": [
+            "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
+          ]
         }
       ]
     },
     {
-      "title": "Business and Innovations",
+      "title": "Upcoming Events and Initiatives",
       "content": [
         {
-          "text": "BTC.Fun Plugin launched, allowing users to create and trade Runes/BRC20 tokens on Bitcoin network, enhancing interaction and functionalities.",
-          "sources": "https://github.com/elizaOS/elizaos/pull/2797",
-          "images": "https://avatars.githubusercontent.com/u/195998257?v=4"
-        },
-        {
-          "text": "Deribit integration comes into play, now part of the Eliza platform allowing institutional level market commentary and data interaction.",
-          "sources": "https://github.com/elizaOS/elizaos/pull/2809",
-          "images": "https://avatars.githubusercontent.com/u/2825062?u=035c79e3200a392013ff0dfbd898ccdb65716039&v=4"
-        },
-        {
-          "text": "New policies regarding application management on platforms like Replit indicate compatibility issues with Node 23 as currently Replit supports Node 20 only.",
-          "sources": "https://github.com/elizaOS/elizaos/issues/2803",
-          "images": "https://avatars.githubusercontent.com/u/62040836?v=4"
-        }
-      ]
-    },
-    {
-      "title": "Announcements and Social Buzz",
-      "content": [
-        {
-          "text": "Excitement rises as season 2 begins in linked discussions and engagements, indicating active community participation.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1883682875578692075",
-            "https://twitter.com/shawmakesmagic/status/1883676926008778941"
-          ],
+          "text": "Season 2 of a notable project has begun, generating excitement in the community.",
+          "sources": "https://twitter.com/shawmakesmagic/status/1883676926008778941",
           "images": [
             "https://pbs.twimg.com/ext_tw_video_thumb/1883674060850376704/pu/img/z7ZrMzV1O1cxTz92.jpg"
           ],
@@ -84,20 +60,13 @@
           ]
         },
         {
-          "text": "Several applications have poured in for the Aiccelerate Builders incubator cohort, showing significant traction in their first initiative.",
+          "text": "Aiccelerate Builders, the first incubator cohort, has seen over 100 applications, highlighting growing interest.",
           "sources": "https://twitter.com/daosdotfun/status/1883689875159003589",
           "images": [
             "https://pbs.twimg.com/ext_tw_video_thumb/1883685861839245312/pu/img/3FTufneHHtPpmX2I.jpg"
           ],
           "videos": [
             "https://video.twimg.com/ext_tw_video/1883685861839245312/pu/vid/avc1/960x720/V3ISclqDYWtotBEK.mp4?tag=12"
-          ]
-        },
-        {
-          "text": "Discussions related to AI development broaden as scenarios showcase how bootlegged AI models are competing with high-profile AI labs.",
-          "sources": "https://twitter.com/shawmakesmagic/status/1883555287422153063",
-          "images": [
-            "https://pbs.twimg.com/media/GiIRhY0bUAAgnri.jpg"
           ]
         }
       ]

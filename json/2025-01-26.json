@@ -3,101 +3,122 @@
   "title": "Daily Summary for 2025-01-26",
   "text": [
     {
-      "title": "Market Conditions Update - January 26, 2025",
+      "title": "Market Conditions",
       "content": [
         {
-          "text": "The cryptocurrency market witnessed some significant movements today. Here's a detailed summary: ",
-          "sources": null,
-          "images": null,
-          "videos": null
-        },
-        {
-          "text": "- **ai16z**: The token experienced a substantial drop of 16.21%, with a current price of $0.7352 and a market cap of $808,758,429.",
-          "sources": "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
-          "images": null,
-          "videos": null
-        },
-        {
-          "text": "- **Bitcoin (BTC)**: Faced a decline with a new price of $101,746, representing a daily change of -2,958.15.",
-          "sources": "https://www.coingecko.com/en/coins/bitcoin",
-          "images": null,
-          "videos": null
-        },
-        {
-          "text": "- **Ethereum (ETH)**: Dropped by $124.62 to $3,204.93.",
-          "sources": "https://www.coingecko.com/en/coins/ethereum",
-          "images": null,
-          "videos": null
-        },
-        {
-          "text": "- **Solana (SOL)**: Witnessed a decrease of $19.39, bringing its price to $236.59.",
-          "sources": "https://www.coingecko.com/en/coins/solana",
-          "images": null,
-          "videos": null
+          "text": "Cryptocurrency market sees a significant downturn.",
+          "sources": [],
+          "images": [],
+          "videos": [],
+          "messages": [
+            {
+              "text": "Bitcoin has decreased by $2,958.15, holding at $101,746 with a market cap over $2 trillion.",
+              "sources": [
+                "https://www.coingecko.com/en/coins/bitcoin"
+              ],
+              "images": [],
+              "videos": []
+            },
+            {
+              "text": "Ethereum dropped by $124.62 to a price of $3,204.93, with its market cap being $386.2 billion.",
+              "sources": [
+                "https://www.coingecko.com/en/coins/ethereum"
+              ],
+              "images": [],
+              "videos": []
+            },
+            {
+              "text": "Solana drops by $19.40, with current pricing at $236.59 and a market cap of approximately $115 billion.",
+              "sources": [
+                "https://www.coingecko.com/en/coins/solana"
+              ],
+              "images": [],
+              "videos": []
+            },
+            {
+              "text": "Ai16z token also sees a decline of approximately 16.21%, priced now at $0.7352.",
+              "sources": [
+                "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
+              ],
+              "images": [],
+              "videos": []
+            }
+          ]
         }
       ]
     },
     {
-      "title": "ElizaOS Development Updates",
+      "title": "Tech Developments",
       "content": [
         {
-          "text": "Several key developments and merges have been completed:",
-          "sources": null,
-          "images": null,
-          "videos": null
-        },
-        {
-          "text": "- A new plugin 'apro' has been introduced to enable coin queries, agent registration, and data verification features. This was merged under pull request #2794.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2794",
-            "https://github.com/elizaOS/elizaos/issues/2793"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/886093?v=4"
-          ],
-          "videos": null
-        },
-        {
-          "text": "- MultiversX plugin has been updated with new access token management features.",
-          "sources": "https://github.com/elizaOS/elizaos/pull/2810",
-          "images": [
-            "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
-          ],
-          "videos": null
-        },
-        {
-          "text": "- New feature for automatic liquidity provisioning (LPing) in Solana's web3.js V2 was added.",
-          "sources": "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198",
-          "images": null,
-          "videos": null
+          "text": "ElizaOS integrates new plugins and fixes numerous issues.",
+          "sources": [],
+          "images": [],
+          "videos": [],
+          "messages": [
+            {
+              "text": "Support for the Apro plugin is added, allowing users to query coin prices, create/register agents, and verify data.",
+              "sources": [
+                "https://github.com/elizaOS/elizaos/pull/2794"
+              ],
+              "images": [
+                "https://avatars.githubusercontent.com/u/886093?v=4"
+              ],
+              "videos": []
+            },
+            {
+              "text": "Solana web3.js V2 plugin built and automated LPing on Orca enabled.",
+              "sources": [
+                "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
+              ],
+              "images": [],
+              "videos": []
+            },
+            {
+              "text": "Access token management added to MultiversX plugin.",
+              "sources": [
+                "https://github.com/elizaOS/elizaos/pull/2810"
+              ],
+              "images": [
+                "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
+              ],
+              "videos": []
+            }
+          ]
         }
       ]
     },
     {
-      "title": "Upcoming Events",
+      "title": "Events",
       "content": [
         {
-          "text": "Stay tuned for these exciting upcoming events:",
-          "sources": null,
-          "images": null,
-          "videos": null
-        },
-        {
-          "text": "- SOZU AI Hackathon: Week 1 submissions are due February 1, with a prize pool exceeding $175,000.",
-          "sources": "https://twitter.com/ai16zdao/status/1883912071290724670",
-          "images": [
-            "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
-          ],
-          "videos": null
-        },
-        {
-          "text": "- NVIDIA Robotics is hosting virtual training sessions for robotics enthusiasts to explore new technologies.",
-          "sources": "https://twitter.com/shawmakesmagic/status/1883630474272411926",
-          "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/1883588555223728128/img/hCdXRFdz5bJZvJoj.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/amplify_video/1883588555223728128/vid/avc1/1280x720/RdvLCCT2QrEvOJAa.mp4?tag=16"
+          "text": "Exciting events in the AI community.",
+          "sources": [],
+          "images": [],
+          "videos": [],
+          "messages": [
+            {
+              "text": "NVIDIA's robotics training platform creates buzz with extensive virtual training opportunities.",
+              "sources": [
+                "https://twitter.com/shawmakesmagic/status/1883630474272411926"
+              ],
+              "images": [
+                "https://pbs.twimg.com/amplify_video_thumb/1883588555223728128/img/hCdXRFdz5bJZvJoj.jpg"
+              ],
+              "videos": [
+                "https://video.twimg.com/amplify_video/1883588555223728128/vid/avc1/1280x720/RdvLCCT2QrEvOJAa.mp4?tag=16"
+              ]
+            },
+            {
+              "text": "SOZU AI Hack hosts its weekly hackathon with significant prize money.",
+              "sources": [
+                "https://twitter.com/ai16zdao/status/1883912071290724670"
+              ],
+              "images": [
+                "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
+              ],
+              "videos": []
+            }
           ]
         }
       ]

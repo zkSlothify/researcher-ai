@@ -3,69 +3,72 @@
   "title": "Daily Summary for 2025-01-26",
   "text": [
     {
-      "Market Conditions": [
+      "title": "Market Conditions",
+      "messages": [
         {
-          "text": "Bitcoin (BTC) faced a significant decrease in value, with its current price at $101,746, reflecting a daily change of -$2,958.15.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin"
-          ]
+          "text": "Bitcoin experienced a significant decline today, with a current price of $101,746. The 24-hour trading volume is $24,968,435,665 and the market cap stands at $2,016,865,086,833.",
+          "sources": "https://www.coingecko.com/en/coins/bitcoin",
+          "images": [],
+          "videos": []
         },
         {
-          "text": "Ethereum (ETH) also saw a drop in price today, currently at $3,204.93, which is down by $124.62 from yesterday.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/ethereum"
-          ]
+          "text": "Ethereum's price dropped to $3,204.93, with a 24-hour trading volume of $15,811,054,087 and a market cap of $386,200,269,910.",
+          "sources": "https://www.coingecko.com/en/coins/ethereum",
+          "images": [],
+          "videos": []
         },
         {
-          "text": "Solana (SOL) continues to experience a downward trend with the current price at $236.59, a decrease of $19.39.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/solana"
-          ]
-        },
-        {
-          "text": "AI16Z witnessed a substantial decline with a -16.21% change, bringing its current price to $0.7352.",
-          "sources": [
-            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
-          ]
+          "text": "Solana is currently priced at $236.59. It had a 24-hour trading volume of $5,481,018,881 and a market cap of $115,121,580,274.",
+          "sources": "https://www.coingecko.com/en/coins/solana",
+          "images": [],
+          "videos": []
         }
       ]
     },
     {
-      "Development Updates": [
+      "title": "Developments in Technology",
+      "messages": [
         {
-          "text": "Several enhancements in the ElizaOS: The Apro plugin now supports actions such as querying current coin prices, creating agents, and verifying data.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2794",
-            "https://github.com/elizaOS/elizaos/issues/2793"
-          ]
-        },
-        {
-          "text": "A new plugin based on Solana web3.js V2 was built and is now operational, intended for automated LPing on Orca.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
-          ]
-        },
-        {
-          "text": "A new access token management feature has been added to the MultiversX plugin, improving overall user experience and functionalities.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2810"
-          ]
-        }
-      ]
-    },
-    {
-      "Events": [
-        {
-          "text": "The end of Season 1 and the beginning of Season 2 was announced with the release of a new promotional video.",
-          "sources": [
-            "https://twitter.com/shawmakesmagic/status/1883676926008778941"
+          "text": "New plugin support for Apro integrated into ElizaOS, which includes querying the current price of coins, creating agents with APRO, and verifying data.",
+          "sources": "https://github.com/elizaOS/elizaos/pull/2794",
+          "images": [
+            "https://avatars.githubusercontent.com/u/886093?v=4"
           ],
+          "videos": []
+        },
+        {
+          "text": "Solana web3.js V2 and automated LPing on Orca have been enhanced, offering improvements in testing setup and documentation.",
+          "sources": "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198",
+          "images": [],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "Event Announcements",
+      "messages": [
+        {
+          "text": "SEASON 1 IS OVER. SEASON 2 BEGINS NOW.",
+          "sources": "https://twitter.com/shawmakesmagic/status/1883676926008778941",
           "images": [
             "https://pbs.twimg.com/ext_tw_video_thumb/1883674060850376704/pu/img/z7ZrMzV1O1cxTz92.jpg"
           ],
           "videos": [
             "https://video.twimg.com/ext_tw_video/1883674060850376704/pu/vid/avc1/1280x720/TAqCm2A4xNXHauxy.mp4?tag=12"
           ]
+        }
+      ]
+    },
+    {
+      "title": "Community Updates",
+      "messages": [
+        {
+          "text": "The ElizaOS community is buzzing with new requests and fixes such as the application not running on Replit due to node version issues and a message ID collision issue in the Telegram client.",
+          "sources": "https://github.com/elizaOS/elizaos/issues/2803",
+          "images": [
+            "https://avatars.githubusercontent.com/u/62040836?v=4"
+          ],
+          "videos": []
         }
       ]
     }

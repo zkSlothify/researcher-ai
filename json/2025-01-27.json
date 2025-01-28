@@ -3,76 +3,131 @@
   "title": "Daily Summary for 2025-01-27",
   "text": [
     {
-      "title": "News, Development, and Events in ElizaOS",
-      "messageContent": [
+      "title": "Tech News and Developments on January 27, 2025",
+      "messages": [
         {
-          "text": "ElizaOS made significant development improvements in various plugins. These include enhancements in code quality, type safety, and functionality across multiple plugins such as Zerion, Story, Twitter, and more. The updates are focused on maintaining existing functionalities while improving the code's robustness.",
+          "text": "New Plugin Releases and Enhancements",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/55a8e20d5b6f6ba44c0a5275a375e94cb758a751"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
-          ]
-        },
-        {
-          "text": "New features such as Zilliqa blockchain plugin and paraswap API-based swap action for the EVM plugin have been introduced. These provide enhanced user interactions and broaden the functionality of the existing infrastructure.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2842",
-            "https://github.com/elizaOS/elizaos/pull/2820"
+            "https://github.com/elizaOS/elizaos/commit/4fa62087b5b6a4d605dbd4375f0e9c0f655af455",
+            "https://github.com/elizaOS/elizaos/pull/2869"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/108257153?v=4"
-          ]
+          ],
+          "videos": []
         },
         {
-          "text": "Documentation updates have been performed to keep the project instructions in line with the recent changes, enhancing the maintainability of the project.",
+          "text": "Zilliqa Plugin: The recently added plugin for the Zilliqa blockchain allows developers to conduct wallet and blockchain interactions more efficiently.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/872b13e9ab88b61667a36fb270a8a216602224ee"
+            "https://github.com/elizaOS/elizaos/commit/4fa62087b5b6a4d605dbd4375f0e9c0f655af455"
           ],
           "images": [
-            "https://avatars.githubusercontent.com/u/1807895?u=8e1003e0d0daf5f08a63e0a6029269e3778fd7d1&v=4"
-          ]
+            "https://avatars.githubusercontent.com/u/108257153?v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Arbitrage Plugin Optimizations: Recent updates to the arbitrage plugin have improved gas price optimization, volume calculation for trades, and enhanced error handling and logging.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2869"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/82287267?v=4"
+          ],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "ElizaOS Plugin Updates",
+      "messages": [
+        {
+          "text": "Type Safety and Code Quality Improvements",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2840",
+            "https://github.com/elizaOS/elizaos/pull/2868"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Suno and Spheron Plugin Improvements: Enhanced type safety and resolved type issues to improve maintainability and code safety.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2840"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Squid Router Plugin Code Updates: The plugin saw improvements in code readability by eliminating redundant clauses and optimizing parameter handling.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2868"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
+          ],
+          "videos": []
         }
       ]
     },
     {
       "title": "Market Conditions",
-      "messageContent": [
+      "messages": [
         {
-          "text": "Bitcoin experienced a dramatic decrease, with its current price at $101,701, marking a daily change of -69.98%.",
+          "text": "Cryptocurrency Market Overview",
+          "sources": [
+            "https://www.coingecko.com/en/coins/bitcoin",
+            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Bitcoin: Currently trading at $101,701, with a 24-hour volume of $89,995,177,496, and a market cap of $2,016,266,553,483, experiencing a daily decrease of 69.98%.",
           "sources": [
             "https://www.coingecko.com/en/coins/bitcoin"
-          ]
+          ],
+          "images": [],
+          "videos": []
         },
         {
-          "text": "Ethereum followed a similar trend as Bitcoin, with a current price of $3160.67, reflecting a daily change of -45.60%.",
+          "text": "Ethereum: Priced at $3,160.67, Ethereum has a 24-hour volume of $38,765,652,011, and a market cap of $381,029,381,748, with a daily decrease of 45.60%.",
           "sources": [
             "https://www.coingecko.com/en/coins/ethereum"
-          ]
+          ],
+          "images": [],
+          "videos": []
         },
         {
-          "text": "Solana and AI16Z tokens also reported significant declines, though less severe than Bitcoin and Ethereum, with daily changes of -2.14% and -3.49%, respectively.",
+          "text": "Solana and AI16Z: Solana is at $234.49 daily change of -2.14%, and AI16Z at $0.7099 with a 3.49% decrease today, highlighting volatility across the market.",
           "sources": [
             "https://www.coingecko.com/en/coins/solana",
             "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
-          ]
+          ],
+          "images": [],
+          "videos": []
         }
       ]
     },
     {
-      "title": "Hackathons and Tech Community Updates",
-      "messageContent": [
+      "title": "Upcoming Events",
+      "messages": [
         {
-          "text": "The Sozu AI Hack event commenced with impressive prize funds and significant community engagement, fostering innovations in AI technology.",
+          "text": "Sozu AI Hack: A digital hackathon offering over $175k in prizes. Week 1 submissions are by February 1, with submissions and demo day on February 2.",
           "sources": [
             "https://twitter.com/ai16zdao/status/1883912071290724670"
           ],
           "images": [
             "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
-          ]
+          ],
+          "videos": []
         },
         {
-          "text": "The Safe Agentathon introduced its AI Agent hackathon, calling on tech builders to engage with AI and crypto stacks.",
+          "text": "Safe's Safe Agentathon: An online AI and Crypto hackathon for builders to work with AI and cryptocurrency stacks.",
           "sources": [
             "https://twitter.com/ai16zdao/status/1883941398870929419"
           ],

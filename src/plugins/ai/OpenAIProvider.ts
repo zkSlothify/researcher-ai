@@ -44,7 +44,7 @@ export class OpenAIProvider implements AiProvider {
 
   public async topics(text: string): Promise<string[]> {
     try {
-      const prompt = `Provide up to 3 words that describe the topic of the following text:\n\n"${text}.\n\n Response format MUST be formatted in this way, the words must be strings:\n\n[ \"word1\", \"word2\", \"word3\"]\n`;
+      const prompt = `Provide up to 6 words that describe the topic of the following text:\n\n"${text}.\n\n Response format MUST be formatted in this way, the words must be strings:\n\n[ \"word1\", \"word2\", \"word3\"]\n`;
   
       const params: OpenAI.Chat.ChatCompletionCreateParams = {
         messages: [{ role: 'user', content: prompt }],

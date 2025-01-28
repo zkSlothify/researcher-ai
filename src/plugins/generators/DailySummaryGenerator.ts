@@ -31,6 +31,7 @@ export class DailySummaryGenerator {
     try {
         const endTime = new Date().getTime() / 1000;
         const startTime = endTime - ( 60 * 60 * 24);
+        
       const contentItems: ContentItem[] = await this.storage.getContentItemsBetweenEpoch(startTime, endTime, this.summaryType);
 
       if (contentItems.length === 0) {
@@ -40,16 +41,34 @@ export class DailySummaryGenerator {
 
       const groupedContent = this.groupObjectsByTopics(contentItems);
 
-      const prompt = this.createAIPrompt(groupedContent, dateStr);
+      const allSummaries: any[] = [];
 
-      const summaryText = await this.openAiProvider.summarize(prompt);
-      const summaryJSONString = summaryText.replace(/```json\n|```/g, "");
-      const summaryJSON = JSON.parse(summaryJSONString);
+      let maxTopicsToSummarize = 0;
+
+      for (const grouped of groupedContent) {
+        try {
+          if (!grouped ) continue;
+          const { topic, objects } = grouped;
+          
+          if (!topic || !objects || objects.length <= 0 || maxTopicsToSummarize >= 10) continue;
+
+          const prompt = this.createAIPromptForTopic(topic, objects, dateStr);
+          const summaryText = await this.openAiProvider.summarize(prompt);
+          const summaryJSONString = summaryText.replace(/```json\n|```/g, "");
+          let summaryJSON = JSON.parse(summaryJSONString);
+          summaryJSON["topic"] = topic;
+  
+          allSummaries.push(summaryJSON);
+          maxTopicsToSummarize++;
+        }
+        catch (e) {}
+      }
+
       const summaryItem: any = {
         type: this.summaryType,
         title: `Daily Summary for ${dateStr}`,
-        text: JSON.stringify(summaryJSON || summaryText),
-        date: new Date(dateStr).getTime() / 1000,
+        text: JSON.stringify(allSummaries, null, 2),
+        date: new Date().getTime() / 1000,
       };
 
       await this.storage.saveContentItem(summaryItem);
@@ -57,7 +76,7 @@ export class DailySummaryGenerator {
       fs.writeFileSync(`./json/${dateStr}.json`, JSON.stringify({
         type: this.summaryType,
         title: `Daily Summary for ${dateStr}`,
-        text: summaryJSON,
+        text: allSummaries,
         date: new Date(dateStr).getTime() / 1000,
       }, null, 2));
 
@@ -71,21 +90,43 @@ export class DailySummaryGenerator {
     const topicMap = new Map();
 
     objects.forEach(obj => {
-      if (obj.topics) {
-        obj.topics.forEach((topic:any) => {
-          let shortCase = topic.toLowerCase();
-          if (!topicMap.has(shortCase)) {
-            topicMap.set(shortCase, []);
-          }
-          topicMap.get(shortCase).push(obj);
-        });
+      if (obj.source.indexOf('github') >= 0) {
+        let github_topic = obj.type === 'githubPullRequestContributor' ? 'pull_request' : obj.type === 'githubIssueContributor' ? 'issue' : 'commmit';
+        if (! obj.topics) {
+          obj.topics = [];
+        }
+
+        if (!topicMap.has(github_topic)) {
+          topicMap.set(github_topic, []);
+        }
+        topicMap.get(github_topic).push(obj);
+        
+      }
+      else {
+        if (obj.topics) {
+          obj.topics.forEach((topic:any) => {
+            let shortCase = topic.toLowerCase();
+            if (!topicMap.has(shortCase)) {
+              topicMap.set(shortCase, []);
+            }
+            topicMap.get(shortCase).push(obj);
+          });
+        }
       }
     });
 
     const sortedTopics = Array.from(topicMap.entries()).sort((a, b) => b[1].length - a[1].length);
     const alreadyAdded : any = {}
 
-    return sortedTopics.map(([topic, associatedObjects]) => {
+    const miscTopics : any = {
+      topic: 'Misceleanous',
+      objects: [],
+      allTopics: []
+    }
+
+    let groupedTopics : any[] = [];
+
+    sortedTopics.forEach(([topic, associatedObjects]) => {
       const mergedTopics = new Set();
       let topicAlreadyAdded = false;
       associatedObjects.forEach((obj:any) => {
@@ -100,17 +141,45 @@ export class DailySummaryGenerator {
           }
         });
       });
-    
-      if ( ! topicAlreadyAdded ) {
+      if ( associatedObjects && associatedObjects.length  <= 1 ) {
+        miscTopics["objects"] = miscTopics["objects"].concat(associatedObjects)
+        miscTopics["allTopics"] = miscTopics["allTopics"].concat(Array.from(mergedTopics))
+      } 
+      else if ( ! topicAlreadyAdded ) {
         alreadyAdded[topic] = true;
 
-        return {
+        groupedTopics.push( {
           topic,
           objects: associatedObjects,
           allTopics: Array.from(mergedTopics)
-        };
+        } );
       }
     });
+    
+    groupedTopics.push( miscTopics );
+
+    return groupedTopics;
+  }
+
+  private createAIPromptForTopic(topic: string, objects: any[], dateStr: string): string {
+    let prompt = `Generate a summary for the topic '${topic}' on. Focus on the following:\n\n`;
+  
+    objects.forEach((item) => {
+      if ((item.metadata?.photos || []).length > 0 || (item.metadata?.videos || []).length > 0 || item.type === 'solanaTokenAnalytics' || item.type === 'coinGeckoMarketAnalytics') {
+        prompt += `***source***\n`;
+        if (item.text) prompt += `text: ${item.text}\n`;
+        if (item.link) prompt += `sources: ${item.link}\n`;
+        if (item.metadata?.photos) prompt += `photos: ${item.metadata?.photos}\n`;
+        if (item.metadata?.videos) prompt += `videos: ${item.metadata?.videos}\n`;
+        prompt += `***source_end***\n\n`;
+      }
+    });
+  
+    prompt += `Provide a clear and concise summary based on the ***sources*** above for the topic. DO NOT PULL DATA FROM OUTSIDE SOURCES'${topic}'. Combine similar sources into a longer summary if it makes sense.\n\n`;
+  
+    prompt += `Response MUST be a valid JSON object containing:\n- 'title': The title of the topic.\n- 'content': A list of messages with keys 'text', 'sources', 'images', and 'videos'.\n\n`;
+  
+    return prompt;
   }
 
   private createAIPrompt(groupedContent: Record<string, any>[], dateStr: string): string {

@@ -101,7 +101,18 @@ export class DailySummaryGenerator {
           topicMap.set(github_topic, []);
         }
         topicMap.get(github_topic).push(obj);
-        
+      }
+      else if (obj.source.indexOf('token_analytics') >= 0 ) {
+        let token_topic = 'crypto market';
+        if (! obj.topics) {
+          obj.topics = [];
+        }
+
+        if (!topicMap.has(token_topic)) {
+          topicMap.set(token_topic, []);
+        }
+        topicMap.get(token_topic).push(obj);
+
       }
       else {
         if (obj.topics) {

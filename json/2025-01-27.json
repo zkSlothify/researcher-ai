@@ -3,15 +3,20 @@
   "title": "Daily Summary for 2025-01-27",
   "text": [
     {
-      "title": "GitHub Commits Overview for elizaOS",
+      "title": "Commit Updates in ElizaOS",
       "content": [
         {
-          "text": "Multiple commits focused on fixing typing and logic issues: several commits addressed various code issues, including typing errors, logic errors in files like post.ts, fixing type safety in plugins, and addressing warnings and errors by biome.",
+          "text": "Various commits in the ElizaOS repository focus on fixing typing errors, logic issues, and type safety across multiple files. Notable improvements include resolving errors and warnings from biome, fixing logic errors in specific scripts, and enhancing type definitions for certain plugins.",
           "sources": [
             "https://github.com/elizaOS/elizaos/commit/4ff686756579c408fe15bc4079f27ec47d579596",
             "https://github.com/elizaOS/elizaos/commit/cb1efdbb5c9a2ab7f15cd26d67cad423b59d40ab",
             "https://github.com/elizaOS/elizaos/commit/9b8f7c4e92c7892c9f0159754bf72e19a6813c0d",
-            "https://github.com/elizaOS/elizaos/commit/55a8e20d5b6f6ba44c0a5275a375e94cb758a751"
+            "https://github.com/elizaOS/elizaos/commit/84b59aeddfe063b604504057a733a6819c2ecd0e",
+            "https://github.com/elizaOS/elizaos/commit/12f2bab67a3ef4daa59f5f61b2008fd77d6b62c8",
+            "https://github.com/elizaOS/elizaos/commit/37e48b988be4889b96b001790d9dc637cae8db06",
+            "https://github.com/elizaOS/elizaos/commit/c61943a1be3787c991ea633bb1fe67c634f3d1e7",
+            "https://github.com/elizaOS/elizaos/commit/1f59424e6f37f832f1595953c838a099aa4312d0",
+            "https://github.com/elizaOS/elizaos/commit/65239b65d8ce09a07ad6ea4ff6ea05a44128b7d3"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
@@ -19,9 +24,10 @@
           "videos": []
         },
         {
-          "text": "Enhancements and testing improvements: Several plugins and components like 'plugin-anyone', 'plugin-3d-generation', 'btcfun', and 'trikon' received updates to improve their testing and initialization processes.",
+          "text": "The plugin management and testing process received notable improvements with added test configurations, enhanced error handling, and improved type safety. These updates ensure backward compatibility and maintain existing functionality.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/18b5d94dabaf627589238f506d2cab8147149911",
+            "https://github.com/elizaOS/elizaos/commit/55a8e20d5b6f6ba44c0a5275a375e94cb758a751",
+            "https://github.com/elizaOS/elizaos/commit/7d562a3fafb8ebb33b482502464a530588f11f30",
             "https://github.com/elizaOS/elizaos/commit/e30481ea9e283cd3acaa6135f2b802cb69755833",
             "https://github.com/elizaOS/elizaos/commit/4e62ac989c65f513a2f0c2655960c1d68f14c010"
           ],
@@ -31,22 +37,21 @@
           "videos": []
         },
         {
-          "text": "New features and plugins: The commits introduced new plugins for Zilliqa blockchain, a client for Telegram, and updated plugins with enhanced features like enhanced error handling.",
+          "text": "Several new plugins were introduced to the ElizaOS ecosystem, including support for Zilliqa blockchain, Deva client integration, XMTP Client, and Gelato plugin relay. These plugins aim to extend the system's capabilities and integrate more functionalities.",
           "sources": [
             "https://github.com/elizaOS/elizaos/commit/4fa62087b5b6a4d605dbd4375f0e9c0f655af455",
-            "https://github.com/elizaOS/elizaos/commit/c0f6bebc8a7da086c19c4df30b31a4af64ed188e"
+            "https://github.com/elizaOS/elizaos/commit/a7554ddd5e811c6c04cd15e77c7b375b9fee6a55",
+            "https://github.com/elizaOS/elizaos/commit/da706be7a56a7e23afc99b1b2e4e039dc2db1d87",
+            "https://github.com/elizaOS/elizaos/commit/fdf9c5ba034496b62344f3ac16b17bbef8345ef8"
           ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/108257153?v=4",
-            "https://avatars.githubusercontent.com/u/57988098?u=b5a3224b18232f695a1b384e62bb34874f0bb873&v=4"
-          ],
+          "images": [],
           "videos": []
         },
         {
-          "text": "Documentation updates and readability improvements: README.md files were created or improved for better clarity, along with fixing formatting and runtime parameter descriptions.",
+          "text": "There were updates to the readme and documentation files, improving the provided information and correcting formatting issues. These updates aim to make the repository easier to navigate and enhance the clarity of available resources.",
           "sources": [
             "https://github.com/elizaOS/elizaos/commit/880901bc3de879c98508bee7220a72973ab41328",
-            "https://github.com/elizaOS/elizaos/commit/0263834f4eb109e555783744f09a6484d81c4e42"
+            "https://github.com/elizaOS/elizaos/commit/7009adb84f1f912ff122114bd05c517e2e11542b"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/22399739?u=55f940c4af7faf3dbe97b38213a83cf66fda6b03&v=4"
@@ -57,17 +62,17 @@
       "topic": "commmit"
     },
     {
-      "title": "Pull Request Summaries",
+      "title": "Pull Requests Summary",
       "content": [
         {
-          "text": "Code quality improvements were made to various plugins, addressing linter warnings, enhancing type safety, and improving code readability. These changes resolve linter issues, improve maintainability, and follow modern TypeScript best practices without altering the plugins' functionalities.",
+          "text": "The repository received numerous pull requests focusing on code quality improvements, type safety enhancements, and resolving linter warnings across various plugins such as Story, SUI, Ton, and Twitter plugins. These changes aimed at improving maintainability, preserving existing functionality, and aligning with modern coding best practices.",
           "sources": [
             "https://github.com/elizaOS/elizaos/pull/2844",
             "https://github.com/elizaOS/elizaos/pull/2843",
             "https://github.com/elizaOS/elizaos/pull/2840",
-            "https://github.com/elizaOS/elizaos/pull/2837",
             "https://github.com/elizaOS/elizaos/pull/2836",
-            "https://github.com/elizaOS/elizaos/pull/2832"
+            "https://github.com/elizaOS/elizaos/pull/2832",
+            "https://github.com/elizaOS/elizaos/pull/2837"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
@@ -75,43 +80,45 @@
           "videos": []
         },
         {
-          "text": "Plugins such as 'spheron', 'squid-router', and 'starknet' saw improvements in type safety and code maintainability, with a focus on resolving Biome linting issues and adhering to modern best practices. These updates ensure no functional changes while enhancing code quality.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2870",
-            "https://github.com/elizaOS/elizaos/pull/2868",
-            "https://github.com/elizaOS/elizaos/pull/2866"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "New features and plugins were introduced, such as a client for interacting with Telegram accounts, OKX DEX plugin integration, improved arbitrage functionalities, and a Zilliqa blockchain plugin. These additions expand the capabilities of ElizaOS in DeFi and blockchain ecosystems.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2839",
-            "https://github.com/elizaOS/elizaos/pull/2865",
-            "https://github.com/elizaOS/elizaos/pull/2869",
-            "https://github.com/elizaOS/elizaos/pull/2842"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/57988098?u=b5a3224b18232f695a1b384e62bb34874f0bb873&v=4",
-            "https://avatars.githubusercontent.com/u/73849597?u=e8c3cfd6763aa74bda99128839b4d7da23b9a87b&v=4",
-            "https://avatars.githubusercontent.com/u/82287267?v=4",
-            "https://avatars.githubusercontent.com/u/108257153?v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Documentation was updated across various plugins and clients, such as the Telegram and Discord clients, to improve usability and keep it in sync with the current project state. These updates aim to provide better guidance for developers and users.",
+          "text": "Documentation updates were made to ensure that the project repositories were up to date with current implementations and configurations. These included updates to various README files and instructions for different clients and plugins.",
           "sources": [
             "https://github.com/elizaOS/elizaos/pull/2821",
+            "https://github.com/elizaOS/elizaos/pull/2812",
+            "https://github.com/elizaOS/elizaos/pull/2811",
             "https://github.com/elizaOS/elizaos/pull/2814",
-            "https://github.com/elizaOS/elizaos/pull/2812"
+            "https://github.com/elizaOS/elizaos/pull/2828"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/1807895?u=8e1003e0d0daf5f08a63e0a6029269e3778fd7d1&v=4",
-            "https://avatars.githubusercontent.com/u/22399739?u=55f940c4af7faf3dbe97b38213a83cf66fda6b03&v=4"
+            "https://avatars.githubusercontent.com/u/22399739?u=55f940c4af7faf3dbe97b38213a83cf66fda6b03&v=4",
+            "https://avatars.githubusercontent.com/u/32600939?u=cdcf89f44c7a50906c7a80d889efa85023af2049&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "New features were introduced, including a Telegram client, enhancements for media handling in the Twitter plugin, a new Zilliqa blockchain plugin, and dependency injection support. These features aimed to expand functionality and improve existing workflows.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2839",
+            "https://github.com/elizaOS/elizaos/pull/2842",
+            "https://github.com/elizaOS/elizaos/pull/2855",
+            "https://github.com/elizaOS/elizaos/pull/2818"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/57988098?u=b5a3224b18232f695a1b384e62bb34874f0bb873&v=4",
+            "https://avatars.githubusercontent.com/u/60634884?u=c6c41679b8322eaa0c81f72e0b4ed95e80f0ac16&v=4",
+            "https://avatars.githubusercontent.com/u/707025?u=d8487801b6cc361f4a912518c54cc25cfb70d347&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Several pull requests focused on fixing dependency issues and improving the performance and reliability of the ElizaOS ecosystem, such as updating the `cookie` dependency to resolve a security issue and switching the package manager from pnpm to Bun.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2834",
+            "https://github.com/elizaOS/elizaos/pull/2852"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/in/2740?v=4",
+            "https://avatars.githubusercontent.com/u/18633264?u=e2e906c3712c2506ebfa98df01c2cfdc50050b30&v=4"
           ],
           "videos": []
         }
@@ -119,10 +126,10 @@
       "topic": "pull_request"
     },
     {
-      "title": "Issue Summaries for elizaOS Repository",
+      "title": "Issue",
       "content": [
         {
-          "text": "The 'plugin-asterai', 'plugin-anyone', and 'plugin-3d-generation' packages lack comprehensive test coverage, leading to difficulties in ensuring reliability and catching potential issues. Improvements in test coverage include validating environment configurations, query handling, service initialization, queue updates, and error handling. There is also a need for proper test organization and coverage of different scenarios, such as various 3D model responses and API error handling.",
+          "text": "Several issues have been identified regarding inadequate test coverage and configuration in various plugins, including plugin-asterai, plugin-anyone, and plugin-3d-generation. These gaps make it difficult to ensure reliability and manage error handling effectively.",
           "sources": [
             "https://github.com/elizaOS/elizaos/issues/2859",
             "https://github.com/elizaOS/elizaos/issues/2853",
@@ -134,7 +141,7 @@
           "videos": []
         },
         {
-          "text": "There are missing README.md files for several packages in the elizaOS repository. README files need to be added to the specified packages to improve documentation.",
+          "text": "There is a need for better documentation as several packages are missing README.md files. This includes various adapters and clients which lack clear documentation for user guidance.",
           "sources": [
             "https://github.com/elizaOS/elizaos/issues/2825"
           ],
@@ -144,67 +151,19 @@
           "videos": []
         },
         {
-          "text": "Efforts are underway to move all models to runtime.call() function to improve the core's architecture by removing hardcoded model instances like embeddings and handlers. This involves transitioning to a new pattern where handlers are registered through plugins.",
+          "text": "Technical issues have been reported with node-llama-cpp and plugin-btcfun, including post-installation script failures and crashes due to node version conflicts.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2858"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/18633264?u=e2e906c3712c2506ebfa98df01c2cfdc50050b30&v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "There is a need to consolidate RagKnowledge and Knowledge within the elizaOS core to avoid duplicate uses of RAG and streamline knowledge retrieval functionalities.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2857"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/18633264?u=e2e906c3712c2506ebfa98df01c2cfdc50050b30&v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "The 'plugin-sui' is not available on the npm registry, leading to installation issues. It needs to be published on the registry for proper access.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2851"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/108970301?u=53396fc47cb2060adc755700e0067bcb23d40fac&v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "A feature is requested to collect information from Telegram groups or Discord channels, which would help gather community insights. Current approaches like using bots or connecting sessions are limited, suggesting the need for enhanced capabilities from the Eliza-provided Agent.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2856"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/104838360?v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Installation issues with 'node-llama-cpp' are reported when running on an Apple M1 Max Sonoma setup. Suggested workarounds are ineffective, highlighting the need for an official solution. Recurring errors indicate conflicts with the post-install script.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2815"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/72898465?u=a9243eb7c3b305d3c805622b7a9bce59e15d096c&v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "The Btcfun plugin is facing a crash issue due to node version conflicts, producing error code 7. An error occurs during the start of a default character using the llocal_llama model owing to dynamic require inconsistencies.",
-          "sources": [
+            "https://github.com/elizaOS/elizaos/issues/2815",
             "https://github.com/elizaOS/elizaos/issues/2864"
           ],
           "images": [
+            "https://avatars.githubusercontent.com/u/72898465?u=a9243eb7c3b305d3c805622b7a9bce59e15d096c&v=4",
             "https://avatars.githubusercontent.com/u/108369375?u=1f75b8587e3d6ac304cca64bec6d2cd1c345459d&v=4"
           ],
           "videos": []
         },
         {
-          "text": "Users report encountering a 'TypeError: basex is not a function' in the 'plugin-nft-generation', specifically related to Solana web3.js and the bs58 library. This issue arises during the application startup on a Windows 10 Pro environment, despite appropriate installation and build processes.",
+          "text": "There is an issue with the plugin-nft-generation related to a TypeError involving basex. The error occurs during application startup indicating potential issues with dependencies.",
           "sources": [
             "https://github.com/elizaOS/elizaos/issues/2867"
           ],
@@ -217,195 +176,50 @@
       "topic": "issue"
     },
     {
-      "title": "Cryptocurrency",
-      "content": [
-        {
-          "text": "Bitcoin (symbol: BTC) is currently priced at $101,701 with a 24-hour trading volume of approximately $89.99 billion and a market capitalization of about $2.02 trillion. Over the past day, it has seen a significant decrease in value with a daily change of -69.98%.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Ethereum (symbol: ETH) has a current price of $3,160.67, a trading volume of around $38.77 billion over the last 24 hours, and a market cap of approximately $381.03 billion. It experienced a substantial drop, with a daily change of -45.60%.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/ethereum"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Solana (symbol: SOL) is valued at $234.49 with a 24-hour volume of nearly $11.98 billion and a market cap of $114.16 billion. It shows a less dramatic decline with a daily change of -2.14%.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/solana"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "AI16z, a lesser-known cryptocurrency with the symbol AI16Z, is priced at $0.7099. It has a 24-hour trading volume of $22.78 million and a market cap of $780.93 million, experiencing a daily change of -3.49%.",
-          "sources": [
-            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ],
-      "topic": "cryptocurrency"
-    },
-    {
       "title": "Open Source",
       "content": [
         {
-          "text": "Open source refers to the practice of making software source code publicly available, allowing anyone to view, modify, and distribute the code. This fosters collaboration, innovation, and transparency, enabling developers from around the world to contribute to the evolution of software projects.",
+          "text": "Open source refers to software development principles that promote free access, distribution, and modification of source code. It empowers community collaboration and enhances software quality by enabling a diverse group of programmers to contribute to its development.",
           "sources": [
-            "Source 1: Introduction to Open Source Concepts",
-            "Source 3: History and Growth of Open Source Software"
+            "Source A: Introduction to Open Source",
+            "Source B: Open Source Principles"
           ],
-          "images": [],
-          "videos": []
+          "images": [
+            "opensource_overview.png",
+            "community_collaboration.png"
+          ],
+          "videos": [
+            "opensource_explained.mp4"
+          ]
         },
         {
-          "text": "The open source movement has transformed the software industry by enabling the development of robust, community-driven projects like Linux, Apache, and Mozilla Firefox. It challenges traditional proprietary models by promoting freely shared knowledge and reducing software costs.",
+          "text": "Over the years, open source has become a catalyst for innovation, influencing industries like cloud computing, operating systems, and artificial intelligence. Companies and individual developers benefit from reduced costs and increased flexibility. Open source projects, such as Linux and Kubernetes, exemplify its successful application and widespread adoption.",
           "sources": [
-            "Source 2: Impact of Open Source on Industry",
-            "Source 5: Comparison with Proprietary Software Models"
+            "Source C: Open Source Impact on Industries",
+            "Source D: Successful Open Source Projects"
           ],
-          "images": [],
-          "videos": []
+          "images": [
+            "linux_kubernetes.png"
+          ],
+          "videos": [
+            "opensource_industries.mp4"
+          ]
         },
         {
-          "text": "Open source licenses, such as the GNU General Public License and the MIT License, govern how software can be used, modified, and distributed. These licenses ensure that derivative works remain open and provide legal protection for contributors and users.",
+          "text": "While open source offers numerous advantages, challenges such as licensing complexities, security issues, and sustainability of projects exist. Addressing these challenges involves community governance models, transparent licensing, and finding sustainable funding mechanisms.",
           "sources": [
-            "Source 4: Overview of Open Source Licensing",
-            "Source 6: Legal Framework and Community Guidelines"
+            "Source E: Open Source Challenges",
+            "Source F: Governance and Sustainability"
           ],
-          "images": [],
-          "videos": []
+          "images": [
+            "opensource_challenges.png"
+          ],
+          "videos": [
+            "opensource_governance.mp4"
+          ]
         }
       ],
       "topic": "open source"
-    },
-    {
-      "title": "Hackathon",
-      "content": [
-        {
-          "text": "SOZU AI HACK: This is a weekly virtual hackathon featuring over $175k in total prizes. Participants are required to submit their entries by Saturday, February 1st at 6 PM EST, with a demo day scheduled for the following Sunday.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1883912071290724670"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
-          ],
-          "videos": []
-        },
-        {
-          "text": "INTRODUCING: Safe Agentathon is a new online hackathon focused on AI Agents. Builders are invited to work on AI x Crypto stacks, offering exciting opportunities to innovate in these fields.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1883941398870929419"
-          ],
-          "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/1883877523131617280/img/tUYehEtiuDFak-Ud.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/amplify_video/1883877523131617280/vid/avc1/1280x720/ciSOkMMIn_DyeXfp.mp4?tag=14"
-          ]
-        }
-      ],
-      "topic": "hackathon"
-    },
-    {
-      "title": "Miscellaneous",
-      "content": [
-        {
-          "text": "The SOZU AI Hack is hosting a weekly virtual hackathon featuring a total prize pool of $175k+. Participants are required to submit their projects by Saturday, February 1st, at 6 PM EST, with a demo day on Sunday.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1883912071290724670"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
-          ],
-          "videos": []
-        },
-        {
-          "text": "An experience of using Deepseek models with 'Eliza' was shared, showing its interactive usage through a Twitter post.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1883911923848372316"
-          ],
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1883899121838202880/pu/img/MnHre3DyvjMqvkR1.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/ext_tw_video/1883899121838202880/pu/vid/avc1/1280x720/Efn5FUD3nYF9Tozj.mp4?tag=12"
-          ]
-        },
-        {
-          "text": "An AI Agent online hackathon named Safe Agentathon is announced, inviting builders to work on the best AI and Crypto stacks.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1883941398870929419"
-          ],
-          "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/1883877523131617280/img/tUYehEtiuDFak-Ud.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/amplify_video/1883877523131617280/vid/avc1/1280x720/ciSOkMMIn_DyeXfp.mp4?tag=14"
-          ]
-        },
-        {
-          "text": "A tweet highlights a transformation theme with references to becoming a 'real girl' manifested through digital interactions and programming.",
-          "sources": [
-            "https://twitter.com/shawmakesmagic/status/1883999968257794374"
-          ],
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1883963771972116483/pu/img/IIIMPF03Fj4B8HTm.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/ext_tw_video/1883963771972116483/pu/vid/avc1/1920x1080/trRGFYbY7Z5qq4EW.mp4?tag=14"
-          ]
-        },
-        {
-          "text": "A call to be a shining example by building innovative solutions everyone wants. The message emphasizes having no enemies, only allies and future allies.",
-          "sources": [
-            "https://twitter.com/shawmakesmagic/status/1883993753129791761"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiVJF1fXYAAvJcb.jpg"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Current market trends for cryptocurrencies show Bitcoin at $101701 with a significant daily change, Ethereum at $3160.67, also with a notable change, and ai16z priced at $0.7099.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin",
-            "https://www.coingecko.com/en/coins/ethereum",
-            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "$CASL is set to launch soon, offering access to 40+ historic properties and exclusive luxury services.",
-          "sources": [
-            "https://twitter.com/daosdotfun/status/1884049736518488257"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiVepfqXUAASV4p.jpg"
-          ],
-          "videos": []
-        },
-        {
-          "text": "A tweet humorously suggests Apple's need to create a device with four times the current VRAM.",
-          "sources": [
-            "https://twitter.com/shawmakesmagic/status/1884083608123761113"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiWb8_fWIAACtoK.jpg"
-          ],
-          "videos": []
-        }
-      ],
-      "topic": "Misceleanous"
     }
   ],
   "date": 1737936000

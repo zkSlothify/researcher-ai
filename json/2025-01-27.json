@@ -1,0 +1,90 @@
+{
+  "type": "dailySummary",
+  "title": "Daily Summary for 2025-01-27",
+  "text": [
+    {
+      "title": "Plugin and Code Quality Updates",
+      "message": [
+        {
+          "text": "Several code quality improvements and type safety enhancements were made across various plugins.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2822",
+            "https://github.com/elizaOS/elizaos/pull/2829",
+            "https://github.com/elizaOS/elizaos/pull/2832"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Code quality improvements included type safety, control flow simplifications, and dependency updates.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2866",
+            "https://github.com/elizaOS/elizaos/pull/2870"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "Market Conditions",
+      "message": [
+        {
+          "text": "Bitcoin's market cap reached $2 trillion, but the daily change was -69.98%. Ethereum also saw a negative daily change of -45.60%.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/bitcoin",
+            "https://www.coingecko.com/en/coins/ethereum"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Solana maintained a relatively stable position with a daily change of -2.14%, while ai16z experienced a slight drop of -3.49%.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/solana",
+            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "Documentation and Readme Updates",
+      "message": [
+        {
+          "text": "Several documentation updates were made, including embedding function updates and Discord client documentation.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/commit/872b13e9ab88b61667a36fb270a8a216602224ee",
+            "https://github.com/elizaOS/elizaos/commit/880901bc3de879c98508bee7220a72973ab41328"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/1807895?u=8e1003e0d0daf5f08a63e0a6029269e3778fd7d1&v=4"
+          ],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "Events and Hackathons",
+      "message": [
+        {
+          "text": "Weekly virtual hackathons with $175k+ total prizes and a new AI Agent online hackathon, Safe Agentathon, introduced.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1883912071290724670",
+            "https://twitter.com/ai16zdao/status/1883941398870929419"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/amplify_video/1883877523131617280/vid/avc1/1280x720/ciSOkMMIn_DyeXfp.mp4?tag=14"
+          ]
+        }
+      ]
+    }
+  ],
+  "date": 1737936000
+}

@@ -3,41 +3,69 @@
   "title": "Daily Summary for 2025-01-26",
   "text": [
     {
-      "Title": "Cryptocurrency Market Update: January 26, 2025",
-      "MessageContent": [
+      "title": "Plugin and Code Quality Updates",
+      "content": [
         {
-          "text": "Summary of today's cryptocurrency market condition:",
-          "sources": [],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Bitcoin (BTC) experienced a decline today, with a current price of $101,746, down by $2,958.15 from yesterday.",
+          "text": "Various plugins received updates to improve type safety and code quality. This includes enhanced maintainability and safety improvements without functional changes.",
           "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin"
+            "https://github.com/elizaOS/elizaos/commit/55a8e20d5b6f6ba44c0a5275a375e94cb758a751",
+            "https://github.com/elizaOS/elizaos/pull/2844",
+            "https://github.com/elizaOS/elizaos/pull/2842",
+            "https://github.com/elizaOS/elizaos/pull/2848"
           ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Ethereum (ETH) is trading at $3,204.93, marking a daily decrease of $124.62.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/ethereum"
+          "images": [
+            "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
           ],
-          "images": [],
           "videos": []
         },
         {
-          "text": "Solana (SOL) recorded a price of $236.59, experiencing a decline of $19.40 today.",
+          "text": "Updates also include resolving linter warnings in various plugins and improving code readability.",
           "sources": [
-            "https://www.coingecko.com/en/coins/solana"
+            "https://github.com/elizaOS/elizaos/pull/2819"
           ],
-          "images": [],
+          "images": [
+            "https://avatars.githubusercontent.com/u/188117230?u=424cd5b834584b3799da288712b3c4158c8032a1&v=4"
+          ],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "Feature Additions and Enhancements",
+      "content": [
+        {
+          "text": "New features introduced include a new Zilliqa blockchain plugin and an upgraded Twitter plugin to handle media attachments.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/commit/4fa62087b5b6a4d605dbd4375f0e9c0f655af455",
+            "https://github.com/elizaOS/elizaos/pull/2818"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/108257153?v=4"
+          ],
           "videos": []
         },
         {
-          "text": "The token ai16z shows a significant decrease with a daily change of -16.21%, trading at $0.7352.",
+          "text": "Additional enhancements include Dependency Injection support and Paraswap API based swap action for the EVM plugin.",
           "sources": [
+            "https://github.com/elizaOS/elizaos/pull/2855",
+            "https://github.com/elizaOS/elizaos/pull/2820"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/707025?u=d8487801b6cc361f4a912518c54cc25cfb70d347&v=4"
+          ],
+          "videos": []
+        }
+      ]
+    },
+    {
+      "title": "Market Conditions",
+      "content": [
+        {
+          "text": "The cryptocurrency market experienced notable changes today:\n- Bitcoin decreased by $2958, with a current price of $101,746.\n- Ethereum's price fell by $124, currently priced at $3204.93.\n- Solana decreased by $19, with a current price of $236.59.\n- Ai16z decreased by $16, with a current price of $0.7352, experiencing a market shake.",
+          "sources": [
+            "https://www.coingecko.com/en/coins/bitcoin",
+            "https://www.coingecko.com/en/coins/ethereum",
+            "https://www.coingecko.com/en/coins/solana",
             "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
           ],
           "images": [],
@@ -46,75 +74,16 @@
       ]
     },
     {
-      "Title": "ElizaOS Development Updates",
-      "MessageContent": [
+      "title": "Events",
+      "content": [
         {
-          "text": "Recent developments in the ElizaOS project include new plugin support and improvements.",
+          "text": "Upcoming events include the Safe Agentathon and SOZU AI HACK, which aim to bring builders to experiment with AI and crypto stacks.",
           "sources": [],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "The new plugin-apro has been introduced, offering functionality such as querying coin prices, creating agents, and verifying data.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2793"
-          ],
           "images": [
-            "https://avatars.githubusercontent.com/u/886093?v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "An access token management feature has been added to the MultiversX Plugin, providing more control over token management.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2810"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/151920498?u=3d14eb2852dcc0f8ca2590047f2c43d601c3aeb1&v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "The Solana web3.js V2 & automated LPing on Orca has been enhanced with new updates and fixes.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/commit/1281911b66307c4b1497f749adba60ae2c77e198"
-          ],
-          "images": [],
-          "videos": []
-        }
-      ]
-    },
-    {
-      "Title": "AI Community Highlights",
-      "MessageContent": [
-        {
-          "text": "The AI community has shown enthusiasm for recent developments and events.",
-          "sources": [],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "A new season is beginning, promising further advancements and projects.",
-          "sources": [
-            "https://twitter.com/shawmakesmagic/status/1883676926008778941"
-          ],
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1883674060850376704/pu/img/z7ZrMzV1O1cxTz92.jpg"
+            "https://pbs.twimg.com/amplify_video_thumb/1883877523131617280/img/tUYehEtiuDFak-Ud.jpg"
           ],
           "videos": [
-            "https://video.twimg.com/ext_tw_video/1883674060850376704/pu/vid/avc1/1280x720/TAqCm2A4xNXHauxy.mp4?tag=12"
-          ]
-        },
-        {
-          "text": "The Aiccelerate Builders incubator cohort has garnered significant attention with over 100 applications.",
-          "sources": [
-            "https://twitter.com/daosdotfun/status/1883689875159003589"
-          ],
-          "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1883685861839245312/pu/img/3FTufneHHtPpmX2I.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/ext_tw_video/1883685861839245312/pu/vid/avc1/960x720/V3ISclqDYWtotBEK.mp4?tag=12"
+            "https://video.twimg.com/amplify_video/1883877523131617280/vid/avc1/1280x720/ciSOkMMIn_DyeXfp.mp4?tag=14"
           ]
         }
       ]

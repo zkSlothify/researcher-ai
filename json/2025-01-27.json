@@ -3,74 +3,81 @@
   "title": "Daily Summary for 2025-01-27",
   "text": [
     {
-      "Title": "Technical Improvements and Plugin Updates by ElizaOS",
-      "Content": [
+      "title": "News, Development, and Events in ElizaOS",
+      "messageContent": [
         {
-          "text": "Several ElizaOS plugins saw major and minor fixes aimed at enhancing code quality, type safety, and maintainability.",
+          "text": "ElizaOS made significant development improvements in various plugins. These include enhancements in code quality, type safety, and functionality across multiple plugins such as Zerion, Story, Twitter, and more. The updates are focused on maintaining existing functionalities while improving the code's robustness.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/55a8e20d5b6f6ba44c0a5275a375e94cb758a751",
-            "https://github.com/elizaOS/elizaos/pull/2844",
-            "https://github.com/elizaOS/elizaos/pull/2837"
+            "https://github.com/elizaOS/elizaos/commit/55a8e20d5b6f6ba44c0a5275a375e94cb758a751"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
           ]
         },
         {
-          "text": "Notable plugins updated include Zerion, Story, Akash, and Zksync-era, with efforts focused on type definitions, linter warnings, and dependency enhancements.",
+          "text": "New features such as Zilliqa blockchain plugin and paraswap API-based swap action for the EVM plugin have been introduced. These provide enhanced user interactions and broaden the functionality of the existing infrastructure.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2843",
-            "https://github.com/elizaOS/elizaos/pull/2819"
+            "https://github.com/elizaOS/elizaos/pull/2842",
+            "https://github.com/elizaOS/elizaos/pull/2820"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/108257153?v=4"
+          ]
+        },
+        {
+          "text": "Documentation updates have been performed to keep the project instructions in line with the recent changes, enhancing the maintainability of the project.",
+          "sources": [
+            "https://github.com/elizaOS/elizaos/commit/872b13e9ab88b61667a36fb270a8a216602224ee"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/1807895?u=8e1003e0d0daf5f08a63e0a6029269e3778fd7d1&v=4"
           ]
         }
       ]
     },
     {
-      "Title": "Market Highlights for Major Cryptocurrencies",
-      "Content": [
+      "title": "Market Conditions",
+      "messageContent": [
         {
-          "text": "Bitcoin experienced a substantial dip in value today, plummeting by 69.98% to $101,701 with a 24-hour trading volume of $89,995,177,496.",
+          "text": "Bitcoin experienced a dramatic decrease, with its current price at $101,701, marking a daily change of -69.98%.",
           "sources": [
             "https://www.coingecko.com/en/coins/bitcoin"
           ]
         },
         {
-          "text": "Ethereum's price decreased to $3,160.67 with a 45.60% drop and Solana also experienced a smaller decline to $234.49.",
+          "text": "Ethereum followed a similar trend as Bitcoin, with a current price of $3160.67, reflecting a daily change of -45.60%.",
           "sources": [
-            "https://www.coingecko.com/en/coins/ethereum",
-            "https://www.coingecko.com/en/coins/solana"
-          ]
-        }
-      ]
-    },
-    {
-      "Title": "Documentation and Readme Enhancements",
-      "Content": [
-        {
-          "text": "ElizaOS also improved its documentation by updating the embedding functions and integrating new examples to assist developers in using the system more effectively.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/commit/872b13e9ab88b61667a36fb270a8a216602224ee",
-            "https://github.com/elizaOS/elizaos/pull/2828"
+            "https://www.coingecko.com/en/coins/ethereum"
           ]
         },
         {
-          "text": "The client documentation for Telegram and Discord received attention to detail, paving the way for improved community engagement.",
+          "text": "Solana and AI16Z tokens also reported significant declines, though less severe than Bitcoin and Ethereum, with daily changes of -2.14% and -3.49%, respectively.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2814",
-            "https://github.com/elizaOS/elizaos/commit/3f7f6106b19733e28da53bcdbba1acb2a087c978"
+            "https://www.coingecko.com/en/coins/solana",
+            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
           ]
         }
       ]
     },
     {
-      "Title": "Community Events and Collaborations",
-      "Content": [
+      "title": "Hackathons and Tech Community Updates",
+      "messageContent": [
         {
-          "text": "Safe Agentathon and Sozu AI Hackathon are drawing attention with substantial prize pools urging developers to build on the intersection of AI and crypto.",
+          "text": "The Sozu AI Hack event commenced with impressive prize funds and significant community engagement, fostering innovations in AI technology.",
           "sources": [
-            "https://twitter.com/ai16zdao/status/1883941398870929419",
             "https://twitter.com/ai16zdao/status/1883912071290724670"
           ],
           "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/1883877523131617280/img/tUYehEtiuDFak-Ud.jpg",
             "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
+          ]
+        },
+        {
+          "text": "The Safe Agentathon introduced its AI Agent hackathon, calling on tech builders to engage with AI and crypto stacks.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1883941398870929419"
+          ],
+          "images": [
+            "https://pbs.twimg.com/amplify_video_thumb/1883877523131617280/img/tUYehEtiuDFak-Ud.jpg"
           ],
           "videos": [
             "https://video.twimg.com/amplify_video/1883877523131617280/vid/avc1/1280x720/ciSOkMMIn_DyeXfp.mp4?tag=14"

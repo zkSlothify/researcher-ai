@@ -3,122 +3,55 @@
   "title": "Daily Summary for 2025-01-27",
   "text": [
     {
-      "title": "Tech and Development Updates",
-      "messages": [
+      "title": "ElizaOS Code Quality and Improvements",
+      "content": [
         {
-          "text": "Multiple ElizaOS plugins received significant code quality improvements, enhancing type safety and maintainability.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2822",
-            "https://github.com/elizaOS/elizaos/pull/2832",
-            "https://github.com/elizaOS/elizaos/pull/2840"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
-          ],
-          "videos": []
+          "text": "Significant changes focus on resolving linter warnings, utilizing type guard definitions, and updating import protocols to modern standards.",
+          "sources": "https://github.com/elizaOS/elizaos/commit/55a8e20d5b6f6ba44c0a5275a375e94cb758a751",
+          "images": "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
         },
         {
-          "text": "A feature was added to support the Zilliqa blockchain with a new plugin for the Eliza ecosystem.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2842"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/108257153?v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "A new swap action has been integrated into the EVM plugin using Paraswap API to enhance token-swapping capabilities.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2820"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/47485188?u=204859eeddfdea8b25f83f66bf5d82fa06c8aa73&v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "A collaborative update improved the plugin-story and plugin-tee-marlin by refining type definitions and polishing the code.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2844",
-            "https://github.com/elizaOS/elizaos/pull/2837"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
-          ],
-          "videos": []
+          "text": "New features and plugins include updates to MultiversX for access token management, Zilliqa blockchain support, and further enhancements to the Trikon, Apro, and Gelato relay plugins.",
+          "sources": "https://github.com/elizaOS/elizaos/pull/2842",
+          "images": "https://avatars.githubusercontent.com/u/108257153?v=4"
         }
       ]
     },
     {
       "title": "Market Conditions",
-      "messages": [
+      "content": [
         {
-          "text": "Bitcoin experienced a slight decline today with a drop in price to $101,701. The market cap stands at $2,016 billion.",
-          "images": [],
-          "videos": []
+          "text": "Bitcoin’s price has experienced a significant decline with the current price at $101,701 and a daily change of -69.98%.",
+          "sources": "https://www.coingecko.com/en/coins/bitcoin"
         },
         {
-          "text": "Ethereum's price also saw a decrease, closing at $3,160.67 with a market cap of $381 billion.",
-          "images": [],
-          "videos": []
+          "text": "Ethereum faced a decrease in value with a current price at $3,160.67 and a daily change of -45.60%.",
+          "sources": "https://www.coingecko.com/en/coins/ethereum"
         },
         {
-          "text": "Solana showed a dip with a current price of $234.49, maintaining a market cap of $114 billion.",
-          "images": [],
-          "videos": []
+          "text": "Solana has seen a slight decrease, currently priced at $234.49 with a daily change of -2.14%.",
+          "sources": "https://www.coingecko.com/en/coins/solana"
         }
       ]
     },
     {
-      "title": "Community and Events",
-      "messages": [
+      "title": "Documentation Updates",
+      "content": [
         {
-          "text": "An exciting AI Agent online hackathon, 'Safe Agentathon,' was announced, inviting builders to explore AI x Crypto intersections.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1883941398870929419"
-          ],
-          "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/1883877523131617280/img/tUYehEtiuDFak-Ud.jpg"
-          ],
-          "videos": [
-            "https://video.twimg.com/amplify_video/1883877523131617280/vid/avc1/1280x720/ciSOkMMIn_DyeXfp.mp4?tag=14"
-          ]
-        },
-        {
-          "text": "SOZU AI HACK announces a weekly hackathon starting February 1st, aiming to reward innovative AI projects.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1883912071290724670"
-          ],
-          "images": [
-            "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
-          ],
-          "videos": []
+          "text": "Updates have been made to various documentations including embedding functions and client telegram README.md for improved clarity and configuration details.",
+          "sources": "https://github.com/elizaOS/elizaos/pull/2821",
+          "images": "https://avatars.githubusercontent.com/u/1807895?u=8e1003e0d0daf5f08a63e0a6029269e3778fd7d1&v=4"
         }
       ]
     },
     {
-      "title": "Documentation and Readme Updates",
-      "messages": [
+      "title": "Events and Developments",
+      "content": [
         {
-          "text": "Documentation was updated to reflect changes in embedding functionality, ensuring clarity and usability.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2821"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/1807895?u=8e1003e0d0daf5f08a63e0a6029269e3778fd7d1&v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "The Telegram client readme was updated with additional configuration details, enhancing user guidance.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2814"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/22399739?u=55f940c4af7faf3dbe97b38213a83cf66fda6b03&v=4"
-          ],
-          "videos": []
+          "text": "The AI Agent online hackathon has been announced by Safe Agentathon, inviting builders to explore AI x Crypto stacks.",
+          "sources": "https://twitter.com/ai16zdao/status/1883941398870929419",
+          "images": "https://pbs.twimg.com/amplify_video_thumb/1883877523131617280/img/tUYehEtiuDFak-Ud.jpg",
+          "videos": "https://video.twimg.com/amplify_video/1883877523131617280/vid/avc1/1280x720/ciSOkMMIn_DyeXfp.mp4?tag=14"
         }
       ]
     }

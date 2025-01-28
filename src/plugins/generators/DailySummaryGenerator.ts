@@ -18,6 +18,7 @@ export class DailySummaryGenerator {
   private storage: SQLiteStorage;
   private summaryType: string;
   private source: string;
+  private blockedTopics: string[] = ['open source']
 
   constructor(config: DailySummaryGeneratorConfig) {
     this.openAiProvider = config.openAiProvider;
@@ -106,10 +107,12 @@ export class DailySummaryGenerator {
         if (obj.topics) {
           obj.topics.forEach((topic:any) => {
             let shortCase = topic.toLowerCase();
-            if (!topicMap.has(shortCase)) {
-              topicMap.set(shortCase, []);
+            if ( this.blockedTopics.includes(shortCase) ) {
+              if (!topicMap.has(shortCase)) {
+                topicMap.set(shortCase, []);
+              }
+              topicMap.get(shortCase).push(obj);
             }
-            topicMap.get(shortCase).push(obj);
           });
         }
       }

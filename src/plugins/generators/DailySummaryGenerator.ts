@@ -107,7 +107,7 @@ export class DailySummaryGenerator {
         if (obj.topics) {
           obj.topics.forEach((topic:any) => {
             let shortCase = topic.toLowerCase();
-            if ( this.blockedTopics.includes(shortCase) ) {
+            if ( ! this.blockedTopics.includes(shortCase) ) {
               if (!topicMap.has(shortCase)) {
                 topicMap.set(shortCase, []);
               }

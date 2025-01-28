@@ -3,49 +3,14 @@
   "title": "Daily Summary for 2025-01-27",
   "text": [
     {
-      "title": "Tech News and Developments on January 27, 2025",
-      "messages": [
+      "title": "Plugin and Code Quality Updates",
+      "message": [
         {
-          "text": "New Plugin Releases and Enhancements",
+          "text": "Several code quality improvements and type safety enhancements were made across various plugins.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/4fa62087b5b6a4d605dbd4375f0e9c0f655af455",
-            "https://github.com/elizaOS/elizaos/pull/2869"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/108257153?v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Zilliqa Plugin: The recently added plugin for the Zilliqa blockchain allows developers to conduct wallet and blockchain interactions more efficiently.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/commit/4fa62087b5b6a4d605dbd4375f0e9c0f655af455"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/108257153?v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Arbitrage Plugin Optimizations: Recent updates to the arbitrage plugin have improved gas price optimization, volume calculation for trades, and enhanced error handling and logging.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2869"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/82287267?v=4"
-          ],
-          "videos": []
-        }
-      ]
-    },
-    {
-      "title": "ElizaOS Plugin Updates",
-      "messages": [
-        {
-          "text": "Type Safety and Code Quality Improvements",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2840",
-            "https://github.com/elizaOS/elizaos/pull/2868"
+            "https://github.com/elizaOS/elizaos/pull/2822",
+            "https://github.com/elizaOS/elizaos/pull/2829",
+            "https://github.com/elizaOS/elizaos/pull/2832"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
@@ -53,57 +18,30 @@
           "videos": []
         },
         {
-          "text": "Suno and Spheron Plugin Improvements: Enhanced type safety and resolved type issues to improve maintainability and code safety.",
+          "text": "Code quality improvements included type safety, control flow simplifications, and dependency updates.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2840"
+            "https://github.com/elizaOS/elizaos/pull/2866",
+            "https://github.com/elizaOS/elizaos/pull/2870"
           ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "Squid Router Plugin Code Updates: The plugin saw improvements in code readability by eliminating redundant clauses and optimizing parameter handling.",
-          "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2868"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
-          ],
+          "images": [],
           "videos": []
         }
       ]
     },
     {
       "title": "Market Conditions",
-      "messages": [
+      "message": [
         {
-          "text": "Cryptocurrency Market Overview",
+          "text": "Bitcoin's market cap reached $2 trillion, but the daily change was -69.98%. Ethereum also saw a negative daily change of -45.60%.",
           "sources": [
             "https://www.coingecko.com/en/coins/bitcoin",
-            "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Bitcoin: Currently trading at $101,701, with a 24-hour volume of $89,995,177,496, and a market cap of $2,016,266,553,483, experiencing a daily decrease of 69.98%.",
-          "sources": [
-            "https://www.coingecko.com/en/coins/bitcoin"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Ethereum: Priced at $3,160.67, Ethereum has a 24-hour volume of $38,765,652,011, and a market cap of $381,029,381,748, with a daily decrease of 45.60%.",
-          "sources": [
             "https://www.coingecko.com/en/coins/ethereum"
           ],
           "images": [],
           "videos": []
         },
         {
-          "text": "Solana and AI16Z: Solana is at $234.49 daily change of -2.14%, and AI16Z at $0.7099 with a 3.49% decrease today, highlighting volatility across the market.",
+          "text": "Solana maintained a relatively stable position with a daily change of -2.14%, while ai16z experienced a slight drop of -3.49%.",
           "sources": [
             "https://www.coingecko.com/en/coins/solana",
             "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
@@ -114,25 +52,32 @@
       ]
     },
     {
-      "title": "Upcoming Events",
-      "messages": [
+      "title": "Documentation and Readme Updates",
+      "message": [
         {
-          "text": "Sozu AI Hack: A digital hackathon offering over $175k in prizes. Week 1 submissions are by February 1, with submissions and demo day on February 2.",
+          "text": "Several documentation updates were made, including embedding function updates and Discord client documentation.",
           "sources": [
-            "https://twitter.com/ai16zdao/status/1883912071290724670"
+            "https://github.com/elizaOS/elizaos/commit/872b13e9ab88b61667a36fb270a8a216602224ee",
+            "https://github.com/elizaOS/elizaos/commit/880901bc3de879c98508bee7220a72973ab41328"
           ],
           "images": [
-            "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
+            "https://avatars.githubusercontent.com/u/1807895?u=8e1003e0d0daf5f08a63e0a6029269e3778fd7d1&v=4"
           ],
           "videos": []
-        },
+        }
+      ]
+    },
+    {
+      "title": "Events and Hackathons",
+      "message": [
         {
-          "text": "Safe's Safe Agentathon: An online AI and Crypto hackathon for builders to work with AI and cryptocurrency stacks.",
+          "text": "Weekly virtual hackathons with $175k+ total prizes and a new AI Agent online hackathon, Safe Agentathon, introduced.",
           "sources": [
+            "https://twitter.com/ai16zdao/status/1883912071290724670",
             "https://twitter.com/ai16zdao/status/1883941398870929419"
           ],
           "images": [
-            "https://pbs.twimg.com/amplify_video_thumb/1883877523131617280/img/tUYehEtiuDFak-Ud.jpg"
+            "https://pbs.twimg.com/media/GiTuTqhWUAAZTwL.jpg"
           ],
           "videos": [
             "https://video.twimg.com/amplify_video/1883877523131617280/vid/avc1/1280x720/ciSOkMMIn_DyeXfp.mp4?tag=14"

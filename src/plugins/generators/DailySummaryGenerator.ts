@@ -68,7 +68,7 @@ export class DailySummaryGenerator {
       const summaryItem: any = {
         type: this.summaryType,
         title: `Daily Summary for ${dateStr}`,
-        text: JSON.stringify(allSummaries, null, 2),
+        categories: JSON.stringify(allSummaries, null, 2),
         date: new Date().getTime() / 1000,
       };
 
@@ -77,7 +77,7 @@ export class DailySummaryGenerator {
       fs.writeFileSync(`./json/${dateStr}.json`, JSON.stringify({
         type: this.summaryType,
         title: `Daily Summary for ${dateStr}`,
-        text: allSummaries,
+        categories: allSummaries,
         date: new Date(dateStr).getTime() / 1000,
       }, null, 2));
 

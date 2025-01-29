@@ -41,7 +41,7 @@ export class SQLiteStorage implements StoragePlugin {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         type TEXT NOT NULL,
         title TEXT,
-        text TEXT,
+        categories TEXT,
         date INTEGER
       );
     `);
@@ -144,13 +144,13 @@ export class SQLiteStorage implements StoragePlugin {
 
     await this.db.run(
       `
-      INSERT INTO summary (type, title, text, date)
+      INSERT INTO summary (type, title, categories, date)
       VALUES (?, ?, ?, ?)
       `,
       [
         item.type,
         item.title || null,
-        item.text || null,
+        item.categories || null,
         item.date,
       ]
     );
@@ -249,7 +249,7 @@ export class SQLiteStorage implements StoragePlugin {
         id: row.id,
         type: row.type,
         title: row.title || undefined,
-        text: row.text || undefined,
+        categories: row.categories || undefined,
         date: row.date,
       }));
     } catch (error) {

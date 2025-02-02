@@ -3,10 +3,22 @@ on:
   schedule:
     - cron: '0 * * * *' # Run every hour
   workflow_dispatch:
-
+  push:
+    branches:
+      - secrets      # Add this to test on secrets branch
+      - main        # Keep this for when you merge to main
 jobs:
   sqlite-job:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write      # Add this
+      id-token: write   # Add this
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -21,6 +33,7 @@ jobs:
           echo '${{ secrets.ENV_SECRETS }}' | jq -r 'to_entries | .[] | .value' | while read -r value; do
             echo "::add-mask::$value"
           done          
+
       - name: Set environment variables
         run: |
           echo '${{ secrets.ENV_SECRETS }}' | jq -r 'to_entries | .[] | "echo \(.key)=\(.value) >> $GITHUB_ENV"' | sh
@@ -32,6 +45,24 @@ jobs:
         run: npm run dev
         env:
           RUN_ONCE: true
+
+      # Add these new steps
+      - name: Copy latest JSON to daily.json
+        run: |
+          LATEST_JSON=$(ls -t ./json/*.json | head -n1)
+          cp "$LATEST_JSON" ./json/daily.json
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Commit and Push Changes
         run: |

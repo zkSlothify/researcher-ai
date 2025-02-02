@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - secrets      # Add this to test on secrets branch
       - main        # Keep this for when you merge to main
+      #- secrets      # Add this to test on secrets branch
 jobs:
   sqlite-job:
     runs-on: ubuntu-latest

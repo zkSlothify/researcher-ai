@@ -51,7 +51,7 @@ const sourceConfigs: SourceConfig[] = [
     source: new DiscordAnnouncementSource({
       name: "discordAnnouncement",
       botToken: process.env.DISCORD_TOKEN || '',
-      channelIds: ["940833937838714913"]
+      channelIds: ["1299473809166045357"]
     }),
     interval: hour
   },

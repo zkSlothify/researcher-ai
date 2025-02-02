@@ -49,7 +49,7 @@ jobs:
       # Add these new steps
       - name: Copy latest JSON to daily.json
         run: |
-          LATEST_JSON=$(ls -t ./json/*.json | head -n1)
+          LATEST_JSON=$(ls ./json/*2025-*-*.json | sort -V | tail -n1)
           cp "$LATEST_JSON" ./json/daily.json
 
       - name: Setup Pages

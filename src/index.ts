@@ -86,8 +86,11 @@ const sourceConfigs: SourceConfig[] = [
   try {
     const openAiProvider = new OpenAIProvider({
       apiKey: process.env.OPENAI_API_KEY || '',
-      model: "gpt-3.5-turbo",
-      temperature: 0,
+      model: "openai/gpt-4o-mini",
+      temperature: 0.1,
+      useOpenRouter: process.env.USE_OPENROUTER === 'true',
+      siteUrl: process.env.SITE_URL,
+      siteName: process.env.SITE_NAME
     });
     
     const summaryOpenAiProvider = new OpenAIProvider({

@@ -1,44 +1,70 @@
-// src/plugins/enrichers/ai/OpenAIProvider.ts
+// src/plugins/ai/OpenAIProvider.ts
 
 import { AiProvider } from "../../types";
-import { OpenAI } from "openai";
+import OpenAI from "openai";
 
 interface OpenAIProviderConfig {
   apiKey: string;
-  model?: string;          // e.g., "gpt-3.5-turbo"
-  temperature?: number;    // 0.0-1.0
+  model?: string;          
+  temperature?: number;    
+  useOpenRouter?: boolean;
+  siteUrl?: string;      
+  siteName?: string;     
 }
 
 export class OpenAIProvider implements AiProvider {
   private openai: OpenAI;
+  private openaiDirect: OpenAI | null = null;  // For image generation
+  private canGenerateImages: boolean = false;
   private model: string;
   private temperature: number;
+  private useOpenRouter: boolean;
 
   constructor(config: OpenAIProviderConfig) {
-    const configuration = {
-      apiKey: config.apiKey,
+    this.useOpenRouter = config.useOpenRouter || false;
+    
+    // Initialize main client (OpenRouter or OpenAI)
+    const openAIConfig: any = {
+      apiKey: config.apiKey
     };
-    this.openai = new OpenAI(configuration);
 
-    // Provide defaults
-    this.model = config.model || "gpt-3.5-turbo";
+    if (this.useOpenRouter) {
+      openAIConfig.baseURL = "https://openrouter.ai/api/v1";
+      openAIConfig.defaultHeaders = {
+        "HTTP-Referer": config.siteUrl || "",
+        "X-Title": config.siteName || "",
+      };
+      this.model = config.model?.includes("/") ? config.model : `openai/${config.model || "gpt-4o-mini"}`;
+      
+      // Create separate OpenAI client for image generation if OpenAI key is provided
+      const openaiKey = process.env.OPENAI_DIRECT_KEY;
+      if (openaiKey) {
+        this.openaiDirect = new OpenAI({
+          apiKey: openaiKey
+        });
+        this.canGenerateImages = true;
+      }
+    } else {
+      this.model = config.model || "gpt-4o-mini";
+      this.canGenerateImages = true;
+    }
+
+    this.openai = new OpenAI(openAIConfig);
     this.temperature = config.temperature ?? 0.7;
   }
 
   public async summarize(prompt: string): Promise<string> {
     try {
-      const params: OpenAI.Chat.ChatCompletionCreateParams = {
-        messages: [{ role: 'user', content: prompt }],
+      const completion = await this.openai.chat.completions.create({
         model: this.model,
-        frequency_penalty: 0,
-      };
-  
-      const { data: chatCompletion, response: raw } = await this.openai.chat.completions.create(params).withResponse();
-  
-      return chatCompletion.choices[0]?.message?.content || "";
+        messages: [{ role: 'user', content: prompt }],
+        temperature: this.temperature
+      });
+
+      return completion.choices[0]?.message?.content || "";
     } catch (e) {
-      console.log( e )
-      return ""
+      console.error("Error in summarize:", e);
+      throw e;
     }
   }
 
@@ -46,23 +72,31 @@ export class OpenAIProvider implements AiProvider {
     try {
       const prompt = `Provide up to 6 words that describe the topic of the following text:\n\n"${text}.\n\n Response format MUST be formatted in this way, the words must be strings:\n\n[ \"word1\", \"word2\", \"word3\"]\n`;
   
-      const params: OpenAI.Chat.ChatCompletionCreateParams = {
-        messages: [{ role: 'user', content: prompt }],
+      const completion = await this.openai.chat.completions.create({
         model: this.model,
-      };
-  
-      const { data: chatCompletion, response: raw } = await this.openai.chat.completions.create(params).withResponse();
+        messages: [{ role: 'user', content: prompt }],
+        temperature: this.temperature
+      });
 
-      return JSON.parse(chatCompletion.choices[0]?.message?.content || "[]");
+      return JSON.parse(completion.choices[0]?.message?.content || "[]");
     } catch (e) {
-      return []
+      console.error("Error in topics:", e);
+      return [];
     }
   }
 
   public async image(text: string): Promise<string[]> {
+    if (!this.canGenerateImages) {
+      console.warn("Image generation is not available. When using OpenRouter, set OPENAI_DIRECT_KEY for image generation.");
+      return [];
+    }
+
     try {
+      // Use direct OpenAI client for image generation
+      const client = this.useOpenRouter ? this.openaiDirect! : this.openai;
+      
       const prompt = `Create an image that depicts the following text:\n\n"${text}.\n\n Response format MUST be formatted in this way, the words must be strings:\n\n{ \"images\": \"<image_url>\"}\n`;
-  
+      
       const params: OpenAI.Images.ImageGenerateParams = {
         model: "dall-e-3",
         prompt: text,
@@ -70,11 +104,12 @@ export class OpenAIProvider implements AiProvider {
         size: "1024x1024",
       };
   
-      const { data: image, response: raw } = await this.openai.images.generate(params).withResponse();
-      console.log(image.data[0].url)
+      const image = await client.images.generate(params);
+      console.log(image.data[0].url);
       return JSON.parse(image.data[0].url || "[]");
     } catch (e) {
-      return []
+      console.error("Error in image generation:", e);
+      return [];
     }
   }
 }

@@ -8,8 +8,11 @@ dotenv.config();
 (async () => {
   const openAiProvider = new OpenAIProvider({
     apiKey: process.env.OPENAI_API_KEY || '',
-    model: "gpt-4o",
+    model: process.env.USE_OPENROUTER === 'true' ? `openai/gpt-4o-mini` : `gpt-4o-mini`,
     temperature: 0,
+    useOpenRouter: process.env.USE_OPENROUTER === 'true',
+    siteUrl: process.env.SITE_URL,
+    siteName: process.env.SITE_NAME
   });
 
 
@@ -22,7 +25,7 @@ dotenv.config();
     summaryType: "dailySummary",
     source: "aiSummary",
   });
-  
+
   const today = new Date();
   const dateStr = today.toISOString().slice(0, 10);
 

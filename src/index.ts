@@ -42,7 +42,7 @@ const sourceConfigs: SourceConfig[] = [
     source: new DiscordChannelSource({
       name: "discordChannel",
       botToken: process.env.DISCORD_TOKEN || '',
-      channelIds: ["940835354846572594"],
+      channelIds: ["1326603270893867064"],
       provider: undefined,
     }),
     interval: 0.1 * hour // 6 minutes

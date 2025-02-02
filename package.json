@@ -7,7 +7,8 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
-    "generator": "ts-node src/generator.ts"
+    "generator": "ts-node src/generator.ts",
+    "historical": "ts-node src/historical.ts"
   },
   "keywords": [
     "news",
@@ -17,7 +18,7 @@
     "api",
     "sqlite"
   ],
-  "author": "Your Name",
+  "author": "bozp",
   "license": "MIT",
   "dependencies": {
     "@mozilla/readability": "^0.5.0",

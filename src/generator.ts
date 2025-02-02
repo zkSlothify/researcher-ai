@@ -8,8 +8,11 @@ dotenv.config();
 (async () => {
   const openAiProvider = new OpenAIProvider({
     apiKey: process.env.OPENAI_API_KEY || '',
-    model: "gpt-4o",
+    model: "openai/gpt-4o-mini",  // Using GPT-4 for summary generation
     temperature: 0,
+    useOpenRouter: process.env.USE_OPENROUTER === 'true',
+    siteUrl: process.env.SITE_URL,
+    siteName: process.env.SITE_NAME
   });
 
 

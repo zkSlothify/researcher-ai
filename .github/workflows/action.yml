@@ -5,15 +5,14 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main        # Keep this for when you merge to main
-      #- secrets      # Add this to test on secrets branch
+      - main
 jobs:
   sqlite-job:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pages: write      # Add this
-      id-token: write   # Add this
+      pages: write
+      id-token: write
 
     environment:
       name: github-pages
@@ -46,7 +45,6 @@ jobs:
         env:
           RUN_ONCE: true
 
-      # Add these new steps
       - name: Copy latest JSON to daily.json
         run: |
           LATEST_JSON=$(ls ./json/*2025-*-*.json | sort -V | tail -n1)

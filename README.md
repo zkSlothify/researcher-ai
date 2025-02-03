@@ -46,15 +46,47 @@ cp example.env .env
 Create a `.env` file with the following variables:
 
 ```env
-TWITTER_USERNAME=           # Twitter account username
-TWITTER_PASSWORD=           # Twitter account password 
-TWITTER_EMAIL=              # Twitter account email
+OPENAI_API_KEY=           # Your OpenAI API key or OpenRouter API key
+OPENAI_DIRECT_KEY=        # Optional: Your OpenAI API key for image generation when using OpenRouter
+USE_OPENROUTER=false      # Set to true to use OpenRouter
+SITE_URL=                 # Your site URL for OpenRouter rankings
+SITE_NAME=                # Your site name for OpenRouter rankings
 
-OPENAI_API_KEY=            # OpenAI API key
+# Other existing configurations...
+TWITTER_USERNAME=         # Account username
+TWITTER_PASSWORD=         # Account password
+TWITTER_EMAIL=            # Account email
 
-DISCORD_APP_ID=            # Discord application ID
-DISCORD_TOKEN=             # Discord bot token
+DISCORD_APP_ID=
+DISCORD_TOKEN=
 ```
+
+## GitHub Actions Secrets Single File
+
+
+1. Navigate to your GitHub repository
+2. Go to "Settings" > "Secrets and variables" > "Actions"
+3. Click "New repository secret"
+4. Copy the JSON with your credentials
+5. Save name as "ENV_SECRETS"
+
+```json
+{
+  "TWITTER_USERNAME": "",
+  "TWITTER_PASSWORD": "",
+  "TWITTER_EMAIL": "",
+  "OPENAI_API_KEY": "",
+  "OPENAI_DIRECT_KEY": "",
+  "USE_OPENROUTER": "",
+  "SITE_URL": "",
+  "SITE_NAME": "",
+  "DISCORD_APP_ID": "",
+  "DISCORD_TOKEN": "",
+  "BIRDEYE_API_KEY": ""
+}
+```
+
+> Note: You'll get notifications about Twitter login from unknown location, maybe best to exclude Twitter
 
 ## Running the Application
 

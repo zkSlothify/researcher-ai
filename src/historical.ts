@@ -29,7 +29,7 @@ let runOnce = process.env.RUN_ONCE === 'true';
 
     const openAiProvider = new OpenAIProvider({
     apiKey: process.env.OPENAI_API_KEY || '',
-    model: "gpt-3.5-turbo",
+    model: process.env.USE_OPENROUTER === 'true' ? `openai/gpt-4o-mini` : `gpt-4o-mini`,
     temperature: 0,
     });
 

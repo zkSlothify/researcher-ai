@@ -2,7 +2,7 @@
 
 import { OpenAIProvider } from "../ai/OpenAIProvider";
 import { SQLiteStorage } from "../storage/SQLiteStorage";
-import { ContentItem } from "../../types";
+import { ContentItem, SummaryItem } from "../../types";
 import fs from "fs";
 
 
@@ -30,10 +30,10 @@ export class DailySummaryGenerator {
   
   public async generateAndStoreSummary(dateStr: string): Promise<void> {
     try {
-        const endTime = new Date().getTime() / 1000;
-        const startTime = endTime - ( 60 * 60 * 24);
+      const currentTime = new Date().getTime() / 1000;
+      const targetTime = currentTime - ( 60 * 60 * 24);
         
-      const contentItems: ContentItem[] = await this.storage.getContentItemsBetweenEpoch(startTime, endTime, this.summaryType);
+      const contentItems: ContentItem[] = await this.storage.getContentItemsBetweenEpoch(targetTime, currentTime, this.summaryType);
 
       if (contentItems.length === 0) {
         console.warn(`No content found for date ${dateStr} to generate summary.`);
@@ -65,25 +65,70 @@ export class DailySummaryGenerator {
         catch (e) {}
       }
 
-      const summaryItem: any = {
+      const summaryItem: SummaryItem = {
         type: this.summaryType,
         title: `Daily Summary for ${dateStr}`,
         categories: JSON.stringify(allSummaries, null, 2),
-        date: new Date().getTime() / 1000,
+        date: currentTime,
       };
 
       await this.storage.saveContentItem(summaryItem);
 
-      fs.writeFileSync(`./json/${dateStr}.json`, JSON.stringify({
-        type: this.summaryType,
-        title: `Daily Summary for ${dateStr}`,
-        categories: allSummaries,
-        date: new Date(dateStr).getTime() / 1000,
-      }, null, 2));
+      await this.writeSummaryToFile(dateStr, currentTime, allSummaries);
 
       console.log(`Daily summary for ${dateStr} generated and stored successfully.`);
     } catch (error) {
       console.error(`Error generating daily summary for ${dateStr}:`, error);
+    }
+  }
+
+  public async checkIfFileMatchesDB(dateStr: string, summary: SummaryItem) {
+    try {
+      let jsonParsed = await this.readSummaryFromFile(dateStr);
+
+      let summaryParsed = {
+        type: summary.type,
+        title: summary.title,
+        categories: JSON.parse(summary.categories || "[]"),
+        date: summary.date
+      }
+
+      if (!this.deepEqual(jsonParsed, summaryParsed)) {
+        console.log("JSON file didn't match database, resaving summary to file.")
+        await this.writeSummaryToFile(dateStr, summary.date || new Date().getTime(), summaryParsed.categories)
+      }
+    }
+    catch (error) {
+      console.error(`Error checkIfFileMatchesDB:`, error);
+    }
+  }
+
+  private deepEqual(obj1: any, obj2: any) {
+    return JSON.stringify(obj1) === JSON.stringify(obj2);
+  }
+
+  private async readSummaryFromFile(dateStr: string) {
+    try {
+      const data = fs.readFileSync(`./json/${dateStr}.json`, 'utf8');
+
+      return JSON.parse(data);
+    }
+    catch (error) {
+      console.error(`Error reading the file ${dateStr}:`, error);
+    }
+  }
+
+  private async writeSummaryToFile(dateStr: string, currentTime: number, allSummaries: any[]) {
+    try {
+      fs.writeFileSync(`./json/${dateStr}.json`, JSON.stringify({
+        type: this.summaryType,
+        title: `Daily Summary for ${dateStr}`,
+        categories: allSummaries,
+        date: currentTime,
+      }, null, 2));
+    }
+    catch (error) {
+      console.error(`Error saving daily summary to json file ${dateStr}:`, error);
     }
   }
 

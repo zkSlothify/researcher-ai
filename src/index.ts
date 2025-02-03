@@ -11,6 +11,7 @@ import { CoinGeckoMarketAnalyticsSource } from "./plugins/sources/CoinGeckoAnaly
 import { DailySummaryGenerator } from "./plugins/generators/DailySummaryGenerator";
 
 import dotenv from "dotenv";
+import { SummaryItem } from "./types";
 
 dotenv.config();
 
@@ -86,7 +87,7 @@ const sourceConfigs: SourceConfig[] = [
   try {
     const openAiProvider = new OpenAIProvider({
       apiKey: process.env.OPENAI_API_KEY || '',
-      model: "openai/gpt-4o-mini",
+      model: process.env.USE_OPENROUTER === 'true' ? `openai/gpt-4o-mini` : `gpt-4o-mini`,
       temperature: 0.1,
       useOpenRouter: process.env.USE_OPENROUTER === 'true',
       siteUrl: process.env.SITE_URL,
@@ -149,7 +150,7 @@ const sourceConfigs: SourceConfig[] = [
       try {
         const today = new Date();
 
-        let summary = await storage.getSummaryBetweenEpoch((today.getTime() - ( hour * 24 )) / 1000,today.getTime() / 1000);
+        let summary: SummaryItem[] = await storage.getSummaryBetweenEpoch((today.getTime() - ( hour * 24 )) / 1000,today.getTime() / 1000);
         
         if ( summary && summary.length <= 0 ) {
           const summaryDate = new Date(today);
@@ -163,7 +164,13 @@ const sourceConfigs: SourceConfig[] = [
           console.log(`Daily report is complete`);
         }
         else {
-          console.log('Summary already generated for today');
+          console.log('Summary already generated for today, validating file is correct');
+          const summaryDate = new Date(today);
+          summaryDate.setDate(summaryDate.getDate() - 1)
+          
+          const dateStr = summaryDate.toISOString().slice(0, 10);
+
+          await summaryGenerator.checkIfFileMatchesDB(dateStr, summary[0]);
         }
       } catch (error) {
         console.error(`Error creating daily report:`, error);

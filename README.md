@@ -100,6 +100,15 @@ npm start
 
 # Generate daily summary
 npm run generator
+
+# Generate daily summary for specific date
+npm run generator --date=2025-01-01 
+
+# Grab Historical Data from sources ( default 60 days )
+npm run historical
+
+# Grab Historical Data from sources ( Specific number of days )
+npm run historical --day=10
 ```
 
 ## Project Structure
@@ -116,6 +125,7 @@ src/
 ├── types.ts            # TypeScript type definitions
 ├── index.ts            # Main application entry
 └── generator.ts        # Summary generator entry
+└── historical.ts       # Grab historical data entry
 ```
 
 ## Adding New Sources
@@ -268,7 +278,7 @@ CREATE TABLE summary (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   type TEXT NOT NULL,
   title TEXT,
-  text TEXT,
+  categories TEXT,
   date INTEGER
 );
 ```

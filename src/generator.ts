@@ -27,8 +27,17 @@ dotenv.config();
   });
 
   const today = new Date();
-  const dateStr = today.toISOString().slice(0, 10);
+  
+  // Fetch overide args to get specific date
+  const args = process.argv.slice(2);
+  let dateStr = today.toISOString().slice(0, 10);
+  args.forEach(arg => {
+    if (arg.startsWith('--date=')) {
+      dateStr = arg.split('=')[1];
+    }
+  });
 
+  console.log(`Creating summary for date ${dateStr}`);
   await summaryGenerator.generateAndStoreSummary(dateStr);
 
   console.log("Fetched and stored items in a unified manner!");

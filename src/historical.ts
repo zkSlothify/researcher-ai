@@ -13,8 +13,6 @@ let day = 24 * hour;
 
 let dailySummaryInterval;
 
-let runOnce = process.env.RUN_ONCE === 'true';
-
 (async () => {
   try {
     const aggregator = new HistoricalAggregator();
@@ -45,9 +43,7 @@ let runOnce = process.env.RUN_ONCE === 'true';
     const storage = new SQLiteStorage({ dbPath: "data/db.sqlite" });
     await storage.init();
 
-    const fetchAndStore = async (sourceName: string) => {
-      let daysToFetch = 60;
-      
+    const fetchAndStore = async (sourceName: string, daysToFetch: number = 60) => {
       try {
         console.log(`Fetching historical data from source: ${sourceName}`);
         const items = await aggregator.fetchSource(sourceName, daysToFetch * day);
@@ -62,7 +58,16 @@ let runOnce = process.env.RUN_ONCE === 'true';
       }
     };
 
-    await fetchAndStore("twitter");
+    
+    // Fetch overide args to get specific date
+    const args = process.argv.slice(2);
+    let days = 60;
+    args.forEach(arg => {
+        if (arg.startsWith('--days=')) {
+            days = parseInt(arg.split('=')[1] || "60");
+        }
+    });
+    await fetchAndStore("twitter", days);
 
   } catch (error) {
     clearInterval(dailySummaryInterval);

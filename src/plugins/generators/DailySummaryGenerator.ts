@@ -62,7 +62,9 @@ export class DailySummaryGenerator {
           allSummaries.push(summaryJSON);
           maxTopicsToSummarize++;
         }
-        catch (e) {}
+        catch (e) {
+          console.log( e )
+        }
       }
 
       const summaryItem: SummaryItem = {
@@ -201,8 +203,12 @@ export class DailySummaryGenerator {
         });
       });
       if ( associatedObjects && associatedObjects.length  <= 1 ) {
-        miscTopics["objects"] = miscTopics["objects"].concat(associatedObjects)
-        miscTopics["allTopics"] = miscTopics["allTopics"].concat(Array.from(mergedTopics))
+        let objectIds = associatedObjects.map((object: any) => object.id);
+        let alreadyAddedToMisc = miscTopics["objects"].find((object: any) => objectIds.indexOf(object.id) >= 0 )
+        if ( ! alreadyAddedToMisc ) {
+          miscTopics["objects"] = miscTopics["objects"].concat(associatedObjects)
+          miscTopics["allTopics"] = miscTopics["allTopics"].concat(Array.from(mergedTopics))
+        }
       } 
       else if ( ! topicAlreadyAdded ) {
         alreadyAdded[topic] = true;
@@ -221,17 +227,14 @@ export class DailySummaryGenerator {
   }
 
   private createAIPromptForTopic(topic: string, objects: any[], dateStr: string): string {
-    let prompt = `Generate a summary for the topic '${topic}' on. Focus on the following:\n\n`;
-  
+    let prompt = `Generate a summary for the topic. Focus on the following details:\n\n`;
     objects.forEach((item) => {
-      if ((item.metadata?.photos || []).length > 0 || (item.metadata?.videos || []).length > 0 || item.type === 'solanaTokenAnalytics' || item.type === 'coinGeckoMarketAnalytics') {
-        prompt += `***source***\n`;
-        if (item.text) prompt += `text: ${item.text}\n`;
-        if (item.link) prompt += `sources: ${item.link}\n`;
-        if (item.metadata?.photos) prompt += `photos: ${item.metadata?.photos}\n`;
-        if (item.metadata?.videos) prompt += `videos: ${item.metadata?.videos}\n`;
-        prompt += `***source_end***\n\n`;
-      }
+      prompt += `\n***source***\n`;
+      if (item.text) prompt += `text: ${item.text}\n`;
+      if (item.link) prompt += `sources: ${item.link}\n`;
+      if (item.metadata?.photos) prompt += `photos: ${item.metadata?.photos}\n`;
+      if (item.metadata?.videos) prompt += `videos: ${item.metadata?.videos}\n`;
+      prompt += `\n***source_end***\n\n`;
     });
   
     prompt += `Provide a clear and concise summary based on the ***sources*** above for the topic. DO NOT PULL DATA FROM OUTSIDE SOURCES'${topic}'. Combine similar sources into a longer summary if it makes sense.\n\n`;

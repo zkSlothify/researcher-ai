@@ -1,101 +1,172 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/lib/animations";
-import { Github } from "lucide-react";
+import { Github, ArrowRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import * as THREE from "three";
 
 export function Hero() {
-  const openGithub = () => {
-    window.open('https://github.com/bozp-pzob/ai-news', '_blank')?.focus();
-  }
+  const containerRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [scene, setScene] = useState<THREE.Scene | null>(null);
+
+  // Initialize Three.js scene
+  useEffect(() => {
+    if (!canvasRef.current) return;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(50, ( window.innerWidth / 2) / window.innerHeight, 0.1, 1000);
+    camera.position.set(0,0,5);
+    const renderer = new THREE.WebGLRenderer({ 
+      canvas: canvasRef.current,
+      alpha: true,
+      antialias: true
+    });
+
+    renderer.setSize(window.innerWidth/2, window.innerHeight);
+
+    // Create abstract geometric shapes
+    const geometry = new THREE.IcosahedronGeometry(1, 0);
+    const material = new THREE.MeshBasicMaterial({
+      color: 0x6366f1,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.3
+    });
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+
+    // Animation
+    const animate = () => {
+      requestAnimationFrame(animate);
+      mesh.rotation.x += 0.001;
+      mesh.rotation.y += 0.002;
+      renderer.render(scene, camera);
+    };
+    animate();
+
+    setScene(scene);
+
+    return () => {
+      scene.remove(mesh);
+      geometry.dispose();
+      material.dispose();
+      renderer.dispose();
+    };
+  }, []);
+
+  // Handle mouse movement
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!containerRef.current || !scene) return;
+    const { left, top, width, height } = containerRef.current.getBoundingClientRect();
+    const x = (e.clientX - left) / width * 2 - 1;
+    const y = -((e.clientY - top) / height) * 2 + 1;
+    setMousePos({ x, y });
+
+    if (scene.children[0]) {
+      scene.children[0].rotation.x = y * 0.5;
+      scene.children[0].rotation.y = x * 0.5;
+    }
+  };
 
   return (
-    <section className="relative h-[calc(100vh-74px)] flex items-center justify-center overflow-hidden">
-      {/* Iridescent background with dynamic gradient */}
-      <div className="absolute inset-0 bg-iridescent opacity-30" />
-
-      {/* Floating orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(3)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-gradient-to-r from-violet-500/20 to-cyan-500/20 animate-float"
-            style={{
-              width: `${Math.random() * 300 + 100}px`,
-              height: `${Math.random() * 300 + 100}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${i * 2}s`,
-              filter: 'blur(60px)',
-            }}
-          />
-        ))}
-      </div>
+    <div 
+      ref={containerRef}
+      className="relative min-h-screen overflow-hidden bg-zinc-950"
+      onMouseMove={handleMouseMove}
+    >
+      {/* 3D Background */}
+      <canvas
+        ref={canvasRef}
+        className="absolute left-[50vw] top-0 inset-0 h-full"
+      />
 
       {/* Content */}
-      <div className="container relative z-10 px-4 mx-auto">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-          className="text-center space-y-8"
-        >
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold text-gradient leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            AI-News
-            <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
-              Aggregation Platform
-            </span>
-          </motion.h1>
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 min-h-screen">
+        {/* Left Section */}
+        <div className="relative flex flex-col justify-center p-8 lg:p-16">
+          <div className="absolute inset-0 bg-gradient-to-br from-zinc-950/90 to-transparent transform -skew-x-12" />
 
-          <motion.p 
-            className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-          >
-            Streamline your organization's communication with our advanced AI-powered news aggregation platform. Collect, analyze, and summarize information from multiple sources in real-time.
-          </motion.p>
+          <div className="relative space-y-8">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-block px-4 py-1 mb-4 border border-zinc-800 rounded-full">
+                <span className="text-sm font-mono text-zinc-400">v1.0.0 BETA</span>
+              </div>
+              <h1 className="text-5xl lg:text-7xl font-bold tracking-tighter mb-4">
+                <span className="block text-white">AI-News</span>
+                <span className="block pb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">
+                  Aggregator
+                </span>
+              </h1>
+              <p className="text-lg text-zinc-400 max-w-md">
+                Experience content aggregation reimagined through the lens of artificial intelligence.
+              </p>
+            </motion.div>
 
-          <motion.div 
-            className="flex flex-wrap justify-center gap-4 mt-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-          >
-            <Button onClick={openGithub} size="lg" className="glass-card hover:bg-white/10 border-violet-500/20 group transition-all duration-300">
-              <Github className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-              <span className="text-gradient">View on GitHub</span>
-            </Button>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="flex flex-wrap gap-4"
+            >
+              <Button 
+                size="lg"
+                className="relative group overflow-hidden bg-white text-black hover:text-white transition-colors"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                <span className="relative flex items-center gap-2">
+                  Get Started
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Button>
 
-          {/* Scroll indicator */}
-          <motion.div 
-            className="absolute -bottom-100 left-1/2 -translate-x-1/2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-          >
-            <div className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-2">
-              <motion.div
-                className="w-1 h-2 bg-white rounded-full"
-                animate={{
-                  y: [0, 12, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            </div>
-          </motion.div>
-        </motion.div>
+              <Button
+                size="lg"
+                variant="outline"
+                className="relative group border-zinc-800 hover:border-zinc-700"
+              >
+                <Github className="w-4 h-4 mr-2" />
+                <span>View Source</span>
+              </Button>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="grid grid-cols-3 gap-8 pt-12 mt-12 border-t border-zinc-800/50"
+            >
+              {[
+                // { value: "10K+", label: "Active Users" },
+                // { value: "50+", label: "Data Sources" },
+                // { value: "1M+", label: "Daily Updates" }
+              ].map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-2xl font-bold text-white">{stat.value}</div>
+                  <div className="text-sm text-zinc-500">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Right Section - Visual Focus */}
+        <div className="hidden lg:flex items-center justify-center relative">
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-tl from-indigo-500/10 to-purple-500/10"
+            style={{
+              filter: "blur(100px)",
+              transform: `translate(${mousePos.x * 20}px, ${mousePos.y * 20}px)`,
+              transition: "transform 0.3s ease-out"
+            }}
+          />
+        </div>
       </div>
-    </section>
+    </div>
   );
 }

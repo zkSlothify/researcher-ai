@@ -10,6 +10,14 @@ export function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [scene, setScene] = useState<THREE.Scene | null>(null);
 
+  const openGithub = () => {
+    window.open('https://github.com/bozp-pzob/ai-news', '_blank')?.focus();
+  }
+
+  const scrollScreen = () => {
+    window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
+  }
+
   // Initialize Three.js scene
   useEffect(() => {
     if (!canvasRef.current) return;
@@ -78,7 +86,7 @@ export function Hero() {
       {/* 3D Background */}
       <canvas
         ref={canvasRef}
-        className="absolute left-[50vw] top-0 inset-0 h-full"
+        className="absolute left-[40vw] top-0 inset-0 h-full"
       />
 
       {/* Content */}
@@ -113,7 +121,8 @@ export function Hero() {
               transition={{ delay: 0.4 }}
               className="flex flex-wrap gap-4"
             >
-              <Button 
+              <Button
+                onClick={scrollScreen}
                 size="lg"
                 className="relative group overflow-hidden bg-white text-black hover:text-white transition-colors"
               >
@@ -125,6 +134,7 @@ export function Hero() {
               </Button>
 
               <Button
+                onClick={openGithub}
                 size="lg"
                 variant="outline"
                 className="relative group border-zinc-800 hover:border-zinc-700"

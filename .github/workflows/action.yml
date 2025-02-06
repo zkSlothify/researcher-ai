@@ -50,19 +50,6 @@ jobs:
           LATEST_JSON=$(ls ./json/*2025-*-*.json | sort -V | tail -n1)
           cp "$LATEST_JSON" ./json/daily.json
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-          retention-days: 5
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
       - name: Commit and Push Changes
         run: |
           git config user.name "GitHub Actions"

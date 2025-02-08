@@ -8,8 +8,8 @@
         {
           "text": "A new configuration option, ENABLE_TWITTER_POST_GENERATION, has been introduced to control automatic tweet generation. This feature allows users to enable or disable the generation of Twitter posts.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3219",
-            "https://github.com/elizaOS/elizaos/pull/3222"
+            "https://github.com/elizaOS/eliza/pull/3219",
+            "https://github.com/elizaOS/eliza/pull/3222"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/60634884?u=c6c41679b8322eaa0c81f72e0b4ed95e80f0ac16&v=4"
@@ -19,8 +19,8 @@
         {
           "text": "The KAIA Plugin has been added, allowing Eliza agents to interface with the KAIA Blockchain. This feature introduces an agent plugin to interact with the blockchain, with low associated risks and no required documentation changes.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3231",
-            "https://github.com/elizaOS/elizaos/pull/3227"
+            "https://github.com/elizaOS/eliza/pull/3231",
+            "https://github.com/elizaOS/eliza/pull/3227"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/112046567?v=4"
@@ -30,9 +30,9 @@
         {
           "text": "The TON Plugin has been updated to include Ton Connect implementation, allowing connections with supported ton wallets via the Ton Connect protocol. It also supports batch transfers of Ton, Jetton, and NFT, and adds an action for interacting with Auction V2 and V3 contracts.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3228",
-            "https://github.com/elizaOS/elizaos/pull/3236",
-            "https://github.com/elizaOS/elizaos/pull/3232"
+            "https://github.com/elizaOS/eliza/pull/3228",
+            "https://github.com/elizaOS/eliza/pull/3236",
+            "https://github.com/elizaOS/eliza/pull/3232"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/6633783?u=fa803532dd4fa6601ee60f4f8785dd7ba1d9f32b&v=4",
@@ -43,8 +43,8 @@
         {
           "text": "The Mina Plugin has been added, implementing on-demand creation of new Mina Providers and enabling token transfer operations. This feature is part of the Mina Hackathon and requires updates to the .env file.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3217",
-            "https://github.com/elizaOS/elizaos/pull/3214"
+            "https://github.com/elizaOS/eliza/pull/3217",
+            "https://github.com/elizaOS/eliza/pull/3214"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/35585232?u=2526b0e5fdcc3bfa289a1b20cc4129b3ccfe00e4&v=4"
@@ -54,7 +54,7 @@
         {
           "text": "The Okto plugin has been introduced, enabling integration with Okto's Web3 APIs and services. It supports portfolio management, wallet management, token information retrieval, and more, using Google OAuth for authentication.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3225"
+            "https://github.com/elizaOS/eliza/pull/3225"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/43859106?u=0bea3e76c68fdaa82761a452b8128b3dadf15972&v=4"
@@ -64,9 +64,9 @@
         {
           "text": "Several bug fixes and optimizations have been made, including removing duplicated dependencies, fixing Docker and type issues, and updating the Supabase adapter to handle room and memory creation correctly.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3215",
-            "https://github.com/elizaOS/elizaos/pull/3220",
-            "https://github.com/elizaOS/elizaos/pull/3221"
+            "https://github.com/elizaOS/eliza/pull/3215",
+            "https://github.com/elizaOS/eliza/pull/3220",
+            "https://github.com/elizaOS/eliza/pull/3221"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/60634884?u=c6c41679b8322eaa0c81f72e0b4ed95e80f0ac16&v=4",
@@ -84,7 +84,7 @@
         {
           "text": "The ElizaOS project is actively developing and integrating various plugins to enhance its functionality. Recent developments include the introduction of the KAIA plugin, which allows Eliza agents to interact with the Kaia Blockchain. This feature is considered low risk and does not require changes to the project documentation. Testing can be conducted using EVM-based private keys and the kaiascan API.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3226"
+            "https://github.com/elizaOS/eliza/issues/3226"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/112046567?v=4"
@@ -94,8 +94,8 @@
         {
           "text": "The Cronos and Conflux plugins are undergoing improvements in their test suites to ensure comprehensive coverage and proper error handling. The Cronos plugin requires enhanced testing for balance and transfer actions, while the Conflux plugin needs updates to address failing tests related to mock implementations and data type mismatches.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3249",
-            "https://github.com/elizaOS/elizaos/issues/3246"
+            "https://github.com/elizaOS/eliza/issues/3249",
+            "https://github.com/elizaOS/eliza/issues/3246"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/188117230?u=424cd5b834584b3799da288712b3c4158c8032a1&v=4"
@@ -105,7 +105,7 @@
         {
           "text": "A proposal for a Taiko plugin integration aims to enable agent interaction with the Taiko L2 network, allowing for ETH/ERC-20 token transfers, balance checks, domain name resolution, and retrieval of on-chain activity metrics.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3229"
+            "https://github.com/elizaOS/eliza/issues/3229"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/79219618?u=47553033aa44cdfaf0342d8a8e80e184dd6cf7d2&v=4"
@@ -115,7 +115,7 @@
         {
           "text": "Issues have been reported with the plugin-evm, specifically with bridging and swapping tokens. Errors include invalid address formats and undefined properties during bridge actions. Users are seeking guidance on testing these functionalities on testnets like Sepolia.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3234"
+            "https://github.com/elizaOS/eliza/issues/3234"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/108145762?u=2926988c0966bee7c876dd0c3ec87fffa96a2463&v=4"
@@ -125,7 +125,7 @@
         {
           "text": "A bug in the ElizaOS character file prevents overriding model configuration parameters. A proposed fix involves renaming parameters for consistency and ensuring the modelConfig object is included in the schema.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3233"
+            "https://github.com/elizaOS/eliza/issues/3233"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/8383712?u=e322b2c4075fa14011e478d42b9dd5787fcf5e6b&v=4"
@@ -135,7 +135,7 @@
         {
           "text": "The CoinGecko plugin in ElizaOS is experiencing issues where it returns the Bitcoin price for all cryptocurrency queries and sends duplicate responses. Users are seeking solutions to these problems, including potential misconfigurations or compatibility issues.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3241"
+            "https://github.com/elizaOS/eliza/issues/3241"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/167812620?v=4"
@@ -145,7 +145,7 @@
         {
           "text": "Users are encountering Docker errors on Mac M1 when building ElizaOS, specifically related to TLS handshake timeouts when loading metadata for Node.js images.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3239"
+            "https://github.com/elizaOS/eliza/issues/3239"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/46179498?u=89dcf261b397bb2930cbedce61e09b8df01998e6&v=4"
@@ -155,7 +155,7 @@
         {
           "text": "There is a query on how to run ElizaOS with debug level logging, as the current method using pnpm does not seem to work.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3244"
+            "https://github.com/elizaOS/eliza/issues/3244"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/31582215?u=b8eb5d3849bf877a3a0b686cf1632aca92e744ae&v=4"
@@ -165,7 +165,7 @@
         {
           "text": "Formatting errors have been reported in Twitter posts and replies generated by the ElizaOS Twitter agent, with users seeking solutions to correct the output format.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3245"
+            "https://github.com/elizaOS/eliza/issues/3245"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/34964366?v=4"

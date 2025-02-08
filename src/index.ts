@@ -62,7 +62,7 @@ const sourceConfigs: SourceConfig[] = [
       contributorsUrl: "https://raw.githubusercontent.com/elizaOS/elizaos.github.io/refs/heads/main/data/daily/contributors.json",
       summaryUrl: "https://raw.githubusercontent.com/elizaOS/elizaos.github.io/refs/heads/main/data/daily/summary.json",
       githubCompany: "elizaOS",
-      githubRepo: "elizaos"
+      githubRepo: "eliza"
     }),
     interval: 6 * hour // 6 hours
   },

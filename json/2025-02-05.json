@@ -8,8 +8,8 @@
         {
           "text": "The ElizaOS project has seen several updates and improvements recently. A significant fix was made to the client-alexa, addressing issues and enhancing its functionality.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/69af5ff231060752793130d31336b3b4ddf03038",
-            "https://github.com/elizaOS/elizaos/commit/a7c3da0f7812e7d1cfb1491b688bc10abfa12351"
+            "https://github.com/elizaOS/eliza/commit/69af5ff231060752793130d31336b3b4ddf03038",
+            "https://github.com/elizaOS/eliza/commit/a7c3da0f7812e7d1cfb1491b688bc10abfa12351"
           ],
           "images": [],
           "videos": []
@@ -17,7 +17,7 @@
         {
           "text": "Unnecessary provider and transfer code were removed to streamline the codebase.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/a12c6960ca1198e81f9564e0e1bfa8c0ab98441e"
+            "https://github.com/elizaOS/eliza/commit/a12c6960ca1198e81f9564e0e1bfa8c0ab98441e"
           ],
           "images": [],
           "videos": []
@@ -25,7 +25,7 @@
         {
           "text": "Documentation was improved by fixing broken links, ensuring better accessibility and usability.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/c0d3f8d3e71a78ea3a706616d801182cb3d85c4a"
+            "https://github.com/elizaOS/eliza/commit/c0d3f8d3e71a78ea3a706616d801182cb3d85c4a"
           ],
           "images": [],
           "videos": []
@@ -33,8 +33,8 @@
         {
           "text": "New features were added with the introduction of plugin-conflux and plugin-cronos, focusing on test configuration and coverage.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/ac823d719ad3da0d8e0501af8d477daef60151da",
-            "https://github.com/elizaOS/elizaos/commit/89fa5a4dc5fffe62fbe4865130bb17699299feef"
+            "https://github.com/elizaOS/eliza/commit/ac823d719ad3da0d8e0501af8d477daef60151da",
+            "https://github.com/elizaOS/eliza/commit/89fa5a4dc5fffe62fbe4865130bb17699299feef"
           ],
           "images": [],
           "videos": []
@@ -42,7 +42,7 @@
         {
           "text": "Biome linting and formatting configuration was added to client-alexa, including the addition of @biomejs/biome as a devDependency and the replacement of the existing ESLint configuration.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/db87d85a74ec06e042c252d86c1293bb858a6d6b"
+            "https://github.com/elizaOS/eliza/commit/db87d85a74ec06e042c252d86c1293bb858a6d6b"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
@@ -52,7 +52,7 @@
         {
           "text": "A security update was made to the vitest dependency, ensuring the project's security and stability.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/2eb94ab3ae8472d706dc9dc960fc4074719b83a5"
+            "https://github.com/elizaOS/eliza/commit/2eb94ab3ae8472d706dc9dc960fc4074719b83a5"
           ],
           "images": [],
           "videos": []
@@ -72,7 +72,7 @@
         {
           "text": "The Twitter client in ElizaOS is experiencing issues with action processing after a cache or database reset. Despite clearing the cache, the client logs messages indicating tweets are already processed, even for new interactions. This may be due to initial caching behavior, which stores the last 20 tweets and all timelines. A review of this caching step is suggested to ensure proper tweet processing.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3279"
+            "https://github.com/elizaOS/eliza/issues/3279"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/60634884?u=c6c41679b8322eaa0c81f72e0b4ed95e80f0ac16&v=4"
@@ -82,7 +82,7 @@
         {
           "text": "A user encountered an error with the message 'ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL' when running the agent on macOS with Node.js 23.3.0. The error occurs after executing 'pnpm start' with a specific character JSON file, despite 'pnpm I' and 'pnpm build' running without issues.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3292"
+            "https://github.com/elizaOS/eliza/issues/3292"
           ],
           "images": [
             "https://github.com/user-attachments/assets/6d75167a-4482-41e4-abe6-0b574545c46d"
@@ -92,7 +92,7 @@
         {
           "text": "A JSON syntax error in the 'package.json' file of the 'plugin-solana-v2' package is causing 'pnpm install' to fail. The error is due to a trailing comma in the 'devDependencies' section. Removing the comma resolves the issue, and a pull request will be submitted to fix this.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3276"
+            "https://github.com/elizaOS/eliza/issues/3276"
           ],
           "images": [
             "https://github.com/user-attachments/assets/fbf1e679-47c7-49ee-8807-4197cef94410"
@@ -102,7 +102,7 @@
         {
           "text": "The documentation for an anime character prompt in ElizaOS contains inappropriate content, promoting the sexualization of female characters. A revision is suggested to provide professional and respectful prompts, focusing on technical details and avoiding unnecessary descriptions.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3259"
+            "https://github.com/elizaOS/eliza/issues/3259"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/34169809?v=4"
@@ -112,7 +112,7 @@
         {
           "text": "An error occurs when converting audio to text in Discord using ElizaOS. The error is related to the 'ffprobe' command not being found, affecting both audio conversion and OpenAI speech-to-text processes.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3282"
+            "https://github.com/elizaOS/eliza/issues/3282"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/6951929?u=687cabd771e4b89ec52a4b65398e8aead1cbeafd&v=4"
@@ -122,7 +122,7 @@
         {
           "text": "A bug in the ElizaOS agent causes it to post a redundant reply on Twitter, instructing users to use a specific query format. This issue may be related to the agent's backend setup for fetching onchain data.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3252"
+            "https://github.com/elizaOS/eliza/issues/3252"
           ],
           "images": [
             "https://github.com/user-attachments/assets/348fdf95-48cb-4a38-9869-a65dc7355b8c",
@@ -133,7 +133,7 @@
         {
           "text": "A feature request has been made for a ccxt plugin in ElizaOS, which would enable trading on 100 bitcoin/altcoin exchanges. This addition would enhance the platform's trading capabilities.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3265"
+            "https://github.com/elizaOS/eliza/issues/3265"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/665424?u=3ea6d0cfe1cfcb959ea7774ad159cc752ade02a5&v=4"

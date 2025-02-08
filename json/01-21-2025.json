@@ -5,7 +5,7 @@
         {
           "text": "Nvidia-nim-plugin preparation and fixes have been implemented, resolving build issues and enhancing initialization processes.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/4c8a60a538f1ecd1d377dc025da3b15f1f5019fd"
+            "https://github.com/elizaOS/eliza/commit/4c8a60a538f1ecd1d377dc025da3b15f1f5019fd"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
@@ -15,7 +15,7 @@
         {
           "text": "Router nitro plugin is enhanced with error handling and additional documentation.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/b77b995ff1017be97d4820ce7e599db0f6d1eb7e"
+            "https://github.com/elizaOS/eliza/commit/b77b995ff1017be97d4820ce7e599db0f6d1eb7e"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/73697080?u=cbe63f4204277190599fce2be4e35fd359c414dc&v=4"
@@ -25,7 +25,7 @@
         {
           "text": "Merlin plugin support added to enhance Bitcoin Layer2 functionalities with Bitcoin Layer1 token creation via Eliza agents.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2583"
+            "https://github.com/elizaOS/eliza/pull/2583"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/6890141?v=4"
@@ -65,7 +65,7 @@
         {
           "text": "Integration tests workflow updated with improved caching for efficiency and optimal resource management.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/4265be39779297fd5a703a751ad5322e61dbe6e6"
+            "https://github.com/elizaOS/eliza/commit/4265be39779297fd5a703a751ad5322e61dbe6e6"
           ],
           "images": [],
           "videos": []
@@ -73,7 +73,7 @@
         {
           "text": "An enhanced documentation request is underway for ESM and dependencies, aiming for a user-friendly setup guide.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2598"
+            "https://github.com/elizaOS/eliza/issues/2598"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/53032750?u=ff3890e429047d07a870d870c54e8834ba1faac3&v=4"

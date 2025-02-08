@@ -8,13 +8,13 @@
         {
           "text": "A significant number of commits focused on fixing errors and improving code quality. Updates ranged from fixing typing errors, imports, and Zod schema issues to enhance plugins for ElizaOS.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/83b5d909d2742d77408251019f976983f667273e",
-            "https://github.com/elizaOS/elizaos/commit/e9ec7fd570d40a0000272934560c919638fd7f2a",
-            "https://github.com/elizaOS/elizaos/commit/57a175ea55caf6116014a9130e251f9ea645ef69",
-            "https://github.com/elizaOS/elizaos/commit/16e3a8d366c3008e9a56557a0fcc8806e5215836",
-            "https://github.com/elizaOS/elizaos/commit/9c1f85284b87993330eeff955ba9906252fe56c1",
-            "https://github.com/elizaOS/elizaos/commit/9fd646f477c2bdc1298c6647ae219e300b661297",
-            "https://github.com/elizaOS/elizaos/commit/18ec203c033a7b166169aa9e09b8d47786c24fad"
+            "https://github.com/elizaOS/eliza/commit/83b5d909d2742d77408251019f976983f667273e",
+            "https://github.com/elizaOS/eliza/commit/e9ec7fd570d40a0000272934560c919638fd7f2a",
+            "https://github.com/elizaOS/eliza/commit/57a175ea55caf6116014a9130e251f9ea645ef69",
+            "https://github.com/elizaOS/eliza/commit/16e3a8d366c3008e9a56557a0fcc8806e5215836",
+            "https://github.com/elizaOS/eliza/commit/9c1f85284b87993330eeff955ba9906252fe56c1",
+            "https://github.com/elizaOS/eliza/commit/9fd646f477c2bdc1298c6647ae219e300b661297",
+            "https://github.com/elizaOS/eliza/commit/18ec203c033a7b166169aa9e09b8d47786c24fad"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
@@ -24,11 +24,11 @@
         {
           "text": "The project also included a series of updates to improve and test various plugins, such as the plugin-apro, plugin-arbitrage, plugin-avalanche, plugin-autonome, and others.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/5a09114920c586095229e431054655dd71055e68",
-            "https://github.com/elizaOS/elizaos/commit/7e34a87a6f40597ffe83973d91035ad69e1a6e62",
-            "https://github.com/elizaOS/elizaos/commit/4bef4288992f3c7a4331fea63e08e48d13cb8d82",
-            "https://github.com/elizaOS/elizaos/commit/81fc52a52d6596fb10c199f12cc6759a8509e753",
-            "https://github.com/elizaOS/elizaos/commit/d0c0451b3ee4335843350218a9c6df0dd71d77c2"
+            "https://github.com/elizaOS/eliza/commit/5a09114920c586095229e431054655dd71055e68",
+            "https://github.com/elizaOS/eliza/commit/7e34a87a6f40597ffe83973d91035ad69e1a6e62",
+            "https://github.com/elizaOS/eliza/commit/4bef4288992f3c7a4331fea63e08e48d13cb8d82",
+            "https://github.com/elizaOS/eliza/commit/81fc52a52d6596fb10c199f12cc6759a8509e753",
+            "https://github.com/elizaOS/eliza/commit/d0c0451b3ee4335843350218a9c6df0dd71d77c2"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/188117230?u=424cd5b834584b3799da288712b3c4158c8032a1&v=4"
@@ -38,9 +38,9 @@
         {
           "text": "Enhancements were made to documentation with fixed template typos, improved translation of README files, and correction of broken links in documentation files.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/d291f0a80c0db5c2de77e8c0a25909a144a82c07",
-            "https://github.com/elizaOS/elizaos/commit/930a26d30108f8fafabb2826dbad70efc22d781d",
-            "https://github.com/elizaOS/elizaos/commit/92de500def4874bb2a33ff5f033f091688b4e3e8"
+            "https://github.com/elizaOS/eliza/commit/d291f0a80c0db5c2de77e8c0a25909a144a82c07",
+            "https://github.com/elizaOS/eliza/commit/930a26d30108f8fafabb2826dbad70efc22d781d",
+            "https://github.com/elizaOS/eliza/commit/92de500def4874bb2a33ff5f033f091688b4e3e8"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/165377636?u=5560dd9f2d310e1ba61dbba864006a951391a582&v=4"
@@ -51,15 +51,15 @@
       "topic": "commmit"
     },
     {
-      "title": "Pull Requests Summary for 'elizaOS/elizaos'",
+      "title": "Pull Requests Summary for 'elizaOS/eliza'",
       "content": [
         {
-          "text": "Several pull requests were made to fix issues and implement improvements across various plugins and tests for the 'elizaOS/elizaos' project. These include fixes for linting errors, particularly in plugins like 'plugin-image-generation', 'plugin-imgflip', and others. There were also enhancements like improving Instagram client configuration flexibilities and the addition of LinkedIn and Nostr clients, enabling agents to publish posts on these platforms.",
+          "text": "Several pull requests were made to fix issues and implement improvements across various plugins and tests for the 'elizaOS/eliza' project. These include fixes for linting errors, particularly in plugins like 'plugin-image-generation', 'plugin-imgflip', and others. There were also enhancements like improving Instagram client configuration flexibilities and the addition of LinkedIn and Nostr clients, enabling agents to publish posts on these platforms.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2978",
-            "https://github.com/elizaOS/elizaos/pull/2976",
-            "https://github.com/elizaOS/elizaos/pull/2975",
-            "https://github.com/elizaOS/elizaos/pull/2972"
+            "https://github.com/elizaOS/eliza/pull/2978",
+            "https://github.com/elizaOS/eliza/pull/2976",
+            "https://github.com/elizaOS/eliza/pull/2975",
+            "https://github.com/elizaOS/eliza/pull/2972"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4",
@@ -71,9 +71,9 @@
         {
           "text": "In addition to these fixes, there were also documentation improvements and testing configurations added to maintain code quality and enhance functionality. Noteworthy corrections include fixing broken links, addressing typos, and ensuring accessibility improvements like adding caption tracks in TTS features.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2964",
-            "https://github.com/elizaOS/elizaos/pull/2987",
-            "https://github.com/elizaOS/elizaos/pull/2990"
+            "https://github.com/elizaOS/eliza/pull/2964",
+            "https://github.com/elizaOS/eliza/pull/2987",
+            "https://github.com/elizaOS/eliza/pull/2990"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/151569122?u=d5e520483acbcfcef96a6a9185de47cba2a1d4fe&v=4",
@@ -85,9 +85,9 @@
         {
           "text": "Security-related pull requests addressed CVEs by updating package dependencies and overriding versions to secure the codebase. Other notable pull requests involve removing unnecessary TypeScript directives, adjusting npm package naming conventions, and performing lockfile audits.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2944",
-            "https://github.com/elizaOS/elizaos/pull/2939",
-            "https://github.com/elizaOS/elizaos/pull/2994"
+            "https://github.com/elizaOS/eliza/pull/2944",
+            "https://github.com/elizaOS/eliza/pull/2939",
+            "https://github.com/elizaOS/eliza/pull/2994"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/667857?v=4",
@@ -104,11 +104,11 @@
         {
           "text": "The elizaOS repository has several open issues regarding plugin test coverage. Many plugins, such as Avalanche, plugin-avail, plugin-autonome, plugin-arbitrage, and plugin-apro, are noted to have insufficient test configurations and coverage. This deficiency makes it challenging to ensure reliability and highlights the necessity for comprehensive test suites covering validation, action properties, core token creation scenarios, and integration with external SDKs.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2998",
-            "https://github.com/elizaOS/elizaos/issues/2996",
-            "https://github.com/elizaOS/elizaos/issues/2991",
-            "https://github.com/elizaOS/elizaos/issues/2981",
-            "https://github.com/elizaOS/elizaos/issues/2979"
+            "https://github.com/elizaOS/eliza/issues/2998",
+            "https://github.com/elizaOS/eliza/issues/2996",
+            "https://github.com/elizaOS/eliza/issues/2991",
+            "https://github.com/elizaOS/eliza/issues/2981",
+            "https://github.com/elizaOS/eliza/issues/2979"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/188117230?u=424cd5b834584b3799da288712b3c4158c8032a1&v=4"
@@ -118,7 +118,7 @@
         {
           "text": "The latest `v0.1.8-alpha.1` release of elizaOS is not building correctly due to type incompatibility errors. Several users reported errors occurring during the build process using `pnpm` and specific TypeScript-related issues. These problems have been linked to mismatches between modules in the core build script.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2963"
+            "https://github.com/elizaOS/eliza/issues/2963"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/46384319?u=dffe4f1adbd7bdf75f2c185f0db36007f42815ac&v=4"
@@ -128,9 +128,9 @@
         {
           "text": "There are network issues and SQL errors noted while running agents for Twitter, potentially caused by internet connectivity problems or incorrect API configuration. Moreover, an error related to the OpenAI API arises if the API key is not set, blocking agent operations.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2989",
-            "https://github.com/elizaOS/elizaos/issues/2988",
-            "https://github.com/elizaOS/elizaos/issues/3001"
+            "https://github.com/elizaOS/eliza/issues/2989",
+            "https://github.com/elizaOS/eliza/issues/2988",
+            "https://github.com/elizaOS/eliza/issues/3001"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/196861923?v=4",
@@ -141,9 +141,9 @@
         {
           "text": "Proposed feature enhancements include the integration of Ideogram.ai to facilitate AI image generation directly within elizaOS, as well as adding deeper blockchains (e.g., Fuse Network EVM chain) and NFT management capabilities in the TON Plugin. These plugins will ensure better usability and integration with existing workflows.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2977",
-            "https://github.com/elizaOS/elizaos/issues/3002",
-            "https://github.com/elizaOS/elizaos/issues/2962"
+            "https://github.com/elizaOS/eliza/issues/2977",
+            "https://github.com/elizaOS/eliza/issues/3002",
+            "https://github.com/elizaOS/eliza/issues/2962"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/14082769?u=1ffb5bf17794dff7d70abc79dca2412f5707090e&v=4",
@@ -155,7 +155,7 @@
         {
           "text": "The contributing guidelines for elizaOS need updates to reflect changes in the branch from which contributors need to fork. The `CONTRIBUTING.md` file should now instruct contributors to fork from the `develop` branch instead of `main`.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2936"
+            "https://github.com/elizaOS/eliza/issues/2936"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/52557585?u=3202947978e1b0f91091e1ac246ebabbda38669a&v=4"

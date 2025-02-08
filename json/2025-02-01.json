@@ -8,9 +8,9 @@
         {
           "text": "Multiple pull requests have been submitted to the elizaOS project, focusing on feature additions and bug fixes. A notable series of pull requests pertain to the addition of a 'trading signals plugin', although specifics on the changes or their implications are not detailed.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3140",
-            "https://github.com/elizaOS/elizaos/pull/3139",
-            "https://github.com/elizaOS/elizaos/pull/3137"
+            "https://github.com/elizaOS/eliza/pull/3140",
+            "https://github.com/elizaOS/eliza/pull/3139",
+            "https://github.com/elizaOS/eliza/pull/3137"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/195081807?u=294325670bf70f360292a13fc03ac04feac1b1d7&v=4"
@@ -20,8 +20,8 @@
         {
           "text": "Two pull requests introduce Google Vertex AI as a model inference provider. This feature aims to integrate Google Vertex AI support, allowing users to utilize models deployed on Google Vertex. The integration requires changes to project documentation to include setup and configuration details for Google Vertex AI. The implementation carries a medium risk due to potential integration issues with Google Vertex AI authentication and API limits.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3136",
-            "https://github.com/elizaOS/elizaos/pull/3135"
+            "https://github.com/elizaOS/eliza/pull/3136",
+            "https://github.com/elizaOS/eliza/pull/3135"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/1732742?v=4"
@@ -31,7 +31,7 @@
         {
           "text": "A new pull request proposes enhancing the Starknet plugin by improving token provider implementation and type safety. This involves removing deprecated methods, updating token providers, adding caching mechanisms, and improving error handling and logging. The changes are internal improvements that enhance code quality and maintainability without altering the API.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3132"
+            "https://github.com/elizaOS/eliza/pull/3132"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/189780094?u=1625dc2a0d64a149d70b138631aac4da29ccf736&v=4"
@@ -41,8 +41,8 @@
         {
           "text": "Bug fixes in various pull requests address issues such as the OpenAI API not accepting the 'max_tokens' parameter and Gitpod installations ignoring lock files.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3146",
-            "https://github.com/elizaOS/elizaos/pull/3131"
+            "https://github.com/elizaOS/eliza/pull/3146",
+            "https://github.com/elizaOS/eliza/pull/3131"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/64296537?u=1d8228a93c06c603e08d438677b3f736d6b1ab22&v=4",
@@ -53,9 +53,9 @@
         {
           "text": "Several pull requests involve minor updates: removing unused packages such as 'solana-agentkit', updating various components, and experimentation with the bun-sql library. These updates focus on codebase optimization and removing redundancies.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3138",
-            "https://github.com/elizaOS/elizaos/pull/3126",
-            "https://github.com/elizaOS/elizaos/pull/3128"
+            "https://github.com/elizaOS/eliza/pull/3138",
+            "https://github.com/elizaOS/eliza/pull/3126",
+            "https://github.com/elizaOS/eliza/pull/3128"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/35041127?u=66d9fe41b5d76cec810aac7fed0b619a08b5e3d6&v=4",
@@ -73,7 +73,7 @@
         {
           "text": "The 'plugin-coinmarketcap' package requires comprehensive test coverage to ensure the reliability and maintainability of its functionality, particularly the 'getPrice' action. Key areas for testing include input validation, API response handling, and error scenarios, with a focus on using Vitest for the testing framework.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3133"
+            "https://github.com/elizaOS/eliza/issues/3133"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/188117230?u=424cd5b834584b3799da288712b3c4158c8032a1&v=4"
@@ -83,7 +83,7 @@
         {
           "text": "The 'plugin-coingecko' package lacks comprehensive test coverage, risking undetected breakages and unverified edge cases. A thorough test suite using Vitest should be implemented, including infrastructure setup and core action testing for functions like 'getPrice' and 'getTrending'.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3123"
+            "https://github.com/elizaOS/eliza/issues/3123"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/188117230?u=424cd5b834584b3799da288712b3c4158c8032a1&v=4"
@@ -93,7 +93,7 @@
         {
           "text": "An error occurred during the DTS build setup of the eliza-starter project, with multiple module not found errors affecting the installation and execution process. Proper type definitions and namespace configurations need attention.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3129"
+            "https://github.com/elizaOS/eliza/issues/3129"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/963889?v=4"
@@ -103,7 +103,7 @@
         {
           "text": "While implementing an image upload feature using the 'agent-twitter-client' library, a fetch error 'media parameter is missing' was encountered when running through the eliza environment despite successful uploads during library tests. This suggests issues with the fetch method within the eliza environment.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3148"
+            "https://github.com/elizaOS/eliza/issues/3148"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/5684607?u=1135f5aca52f4dc95ea93e87b52b676d3cfb536d&v=4"
@@ -113,7 +113,7 @@
         {
           "text": "Version 0.19 of the 'Client Direct' package has not been published to npm, causing availability issues.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3130"
+            "https://github.com/elizaOS/eliza/issues/3130"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/21375952?u=24f232e3e3356e214d1464bde3bd64ffe79e0090&v=4"
@@ -207,7 +207,7 @@
         {
           "text": "A merge pull request #2361 has been made from the 'develop' branch to the 'main' branch, updating to version 0.1.9.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/ffa4c1dcdacc096d5b451f246b53fbaa266b0f64"
+            "https://github.com/elizaOS/eliza/commit/ffa4c1dcdacc096d5b451f246b53fbaa266b0f64"
           ],
           "images": [],
           "videos": []

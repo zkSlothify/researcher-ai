@@ -8,10 +8,10 @@
         {
           "text": "Several commits were made to address and fix typing errors and logical issues within the ElizaOS codebase. Issues were partially to fully resolved, with some requiring future review due to complex logic.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/c15f4c4f209d2ee37833d23c0e79e708fe2279c4",
-            "https://github.com/elizaOS/elizaos/commit/b8cdc9969b16f9f572ec479f14d03b9b4b98f413",
-            "https://github.com/elizaOS/elizaos/commit/b35c2f043e3b18504fdc63bc94a63b9f4fd30e89",
-            "https://github.com/elizaOS/elizaos/commit/8ba956f757cf045116e6216b227597e997022626"
+            "https://github.com/elizaOS/eliza/commit/c15f4c4f209d2ee37833d23c0e79e708fe2279c4",
+            "https://github.com/elizaOS/eliza/commit/b8cdc9969b16f9f572ec479f14d03b9b4b98f413",
+            "https://github.com/elizaOS/eliza/commit/b35c2f043e3b18504fdc63bc94a63b9f4fd30e89",
+            "https://github.com/elizaOS/eliza/commit/8ba956f757cf045116e6216b227597e997022626"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
@@ -21,8 +21,8 @@
         {
           "text": "Plugins such as quai and opacity underwent significant fixes relating to logical and typing errors. Improvements included removing unnecessary console logs and integrating the use of elizaLogger.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/1fa8debb5c4f17426b3a367c67aa746bfe1116dc",
-            "https://github.com/elizaOS/elizaos/commit/483112557a1d198df41ce69391308c5445f533bf"
+            "https://github.com/elizaOS/eliza/commit/1fa8debb5c4f17426b3a367c67aa746bfe1116dc",
+            "https://github.com/elizaOS/eliza/commit/483112557a1d198df41ce69391308c5445f533bf"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
@@ -32,8 +32,8 @@
         {
           "text": "Security updates and dependency upgrades were merged, focusing on enhancing the security posture of the software by updating systeminformation and pnpm versions to address known vulnerabilities.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/25b6377c8b40229580a28c137d47474a5355a3cb",
-            "https://github.com/elizaOS/elizaos/commit/9a4577fcfe37848f3983c0c9b32bc4cad0dbb5af"
+            "https://github.com/elizaOS/eliza/commit/25b6377c8b40229580a28c137d47474a5355a3cb",
+            "https://github.com/elizaOS/eliza/commit/9a4577fcfe37848f3983c0c9b32bc4cad0dbb5af"
           ],
           "images": [],
           "videos": []
@@ -41,8 +41,8 @@
         {
           "text": "Additional project maintenance involved adjusting configurations and documentation, as well as correcting typos across different code files to improve clarity and maintainability.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/fe8f5f74b2a7aa2f8bd5ebb543c740f5f4366cc2",
-            "https://github.com/elizaOS/elizaos/commit/770a8d245d2d3a1680c7c2ec7e2fedbc42cc1f61"
+            "https://github.com/elizaOS/eliza/commit/fe8f5f74b2a7aa2f8bd5ebb543c740f5f4366cc2",
+            "https://github.com/elizaOS/eliza/commit/770a8d245d2d3a1680c7c2ec7e2fedbc42cc1f61"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/165377636?u=5560dd9f2d310e1ba61dbba864006a951391a582&v=4"
@@ -52,8 +52,8 @@
         {
           "text": "Merge operations were carried out to incorporate changes from the develop branch into various feature or fix branches, ensuring updated and streamlined codebase alignments.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/7e31d47302d1f2a4037b2d3b16690d0e36143b30",
-            "https://github.com/elizaOS/elizaos/commit/267d6f698f8e709e2619af04241a854a08bdcae1"
+            "https://github.com/elizaOS/eliza/commit/7e31d47302d1f2a4037b2d3b16690d0e36143b30",
+            "https://github.com/elizaOS/eliza/commit/267d6f698f8e709e2619af04241a854a08bdcae1"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/60634884?u=c6c41679b8322eaa0c81f72e0b4ed95e80f0ac16&v=4"
@@ -63,8 +63,8 @@
         {
           "text": "Additionally, there was a focus on improving logging and error handling, integrating more robust mechanisms using elizaLogger for enhanced diagnostics and monitoring.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/13a63d1325e2cdf3eca6e2f43739154338b0e804",
-            "https://github.com/elizaOS/elizaos/commit/678144b8cefe6225a7107400f83f65f2be929386"
+            "https://github.com/elizaOS/eliza/commit/13a63d1325e2cdf3eca6e2f43739154338b0e804",
+            "https://github.com/elizaOS/eliza/commit/678144b8cefe6225a7107400f83f65f2be929386"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/165377636?u=5560dd9f2d310e1ba61dbba864006a951391a582&v=4",
@@ -81,7 +81,7 @@
         {
           "text": "The {{maxTweetLength}} template tag doesn't work because it doesn't exist in the tweet post template. A possible solution might involve passing custom inputs into composeContext or directly populating maxTweetLength before sending it to composeContext.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2927"
+            "https://github.com/elizaOS/eliza/issues/2927"
           ],
           "images": [],
           "videos": []
@@ -89,7 +89,7 @@
         {
           "text": "A feature request to have runtime configuration expose several settings like Lore count, Post Example count, Bio count, and others. Suggestions include documenting these parameters thoroughly and possibly configuring chunkSize and bleed for knowledge processing.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2922"
+            "https://github.com/elizaOS/eliza/issues/2922"
           ],
           "images": [],
           "videos": []
@@ -97,7 +97,7 @@
         {
           "text": "A feature request to implement reranked contextual embedding with cBM25 as the default Retrieval-Augmented Generation (RAG) system in ElizaOS, inspired by a method described in the Anthropic blog.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2919"
+            "https://github.com/elizaOS/eliza/issues/2919"
           ],
           "images": [
             "https://github.com/user-attachments/assets/603ef4c1-b3bc-4153-a8a9-48c08c5a4b35"
@@ -107,7 +107,7 @@
         {
           "text": "An issue where setting messageCount to unique=true causes it to always return 1, breaking the facts feature. The suggestion is to set unique=false to resolve the issue, but the validate logic remains confusing and could be improved.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2915"
+            "https://github.com/elizaOS/eliza/issues/2915"
           ],
           "images": [],
           "videos": []
@@ -115,7 +115,7 @@
         {
           "text": "The ragKnowledge component retrieves entire documents at runtime, making prompts excessively long. A proposed fix includes avoiding embedding entire documents or filtering them. There is code duplication between processFile and createKnowledge that could be cleaned up.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2914"
+            "https://github.com/elizaOS/eliza/issues/2914"
           ],
           "images": [],
           "videos": []
@@ -123,7 +123,7 @@
         {
           "text": "A proposal to consolidate RAGKnowledge into Knowledge to prevent overlap and confusion within the system.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2918"
+            "https://github.com/elizaOS/eliza/issues/2918"
           ],
           "images": [],
           "videos": []
@@ -131,7 +131,7 @@
         {
           "text": "A suggestion to move text splitting functionality into the core and remove dependencies on langchain.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2917"
+            "https://github.com/elizaOS/eliza/issues/2917"
           ],
           "images": [],
           "videos": []
@@ -139,7 +139,7 @@
         {
           "text": "Issues related to handling embeddings include the need for dynamic embedding tables due to differing lengths, the suggestion to move hardcoded embedding handling to plugins, and the necessity of default models in multi-plugin contexts.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2908"
+            "https://github.com/elizaOS/eliza/issues/2908"
           ],
           "images": [],
           "videos": []
@@ -147,7 +147,7 @@
         {
           "text": "A bug where the Eliza chatbot client fails to connect on http://localhost:5173/, showing a disconnect while the REST API runs smoothly on port 3000.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2885"
+            "https://github.com/elizaOS/eliza/issues/2885"
           ],
           "images": [
             "https://github.com/user-attachments/assets/3d1840ca-8d5d-439d-9d6c-3059494fcb12"
@@ -157,7 +157,7 @@
         {
           "text": "A bug in the plugin-solana where the SEND_TOKEN action verification always returns false, hindering transaction confirmations, especially compared to other actions like EXECUTE_SWAP.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2920"
+            "https://github.com/elizaOS/eliza/issues/2920"
           ],
           "images": [],
           "videos": []
@@ -165,7 +165,7 @@
         {
           "text": "An error in the Ollama API with the llava model results in JSON parsing issues and repetitive tweet content, further compounded by delayed or non-responsive behavior from the localhost chat.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2907"
+            "https://github.com/elizaOS/eliza/issues/2907"
           ],
           "images": [],
           "videos": []
@@ -173,7 +173,7 @@
         {
           "text": "When an agent sends multiple tweets, the reply to chain is disrupted as the second tweet responds to the user's original tweet rather than the agent's initial tweet. This may require changing how initial tweet IDs are stored or handled.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2891"
+            "https://github.com/elizaOS/eliza/issues/2891"
           ],
           "images": [],
           "videos": []
@@ -181,7 +181,7 @@
         {
           "text": "A feature request to add a prefill prompt feature in the character.json configuration for service providers like Anthropic and GoogleAI.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2875"
+            "https://github.com/elizaOS/eliza/issues/2875"
           ],
           "images": [],
           "videos": []
@@ -189,7 +189,7 @@
         {
           "text": "After updating to the latest version, users are facing experimental warnings and module import errors related to node and ts-node.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2871"
+            "https://github.com/elizaOS/eliza/issues/2871"
           ],
           "images": [],
           "videos": []
@@ -197,7 +197,7 @@
         {
           "text": "Deepseek chats sometimes append unwanted text like (NONE) or (CONTINUE), requiring code hacks to exclude these from responses.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/2889"
+            "https://github.com/elizaOS/eliza/issues/2889"
           ],
           "images": [
             "https://github.com/user-attachments/assets/b185e622-46bb-4969-a6fc-2d2ca7f8ecac"

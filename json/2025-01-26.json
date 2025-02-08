@@ -8,10 +8,10 @@
         {
           "text": "Various plugins received updates to improve type safety and code quality. This includes enhanced maintainability and safety improvements without functional changes.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/55a8e20d5b6f6ba44c0a5275a375e94cb758a751",
-            "https://github.com/elizaOS/elizaos/pull/2844",
-            "https://github.com/elizaOS/elizaos/pull/2842",
-            "https://github.com/elizaOS/elizaos/pull/2848"
+            "https://github.com/elizaOS/eliza/commit/55a8e20d5b6f6ba44c0a5275a375e94cb758a751",
+            "https://github.com/elizaOS/eliza/pull/2844",
+            "https://github.com/elizaOS/eliza/pull/2842",
+            "https://github.com/elizaOS/eliza/pull/2848"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
@@ -21,7 +21,7 @@
         {
           "text": "Updates also include resolving linter warnings in various plugins and improving code readability.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2819"
+            "https://github.com/elizaOS/eliza/pull/2819"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/188117230?u=424cd5b834584b3799da288712b3c4158c8032a1&v=4"
@@ -36,8 +36,8 @@
         {
           "text": "New features introduced include a new Zilliqa blockchain plugin and an upgraded Twitter plugin to handle media attachments.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/commit/4fa62087b5b6a4d605dbd4375f0e9c0f655af455",
-            "https://github.com/elizaOS/elizaos/pull/2818"
+            "https://github.com/elizaOS/eliza/commit/4fa62087b5b6a4d605dbd4375f0e9c0f655af455",
+            "https://github.com/elizaOS/eliza/pull/2818"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/108257153?v=4"
@@ -47,8 +47,8 @@
         {
           "text": "Additional enhancements include Dependency Injection support and Paraswap API based swap action for the EVM plugin.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/2855",
-            "https://github.com/elizaOS/elizaos/pull/2820"
+            "https://github.com/elizaOS/eliza/pull/2855",
+            "https://github.com/elizaOS/eliza/pull/2820"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/707025?u=d8487801b6cc361f4a912518c54cc25cfb70d347&v=4"

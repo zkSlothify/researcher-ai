@@ -8,13 +8,13 @@
         {
           "text": "Multiple plugins within the ElizaOS ecosystem have been updated to include Biome linting and formatting configurations. This includes plugins related to Solana, blockchain, storage, TEE, and more. The updates involve adding @biomejs/biome as a devDependency, adding lint and format scripts, and standardizing dependencies.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3186",
-            "https://github.com/elizaOS/elizaos/pull/3185",
-            "https://github.com/elizaOS/elizaos/pull/3184",
-            "https://github.com/elizaOS/elizaos/pull/3183",
-            "https://github.com/elizaOS/elizaos/pull/3182",
-            "https://github.com/elizaOS/elizaos/pull/3181",
-            "https://github.com/elizaOS/elizaos/pull/3180"
+            "https://github.com/elizaOS/eliza/pull/3186",
+            "https://github.com/elizaOS/eliza/pull/3185",
+            "https://github.com/elizaOS/eliza/pull/3184",
+            "https://github.com/elizaOS/eliza/pull/3183",
+            "https://github.com/elizaOS/eliza/pull/3182",
+            "https://github.com/elizaOS/eliza/pull/3181",
+            "https://github.com/elizaOS/eliza/pull/3180"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/154863472?u=99689ad0f9ec0be78ba3b726c1ef10df796fbe7d&v=4"
@@ -24,9 +24,9 @@
         {
           "text": "Documentation updates have been made to reflect changes in branding and to improve clarity. This includes renaming Twitter to X (Twitter) in the README file and adding weekly contributor meeting notes. Additionally, typos and consistency issues in community chat logs have been corrected.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3198",
-            "https://github.com/elizaOS/elizaos/pull/3204",
-            "https://github.com/elizaOS/elizaos/pull/3206"
+            "https://github.com/elizaOS/eliza/pull/3198",
+            "https://github.com/elizaOS/eliza/pull/3204",
+            "https://github.com/elizaOS/eliza/pull/3206"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/79686507?u=2c32263a1f63485439e60832dbcf8902d9311f3d&v=4",
@@ -38,10 +38,10 @@
         {
           "text": "New features have been added to the ElizaOS plugins, including the TON Plugin for NFT and wallet management, and the Cookie.fun plugin for social sentiment analysis. The DeFAI Protocol has also been integrated to enable AI-driven DeFi interactions.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3211",
-            "https://github.com/elizaOS/elizaos/pull/3199",
-            "https://github.com/elizaOS/elizaos/pull/3192",
-            "https://github.com/elizaOS/elizaos/pull/3193"
+            "https://github.com/elizaOS/eliza/pull/3211",
+            "https://github.com/elizaOS/eliza/pull/3199",
+            "https://github.com/elizaOS/eliza/pull/3192",
+            "https://github.com/elizaOS/eliza/pull/3193"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/29272392?u=a4773a399c1cbcd34cdca9a7877cd61824c5bf09&v=4",
@@ -53,9 +53,9 @@
         {
           "text": "Various bug fixes and optimizations have been implemented across different plugins and components of ElizaOS. This includes fixing ESM import issues, optimizing the quick-intel plugin, and improving Slack client attachment handling.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/pull/3187",
-            "https://github.com/elizaOS/elizaos/pull/3208",
-            "https://github.com/elizaOS/elizaos/pull/3194"
+            "https://github.com/elizaOS/eliza/pull/3187",
+            "https://github.com/elizaOS/eliza/pull/3208",
+            "https://github.com/elizaOS/eliza/pull/3194"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/22415259?u=210e0fb7c522442e99a3ccceabb2de94700509bb&v=4",
@@ -73,7 +73,7 @@
         {
           "text": "The README file has been updated to reflect Twitter's rebranding to X. The term 'X (Twitter)' is now used to accommodate users still familiar with the old name.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3196"
+            "https://github.com/elizaOS/eliza/issues/3196"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/79686507?u=2c32263a1f63485439e60832dbcf8902d9311f3d&v=4"
@@ -83,7 +83,7 @@
         {
           "text": "There are build errors when deploying on render.com, specifically related to the 'sharp' package. Errors include 'NewOrCopy' not being a member of 'Napi::Buffer<char>'. Attempts to make 'sharp' optional did not resolve the issue.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3212"
+            "https://github.com/elizaOS/eliza/issues/3212"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/185045229?u=f167b657baacefc71ea779c685f9b9c9dc8ce850&v=4"
@@ -93,7 +93,7 @@
         {
           "text": "A feature request has been made to enhance code standards by implementing consistent coding practices. This includes naming conventions, consistent formatting, and using tools like ESLint and Prettier.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3200"
+            "https://github.com/elizaOS/eliza/issues/3200"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/196351948?v=4"
@@ -103,7 +103,7 @@
         {
           "text": "A runtime import error occurs in NestJs applications using packages from the Eliza repository. The error 'ERR_PACKAGE_PATH_NOT_EXPORTED' suggests issues with package exports in the Eliza packages.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3191"
+            "https://github.com/elizaOS/eliza/issues/3191"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/92687884?v=4"
@@ -113,7 +113,7 @@
         {
           "text": "A Twitter agent is experiencing an 'ERR_INVALID_URL' error when generating new tweets. Attempts to use different LLM APIs have not resolved the issue.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3202"
+            "https://github.com/elizaOS/eliza/issues/3202"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/158835053?v=4"
@@ -123,7 +123,7 @@
         {
           "text": "A Twitter logging bug is reported where, despite successful login, errors occur when fetching or posting tweets. No login notification is received on the user's phone, indicating potential authentication issues.",
           "sources": [
-            "https://github.com/elizaOS/elizaos/issues/3201"
+            "https://github.com/elizaOS/eliza/issues/3201"
           ],
           "images": [
             "https://avatars.githubusercontent.com/u/167812620?v=4"

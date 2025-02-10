@@ -3,16 +3,90 @@
   "title": "Daily Summary for 2025-02-09",
   "categories": [
     {
-      "title": "Crypto Market Overview",
+      "title": "Recent Updates and Enhancements in ElizaOS",
       "content": [
         {
-          "text": "The cryptocurrency market is experiencing significant activity with notable changes in the prices and market caps of various digital assets.",
-          "sources": [],
-          "images": [],
+          "text": "The ElizaOS project has seen several updates and enhancements across various components. Notably, new character methods have been added, although they have not been fully tested and may increase the size of the adapter.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3400"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/82053242?u=98209a1f10456f42d4d2fa71db4d5bf4a672cbc3&v=4"
+          ],
           "videos": []
         },
         {
-          "text": "Bitcoin, the leading cryptocurrency, is currently priced at $96,845 with a 24-hour trading volume of $16,091,343,820 and a market cap of $1,919,893,772,162. It has seen a substantial daily change of 124.612%.",
+          "text": "A new build command `build:core` has been introduced to ensure the core is built first, addressing previous build issues.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3398"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/82053242?u=98209a1f10456f42d4d2fa71db4d5bf4a672cbc3&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "The build process has been fixed for the root directory using `bun run build`, and additional fixes were made for the Sui Typhoon Hackathon scheduled for February 2025.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3396",
+            "https://github.com/elizaOS/eliza/pull/3399"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/82053242?u=98209a1f10456f42d4d2fa71db4d5bf4a672cbc3&v=4",
+            "https://avatars.githubusercontent.com/u/5687539?u=844e8b656f542169e7ee912affdd74249d47c182&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Enhancements have been made to the Twitter client system message, character file, and Shopify parsing logic to better handle Twitter data.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3401"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/57520778?u=f90f55f1c5855b3f65fbdf1da536c4879c9ec442&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A new feature, VangAI, has been introduced as a Crypto Oracle, and a new database adapter using Drizzle ORM has been implemented, enhancing database schema management and vector operations.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3405",
+            "https://github.com/elizaOS/eliza/pull/3403"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/43931727?u=b22523f013c6606ec3f342e4da1c9b84566ea958&v=4",
+            "https://avatars.githubusercontent.com/u/54844437?v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "The project has externalized vendor code, moving model providers into plugins and switching from `pnpm` to `bun` to enable better scalability.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3393"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/18633264?u=e2e906c3712c2506ebfa98df01c2cfdc50050b30&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "The README.md file has been enhanced with detailed system requirements, project structure overview, and comprehensive contribution guidelines to make the project more accessible to new contributors.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3392"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/192837798?u=34b627ecf6d490845e40408c5dc9871a09419f22&v=4"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "pull_request"
+    },
+    {
+      "title": "Crypto Market Overview",
+      "content": [
+        {
+          "text": "The cryptocurrency market is experiencing varied movements across different assets. Bitcoin, with a current price of $96,200, has a significant 24-hour trading volume of $26,612,820,142 and a market cap of $1,906,773,302,781. However, it has seen a daily change of -560.79, indicating a downward trend.",
           "sources": [
             "https://www.coingecko.com/en/coins/bitcoin"
           ],
@@ -20,7 +94,7 @@
           "videos": []
         },
         {
-          "text": "Ethereum, another major player in the crypto space, is priced at $2,652.78. It has a 24-hour trading volume of $15,693,105,907 and a market cap of $319,779,380,156, with a daily change of 15.303665%.",
+          "text": "Ethereum is currently priced at $2,618.7, with a 24-hour trading volume of $18,063,719,203 and a market cap of $315,781,496,346. It has experienced a daily change of -31.57, showing a slight decline.",
           "sources": [
             "https://www.coingecko.com/en/coins/ethereum"
           ],
@@ -28,7 +102,7 @@
           "videos": []
         },
         {
-          "text": "Solana is trading at $201.49, with a 24-hour volume of $2,723,404,548 and a market cap of $98,288,188,178. It has experienced a daily change of 8.271463%.",
+          "text": "Solana's current price is $201.63, with a 24-hour trading volume of $4,075,557,842 and a market cap of $98,393,496,850. It has seen a minor daily increase of 0.61.",
           "sources": [
             "https://www.coingecko.com/en/coins/solana"
           ],
@@ -36,7 +110,7 @@
           "videos": []
         },
         {
-          "text": "The token ai16z is priced at $0.3476, with a 24-hour trading volume of $11,207,479.37 and a market cap of $382,394,806. It has seen a daily change of 13.14%.",
+          "text": "The token ai16z is priced at $0.3796, with a 24-hour trading volume of $22,096,830.93 and a market cap of $417,575,466. It has experienced a notable daily increase of 10.47.",
           "sources": [
             "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
           ],
@@ -47,85 +121,75 @@
       "topic": "crypto market"
     },
     {
-      "title": "AI Agents and DAOs: Metaphors and Metrics",
+      "title": "ElizaOS Plugin Registry Migration",
       "content": [
         {
-          "text": "AI agents are likened to mech suits for humans, enhancing human capabilities.",
+          "text": "Attention DEVS: The plugin registry migration for ElizaOS is currently in progress. Developers can submit their plugins to the new registry by sending a pull request to the index.json file, which can be hosted on their GitHub. New documentation is being developed and will be shared once ready.",
           "sources": [
-            "https://twitter.com/ai16zdao/status/1888301607491653903"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "A new metaphor for AI DAOs describes AI as the engine and humans as the steering wheel, emphasizing the collaborative nature of AI and human interaction.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1888290359718899859"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Despite a cooling trend in AI meta, @elizaOS and @ai16zdao continue to push forward with significant developer engagement, boasting 14.1k stars, 4.3k forks, and 531 contributors.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1888290239031939197"
+            "https://twitter.com/ai16zdao/status/1888736329971683472",
+            "https://twitter.com/shawmakesmagic/status/1888736463992283158"
           ],
           "images": [
-            "https://pbs.twimg.com/media/GjRYdO5bIAAlk1B.jpg"
+            "https://pbs.twimg.com/ext_tw_video_thumb/1888734670247890944/pu/img/nJ5FPHEY3MHQmEg-.jpg"
           ],
-          "videos": []
+          "videos": [
+            "https://video.twimg.com/ext_tw_video/1888734670247890944/pu/vid/avc1/640x360/Bsk7NDTTrMwsljtp.mp4?tag=12"
+          ]
         }
       ],
-      "topic": "ai"
+      "topic": "plugin"
     },
     {
-      "title": "AI Agents and Development Updates",
+      "title": "Recent Developments in ElizaOS and Related Projects",
       "content": [
         {
-          "text": "AI agents are likened to mech suits for humans, enhancing human capabilities.",
+          "text": "RAISE NOW LIVE",
           "sources": [
-            "https://twitter.com/ai16zdao/status/1888301607491653903"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "A new metaphor for AI DAOs describes AI as the engine and humans as the steering wheel, emphasizing the collaborative nature of AI and human interaction.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1888290359718899859"
-          ],
-          "images": [],
-          "videos": []
-        },
-        {
-          "text": "Despite a cooling trend in AI meta, @elizaOS and @ai16zdao continue to push forward with significant developer engagement, boasting 14.1k stars, 4.3k forks, and 531 contributors.",
-          "sources": [
-            "https://twitter.com/ai16zdao/status/1888290239031939197"
+            "https://twitter.com/daosdotfun/status/1888682677865423017"
           ],
           "images": [
-            "https://pbs.twimg.com/media/GjRYdO5bIAAlk1B.jpg"
+            "https://pbs.twimg.com/media/GjXUizYXgAIp1HI.jpg"
           ],
           "videos": []
         },
         {
-          "text": "A post on Hacker News titled 'The Age of Agent Experience' advocates for building APIs that are agent-centric, suggesting a shift in how APIs are developed.",
+          "text": "Bot Generates Multiple Replies Due to DEFAULT_MAX_TWEET_LENGTH. The bot sometimes generates multiple replies to a single tweet due to the 280-character limit, leading to excessive API calls and increased costs. A temporary fix is to increase the DEFAULT_MAX_TWEET_LENGTH.",
           "sources": [
-            "https://twitter.com/ai16zdao/status/1888290115396456927"
+            "https://github.com/elizaOS/eliza/issues/3394"
           ],
           "images": [
-            "https://pbs.twimg.com/media/GjNODqUXsAA5pNV.png"
+            "https://avatars.githubusercontent.com/u/196733228?v=4"
           ],
           "videos": []
         },
         {
-          "text": "Development efforts are focused on package improvements, new features, and bug fixes, with 32 contributors merging 15 pull requests. Major work includes merging pull requests related to model configurations and unit tests.",
-          "sources": [],
-          "images": [],
-          "videos": []
+          "text": "Attention DEVS: plugin registry migration in progress. ElizaOS plugins can be submitted via PR to the index.json hosted on GitHub. New documentation is being prepared.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1888736329971683472",
+            "https://twitter.com/shawmakesmagic/status/1888736463992283158"
+          ],
+          "images": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/1888734670247890944/pu/img/nJ5FPHEY3MHQmEg-.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/ext_tw_video/1888734670247890944/pu/vid/avc1/640x360/Bsk7NDTTrMwsljtp.mp4?tag=12"
+          ]
+        },
+        {
+          "text": "Some highlights from the past few days of building include improvements by @AshConnell and work by @itsmetamike.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1888732038343037397"
+          ],
+          "images": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/1888704704676282368/pu/img/md_oXNuc_j6gpBPs.jpg"
+          ],
+          "videos": [
+            "https://video.twimg.com/ext_tw_video/1888704704676282368/pu/vid/avc1/1280x720/2b5R5LDc8B1e-sA9.mp4?tag=12"
+          ]
         }
       ],
       "topic": "Misceleanous"
     }
   ],
-  "date": 1739110674.095
+  "date": 1739197267.334
 }

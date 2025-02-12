@@ -3,91 +3,76 @@
   "title": "Daily Summary for 2025-02-11",
   "categories": [
     {
-      "title": "ElizaOS Project Updates",
+      "title": "ElizaOS Updates and Enhancements",
       "content": [
         {
-          "text": "The ElizaOS project has seen several updates and improvements across various components. Notable changes include the addition of new features, updates to documentation, and minor fixes.",
+          "text": "Several updates and enhancements have been made to the ElizaOS project, focusing on improving functionality, fixing bugs, and adding new features.",
           "sources": [
-            "https://github.com/elizaOS/eliza/pull/3424",
-            "https://github.com/elizaOS/eliza/pull/3407",
-            "https://github.com/elizaOS/eliza/pull/3423",
-            "https://github.com/elizaOS/eliza/pull/3425",
-            "https://github.com/elizaOS/eliza/pull/3421",
-            "https://github.com/elizaOS/eliza/pull/3417",
-            "https://github.com/elizaOS/eliza/pull/3406",
-            "https://github.com/elizaOS/eliza/pull/3422",
-            "https://github.com/elizaOS/eliza/pull/3413",
-            "https://github.com/elizaOS/eliza/pull/3419",
-            "https://github.com/elizaOS/eliza/pull/3416",
-            "https://github.com/elizaOS/eliza/pull/3415",
-            "https://github.com/elizaOS/eliza/pull/3414",
-            "https://github.com/elizaOS/eliza/pull/3408",
-            "https://github.com/elizaOS/eliza/pull/3410"
+            "https://github.com/elizaOS/eliza/pull/3445",
+            "https://github.com/elizaOS/eliza/pull/3438",
+            "https://github.com/elizaOS/eliza/pull/3437",
+            "https://github.com/elizaOS/eliza/pull/3436",
+            "https://github.com/elizaOS/eliza/pull/3432"
           ],
           "images": [
-            "https://avatars.githubusercontent.com/u/82053242?u=98209a1f10456f42d4d2fa71db4d5bf4a672cbc3&v=4",
-            "https://avatars.githubusercontent.com/u/127061691?v=4",
+            "https://avatars.githubusercontent.com/u/82053242?u=98209a1f10456f42d4d2fa71db4d5bf4a672cbc3&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Bug fixes have been implemented to address issues with npm run dev and dependencies for @solana/web3.js, as well as improvements to string handling in response processing.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3446",
+            "https://github.com/elizaOS/eliza/pull/3431",
+            "https://github.com/elizaOS/eliza/pull/3442"
+          ],
+          "images": [
             "https://avatars.githubusercontent.com/u/60634884?u=c6c41679b8322eaa0c81f72e0b4ed95e80f0ac16&v=4",
-            "https://avatars.githubusercontent.com/u/95926324?u=eae3fbc4228c17bb52c31b08da2d5f71fb2345db&v=4",
-            "https://avatars.githubusercontent.com/u/4424030?v=4",
-            "https://avatars.githubusercontent.com/u/4446580?u=9fa8605453298e45320d15b658716196f419a5af&v=4",
-            "https://avatars.githubusercontent.com/u/43066067?u=a3b53d49e52067149fdaad105b8a41e3a7fafd83&v=4",
-            "https://avatars.githubusercontent.com/u/132911026?u=d51341f7a1407215704ae8d0cb4d60c50402ca7a&v=4",
-            "https://avatars.githubusercontent.com/u/137284002?u=619f670f01df23822e05a3eab4dbbf1f142757ae&v=4",
-            "https://avatars.githubusercontent.com/u/191278655?u=9bc65d4634f519e3e99ba6fee4d0102fe0777a47&v=4",
-            "https://avatars.githubusercontent.com/u/198445873?v=4",
-            "https://avatars.githubusercontent.com/u/189391897?u=955a60c2837577eaea5c9ac69541da57728fe6f5&v=4",
-            "https://avatars.githubusercontent.com/u/86532040?u=d91ae59e49ae98b93e25cea29f7e5fa49b2679b5&v=4",
-            "https://avatars.githubusercontent.com/u/187120306?u=1902a0c17e07b76b0bb5ff5a93144d78ed5c1ed8&v=4",
-            "https://avatars.githubusercontent.com/u/32600939?u=cdcf89f44c7a50906c7a80d889efa85023af2049&v=4"
+            "https://avatars.githubusercontent.com/u/25138864?v=4"
           ],
           "videos": []
         },
         {
-          "text": "New features include the addition of agent commands, the Navi Protocol for token operations, and the D.A.T.A plugin for enhanced data fetching capabilities. These updates aim to improve user interaction with the Eliza AI Agent and expand its functionality.",
+          "text": "New features include the integration of the decentralized social application Tako, allowing for proactive interactions and scheduled posting, and the addition of new characters from the Muppets.",
           "sources": [
-            "https://github.com/elizaOS/eliza/pull/3424",
-            "https://github.com/elizaOS/eliza/pull/3425",
-            "https://github.com/elizaOS/eliza/pull/3421",
-            "https://github.com/elizaOS/eliza/pull/3417"
+            "https://github.com/elizaOS/eliza/pull/3433",
+            "https://github.com/elizaOS/eliza/pull/3430"
           ],
           "images": [
-            "https://avatars.githubusercontent.com/u/82053242?u=98209a1f10456f42d4d2fa71db4d5bf4a672cbc3&v=4",
-            "https://avatars.githubusercontent.com/u/95926324?u=eae3fbc4228c17bb52c31b08da2d5f71fb2345db&v=4",
-            "https://avatars.githubusercontent.com/u/4424030?v=4",
-            "https://avatars.githubusercontent.com/u/4446580?u=9fa8605453298e45320d15b658716196f419a5af&v=4"
+            "https://avatars.githubusercontent.com/u/169011183?u=28c77606047ab46390b43c2cc6ea121cc63faa1e&v=4",
+            "https://avatars.githubusercontent.com/u/52178?u=60d3ad18611db43abc780c480abdcfc94857298a&v=4"
           ],
           "videos": []
         },
         {
-          "text": "Documentation updates have been made to correct typos, improve clarity, and provide better guidance for users. This includes updates to the Turkish documentation and general improvements across various pages.",
+          "text": "The Dockerfile has been updated to remove the deprecated --no-frozen-lockfile command, ensuring successful builds.",
           "sources": [
-            "https://github.com/elizaOS/eliza/pull/3407",
-            "https://github.com/elizaOS/eliza/pull/3422",
-            "https://github.com/elizaOS/eliza/pull/3413",
-            "https://github.com/elizaOS/eliza/pull/3410"
+            "https://github.com/elizaOS/eliza/pull/3428"
           ],
           "images": [
-            "https://avatars.githubusercontent.com/u/127061691?v=4",
-            "https://avatars.githubusercontent.com/u/132911026?u=d51341f7a1407215704ae8d0cb4d60c50402ca7a&v=4",
-            "https://avatars.githubusercontent.com/u/137284002?u=619f670f01df23822e05a3eab4dbbf1f142757ae&v=4",
-            "https://avatars.githubusercontent.com/u/32600939?u=cdcf89f44c7a50906c7a80d889efa85023af2049&v=4"
+            "https://avatars.githubusercontent.com/u/196692569?v=4"
           ],
           "videos": []
         },
         {
-          "text": "Minor updates and fixes include changes to links in various files, updates to the package-lock.json, and improvements to the .env.example file to prevent common user errors.",
+          "text": "The Bluefin ElizaOS Plugin has been introduced, integrating Bluefin’s trading infrastructure with ElizaOS, providing comprehensive API coverage for trading, rewards, and affiliate programs.",
           "sources": [
-            "https://github.com/elizaOS/eliza/pull/3419",
-            "https://github.com/elizaOS/eliza/pull/3416",
-            "https://github.com/elizaOS/eliza/pull/3415",
-            "https://github.com/elizaOS/eliza/pull/3414"
+            "https://github.com/elizaOS/eliza/pull/3427"
           ],
           "images": [
-            "https://avatars.githubusercontent.com/u/191278655?u=9bc65d4634f519e3e99ba6fee4d0102fe0777a47&v=4",
-            "https://avatars.githubusercontent.com/u/198445873?v=4",
-            "https://avatars.githubusercontent.com/u/189391897?u=955a60c2837577eaea5c9ac69541da57728fe6f5&v=4",
-            "https://avatars.githubusercontent.com/u/86532040?u=d91ae59e49ae98b93e25cea29f7e5fa49b2679b5&v=4"
+            "https://avatars.githubusercontent.com/u/94484367?u=219409f8874500714ab763aad6266f74d129138e&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A small refactor has been made to the XMTP component, and a new CLI utility has been added to help developers manage plugins in the ElizaOS V1 repository.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/pull/3426",
+            "https://github.com/elizaOS/eliza/pull/3429"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/1447073?u=dff55a747ae4569a87f4eae7a01578682640a9e9&v=4",
+            "https://avatars.githubusercontent.com/u/16395496?u=45c152d8433e37c62520e66c0dd6d754ccf3eaf4&v=4"
           ],
           "videos": []
         }
@@ -95,10 +80,76 @@
       "topic": "pull_request"
     },
     {
+      "title": "Issues and Enhancements in ElizaOS",
+      "content": [
+        {
+          "text": "Users are experiencing issues with the .env file not being read correctly, causing the application to run on the wrong port and load incorrect models. The expected behavior is for the application to start with the specified settings in the .env file.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3449"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/44348964?u=e23b78939648dcdf89d4f29fafdaf34b691231e4&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "The 'pnpm start' process is getting stuck at 'INFO: Initializing LlamaService...' without any errors, causing delays in starting the application. This issue persists despite multiple attempts and system restarts.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3448"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/44348964?u=e23b78939648dcdf89d4f29fafdaf34b691231e4&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "Long messages are causing errors due to the PostgreSQL database's limitation on the levenshtein function, which cannot handle arguments exceeding 255 characters. This issue can be temporarily resolved by slicing messages, but a more robust solution is needed.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3441"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/53032750?u=ff3890e429047d07a870d870c54e8834ba1faac3&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "When ragKnowledge is enabled, stringKnowledge is incorrectly stored in memories instead of knowledge. The expected behavior is for stringKnowledge to be stored correctly in knowledge.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3434"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/53032750?u=ff3890e429047d07a870d870c54e8834ba1faac3&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "An enhancement is proposed for the TwitterPostClient's dry run functionality to return a structured result object, allowing programmatic access to draft tweets. This would improve the developer experience by eliminating the need for runtime method overriding.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3444"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/85589251?u=d5e192f880fbfd123a166d8c856f7ce15be239f9&v=4"
+          ],
+          "videos": []
+        },
+        {
+          "text": "A feature request suggests preventing the cleanup of ragKnowledge created from remote files during runtime initialization. The current cleanup operation removes knowledge missing a local source file, which affects remote-sourced knowledge.",
+          "sources": [
+            "https://github.com/elizaOS/eliza/issues/3440"
+          ],
+          "images": [
+            "https://avatars.githubusercontent.com/u/1527902?u=5910337f1512185172145a296d73e4e0cadb77f1&v=4"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "issue"
+    },
+    {
       "title": "Crypto Market Overview",
       "content": [
         {
-          "text": "The cryptocurrency market is experiencing significant activity with notable changes in the prices and market caps of various digital assets. Bitcoin, the leading cryptocurrency, is currently priced at $97,967 with a 24-hour trading volume of $39,169,430,125 and a market cap of $1,941,150,064,490, showing a daily change of 1801%.",
+          "text": "The cryptocurrency market is experiencing mixed trends with significant fluctuations in prices and market caps. Bitcoin, the leading cryptocurrency, is currently priced at $95,815 with a 24-hour trading volume of $31,805,042,855 and a market cap of $1,899,422,213,852. It has seen a daily change of -2227.04, indicating a downward trend.",
           "sources": [
             "https://www.coingecko.com/en/coins/bitcoin"
           ],
@@ -106,7 +157,7 @@
           "videos": []
         },
         {
-          "text": "Ethereum, another major player in the crypto space, is priced at $2,698.57. It has a 24-hour trading volume of $18,721,779,660 and a market cap of $325,146,436,475, with a daily change of 82.161%.",
+          "text": "Ethereum, another major player in the crypto market, is priced at $2,602.94. It has a 24-hour trading volume of $20,622,603,678 and a market cap of $313,974,212,158. Ethereum has also experienced a decline with a daily change of -98.96.",
           "sources": [
             "https://www.coingecko.com/en/coins/ethereum"
           ],
@@ -114,7 +165,7 @@
           "videos": []
         },
         {
-          "text": "Solana is currently valued at $202.38, with a 24-hour trading volume of $4,808,808,787 and a market cap of $98,740,074,150. It has experienced a daily change of 0.92026167%.",
+          "text": "Solana is currently priced at $197, with a 24-hour trading volume of $4,393,829,461 and a market cap of $96,158,516,291. It has a daily change of -5.63, showing a slight decrease in value.",
           "sources": [
             "https://www.coingecko.com/en/coins/solana"
           ],
@@ -122,7 +173,7 @@
           "videos": []
         },
         {
-          "text": "The token ai16z is priced at $0.4399, with a 24-hour trading volume of $30,395,595.42 and a market cap of $483,954,682, showing a daily change of 15.79%.",
+          "text": "The token ai16z is priced at $0.5287, with a 24-hour trading volume of $64,253,692.27 and a market cap of $581,634,820. It has experienced a significant daily increase of 20.09, indicating a positive trend.",
           "sources": [
             "https://dexscreener.com/solana/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
           ],
@@ -133,74 +184,87 @@
       "topic": "crypto market"
     },
     {
-      "title": "ElizaOS Development and Integration Challenges",
+      "title": "The Intersection of AI and Crypto",
       "content": [
         {
-          "text": "A user is experiencing an issue while trying to run ElizaOS on a Jetson Orin NX 8GB. The error 'Cannot find module '@anush008/tokenizers-linux-arm64-gnu'' is encountered during the startup process. The user is new to Linux and is seeking solutions, but cannot access a potential solution posted on GitHub.",
+          "text": "Join us tomorrow for a special episode featuring @dao_aisu, an AI agent, as a guest. The discussion will focus on the intersection of AI and crypto, a major narrative in the current cycle.",
           "sources": [
-            "https://github.com/elizaOS/eliza/issues/3418"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/198586686?v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "A feature request has been made to decouple service type definitions from the main ElizaOS repository, similar to how clients and plugins have been decoupled. This would facilitate the development of new service extensions without being tied to the core package types.",
-          "sources": [
-            "https://github.com/elizaOS/eliza/issues/3420"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/3228613?u=439af0ed11f58e1e7e0050fe3f5298481eb1dcee&v=4"
-          ],
-          "videos": []
-        },
-        {
-          "text": "There is a proposal to integrate BAML, a domain-specific language for generating structured outputs from LLMs, into the ElizaOS workflow. BAML offers features like type-safe outputs, flexibility across different LLMs, and a robust online playground for testing prompts. It aims to enhance the development of reliable agents and chatbots with structured output capabilities.",
-          "sources": [
-            "https://github.com/elizaOS/eliza/issues/3411"
-          ],
-          "images": [
-            "https://avatars.githubusercontent.com/u/46384319?u=dffe4f1adbd7bdf75f2c185f0db36007f42815ac&v=4"
-          ],
-          "videos": []
-        }
-      ],
-      "topic": "issue"
-    },
-    {
-      "title": "Recent Developments in DAOs and Tech Upgrades",
-      "content": [
-        {
-          "text": "Reminder to get involved with @daosdotfun. Check out the source for more details.",
-          "sources": [
-            "https://twitter.com/daosdotfun/status/1889069354232287316"
+            "https://twitter.com/daosdotfun/status/1889378374486753315"
           ],
           "images": [],
           "videos": []
         },
         {
-          "text": "With 18 contributors, 2 pull requests were merged, focusing on various improvements.",
+          "text": "Crypto provides open financial rails for AI agents to transact, enhancing interoperability and equipping AI with tools to achieve various goals.",
+          "sources": [
+            "https://twitter.com/ai16zdao/status/1889461065643131133"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GjcuozQaYAA3CC8.png"
+          ],
+          "videos": []
+        }
+      ],
+      "topic": "ai"
+    },
+    {
+      "title": "Head Down Building V2 Progress",
+      "content": [
+        {
+          "text": "The development of version 2 is progressing well, but it requires full focus for a few more weeks. For any inquiries, contact inquiries@elizalabs.ai.",
+          "sources": [
+            "https://twitter.com/shawmakesmagic/status/1889367714512212317",
+            "https://twitter.com/ai16zdao/status/1889460292934869057"
+          ],
+          "images": [],
+          "videos": []
+        }
+      ],
+      "topic": "building"
+    },
+    {
+      "title": "AI and Crypto: Current Developments and Discussions",
+      "content": [
+        {
+          "text": "Join us tomorrow for a special episode featuring @dao_aisu's AI agent as a guest. The discussion will focus on the intersection of AI and crypto, a major narrative in the current cycle.",
+          "sources": [
+            "https://twitter.com/daosdotfun/status/1889378374486753315"
+          ],
+          "images": [],
+          "videos": []
+        },
+        {
+          "text": "Development efforts are ongoing with a focus on bug fixes, involving 13 contributors and 5 merged PRs, alongside various improvements.",
           "sources": [],
           "images": [],
           "videos": []
         },
         {
-          "text": "Testing builds on @hyperfy_io have received a massive upgrade, enhancing both visual and performance aspects.",
+          "text": "Hyperfy v2 in collaboration with @elizaOS is working on making AI agents more tangible.",
           "sources": [
-            "https://twitter.com/shawmakesmagic/status/1889143912909926553"
+            "https://twitter.com/ai16zdao/status/1889463875688402983"
           ],
           "images": [
-            "https://pbs.twimg.com/ext_tw_video_thumb/1889090977341542400/pu/img/yxjWshrhWpREHEe0.jpg"
+            "https://pbs.twimg.com/ext_tw_video_thumb/1889186253104353280/pu/img/s9TjH_u5-l8uMgHO.jpg"
           ],
           "videos": [
-            "https://video.twimg.com/ext_tw_video/1889090977341542400/pu/vid/avc1/1920x1080/ZTBPaUt3gEiCp5FP.mp4?tag=14"
+            "https://video.twimg.com/ext_tw_video/1889186253104353280/pu/vid/avc1/1280x720/Y-hRykUUMRIqZlXd.mp4?tag=12"
           ]
         },
         {
-          "text": "A good read on crypto agents and the associated whitepaper is available.",
+          "text": "Crypto offers open financial rails for AI agents to transact, enhancing interoperability and providing tools for AI to achieve various goals.",
           "sources": [
-            "https://twitter.com/ai16zdao/status/1889162054411428229"
+            "https://twitter.com/ai16zdao/status/1889461065643131133"
+          ],
+          "images": [
+            "https://pbs.twimg.com/media/GjcuozQaYAA3CC8.png"
+          ],
+          "videos": []
+        },
+        {
+          "text": "The challenge remains to enable seamless transactions via AI agents, such as sending cryptocurrency through simple text commands.",
+          "sources": [
+            "https://twitter.com/shawmakesmagic/status/1889585650703155634"
           ],
           "images": [],
           "videos": []
@@ -209,5 +273,5 @@
       "topic": "Misceleanous"
     }
   ],
-  "date": 1739283691.581
+  "date": 1739373810.71
 }

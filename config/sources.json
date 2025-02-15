@@ -1,0 +1,12 @@
+{
+    "sources": [
+      {
+        "type": "CoinGeckoAnalyticsSource",
+        "name": "coinGeckoTokenAnalytics",
+        "interval": 43200000,
+        "params": {
+            "tokenSymbols": ["bitcoin", "ethereum", "solana"]
+        }
+      }
+    ]
+}

@@ -7,7 +7,7 @@ interface CoinGeckoAnalyticsSourceConfig {
     tokenSymbols: string[];
 }
 
-export class CoinGeckoMarketAnalyticsSource implements ContentSource {
+export class CoinGeckoAnalyticsSource implements ContentSource {
     public name: string;
     private tokenSymbols: string[];
   

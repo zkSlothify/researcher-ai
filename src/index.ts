@@ -1,17 +1,13 @@
 import { ContentAggregator } from "./aggregator/ContentAggregator";
-import { TwitterSource } from "./plugins/sources/TwitterSource";
-import { GitHubDataSource } from "./plugins/sources/GitHubDataSource";
 import { SQLiteStorage } from "./plugins/storage/SQLiteStorage";
 import { OpenAIProvider } from "./plugins/ai/OpenAIProvider";
 import { AiTopicsEnricher } from "./plugins/enrichers/AiTopicEnricher";
-import { DiscordChannelSource } from "./plugins/sources/DiscordChannelSource";
-import { DiscordAnnouncementSource } from "./plugins/sources/DiscordAnnouncementSource";
-import { SolanaTokenAnalyticsSource } from "./plugins/sources/SolanaAnalyticsSource";
-import { CoinGeckoMarketAnalyticsSource } from "./plugins/sources/CoinGeckoAnalyticsSource";
 import { DailySummaryGenerator } from "./plugins/generators/DailySummaryGenerator";
-
 import dotenv from "dotenv";
+import fs from "fs";
+import path from "path";
 import { SummaryItem } from "./types";
+import { loadSourceModules, resolveParam } from "./helpers/configHelper";
 
 dotenv.config();
 
@@ -22,69 +18,45 @@ interface SourceConfig {
   interval: Interval;
 }
 
-let hour = 60 * 60 * 1000;
-
+const hour = 60 * 60 * 1000;
 let dailySummaryInterval;
-
 let runOnce = process.env.RUN_ONCE === 'true';
-
-const sourceConfigs: SourceConfig[] = [
-  {
-    source: new TwitterSource({
-      name: "twitter",
-      username: process.env.TWITTER_USERNAME,
-      password: process.env.TWITTER_PASSWORD,
-      email: process.env.TWITTER_EMAIL,
-      accounts: ["daosdotfun", "ai16zdao", "shawmakesmagic"]
-    }),
-    interval: 0.5 * hour // 30 minutes
-  },
-  {
-    source: new DiscordChannelSource({
-      name: "discordChannel",
-      botToken: process.env.DISCORD_TOKEN || '',
-      channelIds: ["1326603270893867064"],
-      provider: undefined,
-    }),
-    interval: 0.1 * hour // 6 minutes
-  },
-  {
-    source: new DiscordAnnouncementSource({
-      name: "discordAnnouncement",
-      botToken: process.env.DISCORD_TOKEN || '',
-      channelIds: ["1299473809166045357"]
-    }),
-    interval: hour
-  },
-  {
-    source: new GitHubDataSource({
-      name: "eliza_github",
-      contributorsUrl: "https://raw.githubusercontent.com/elizaOS/elizaos.github.io/refs/heads/main/data/daily/contributors.json",
-      summaryUrl: "https://raw.githubusercontent.com/elizaOS/elizaos.github.io/refs/heads/main/data/daily/summary.json",
-      githubCompany: "elizaOS",
-      githubRepo: "eliza"
-    }),
-    interval: 6 * hour // 6 hours
-  },
-  {
-    source: new SolanaTokenAnalyticsSource({
-      name: "solana_token_analytics",
-      apiKey: process.env.BIRDEYE_API_KEY || '',
-      tokenAddresses: ['HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC']
-    }),
-    interval: 12 * hour // 12 hours
-  },
-  {
-    source: new CoinGeckoMarketAnalyticsSource({
-      name: "coin_gecko_token_analytics",
-      tokenSymbols: ['bitcoin', 'ethereum', 'solana']
-    }),
-    interval: 12 * hour // 12 hours
-  }
-];
 
 (async () => {
   try {
+    // Fetch overide args to get run specific source config
+    const args = process.argv.slice(2);
+    let sourceFile = "sources.json"
+    args.forEach(arg => {
+      if (arg.startsWith('--source=')) {
+        sourceFile = arg.split('=')[1];
+      }
+    });
+
+    const sourceClasses = await loadSourceModules();
+    
+    // Load the JSON configuration file
+    const configPath = path.join(__dirname, "../config", sourceFile);
+    const configFile = fs.readFileSync(configPath, "utf8");
+    const configJSON = JSON.parse(configFile);
+    
+    const sourceConfigs: SourceConfig[] = configJSON.sources.map((src: any) => {
+      const { type, name, interval, params } = src;
+      const SourceClass = sourceClasses[type];
+      if (!SourceClass) {
+        throw new Error(`Unknown source type: ${type}`);
+      }
+      
+      // Resolve each parameter value
+      const resolvedParams = Object.entries(params).reduce((acc, [key, value]) => {
+        acc[key] = typeof value === "string" ? resolveParam(value) : value;
+        return acc;
+      }, {} as Record<string, any>);
+      
+      const source = new SourceClass({ name, ...resolvedParams });
+      return { source, interval };
+    });
+    
     const openAiProvider = new OpenAIProvider({
       apiKey: process.env.OPENAI_API_KEY || '',
       model: process.env.USE_OPENROUTER === 'true' ? `openai/gpt-4o-mini` : `gpt-4o-mini`,
@@ -100,19 +72,16 @@ const sourceConfigs: SourceConfig[] = [
       temperature: 0,
     });
   
-    // 1. Create aggregator
     const aggregator = new ContentAggregator();
   
     sourceConfigs.forEach((config) => aggregator.registerSource(config.source));
   
     // If any source depends on the AI provider, set it here
-    const discordChannelSource = sourceConfigs.find(
-      (cfg) => cfg.source instanceof DiscordChannelSource
-    )?.source as DiscordChannelSource | undefined;
-  
-    if (discordChannelSource) {
-      discordChannelSource.provider = openAiProvider;
-    }
+    sourceConfigs.forEach(({ source }) => {
+      if ("provider" in source && !source.provider) {
+        source.provider = openAiProvider;
+      }
+    });
   
     aggregator.registerEnricher(
       new AiTopicsEnricher({

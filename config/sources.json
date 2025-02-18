@@ -1,12 +1,84 @@
 {
+    "settings": {
+        "runOnce": true
+    },
     "sources": [
-      {
-        "type": "CoinGeckoAnalyticsSource",
-        "name": "coinGeckoTokenAnalytics",
-        "interval": 43200000,
-        "params": {
-            "tokenSymbols": ["bitcoin", "ethereum", "solana"]
+        {
+          "type": "TwitterSource",
+          "name": "twitter",
+          "interval": 1800000,
+          "params": {
+            "username": "process.env.TWITTER_USERNAME",
+            "password": "process.env.TWITTER_PASSWORD",
+            "email": "process.env.TWITTER_EMAIL",
+            "accounts": ["daosdotfun", "ai16zdao", "shawmakesmagic"]
+          }
+        },
+        {
+            "type": "CoinGeckoAnalyticsSource",
+            "name": "coinGeckoTokenAnalytics",
+            "interval": 43200000,
+            "params": {
+                "tokenSymbols": ["bitcoin", "ethereum", "solana"]
+            }
         }
-      }
+    ],
+    "ai": [
+        {
+          "type": "OpenAIProvider",
+          "name": "summaryOpenAiProvider",
+          "params": {
+            "apiKey": "process.env.OPENAI_API_KEY",
+            "model": "openai/chatgpt-4o-latest",
+            "temperature": 0,
+            "useOpenRouter": true,
+            "siteUrl": "process.env.SITE_URL",
+            "siteName": "process.env.SITE_NAME"
+          }
+        },
+        {
+          "type": "OpenAIProvider",
+          "name": "miniOpenAiProvider",
+          "params": {
+            "apiKey": "process.env.OPENAI_API_KEY",
+            "model": "openai/gpt-4o-mini",
+            "temperature": 0,
+            "useOpenRouter": true,
+            "siteUrl": "process.env.SITE_URL",
+            "siteName": "process.env.SITE_NAME"
+          }
+        }
+    ],
+    "enrichers": [
+        {
+          "type": "AiTopicsEnricher",
+          "name": "topicEnricher",
+          "params": {
+            "provider": "miniOpenAiProvider",
+            "thresholdLength": 30
+          }
+        }
+    ],
+    "storage": [
+        {
+            "type": "SQLiteStorage",
+            "name": "SQLiteStorage",
+            "params": {
+                "dbPath": "data/db.sqlite"
+            }
+        }
+    ],
+    "generators": [
+        {
+          "type": "DailySummaryGenerator",
+          "name": "DailySummaryGenerator",
+          "interval": 3600000,
+          "params": {
+            "provider": "summaryOpenAiProvider",
+            "storage": "SQLiteStorage",
+            "summaryType": "dailySummary",
+            "source": "aiSummary"
+          }
+        }
     ]
 }

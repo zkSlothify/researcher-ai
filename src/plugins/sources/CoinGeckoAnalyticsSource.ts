@@ -1,3 +1,4 @@
+import { delay } from "../../helpers/generalHelper";
 import { ContentItem } from "../../types";
 import { ContentSource } from "./ContentSource"; // Assuming the ContentSource is in the same folder
 import fetch from "node-fetch";
@@ -57,7 +58,10 @@ export class CoinGeckoAnalyticsSource implements ContentSource {
                 };
         
                 marketResponse.push(summaryItem);
+
+                await delay(2000);
             } catch (error) {
+                await delay(2000);
                 console.error("Error fetching market data:", error);
             }
         }

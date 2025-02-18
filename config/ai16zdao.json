@@ -42,7 +42,7 @@
         }
       },
       {
-        "type": "SolanaTokenAnalyticsSource",
+        "type": "SolanaAnalyticsSource",
         "name": "solanaTokenAnalytics",
         "interval": 43200000,
         "params": {
@@ -51,7 +51,7 @@
         }
       },
       {
-        "type": "CoinGeckoMarketAnalyticsSource",
+        "type": "CoinGeckoAnalyticsSource",
         "name": "coinGeckoTokenAnalytics",
         "interval": 43200000,
         "params": {

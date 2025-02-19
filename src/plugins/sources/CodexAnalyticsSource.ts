@@ -91,10 +91,9 @@ export class CodexAnalyticsSource implements ContentSource {
                 sell_txns_24h: analytics.sellCount24,
               },
             };
-            
+
             codexResponse.push(summaryItem);
         }
-
       } catch (error) {
         console.error("Error fetching analytics data:", error);
       }

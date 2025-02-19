@@ -21,7 +21,7 @@
         "params": {
           "botToken": "process.env.DISCORD_TOKEN",
           "channelIds": ["1326603270893867064"],
-          "provider": null
+          "provider": "summaryOpenAiProvider"
         }
       },
       {

@@ -76,7 +76,6 @@ export class HistoricalAggregator {
         if ( source.name === sourceName ) {
           if ( source.fetchHistorical ) {
             const items = await source.fetchHistorical(days);
-            console.log( items );
             allItems = allItems.concat(items);
           }
         }

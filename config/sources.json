@@ -19,7 +19,7 @@
               "apiKey": "process.env.BIRDEYE_API_KEY",
               "tokenAddresses": ["HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"]
           }
-        },
+        }
     ],
     "ai": [
         {

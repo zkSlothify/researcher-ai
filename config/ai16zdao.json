@@ -65,10 +65,10 @@
     "ai": [
         {
           "type": "OpenAIProvider",
-          "name": "openAiProvider",
+          "name": "summaryOpenAiProvider",
           "params": {
             "apiKey": "process.env.OPENAI_API_KEY",
-            "model": "openai/gpt-4o-latest",
+            "model": "openai/chatgpt-4o-latest",
             "temperature": 0,
             "useOpenRouter": true,
             "siteUrl": "process.env.SITE_URL",
@@ -77,7 +77,7 @@
         },
         {
           "type": "OpenAIProvider",
-          "name": "summaryOpenAiProvider",
+          "name": "miniOpenAiProvider",
           "params": {
             "apiKey": "process.env.OPENAI_API_KEY",
             "model": "openai/gpt-4o-mini",

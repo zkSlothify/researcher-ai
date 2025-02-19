@@ -8,6 +8,7 @@ dotenv.config();
 (async () => {
   const args = process.argv.slice(2);
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
   let sourceFile = "sources.json"
   let dateStr = today.toISOString().slice(0, 10);
   args.forEach(arg => {

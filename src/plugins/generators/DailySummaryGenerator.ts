@@ -31,10 +31,10 @@ export class DailySummaryGenerator {
   
   public async generateAndStoreSummary(dateStr: string): Promise<void> {
     try {
-      const currentTime = new Date().getTime() / 1000;
-      const targetTime = currentTime - ( 60 * 60 * 24);
+      const currentTime = new Date(dateStr).getTime() / 1000;
+      const targetTime = currentTime + ( 60 * 60 * 24);
         
-      const contentItems: ContentItem[] = await this.storage.getContentItemsBetweenEpoch(targetTime, currentTime, this.summaryType);
+      const contentItems: ContentItem[] = await this.storage.getContentItemsBetweenEpoch(currentTime, targetTime, this.summaryType);
 
       if (contentItems.length === 0) {
         console.warn(`No content found for date ${dateStr} to generate summary.`);

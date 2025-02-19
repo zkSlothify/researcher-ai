@@ -1,4 +1,7 @@
 {
+    "settings": {
+        "runOnce": true
+    },
     "sources": [
       {
         "type": "TwitterSource",
@@ -82,6 +85,38 @@
             "useOpenRouter": true,
             "siteUrl": "process.env.SITE_URL",
             "siteName": "process.env.SITE_NAME"
+          }
+        }
+    ],
+    "enrichers": [
+        {
+          "type": "AiTopicsEnricher",
+          "name": "topicEnricher",
+          "params": {
+            "provider": "miniOpenAiProvider",
+            "thresholdLength": 30
+          }
+        }
+    ],
+    "storage": [
+        {
+            "type": "SQLiteStorage",
+            "name": "SQLiteStorage",
+            "params": {
+                "dbPath": "data/db.sqlite"
+            }
+        }
+    ],
+    "generators": [
+        {
+          "type": "DailySummaryGenerator",
+          "name": "DailySummaryGenerator",
+          "interval": 3600000,
+          "params": {
+            "provider": "summaryOpenAiProvider",
+            "storage": "SQLiteStorage",
+            "summaryType": "dailySummary",
+            "source": "aiSummary"
           }
         }
     ]

@@ -4,24 +4,22 @@
     },
     "sources": [
         {
-          "type": "TwitterSource",
-          "name": "twitter",
-          "interval": 1800000,
-          "params": {
-            "username": "process.env.TWITTER_USERNAME",
-            "password": "process.env.TWITTER_PASSWORD",
-            "email": "process.env.TWITTER_EMAIL",
-            "accounts": ["daosdotfun", "ai16zdao", "shawmakesmagic"]
-          }
-        },
-        {
             "type": "CoinGeckoAnalyticsSource",
             "name": "coinGeckoTokenAnalytics",
             "interval": 43200000,
             "params": {
                 "tokenSymbols": ["bitcoin", "ethereum", "solana"]
             }
-        }
+        },
+        {
+          "type": "SolanaAnalyticsSource",
+          "name": "solanaTokenAnalytics",
+          "interval": 43200000,
+          "params": {
+              "apiKey": "process.env.BIRDEYE_API_KEY",
+              "tokenAddresses": ["HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"]
+          }
+        },
     ],
     "ai": [
         {

@@ -59,6 +59,8 @@ TWITTER_EMAIL=            # Account email
 
 DISCORD_APP_ID=
 DISCORD_TOKEN=
+
+CODEX_API_KEY=            # Market Data
 ```
 
 ## GitHub Actions Secrets Single File
@@ -82,7 +84,8 @@ DISCORD_TOKEN=
   "SITE_NAME": "",
   "DISCORD_APP_ID": "",
   "DISCORD_TOKEN": "",
-  "BIRDEYE_API_KEY": ""
+  "BIRDEYE_API_KEY": "",
+  "CODEX_API_KEY": "",
 }
 ```
 
@@ -110,8 +113,14 @@ npm run generator -- --source=sources.json --date=2025-01-01
 # Grab Historical Data from sources ( default 60 days )
 npm run historical
 
-# Grab Historical Data from the sources.json config ( Specific number of days )
-npm run historical -- --source=sources.json --day=10
+# Grab Historical Data for specific date from the sources.json config
+npm run historical -- --source=sources.json --date=2025-01-01
+
+# Grab Historical Data from sources ( default 60 days )
+npm run histogenerator
+
+# Grab Historical Data for specific date from the sources.json config
+npm run histogenerator -- --source=sources.json --date=2025-01-01
 ```
 
 ## Project Structure
@@ -130,6 +139,7 @@ src/
 ├── index.ts            # Main application entry
 └── generator.ts        # Summary generator entry
 └── historical.ts       # Grab historical data entry
+└── histogenerator.ts   # Grab historical data entry and Generate Summary
 ```
 
 ## Adding New Sources
@@ -146,7 +156,7 @@ class NewSource implements ContentSource {
   async fetchItems(): Promise<ContentItem[]> {
     // Implementation
   }
-  async fetchHistorical(): Promise<ContentItem[]> {
+  async fetchHistorical(date:string): Promise<ContentItem[]> {
     // Implementation for historical fetching if source allows
   }
 }
@@ -228,6 +238,7 @@ Daily summaries are stored in JSON files with this structure:
 ### Cryptocurrency Analytics
 - Token price monitoring (Solana)
 - Market data from CoinGecko
+- Market data from Codex
 - Trading metrics and volume data
 
 ## Scheduled Tasks
@@ -256,7 +267,8 @@ DISCORD_APP_ID=            # Discord application ID
 DISCORD_TOKEN=             # Bot token
 
 # Analytics
-BIRDEYE_API_KEY=          # Optional: For Solana token analytics
+BIRDEYE_API_KEY=           # Optional: For Solana token analytics
+CODEX_API_KEY=             # Optional: Alternate way to pull any token
 ```
 
 ## Storage

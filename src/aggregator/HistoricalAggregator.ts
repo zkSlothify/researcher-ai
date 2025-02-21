@@ -45,12 +45,12 @@ export class HistoricalAggregator {
   /**
    * Fetch items from all registered sources
    */
-  public async fetchAll(days: number): Promise<ContentItem[]> {
+  public async fetchAll(date: string): Promise<ContentItem[]> {
     let allItems: ContentItem[] = [];
     for (const source of this.sources) {
       try {
         if ( source.fetchHistorical ) {
-          const items = await source.fetchHistorical(days);
+          const items = await source.fetchHistorical(date);
           allItems = allItems.concat(items);
         }
       } catch (error) {
@@ -69,13 +69,13 @@ export class HistoricalAggregator {
   /**
    * Fetch items from all registered sources
    */
-  public async fetchSource(sourceName: string, days: number): Promise<ContentItem[]> {
+  public async fetchSource(sourceName: string, date: string): Promise<ContentItem[]> {
     let allItems: ContentItem[] = [];
     for (const source of this.sources) {
       try {
         if ( source.name === sourceName ) {
           if ( source.fetchHistorical ) {
-            const items = await source.fetchHistorical(days);
+            const items = await source.fetchHistorical(date);
             allItems = allItems.concat(items);
           }
         }
@@ -92,10 +92,10 @@ export class HistoricalAggregator {
     return allItems;
   }
   
-  public async fetchAndStore(sourceName: string, days : number) {
+  public async fetchAndStore(sourceName: string, date : string) {
     try {
       console.log(`Fetching data from source: ${sourceName}`);
-      const items = await this.fetchSource(sourceName, days);
+      const items = await this.fetchSource(sourceName, date);
       await this.saveItems(items, sourceName);
     } catch (error) {
       console.error(`Error fetching/storing data from source ${sourceName}:`, error);

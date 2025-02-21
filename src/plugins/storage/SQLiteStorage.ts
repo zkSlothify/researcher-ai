@@ -191,7 +191,7 @@ export class SQLiteStorage implements StoragePlugin {
     }
 
     let query = `SELECT * FROM items WHERE date BETWEEN ? AND ?`;
-    const params: any[] = [startEpoch, endEpoch];
+    const params: any[] = [startEpoch - 1, endEpoch + 1];
 
     if (excludeType) {
       query += ` AND type != ?`;

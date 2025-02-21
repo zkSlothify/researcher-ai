@@ -2,7 +2,7 @@ import { HistoricalAggregator } from "./aggregator/HistoricalAggregator";
 import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
-import { loadDirectoryModules, loadItems, loadProviders } from "./helpers/configHelper";
+import { loadDirectoryModules, loadItems, loadProviders, loadStorage } from "./helpers/configHelper";
 
 dotenv.config();
 
@@ -30,6 +30,7 @@ let dailySummaryInterval;
     const sourceClasses = await loadDirectoryModules("sources");
     const aiClasses = await loadDirectoryModules("ai");
     const enricherClasses = await loadDirectoryModules("enrichers");
+    const generatorClasses = await loadDirectoryModules("generators");
     const storageClasses = await loadDirectoryModules("storage");
     
     // Load the JSON configuration file
@@ -40,12 +41,17 @@ let dailySummaryInterval;
     let aiConfigs = await loadItems(configJSON.ai, aiClasses, "ai");
     let sourceConfigs = await loadItems(configJSON.sources, sourceClasses, "source");
     let enricherConfigs = await loadItems(configJSON.enrichers, enricherClasses, "enrichers");
+    let generatorConfigs = await loadItems(configJSON.generators, generatorClasses, "generators");
     let storageConfigs = await loadItems(configJSON.storage, storageClasses, "storage");
 
     // If any configs depends on the AI provider, set it here
     sourceConfigs = await loadProviders(sourceConfigs, aiConfigs);
     enricherConfigs = await loadProviders(enricherConfigs, aiConfigs);
-  
+    generatorConfigs = await loadProviders(generatorConfigs, aiConfigs);
+
+    // If any configs depends on the storage, set it here
+    generatorConfigs = await loadStorage(generatorConfigs, storageConfigs);
+
     const aggregator = new HistoricalAggregator();
   
     // Register Sources under Aggregator
@@ -69,6 +75,14 @@ let dailySummaryInterval;
     };
 
     console.log("Content aggregator is finished fetching historical.");
+
+    console.log(`Creating summary for date ${dateStr}`);
+    
+    for ( const generator of generatorConfigs ) {
+      await generator.instance.storage.init();
+      generator.instance.generateContent();
+      await generator.instance.generateAndStoreSummary(dateStr);
+    };
 
   } catch (error) {
     clearInterval(dailySummaryInterval);

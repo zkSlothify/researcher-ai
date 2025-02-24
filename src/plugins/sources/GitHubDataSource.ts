@@ -74,11 +74,10 @@ export class GitHubDataSource implements ContentSource {
       const targetDate = new Date(date);
       const year = targetDate.getFullYear();
       const month = String(targetDate.getMonth() + 1).padStart(2, '0');
-      const day = String(targetDate.getDate()).padStart(2, '0');
+      const day = String(targetDate.getUTCDate()).padStart(2, '0');
       const historicalSummary = this.historicalSummaryUrl.replace("<year>", String(year)).replace("<month>", month).replace("<day>", day)
       const historicalContributor = this.historicalContributorUrl.replace("<year>", String(year)).replace("<month>", month).replace("<day>", day)
-      console.log(historicalSummary)
-      console.log(historicalContributor)
+
       const contributorsResp = await fetch(historicalContributor);
       let contributorsData: any = [];
       if (!contributorsResp.ok) {

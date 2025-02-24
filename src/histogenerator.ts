@@ -80,7 +80,6 @@ let dailySummaryInterval;
     
     for ( const generator of generatorConfigs ) {
       await generator.instance.storage.init();
-      generator.instance.generateContent();
       await generator.instance.generateAndStoreSummary(dateStr);
     };
 

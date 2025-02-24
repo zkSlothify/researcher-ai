@@ -57,7 +57,7 @@ export class HistoricalAggregator {
         console.error(`Error fetching from ${source.name}:`, error);
       }
     }
-
+    console.log( allItems )
     allItems = await this.processItems(allItems);
 
     // Apply each enricher to the entire articles array

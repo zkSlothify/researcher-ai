@@ -75,7 +75,7 @@ export class DailySummaryGenerator {
         date: currentTime,
       };
 
-      await this.storage.saveContentItem(summaryItem);
+      await this.storage.saveSummaryItem(summaryItem);
 
       await this.writeSummaryToFile(dateStr, currentTime, allSummaries);
 

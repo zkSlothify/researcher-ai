@@ -52,7 +52,7 @@ export class SQLiteStorage implements StoragePlugin {
     }
   }
 
-  public async save(items: ContentItem[]): Promise<ContentItem[]> {
+  public async saveContentItems(items: ContentItem[]): Promise<ContentItem[]> {
     if (!this.db) {
       throw new Error("Database not initialized. Call init() first.");
     }
@@ -135,7 +135,34 @@ export class SQLiteStorage implements StoragePlugin {
     return items;
   }
 
-  public async saveContentItem(item: SummaryItem): Promise<void> {
+  public async getContentItem(cid: string): Promise<ContentItem | null> {
+    if (!this.db) {
+      throw new Error("Database not initialized. Call init() first.");
+    }
+  
+    const row = await this.db.get(`SELECT * FROM items WHERE cid = ?`, [cid]);
+  
+    if (!row) {
+      return null;
+    }
+  
+    const item: ContentItem = {
+      id: row.id,
+      type: row.type,
+      source: row.source,
+      cid: row.cid,
+      title: row.title,
+      text: row.text,
+      link: row.link,
+      topics: row.topics ? JSON.parse(row.topics) : null,
+      date: row.date,
+      metadata: row.metadata ? JSON.parse(row.metadata) : null
+    };
+  
+    return item;
+  }
+
+  public async saveSummaryItem(item: SummaryItem): Promise<void> {
     if (!this.db) {
       throw new Error("Database not initialized. Call init() first.");
     }

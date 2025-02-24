@@ -93,7 +93,7 @@ export class CodexAnalyticsSource implements ContentSource {
     } catch (error) {
         console.error("Error fetching analytics data:", error);
     }
-    console.log( codexResponse )
+    
     return codexResponse;
   }
 

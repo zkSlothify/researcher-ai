@@ -49,4 +49,10 @@ dotenv.config();
   };
 
   console.log("Fetched and stored items in a unified manner!");
+    
+  console.log("Shutting down...");
+  storageConfigs.forEach(async (storage : any) => {
+    await storage.close();
+  });
+  process.exit(0);
 })();

@@ -32,7 +32,7 @@ export class HistoricalAggregator {
 
     try {
       if (items.length > 0) {
-        await this.storage.save(items);
+        await this.storage.saveContentItems(items);
         console.log(`Stored ${items.length} items from source: ${sourceName}`);
       } else {
         console.log(`No new items fetched from source: ${sourceName}`);
@@ -57,6 +57,8 @@ export class HistoricalAggregator {
         console.error(`Error fetching from ${source.name}:`, error);
       }
     }
+
+    allItems = await this.processItems(allItems);
 
     // Apply each enricher to the entire articles array
     for (const enricher of this.enrichers) {
@@ -84,6 +86,8 @@ export class HistoricalAggregator {
       }
     }
 
+    allItems = await this.processItems(allItems);
+
     // Apply each enricher to the entire articles array
     for (const enricher of this.enrichers) {
         allItems = await enricher.enrich(allItems);
@@ -100,5 +104,23 @@ export class HistoricalAggregator {
     } catch (error) {
       console.error(`Error fetching/storing data from source ${sourceName}:`, error);
     }
+  };
+
+  public async processItems(items: ContentItem[]): Promise<ContentItem[]> {
+    if (! this.storage) {
+      throw("Storage Plugin is not set for Aggregator.")
+    }
+
+    let allItems: ContentItem[] = [];
+    for (const item of items) {
+      if ( item && item.cid ) {
+        const exists = await this.storage.getContentItem(item.cid);
+        if (! exists) {
+          allItems.push(item)
+        }
+      }
+    }
+    
+    return allItems;
   };
 }

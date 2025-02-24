@@ -84,6 +84,11 @@ let dailySummaryInterval;
       await generator.instance.generateAndStoreSummary(dateStr);
     };
 
+    console.log("Shutting down...");
+    storageConfigs.forEach(async (storage : any) => {
+      await storage.close();
+    });
+    process.exit(0);
   } catch (error) {
     clearInterval(dailySummaryInterval);
     console.error("Error initializing the content aggregator:", error);

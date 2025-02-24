@@ -108,6 +108,87 @@ export class DiscordChannelSource implements ContentSource {
     return discordResponse
   }
 
+  public async fetchHistorical(date: string): Promise<ContentItem[]> {
+    if (!this.client.isReady()) {
+      await this.client.login(this.botToken);
+    }
+
+    const cutoffTimestamp = new Date(date).getTime();
+    let discordResponse: ContentItem[] = [];
+
+    for (const channelId of this.channelIds) {
+      const channel = await this.client.channels.fetch(channelId);
+      if (!channel || channel.type !== ChannelType.GuildText) {
+        console.warn(`Channel ID ${channelId} is not a text channel or does not exist.`);
+        continue;
+      }
+
+      const textChannel = channel as TextChannel;
+      let allMessages: any[] = [];
+      let lastMessageId: string | undefined = undefined;
+
+      // Paginate backwards until messages are older than the cutoff date.
+      while (true) {
+        const fetchOptions: { limit: number; before?: string } = { limit: 100 };
+        if (lastMessageId) {
+          fetchOptions.before = lastMessageId;
+        }
+
+        const messages = await textChannel.messages.fetch(fetchOptions);
+
+        if (messages.size === 0) break;
+
+        // Filter the batch for messages on/after the cutoff timestamp.
+        messages.forEach((msg) => {
+          if (msg.createdTimestamp >= cutoffTimestamp) {
+            allMessages.push(msg);
+          }
+        });
+
+        // If the oldest message in this batch is older than the cutoff, stop fetching.
+        const oldestMessage = messages.last();
+        if (!oldestMessage || oldestMessage.createdTimestamp < cutoffTimestamp) {
+          break;
+        }
+        lastMessageId = oldestMessage.id;
+      }
+
+      if (allMessages.length === 0) {
+        console.log(`No messages found for channel ${channelId} since ${date}.`);
+        continue;
+      }
+
+      // Sort messages in ascending order so the transcript is chronological.
+      allMessages.sort((a, b) => a.createdTimestamp - b.createdTimestamp);
+
+      let transcript = '';
+      allMessages.forEach((msg) => {
+        transcript += `[${msg.author.username}]: ${msg.content}\n`;
+      });
+
+      const prompt = this.formatStructuredPrompt(transcript);
+
+      if (this.provider) {
+        const summary = await this.provider.summarize(prompt);
+        discordResponse.push({
+          type: "discordChannelHistoricalSummary",
+          cid: `${channelId}-historical-${date}`,
+          source: this.name,
+          text: summary,
+          link: `https://discord.com/channels/${textChannel.guild.id}/${channelId}`,
+          date: Math.floor(new Date().getTime() / 1000),
+          metadata: {
+            channelId: channelId,
+            guildId: textChannel.guild.id,
+            summaryDate: Math.floor(new Date().getTime() / 1000),
+            historicalSince: date,
+          },
+        });
+      }
+    }
+    return discordResponse;
+  }
+
   // Load the last processed message IDs from the JSON file
   private loadState(): LastProcessedState {
     try {

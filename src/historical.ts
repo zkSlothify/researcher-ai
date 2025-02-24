@@ -69,7 +69,12 @@ let dailySummaryInterval;
     };
 
     console.log("Content aggregator is finished fetching historical.");
-
+    
+    console.log("Shutting down...");
+    storageConfigs.forEach(async (storage : any) => {
+      await storage.close();
+    });
+    process.exit(0);
   } catch (error) {
     clearInterval(dailySummaryInterval);
     console.error("Error initializing the content aggregator:", error);

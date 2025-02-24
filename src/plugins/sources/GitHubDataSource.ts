@@ -45,6 +45,7 @@ export class GitHubDataSource implements ContentSource {
    */
   public async fetchItems(): Promise<ContentItem[]> {
     try {
+      const targetDate = new Date();
       const contributorsResp = await fetch(this.contributorsUrl);
       if (!contributorsResp.ok) {
         console.error(`Failed to fetch contributors.json. Status: ${contributorsResp.status}`);
@@ -59,7 +60,7 @@ export class GitHubDataSource implements ContentSource {
       }
       const summaryData : any = await summaryResp.json();
 
-      const githubData = await this.processGithubData(contributorsData, summaryData);
+      const githubData = await this.processGithubData(contributorsData, summaryData, targetDate);
 
       return githubData;
     } catch (error) {
@@ -70,7 +71,7 @@ export class GitHubDataSource implements ContentSource {
 
   public async fetchHistorical(date:string): Promise<ContentItem[]> {
     try {
-      const targetDate = new Date(date)
+      const targetDate = new Date(date);
       const year = targetDate.getFullYear();
       const month = String(targetDate.getMonth() + 1).padStart(2, '0');
       const day = String(targetDate.getDate()).padStart(2, '0');
@@ -98,7 +99,7 @@ export class GitHubDataSource implements ContentSource {
         summaryData = await summaryResp.json();
       }
 
-      const githubData = await this.processGithubData(contributorsData, summaryData)
+      const githubData = await this.processGithubData(contributorsData, summaryData, targetDate)
 
       return githubData;
     } catch (error) {
@@ -107,7 +108,7 @@ export class GitHubDataSource implements ContentSource {
     }
   }
 
-  private async processGithubData(contributorsData: any, summaryData: any): Promise<ContentItem[]> {
+  private async processGithubData(contributorsData: any, summaryData: any, date: Date): Promise<ContentItem[]> {
     try {
       const githubItems : ContentItem[] = [];
   
@@ -121,7 +122,7 @@ export class GitHubDataSource implements ContentSource {
                 source: this.name,
                 link: `${this.baseGithubUrl}commit/${commit.sha}`,
                 text: commit.message,
-                date: new Date().getTime() / 1000,
+                date: date.getTime() / 1000,
                 metadata: {
                     additions: commit.additions,
                     deletions: commit.deletions,
@@ -142,7 +143,7 @@ export class GitHubDataSource implements ContentSource {
                 source: this.name,
                 link: `${this.baseGithubUrl}pull/${pr.number}`,
                 text: `Title: ${pr.title}\nBody: ${pr.body}`,
-                date: new Date().getTime() / 1000,
+                date: date.getTime() / 1000,
                 metadata: {
                   number: pr.number,
                   state: pr.state,
@@ -163,7 +164,7 @@ export class GitHubDataSource implements ContentSource {
                 source: this.name,
                 link: `${this.baseGithubUrl}issues/${issue.number}`,
                 text: `Title: ${issue.title}\nBody: ${issue.body}`,
-                date: new Date().getTime() / 1000,
+                date: date.getTime() / 1000,
                 metadata: {
                   number: issue.number,
                   state: issue.state,
@@ -184,7 +185,7 @@ export class GitHubDataSource implements ContentSource {
         cid: cid,
         source: this.name,
         text: summaryData.overview,
-        date: new Date().getTime() / 1000,
+        date: date.getTime() / 1000,
         metadata: {
           metrics: summaryData.metrics,
           changes: summaryData.changes,

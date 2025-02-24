@@ -176,11 +176,11 @@ export class DiscordChannelSource implements ContentSource {
           source: this.name,
           text: summary,
           link: `https://discord.com/channels/${textChannel.guild.id}/${channelId}`,
-          date: Math.floor(new Date().getTime() / 1000),
+          date: Math.floor(cutoffTimestamp / 1000),
           metadata: {
             channelId: channelId,
             guildId: textChannel.guild.id,
-            summaryDate: Math.floor(new Date().getTime() / 1000),
+            summaryDate: Math.floor(cutoffTimestamp / 1000),
             historicalSince: date,
           },
         });

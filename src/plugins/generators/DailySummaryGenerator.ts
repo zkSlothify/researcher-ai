@@ -5,23 +5,24 @@ import { SQLiteStorage } from "../storage/SQLiteStorage";
 import { ContentItem, SummaryItem } from "../../types";
 import fs from "fs";
 
+const hour = 60 * 60 * 1000;
 
 interface DailySummaryGeneratorConfig {
-  openAiProvider: OpenAIProvider;
+  provider: OpenAIProvider;
   storage: SQLiteStorage;
   summaryType: string;
   source: string;
 }
 
 export class DailySummaryGenerator {
-  private openAiProvider: OpenAIProvider;
+  private provider: OpenAIProvider;
   private storage: SQLiteStorage;
   private summaryType: string;
   private source: string;
   private blockedTopics: string[] = ['open source']
 
   constructor(config: DailySummaryGeneratorConfig) {
-    this.openAiProvider = config.openAiProvider;
+    this.provider = config.provider;
     this.storage = config.storage;
     this.summaryType = config.summaryType;
     this.source = config.source;
@@ -30,10 +31,9 @@ export class DailySummaryGenerator {
   
   public async generateAndStoreSummary(dateStr: string): Promise<void> {
     try {
-      const currentTime = new Date().getTime() / 1000;
-      const targetTime = currentTime - ( 60 * 60 * 24);
-        
-      const contentItems: ContentItem[] = await this.storage.getContentItemsBetweenEpoch(targetTime, currentTime, this.summaryType);
+      const currentTime = new Date(dateStr).getTime() / 1000;
+      const targetTime = currentTime + ( 60 * 60 * 24);
+      const contentItems: ContentItem[] = await this.storage.getContentItemsBetweenEpoch(currentTime, targetTime, this.summaryType);
 
       if (contentItems.length === 0) {
         console.warn(`No content found for date ${dateStr} to generate summary.`);
@@ -54,7 +54,7 @@ export class DailySummaryGenerator {
           if (!topic || !objects || objects.length <= 0 || maxTopicsToSummarize >= 10) continue;
 
           const prompt = this.createAIPromptForTopic(topic, objects, dateStr);
-          const summaryText = await this.openAiProvider.summarize(prompt);
+          const summaryText = await this.provider.summarize(prompt);
           const summaryJSONString = summaryText.replace(/```json\n|```/g, "");
           let summaryJSON = JSON.parse(summaryJSONString);
           summaryJSON["topic"] = topic;
@@ -74,7 +74,7 @@ export class DailySummaryGenerator {
         date: currentTime,
       };
 
-      await this.storage.saveContentItem(summaryItem);
+      await this.storage.saveSummaryItem(summaryItem);
 
       await this.writeSummaryToFile(dateStr, currentTime, allSummaries);
 
@@ -102,6 +102,37 @@ export class DailySummaryGenerator {
     }
     catch (error) {
       console.error(`Error checkIfFileMatchesDB:`, error);
+    }
+  }
+
+  public async generateContent() {
+    try {
+      const today = new Date();
+
+      let summary: SummaryItem[] = await this.storage.getSummaryBetweenEpoch((today.getTime() - ( hour * 24 )) / 1000,today.getTime() / 1000);
+      
+      if ( summary && summary.length <= 0 ) {
+        const summaryDate = new Date(today);
+        summaryDate.setDate(summaryDate.getDate() - 1)
+        
+        const dateStr = summaryDate.toISOString().slice(0, 10);
+        console.log(`Summarizing data from for daily report`);
+      
+        await this.generateAndStoreSummary(dateStr);
+        
+        console.log(`Daily report is complete`);
+      }
+      else {
+        console.log('Summary already generated for today, validating file is correct');
+        const summaryDate = new Date(today);
+        summaryDate.setDate(summaryDate.getDate() - 1)
+        
+        const dateStr = summaryDate.toISOString().slice(0, 10);
+
+        await this.checkIfFileMatchesDB(dateStr, summary[0]);
+      }
+    } catch (error) {
+      console.error(`Error creating daily report:`, error);
     }
   }
 
@@ -149,7 +180,7 @@ export class DailySummaryGenerator {
         }
         topicMap.get(github_topic).push(obj);
       }
-      else if (obj.source.indexOf('token_analytics') >= 0 ) {
+      else if (obj.cid.indexOf('analytics') >= 0 ) {
         let token_topic = 'crypto market';
         if (! obj.topics) {
           obj.topics = [];

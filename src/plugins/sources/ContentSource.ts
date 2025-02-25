@@ -7,5 +7,5 @@ export interface ContentSource {
    * Return an array of ContentItems, each describing an item in a unified format.
    */
   fetchItems(): Promise<ContentItem[]>;
-  fetchHistorical?(days:number): Promise<ContentItem[]>;
+  fetchHistorical?(date:string): Promise<ContentItem[]>;
 }

@@ -64,7 +64,7 @@ export class TwitterSource implements ContentSource {
     return tweetsResponse;
   }
 
-  public async fetchHistorical(days:number): Promise<ContentItem[]> {
+  public async fetchHistorical(date:string): Promise<ContentItem[]> {
     const isLoggedIn = await this.client.isLoggedIn();
     
     if ( ! isLoggedIn ) {
@@ -74,8 +74,7 @@ export class TwitterSource implements ContentSource {
     }
 
     let tweetsResponse : any[] = [];
-    let currentDate = new Date().getTime() / 1000;
-    let targetDate = currentDate - days;
+    let targetDate = new Date(date).getTime() / 1000;
     
     for await (const account of this.accounts) {
       let query = `from:${account}`

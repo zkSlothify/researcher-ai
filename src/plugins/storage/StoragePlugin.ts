@@ -5,7 +5,8 @@ import { ContentItem, SummaryItem } from "../../types";
 export interface StoragePlugin {
   init(): Promise<void>;
   close(): Promise<void>;
-  save(items: ContentItem[]): Promise<ContentItem[]>;
-  saveContentItem(item: SummaryItem): Promise<void>;
+  saveContentItems(items: ContentItem[]): Promise<ContentItem[]>;
+  getContentItem(cid: string): Promise<ContentItem | null>;
+  saveSummaryItem(item: SummaryItem): Promise<void>;
   getSummaryBetweenEpoch(startEpoch: number,endEpoch: number,excludeType?: string): Promise<SummaryItem[]>;
 }

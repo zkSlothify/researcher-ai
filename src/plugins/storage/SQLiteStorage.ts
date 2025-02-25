@@ -3,17 +3,15 @@
 import { StoragePlugin } from "./StoragePlugin"; // a small interface if you like
 import { open, Database } from "sqlite";
 import sqlite3 from "sqlite3";
-import { ContentItem, SummaryItem } from "../../types";
-
-export interface UnifiedStorageConfig {
-  dbPath: string;
-}
+import { ContentItem, SummaryItem, StorageConfig } from "../../types";
 
 export class SQLiteStorage implements StoragePlugin {
+  public name: string;
   private db: Database<sqlite3.Database, sqlite3.Statement> | null = null;
   private dbPath: string;
 
-  constructor(config: UnifiedStorageConfig) {
+  constructor(config: StorageConfig) {
+    this.name = config.name;
     this.dbPath = config.dbPath;
   }
 
@@ -54,7 +52,7 @@ export class SQLiteStorage implements StoragePlugin {
     }
   }
 
-  public async save(items: ContentItem[]): Promise<ContentItem[]> {
+  public async saveContentItems(items: ContentItem[]): Promise<ContentItem[]> {
     if (!this.db) {
       throw new Error("Database not initialized. Call init() first.");
     }
@@ -137,7 +135,34 @@ export class SQLiteStorage implements StoragePlugin {
     return items;
   }
 
-  public async saveContentItem(item: SummaryItem): Promise<void> {
+  public async getContentItem(cid: string): Promise<ContentItem | null> {
+    if (!this.db) {
+      throw new Error("Database not initialized. Call init() first.");
+    }
+  
+    const row = await this.db.get(`SELECT * FROM items WHERE cid = ?`, [cid]);
+  
+    if (!row) {
+      return null;
+    }
+  
+    const item: ContentItem = {
+      id: row.id,
+      type: row.type,
+      source: row.source,
+      cid: row.cid,
+      title: row.title,
+      text: row.text,
+      link: row.link,
+      topics: row.topics ? JSON.parse(row.topics) : null,
+      date: row.date,
+      metadata: row.metadata ? JSON.parse(row.metadata) : null
+    };
+  
+    return item;
+  }
+
+  public async saveSummaryItem(item: SummaryItem): Promise<void> {
     if (!this.db) {
       throw new Error("Database not initialized. Call init() first.");
     }
@@ -193,7 +218,7 @@ export class SQLiteStorage implements StoragePlugin {
     }
 
     let query = `SELECT * FROM items WHERE date BETWEEN ? AND ?`;
-    const params: any[] = [startEpoch, endEpoch];
+    const params: any[] = [startEpoch - 1, endEpoch + 1];
 
     if (excludeType) {
       query += ` AND type != ?`;

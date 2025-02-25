@@ -59,6 +59,8 @@ TWITTER_EMAIL=            # Account email
 
 DISCORD_APP_ID=
 DISCORD_TOKEN=
+
+CODEX_API_KEY=            # Market Data
 ```
 
 ## GitHub Actions Secrets Single File
@@ -82,7 +84,8 @@ DISCORD_TOKEN=
   "SITE_NAME": "",
   "DISCORD_APP_ID": "",
   "DISCORD_TOKEN": "",
-  "BIRDEYE_API_KEY": ""
+  "BIRDEYE_API_KEY": "",
+  "CODEX_API_KEY": "",
 }
 ```
 
@@ -94,28 +97,36 @@ DISCORD_TOKEN=
 # Development mode
 npm run dev
 
+# Development mode using the sources.json config
+npm run dev -- --source=sources.json
+
 # Build and run production
 npm run build
 npm start
 
-# Generate daily summary
-npm run generator
-
-# Generate daily summary for specific date
-npm run generator --date=2025-01-01 
-
 # Grab Historical Data from sources ( default 60 days )
 npm run historical
 
-# Grab Historical Data from sources ( Specific number of days )
-npm run historical --day=10
+# Grab Historical Data for specific date from the sources.json config
+npm run historical -- --source=sources.json --date=2025-01-01
+
+
+# Grab Historical Data for specific date range from the sources.json config
+npm run historical -- --source=sources.json --after=2025-01-01 --before=2025-01-06
+
+# Grab Historical Data for after specific date from the sources.json config
+npm run historical -- --source=sources.json --after=2025-01-01
+
+# Grab Historical Data for before specific date from the sources.json config //Limited to Jan 1, 2024
+npm run historical -- --source=sources.json --before=2025-01-01
 ```
 
 ## Project Structure
 
 ```
+config/                 # JSON-Based Configuration System     
 src/
-├── aggregator/          # Core aggregation logic
+├── aggregator/         # Core aggregation logic
 ├── plugins/
 │   ├── ai/             # AI provider implementations
 │   ├── enrichers/      # Content enrichment plugins
@@ -124,15 +135,14 @@ src/
 │   └── storage/        # Database storage handlers
 ├── types.ts            # TypeScript type definitions
 ├── index.ts            # Main application entry
-└── generator.ts        # Summary generator entry
-└── historical.ts       # Grab historical data entry
+└── historical.ts       # Grab historical data entry and Generate Summary on Historical Data
 ```
 
 ## Adding New Sources
 
 1. Implement the `ContentSource` interface
-2. Add configuration in `index.ts`
-3. Register the source with the aggregator
+2. Add configuration in JSON config
+3. Run System
 
 Example:
 ```typescript
@@ -141,6 +151,9 @@ class NewSource implements ContentSource {
   
   async fetchItems(): Promise<ContentItem[]> {
     // Implementation
+  }
+  async fetchHistorical(date:string): Promise<ContentItem[]> {
+    // Implementation for historical fetching if source allows
   }
 }
 ```
@@ -221,6 +234,7 @@ Daily summaries are stored in JSON files with this structure:
 ### Cryptocurrency Analytics
 - Token price monitoring (Solana)
 - Market data from CoinGecko
+- Market data from Codex
 - Trading metrics and volume data
 
 ## Scheduled Tasks
@@ -249,7 +263,8 @@ DISCORD_APP_ID=            # Discord application ID
 DISCORD_TOKEN=             # Bot token
 
 # Analytics
-BIRDEYE_API_KEY=          # Optional: For Solana token analytics
+BIRDEYE_API_KEY=           # Optional: For Solana token analytics
+CODEX_API_KEY=             # Optional: Alternate way to pull any token
 ```
 
 ## Storage

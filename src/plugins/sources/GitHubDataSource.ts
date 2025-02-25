@@ -36,7 +36,7 @@ export class GitHubDataSource implements ContentSource {
     this.historicalContributorUrl = config.historicalContributorUrl;
     this.githubCompany = config.githubCompany;
     this.githubRepo = config.githubRepo;
-    this.baseGithubUrl = `https://github.com/${this.githubCompany}/${this.githubRepo}/`
+    this.baseGithubUrl = `https://opengraph.githubassets.com/1/${this.githubCompany}/${this.githubRepo}/`
   }
 
   /**

@@ -10,10 +10,15 @@ dotenv.config();
   try {
     // Fetch overide args to get run specific source config
     const args = process.argv.slice(2);
-    let sourceFile = "sources.json"
+    let sourceFile = "sources.json";
+    let runOnce = false;
+    let onlyFetch = false;
     args.forEach(arg => {
       if (arg.startsWith('--source=')) {
         sourceFile = arg.split('=')[1];
+      }
+      if (arg.startsWith('--onlyFetch=')) {
+        onlyFetch = arg.split('=')[1].toLowerCase() == 'true';
       }
     });
 
@@ -28,7 +33,12 @@ dotenv.config();
     const configFile = fs.readFileSync(configPath, "utf8");
     const configJSON = JSON.parse(configFile);
     
-    let runOnce = configJSON?.settings?.runOnce || false;
+    if (typeof configJSON?.settings?.runOnce === 'boolean') {
+      runOnce = configJSON?.settings?.runOnce || runOnce;
+    }
+    if (typeof configJSON?.settings?.onlyFetch === 'boolean') {
+      onlyFetch = configJSON?.settings?.onlyFetch || onlyFetch;
+    }
     
     let aiConfigs = await loadItems(configJSON.ai, aiClasses, "ai");
     let sourceConfigs = await loadItems(configJSON.sources, sourceClasses, "source");
@@ -67,14 +77,19 @@ dotenv.config();
       }, config.interval);
     };
     
+    if ( ! onlyFetch ) {
     //Generate Content
-    for ( const generator of generatorConfigs ) {
-      generator.instance.generateContent();
-
-      setInterval(() => {
+      for ( const generator of generatorConfigs ) {
         generator.instance.generateContent();
-      }, generator.interval);
-    };
+
+        setInterval(() => {
+          generator.instance.generateContent();
+        }, generator.interval);
+      };
+    }
+    else {
+      console.log( "Summary will not be generated." )
+    }
 
     console.log("Content aggregator is running and scheduled.");
     

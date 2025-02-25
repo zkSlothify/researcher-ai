@@ -1,8 +1,9 @@
 // src/aggregator/ContentAggregator.ts
 
+import { addOneDay, callbackDateRangeLogic, formatDate, parseDate } from "../helpers/dateHelper";
 import { ContentSource } from "../plugins/sources/ContentSource";
 import { StoragePlugin } from "../plugins/storage/StoragePlugin";
-import { ContentItem, EnricherPlugin } from "../types";
+import { ContentItem, EnricherPlugin, DateConfig } from "../types";
 
 export class HistoricalAggregator {
   private sources: ContentSource[] = [];
@@ -57,7 +58,7 @@ export class HistoricalAggregator {
         console.error(`Error fetching from ${source.name}:`, error);
       }
     }
-    console.log( allItems )
+
     allItems = await this.processItems(allItems);
 
     // Apply each enricher to the entire articles array
@@ -101,6 +102,14 @@ export class HistoricalAggregator {
       console.log(`Fetching data from source: ${sourceName}`);
       const items = await this.fetchSource(sourceName, date);
       await this.saveItems(items, sourceName);
+    } catch (error) {
+      console.error(`Error fetching/storing data from source ${sourceName}:`, error);
+    }
+  };
+  
+  public async fetchAndStoreRange(sourceName: string, filter: DateConfig) {
+    try {
+      await callbackDateRangeLogic(filter, (dayStr:string) => this.fetchAndStore(sourceName, dayStr))
     } catch (error) {
       console.error(`Error fetching/storing data from source ${sourceName}:`, error);
     }

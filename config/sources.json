@@ -1,6 +1,7 @@
 {
     "settings": {
-        "runOnce": true
+        "runOnce": true,
+        "onlyFetch": false
     },
     "sources": [
         {

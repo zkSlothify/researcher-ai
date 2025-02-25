@@ -69,3 +69,10 @@ export interface StorageConfig {
   name: string;
   dbPath: string;
 }
+
+export interface DateConfig {
+  filterType: 'before' | 'after' | 'during';
+  date?: string;
+  after?: string;
+  before?: string;
+}

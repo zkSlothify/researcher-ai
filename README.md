@@ -104,23 +104,21 @@ npm run dev -- --source=sources.json
 npm run build
 npm start
 
-# Generate daily summary
-npm run generator
-
-# Generate daily summary for specific date using the sources.json config
-npm run generator -- --source=sources.json --date=2025-01-01 
-
 # Grab Historical Data from sources ( default 60 days )
 npm run historical
 
 # Grab Historical Data for specific date from the sources.json config
 npm run historical -- --source=sources.json --date=2025-01-01
 
-# Grab Historical Data from sources ( default 60 days )
-npm run histogenerator
 
-# Grab Historical Data for specific date from the sources.json config
-npm run histogenerator -- --source=sources.json --date=2025-01-01
+# Grab Historical Data for specific date range from the sources.json config
+npm run historical -- --source=sources.json --after=2025-01-01 --before=2025-01-06
+
+# Grab Historical Data for after specific date from the sources.json config
+npm run historical -- --source=sources.json --after=2025-01-01
+
+# Grab Historical Data for before specific date from the sources.json config //Limited to Jan 1, 2024
+npm run historical -- --source=sources.json --before=2025-01-01
 ```
 
 ## Project Structure
@@ -137,9 +135,7 @@ src/
 │   └── storage/        # Database storage handlers
 ├── types.ts            # TypeScript type definitions
 ├── index.ts            # Main application entry
-└── generator.ts        # Summary generator entry
-└── historical.ts       # Grab historical data entry
-└── histogenerator.ts   # Grab historical data entry and Generate Summary
+└── historical.ts       # Grab historical data entry and Generate Summary on Historical Data
 ```
 
 ## Adding New Sources

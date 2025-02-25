@@ -33,7 +33,6 @@ export class DailySummaryGenerator {
     try {
       const currentTime = new Date(dateStr).getTime() / 1000;
       const targetTime = currentTime + ( 60 * 60 * 24);
-      
       const contentItems: ContentItem[] = await this.storage.getContentItemsBetweenEpoch(currentTime, targetTime, this.summaryType);
 
       if (contentItems.length === 0) {

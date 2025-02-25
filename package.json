@@ -7,9 +7,7 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
-    "generator": "ts-node src/generator.ts",
-    "historical": "ts-node src/historical.ts",
-    "histogenerator": "ts-node src/histogenerator.ts"
+    "historical": "ts-node src/historical.ts"
   },
   "keywords": [
     "news",

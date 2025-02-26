@@ -41,7 +41,7 @@ jobs:
         run: npm install
         
       - name: Run index.js
-        run: npm run dev
+        run: npm run dev -- --source=${{ env.SOURCE }}
         env:
           RUN_ONCE: true
 

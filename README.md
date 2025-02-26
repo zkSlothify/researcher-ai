@@ -86,6 +86,7 @@ CODEX_API_KEY=            # Market Data
   "DISCORD_TOKEN": "",
   "BIRDEYE_API_KEY": "",
   "CODEX_API_KEY": "",
+  "SOURCE": "sources.json"
 }
 ```
 

@@ -30,7 +30,7 @@ export const callbackDateRangeLogic = async (filter: DateConfig, callback: Funct
     } else if (filter.filterType === 'during' && filter.date) {
       await callback(filter.date);
     } else if (filter.filterType === 'before' && filter.date) {
-      const earliest = new Date(2020, 0, 1);
+      const earliest = new Date(2025, 0, 1);
       let current = earliest;
       const end = parseDate(filter.date);
       while (current <= end) {

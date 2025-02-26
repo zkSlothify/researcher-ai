@@ -70,6 +70,28 @@
             "summaryType": "dailySummary",
             "source": "aiSummary"
           }
+        },
+        {
+          "type": "DailySummaryGenerator",
+          "name": "HalfDaySummaryGenerator",
+          "interval": 1800000,
+          "params": {
+            "provider": "summaryOpenAiProvider",
+            "storage": "SQLiteStorage",
+            "summaryType": "halfDaySummary",
+            "source": "aiSummary"
+          }
+        },
+        {
+          "type": "DailySummaryGenerator",
+          "name": "TwelveHourSummaryGenerator",
+          "interval": 43200000,
+          "params": {
+            "provider": "summaryOpenAiProvider",
+            "storage": "SQLiteStorage",
+            "summaryType": "twelveHourSummary",
+            "source": "aiSummary"
+          }
         }
     ]
 }

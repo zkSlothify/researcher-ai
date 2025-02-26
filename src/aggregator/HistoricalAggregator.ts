@@ -99,7 +99,7 @@ export class HistoricalAggregator {
   
   public async fetchAndStore(sourceName: string, date : string) {
     try {
-      console.log(`Fetching data from source: ${sourceName}`);
+      console.log(`Fetching data from source: ${sourceName} for Date: ${date}`);
       const items = await this.fetchSource(sourceName, date);
       await this.saveItems(items, sourceName);
     } catch (error) {

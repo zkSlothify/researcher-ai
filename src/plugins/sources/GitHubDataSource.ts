@@ -27,6 +27,7 @@ export class GitHubDataSource implements ContentSource {
   private githubCompany: string;
   private githubRepo: string;
   private baseGithubUrl: string;
+  private baseGithubImageUrl: string;
 
   constructor(config: GithubDataSourceConfig) {
     this.name = config.name;
@@ -36,7 +37,8 @@ export class GitHubDataSource implements ContentSource {
     this.historicalContributorUrl = config.historicalContributorUrl;
     this.githubCompany = config.githubCompany;
     this.githubRepo = config.githubRepo;
-    this.baseGithubUrl = `https://opengraph.githubassets.com/1/${this.githubCompany}/${this.githubRepo}/`
+    this.baseGithubUrl = `https://github.com/${this.githubCompany}/${this.githubRepo}/`;
+    this.baseGithubImageUrl = `https://opengraph.githubassets.com/1/${this.githubCompany}/${this.githubRepo}/`;
   }
 
   /**
@@ -126,7 +128,7 @@ export class GitHubDataSource implements ContentSource {
                     additions: commit.additions,
                     deletions: commit.deletions,
                     changed_files: commit.changed_files,
-                    photos: [c.avatar_url]
+                    photos: [`${this.baseGithubImageUrl}commit/${commit.sha}`]
                 },
               }
   
@@ -147,7 +149,7 @@ export class GitHubDataSource implements ContentSource {
                   number: pr.number,
                   state: pr.state,
                   merged: pr.merged,
-                  photos: [c.avatar_url]
+                  photos: [`${this.baseGithubImageUrl}pull/${pr.number}`]
                 },
               }
   
@@ -167,7 +169,7 @@ export class GitHubDataSource implements ContentSource {
                 metadata: {
                   number: issue.number,
                   state: issue.state,
-                  photos: [c.avatar_url]
+                  photos: [`${this.baseGithubImageUrl}issues/${issue.number}`]
                 },
               }
   

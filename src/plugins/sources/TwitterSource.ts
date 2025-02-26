@@ -5,6 +5,7 @@ import { ContentItem } from "../../types";
 
 // Hypothetical Twitter client
 import { SearchMode, Scraper } from 'agent-twitter-client';
+import { TwitterCache } from "../../helpers/cache";
 
 interface TwitterSourceConfig {
   name: string;
@@ -21,6 +22,7 @@ export class TwitterSource implements ContentSource {
   private username: string | undefined;
   private password: string | undefined;
   private email: string | undefined;
+  private cache: TwitterCache;
 
   constructor(config: TwitterSourceConfig) {
     this.name = config.name;
@@ -29,6 +31,7 @@ export class TwitterSource implements ContentSource {
     this.username = config.username;
     this.password = config.password;
     this.email = config.email;
+    this.cache = new TwitterCache();
   }
 
   private async processTweets(tweets: any[]): Promise<any> {
@@ -73,33 +76,56 @@ export class TwitterSource implements ContentSource {
         }
     }
 
-    let tweetsResponse : any[] = [];
+    let resultTweets: ContentItem[] = [];
     let targetDate = new Date(date).getTime() / 1000;
     
     for await (const account of this.accounts) {
-      let query = `from:${account}`
-      let cursor;
-      
+      const cachedData = this.cache.get(account, date);
+
+      if (cachedData) {
+        resultTweets = resultTweets.concat(cachedData);
+        continue;
+      }
+
+      let cursor = this.cache.getCursor(account);
+
+      const tweetsByDate: Record<string, ContentItem[]> = {};
+
+      let query = `from:${account}`;
       let tweets : any = await this.client.fetchSearchTweets(query, 100, 1);
       
       while ( tweets["tweets"].length > 0 ) {
         let processedTweets = await this.processTweets(tweets["tweets"]);
+        for (const tweet of processedTweets) {
+          const tweetDateStr = new Date((tweet.date) * 1000).toISOString().slice(0, 10);
+          if (!tweetsByDate[tweetDateStr]) {
+            tweetsByDate[tweetDateStr] = [];
+          }
+          tweetsByDate[tweetDateStr].push(tweet);
+        }
 
-        tweetsResponse = tweetsResponse.concat(processedTweets)
-        
-        tweets = await this.client.fetchSearchTweets(query, 100, 1, cursor);
-        
-        let past = tweets["tweets"].find((tweet : any) => tweet.timestamp < targetDate);
-        
-        if ( past ) {
+        const lastTweet = tweets["tweets"][tweets["tweets"].length - 1];
+        if (lastTweet.timestamp < targetDate) {
+          if (cursor) {
+            this.cache.setCursor(account, cursor);
+          }
           break;
         }
 
         cursor = tweets["next"];
+        tweets = await this.client.fetchSearchTweets(`from:${account}`, 100, 1, cursor);
+      }
+
+      for (const [tweetDate, tweetList] of Object.entries(tweetsByDate)) {
+        this.cache.set(account, tweetDate, tweetList, 300);
+      }
+  
+      if (tweetsByDate[date]) {
+        resultTweets = resultTweets.concat(tweetsByDate[date]);
       }
     }
-    
-    return tweetsResponse;
+
+    return resultTweets;
   }
 
   public async fetchItems(): Promise<ContentItem[]> {
